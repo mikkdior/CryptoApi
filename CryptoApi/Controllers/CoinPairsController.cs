@@ -23,7 +23,6 @@ public class CoinPairsController : Controller
     public IActionResult Pair()
     {
 
-
         return View();
     }
     public IActionResult Privacy()

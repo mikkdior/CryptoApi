@@ -1,5 +1,43 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+<div class="coin-pairs-stats__wrap">
+    <div class="coin-pairs-real-time-price-chart">
+        <div class="coin-pairs-real-time-price-chart__chart">
+            <div class='tradingview-widget-container'>
+                <div id='2'></div>
+                <div class='tradingview-widget-copyright'><a href='https://www.tradingview.com/symbols/ETCUSD/' rel='noopener' target='_blank'><span class='blue-text'>ETCUSD Rates</span></a> by TradingView</div>
+                <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+                <script type='text/javascript'>
+                new TradingView.MediumWidget(
+                {
+                'symbols': [
+                [
+                    'ETCUSD'
+                ]
+                ],
+                'chartOnly': false,
+                'width': 840,
+                'height': 320,
+                'locale': 'en',
+                'colorTheme': 'light',
+                'gridLineColor': 'rgba(240, 243, 250, 0)',
+                'fontColor': '#787B86',
+                'isTransparent': false,
+                'autosize': false,
+                'showFloatingTooltip': true,
+                'showVolume': false,
+                'scalePosition': 'no',
+                'scaleMode': 'Normal',
+                'fontFamily': 'Trebuchet MS, sans-serif',
+                'noTimeScale': false,
+                'chartType': 'area',
+                'lineColor': '#2962FF',
+                'bottomColor': 'rgba(41, 98, 255, 0)',
+                'topColor': 'rgba(41, 98, 255, 0.3)',
+                'container_id': '2'
+            }
+                );
+                </script>
+            </div>
+        </div>
+    </div>
+</div>

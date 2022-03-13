@@ -1,5 +1,303 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<nav class="navHeader">
+    <div>
+        <button type="button"
+                class="md-button navHeader_myExchanges md-theme-default">
+            <div class="md-ripple">
+                <div class="md-button-content">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjIxMTAyIDBDOC4wODg5NSAwIC0wLjAwMDI0NDE0MSAxMi44NjQgLTAuMDAwMjQ0MTQxIDEyLjg2NEw0LjA2MjIyIDEyLjkxNDlMMi40MTUzMiAyMEw5Ljk5OTc3IDguMDY0MDNMNi4zMjQ4IDguMDE0OThDNy4yMjQyNSA0LjM1OTIgOC4yODE5IDAgOC4yMTEwMiAwWiIgZmlsbD0iI0MwRjA2MCIvPgo8L3N2Zz4K"
+                            alt=""
+                            class="navHeader_myExchanges-icon">
+                    <span>My active exchanges</span>
+                    <svg width="10"
+                            height="6"
+                            viewBox="0 0 10 6"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="navHeader_linkArrow">
+                        <path d="M8.34774 0.894654L8.34756 0.894821L5.0037 4.0264L1.6531 0.894654C1.44676 0.701782 1.11833 0.701782 0.911985 0.894654C0.696005 1.09653 0.696005 1.43165 0.911985 1.63353L4.62642 5.10535C4.73035 5.20249 4.86129 5.25 4.99697 5.25C5.12266 5.25 5.26148 5.20447 5.36754 5.10535L9.07963 1.63571C9.30531 1.43398 9.30514 1.09681 9.08886 0.894654C8.88251 0.701782 8.55409 0.701782 8.34774 0.894654Z"
+                                stroke="#fff"
+                                fill="#fff"
+                                stroke-width="0.5"></path>
+                    </svg>
+                </div>
+            </div>
+        </button>
+    </div>
+    <a href="https://letsexchange.io/about-us"
+        class="navHeader_link">
+        About us
+    </a>
+    <a href="https://letsexchange.io/how-it-works"
+        class="navHeader_link">
+        How It Works
+    </a>
+    <a href="https://letsexchange.io/custom/exchange-rates"
+        class="navHeader_link">
+        Exchange Rates
+    </a>
+    <a href="https://letsexchange.io/blog"
+        class="navHeader_link"> Blog</a>
+
+    <div class="LanguageSelect">
+        <div tabindex="0"
+                class="multiselect">
+    <span class="arrow">
+    <svg width="10"
+            height="6"
+            viewBox="0 0 10 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="">
+        <path d="M8.34774 0.894654L8.34756 0.894821L5.0037 4.0264L1.6531 0.894654C1.44676 0.701782 1.11833 0.701782 0.911985 0.894654C0.696005 1.09653 0.696005 1.43165 0.911985 1.63353L4.62642 5.10535C4.73035 5.20249 4.86129 5.25 4.99697 5.25C5.12266 5.25 5.26148 5.20447 5.36754 5.10535L9.07963 1.63571C9.30531 1.43398 9.30514 1.09681 9.08886 0.894654C8.88251 0.701782 8.55409 0.701782 8.34774 0.894654Z"
+            stroke="#fff"
+            fill="#fff"
+            stroke-width="0.5"></path>
+    </svg>
+    </span>
+            <div class="multiselect__tags">
+                <div class="multiselect__tags-wrap"
+                        style="display:none;"></div>
+                <div class="multiselect__spinner"
+                        style="display:none;"></div>
+                <span class="multiselect__single">
+        <img src="/custom/img/letsexchange/en.svg"> En
+    </span>
+            </div>
+            <div tabindex="-1"
+                    class="multiselect__content-wrapper"
+                    style="max-height:287px; display: none;">
+                <ul class="multiselect__content"
+                    style="display:inline-block;">
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option multiselect__option--highlight">
+            <a href="https://letsexchange.io/"><img src="/custom/img/letsexchange/en.svg"> En
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option">
+            <a href="https://letsexchange.io/ru"><img src="/custom/img/letsexchange/ru.svg"> Ru
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/de">
+            <img src="/custom/img/letsexchange/de.svg"> De
+            </a></span>
+                    </li>
+                    <li class="multiselect__element">
+        <span data-select=""
+                data-selected=""
+                data-deselect=""
+                class="multiselect__option">
+            <a href="https://letsexchange.io/pt">
+            <img src="/custom/img/letsexchange/pt.svg"> Pt
+            </a>
+        </span>
+                    </li>
+                    <li class="multiselect__element">
+        <span data-select=""
+                data-selected=""
+                data-deselect=""
+                class="multiselect__option">
+            <a href="https://letsexchange.io/es">
+            <img src="/custom/img/letsexchange/es.svg"> Es
+            </a>
+        </span>
+                    </li>
+                    <li class="multiselect__element">
+        <span data-select=""
+                data-selected=""
+                data-deselect=""
+                class="multiselect__option">
+            <a href="https://letsexchange.io/tr">
+            <img src="/custom/img/letsexchange/tr.svg"> Tr
+            </a>
+        </span>
+                    </li>
+                    <li style="display:none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                    <li style="display:none;"><span class="multiselect__option">List is empty.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="selectWrap">
+        <div>
+            <div class="md-menu navHeader_linkMenu navHeader_link navHeader_linkMenuArrow">
+                <button type="button"
+                        class="md-button md-theme-default dashboard-header_part--help--Btn light">
+                    <div class="md-ripple">
+                        <div class="md-button-content">
+                            Help
+                            <svg width="10"
+                                    height="6"
+                                    viewBox="0 0 10 6"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="navHeader_linkArrow">
+                                <path d="M8.34774 0.894654L8.34756 0.894821L5.0037 4.0264L1.6531 0.894654C1.44676 0.701782 1.11833 0.701782 0.911985 0.894654C0.696005 1.09653 0.696005 1.43165 0.911985 1.63353L4.62642 5.10535C4.73035 5.20249 4.86129 5.25 4.99697 5.25C5.12266 5.25 5.26148 5.20447 5.36754 5.10535L9.07963 1.63571C9.30531 1.43398 9.30514 1.09681 9.08886 0.894654C8.88251 0.701782 8.55409 0.701782 8.34774 0.894654Z"
+                                        stroke="#fff"
+                                        fill="#fff"
+                                        stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+                <div class="navHeader_linkMenuContainer md-menu-content-bottom-end md-menu-content-small md-menu-content md-theme-default"
+                        x-placement="bottom-end"
+                        style="position: absolute; top: 74px; left: 1312px; will-change: top, left; display: none;">
+                    <div class="md-menu-content-container md-scrollbar md-theme-default">
+                        <ul class="md-list md-theme-default">
+                            <li class="md-list-item md-menu-item md-theme-default">
+                                <div class="md-list-item-default md-list-item-container md-button-clean">
+                                    <div class="md-list-item-content md-ripple md-disabled"><a href="https://letsexchange.io/faq"
+                                                                                                class="navHeader_linkMenuItem">
+                                        FAQ
+                                    </a> </div>
+                                </div>
+                            </li>
+                            <li class="md-list-item md-menu-item md-theme-default">
+                                <div class="md-list-item-default md-list-item-container md-button-clean">
+                                    <div class="md-list-item-content md-ripple md-disabled"><a href="https://letsexchange.io/contacts"
+                                                                                                class="navHeader_linkMenuItem">
+                                        Contacts
+                                    </a> </div>
+                                </div>
+                            </li>
+                            <li class="md-list-item md-menu-item md-theme-default">
+                                <div class="md-list-item-default md-list-item-container md-button-clean">
+                                    <div class="md-list-item-content md-ripple md-disabled"><a href="https://letsexchange.io/transaction-status"
+                                                                                                class="navHeader_linkMenuItem">
+                                        Exchange status
+                                    </a> </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="userButtonMobile">
+                <button class="userItem userItemMobileHelp">
+                    <div class="userBtnInfo">
+                        <span>Help</span>
+                    </div>
+                    <svg width="10"
+                            height="6"
+                            viewBox="0 0 10 6"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="navHeader_linkArrow">
+                        <path d="M8.34774 0.894654L8.34756 0.894821L5.0037 4.0264L1.6531 0.894654C1.44676 0.701782 1.11833 0.701782 0.911985 0.894654C0.696005 1.09653 0.696005 1.43165 0.911985 1.63353L4.62642 5.10535C4.73035 5.20249 4.86129 5.25 4.99697 5.25C5.12266 5.25 5.26148 5.20447 5.36754 5.10535L9.07963 1.63571C9.30531 1.43398 9.30514 1.09681 9.08886 0.894654C8.88251 0.701782 8.55409 0.701782 8.34774 0.894654Z"
+                                stroke="#fff"
+                                fill="#fff"
+                                stroke-width="0.5"></path>
+                    </svg>
+                </button>
+                <div class="userItemsMobileHelp">
+                <div class="md-menu-content-container md-scrollbar md-theme-default">
+                    <ul class="md-list md-theme-default">
+                        <li class="md-list-item md-menu-item md-theme-default">
+                            <div class="md-list-item-default md-list-item-container md-button-clean">
+                                <div class="md-list-item-content md-ripple md-disabled"><a href="https://letsexchange.io/faq"
+                                                                                            class="navHeader_linkMenuItem light">
+                                    FAQ
+                                </a> </div>
+                            </div>
+                        </li>
+                        <li class="md-list-item md-menu-item md-theme-default">
+                            <div class="md-list-item-default md-list-item-container md-button-clean">
+                                <div class="md-list-item-content md-ripple md-disabled"><a href="https://letsexchange.io/contacts"
+                                                                                            class="navHeader_linkMenuItem light">
+                                    Contacts
+                                </a> </div>
+                            </div>
+                        </li>
+                        <li class="md-list-item md-menu-item md-theme-default">
+                            <div class="md-list-item-default md-list-item-container md-button-clean">
+                                <div class="md-list-item-content md-ripple md-disabled"><a href="https://letsexchange.io/transaction-status"
+                                                                                            class="navHeader_linkMenuItem light">
+                                    Exchange status
+                                </a> </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navHeader_linkAccountItem">
+        Account
+    </div>
+    <div class="LanguageSelectMobile">
+        <div tabindex="0"
+                class="multiselect"><span class="arrow"><svg width="10"
+                                                            height="6"
+                                                            viewBox="0 0 10 6"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.34774 0.894654L8.34756 0.894821L5.0037 4.0264L1.6531 0.894654C1.44676 0.701782 1.11833 0.701782 0.911985 0.894654C0.696005 1.09653 0.696005 1.43165 0.911985 1.63353L4.62642 5.10535C4.73035 5.20249 4.86129 5.25 4.99697 5.25C5.12266 5.25 5.26148 5.20447 5.36754 5.10535L9.07963 1.63571C9.30531 1.43398 9.30514 1.09681 9.08886 0.894654C8.88251 0.701782 8.55409 0.701782 8.34774 0.894654Z"
+            stroke="#fff"
+            fill="#fff"
+            stroke-width="0.5"></path>
+    </svg></span>
+            <div class="multiselect__tags">
+                <div class="multiselect__tags-wrap"
+                        style="display:none;"></div>
+                <div class="multiselect__spinner"
+                        style="display:none;"></div>
+                <span class="multiselect__single"><img src="/custom/img/letsexchange/ru.svg"> Ru
+    </span>
+            </div>
+            <div tabindex="-1"
+                    class="multiselect__content-wrapper"
+                    style="max-height:300px;display:none;">
+                <ul class="multiselect__content"
+                    style="display:inline-block;">
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/"><img src="/custom/img/letsexchange/en.svg"> En
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/ru"><img src="/custom/img/letsexchange/ru.svg"> Ru
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/de"><img src="/custom/img/letsexchange/de.svg"> De
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/pt"><img src="/custom/img/letsexchange/pt.svg"> Pt
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/es"><img src="/custom/img/letsexchange/es.svg"> Es
+            </a></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select=""
+                                                            data-selected=""
+                                                            data-deselect=""
+                                                            class="multiselect__option"><a href="https://letsexchange.io/tr"><img src="/custom/img/letsexchange/tr.svg"> Tr
+            </a></span>
+                    </li>
+                    <li style="display:none;"><span class="multiselect__option">No elements found. Consider changing the search query.</span></li>
+                    <li style="display:none;"><span class="multiselect__option">List is empty.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
