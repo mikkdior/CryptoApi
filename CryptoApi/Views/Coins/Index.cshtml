@@ -1,5 +1,5 @@
 ﻿@{
-ViewData["Title"] = "Coins Page";
+    ViewData["Title"] = "Coins Page";
 }
 <!DOCTYPE html>
 <html data-n-head-ssr="" lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
@@ -38,7 +38,8 @@ ViewData["Title"] = "Coins Page";
         <link rel="stylesheet" type="text/css" href="/css/letsexchange.css?31023">
 
         <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -50,8 +51,10 @@ ViewData["Title"] = "Coins Page";
     <body>
 
         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM4DDZM"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM4DDZM"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
         <!-- End Google Tag Manager (noscript) -->
 
         <div data-server-rendered="true" id="__nuxt">
@@ -75,31 +78,10 @@ ViewData["Title"] = "Coins Page";
                                         class="breadcrumbs__list-item">
                                         <a href="/custom/exchange-pairs/" itemprop="item"
                                             class="nuxt-link-active breadcrumbs__list-item-link">
-                                            <span>Cryptocurrency Exchange Pairs</span>
+                                            <span>All Coins</span>
                                             <meta itemprop="name" content="Cryptocurrency Exchange Pairs">
                                             <meta itemprop="position" content="2">
                                         </a>
-                                    </li>
-                                    <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"
-                                        class="breadcrumbs__list-item">
-                                        <a href="/custom/exchange-pairs/eth/usd/info/" itemprop="item"
-                                            class="nuxt-link-active breadcrumbs__list-item-link">
-                                            <span>ETH to USD</span>
-                                            <meta itemprop="name" content="ETH to USD">
-                                            <meta itemprop="position" content="3">
-                                        </a>
-                                    </li>
-                                    <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"
-                                        class="breadcrumbs__list-item">
-                                        <span itemprop="item"
-                                            class="breadcrumbs__list-item-link breadcrumbs__list-item-link--active">
-                                            <span>0.03833524 ETH to USD</span> 
-                                            <meta
-                                                itemprop="item" content="">
-                                            <meta itemprop="name" content="0.03833524 ETH to USD">
-                                            <meta itemprop="position"
-                                                content="3">
-                                        </span>
                                     </li>
                                 </ul>
                             </nav>
@@ -107,40 +89,11 @@ ViewData["Title"] = "Coins Page";
                         <div class="coin-pair-details-page">
                             <div class="coin-pair-details-page__content">
                                 <div class="container">
-                                    <div class="coin-pairs-stats">
-                                        <h1 class="coin-pairs-stats__title">
-                                            <div class="coin-pair-display">
-                                                <div class="coin-pair-display__icons">
-                                                    <span class="coin-icon coin-pair-display__icons-item"
-                                                    style="--size:44px;">
-                                                    <img
-                                                    src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/eth.png"
-                                                    alt="ETH-logo">
-                                                </span> 
-                                                    <span class="coin-icon coin-pair-display__icons-item"
-                                                    style="--size:44px;"><img
-                                                    src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/usd.png"
-                                                    alt="USD-logo">
-                                                </span>
-                                                </div>
-                                                <div class="wrap">
-                                                    <div class="coin-pair-display__text"><span>1</span> ETH
-                                                        /
-                                                        <span class="coin-pair-display__text coin-pair-display__text--light">USD</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            0.03833524 ETH to USD
-                                        </h1>
-                                        <div class="coin-pairs-stats__flex" style="display: grid; grid-gap: 5px; grid-template-columns: 1fr auto;; grid-template-rows: repeat(1, 500px);">
-                                            @await Html.PartialAsync("_GraphRates")
-                                            @await Html.PartialAsync("_CurrencyExchange")
-                                        </div>
-                                    </div>
-                                    @await Html.PartialAsync("_CoinPairList")
-                                    @await Html.PartialAsync("_CoinPairList")
-                                    @await Html.PartialAsync("_CoinPairDetailsText")
-                                    @await Html.PartialAsync("_Faq")
+                                    <h1 class="coin-pairs-page__title">
+                                        All Coins We Work With
+                                    </h1>
+                                    @await Html.PartialAsync("_CoinsTable")
+                                    @await Html.PartialAsync("_Pagination")
                                 </div>
                             </div>
                         </div>

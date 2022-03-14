@@ -30,10 +30,21 @@
     align-items: center;
     justify-content: space-between;
 }
-.dc-benefits-item img {
+.dc-benefits-item .dc-benefits-item-img {
     border: 1px solid black;
     border-radius: 100px;
     padding: 30px;
+}
+.dc-benefits-item img {
+    width: 150px;
+    height: 150px;
+}
+.dc-benefit-title {
+    font-weight: 900;
+}
+.dc-benefits-title {
+    font-size: 32px;
+    font-weight: 600;
 }
 .dc-benefits-item-info {
     width: 400px;
@@ -42,10 +53,10 @@
     margin-top: 10px;
 }
 /*//////////////////////////////////////////*/
-.dc-coin-pairs__title {
+.dc-coin-pairs-table__title, .dc-coins-table__title {
     padding-bottom: 32px;
-    font-weight: 800; 
-    font-size: 32px; 
+    font-weight: 800;
+    font-size: 32px;
     line-height: 64px;
     letter-spacing: -.04em;
 }
@@ -57,4 +68,36 @@
 }
 /*/////////////////////////////////////////////*/
 .dc-faq-btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.8;
+}
+/*/////////////////////////////////////////////*/
+.dc-coins-display .coin-pair-display__icons-item {
+    position: inherit !important;
+}
+.dc-buy-on-sell-icon {
+    transition: all 200ms;
+    position: absolute;
+    top: 15px;
+    right: 55px;
+}
+.dc-available-info {
+    position: relative;
+}
+.dc-available-info .coin-pairs-table__btn {
+    opacity: 0;
+    transition: all 200ms;
+}
+.dc-available-info:hover .dc-buy-on-sell-icon {
+    opacity: 0;
+}
+.data-table__body-item-cell-wrap--btn:hover .coin-pairs-table__btn {
+    opacity: 1;
+}
+.dc-coin-display__icons span{
+    border: 2px solid #fff;
+}
+.dc-coin-display__icons--height {
+
 }
