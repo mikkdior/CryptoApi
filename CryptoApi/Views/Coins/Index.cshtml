@@ -110,13 +110,19 @@ ViewData["Title"] = "Coins Page";
                                     <div class="coin-pairs-stats">
                                         <h1 class="coin-pairs-stats__title">
                                             <div class="coin-pair-display">
-                                                <div class="coin-pair-display__icons"><span class="coin-icon coin-pair-display__icons-item"
-                                                    style="--size:44px;"><img
+                                                <div class="coin-pair-display__icons">
+                                                    <span class="coin-icon coin-pair-display__icons-item"
+                                                    style="--size:44px;">
+                                                    <img
                                                     src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/eth.png"
-                                                    alt="ETH-logo"></span> <span class="coin-icon coin-pair-display__icons-item"
+                                                    alt="ETH-logo">
+                                                </span> 
+                                                    <span class="coin-icon coin-pair-display__icons-item"
                                                     style="--size:44px;"><img
                                                     src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/usd.png"
-                                                    alt="USD-logo"></span></div>
+                                                    alt="USD-logo">
+                                                </span>
+                                                </div>
                                                 <div class="wrap">
                                                     <div class="coin-pair-display__text"><span>1</span> ETH
                                                         /
@@ -141,8 +147,12 @@ ViewData["Title"] = "Coins Page";
                     </main>
                     @await Html.PartialAsync("_Footer")
                     <div class="scroll-to-top-btn" style="display:none;">
-                        <button class="btn scroll-to-top-btn__btn"><span class="btn__content"> <span
-                            class="btn__content-item"><i class="svg-icon scroll-to-top-btn__icon"></i></span> </span>
+                        <button class="btn scroll-to-top-btn__btn">
+                            <span class="btn__content"> 
+                                <span class="btn__content-item">
+                                    <i class="svg-icon scroll-to-top-btn__icon"></i>
+                                </span> 
+                            </span>
                         </button>
                     </div>
                 </div>

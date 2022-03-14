@@ -1,0 +1,60 @@
+.dc-benefits {
+    background: #FFF;
+    margin: auto;
+    padding: 50px 250px;
+    border-radius: 16px;
+    color: black;
+    margin-bottom: 100px;
+}
+.dc-benefits a {
+    color: blue;
+}
+.dc-benefits h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.dc-benefits-list {
+    list-style: none;
+}
+.dc-benefits-list li {
+
+}
+.dc-benefits-list li + li {
+    margin-top: 50px;
+}
+.dc-benefits-list li:nth-child(even) .dc-benefits-item {
+    flex-direction: row-reverse;
+}
+.dc-benefits-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dc-benefits-item img {
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 30px;
+}
+.dc-benefits-item-info {
+    width: 400px;
+}
+.dc-benefits-item-info p+p{
+    margin-top: 10px;
+}
+/*//////////////////////////////////////////*/
+.dc-coin-pairs__title {
+    padding-bottom: 32px;
+    font-weight: 800; 
+    font-size: 32px; 
+    line-height: 64px;
+    letter-spacing: -.04em;
+}
+.header_wrapper a img {
+    width: 213px;
+}
+.default-layout__content-wrapper {
+    margin-top: 50px;
+}
+/*/////////////////////////////////////////////*/
+.dc-faq-btn {
+}

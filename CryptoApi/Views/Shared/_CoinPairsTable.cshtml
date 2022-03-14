@@ -1,0 +1,71 @@
+﻿<div class="coin-pairs-table"  style="padding-bottom: 30px">
+    <div class="data-table__wrap">
+        <table class="data-table">
+            <thead class="data-table__header">
+                <tr class="data-table__header-items">
+                    <th class="data-table__header-item data-table__header-item--pair" style="width:236px;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--left">
+                            <div class="header-title">
+                                Pair
+                            </div>
+                        </div>
+                    </th>
+                    <th class="data-table__header-item data-table__header-item--lastPrice" style="width:200px;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                            <div class="header-title">
+                                Price
+                            </div>
+                        </div>
+                    </th>
+                    <th class="data-table__header-item data-table__header-item--pointer data-table__header-item--changePerc"
+                        style="width:120px;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                            <div class="data-table__header-item-icon"><i
+                                    class="svg-icon data-table__sort-direction"></i></div>
+                            <div class="header-title">
+                                24H %
+                            </div>
+                        </div>
+                    </th>
+                    <th class="data-table__header-item data-table__header-item--high24h" style="width:156px;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                            <div class="header-title">
+                                24h High
+                            </div>
+                        </div>
+                    </th>
+                    <th class="data-table__header-item data-table__header-item--low24h" style="width:156px;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                            <div class="header-title">
+                                24h Low
+                            </div>
+                        </div>
+                    </th>
+                    <th class="data-table__header-item data-table__header-item--pointer data-table__header-item--cap"
+                        style="width:164px;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                            <div class="data-table__header-item-icon"><i
+                                    class="svg-icon data-table__sort-direction"></i></div>
+                            <div class="header-title">
+                                Market cap
+                            </div>
+                            <div class="data-table__header-item-tooltip"><i class="svg-icon"></i></div>
+                        </div>
+                    </th>
+                    <th class="data-table__header-item data-table__header-item--btn" style="width:100%;">
+                        <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                            <div class="header-title">
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="data-table__body">
+                @for (int i = 0; i < 20; i++)
+                {
+                    @await Html.PartialAsync("_CoinPairsTableLine")
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
