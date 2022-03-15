@@ -1,4 +1,6 @@
 ﻿using CryptoApi.Models;
+using CryptoApi.Models.DB;
+using CryptoApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,20 +9,25 @@ namespace CryptoApi.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private CDbM db;
+        private CBlocksHelperVM blocksHelper;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, CDbM db, CBlocksHelperVM blocks)
         {
             _logger = logger;
+
+            this.db = db;
+            this.blocksHelper = blocks;
         }
 
-        public IActionResult Index()
+        public IActionResult Index([FromServices] CHomeVM model)
         {
-            return View();
+            return View(model);
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

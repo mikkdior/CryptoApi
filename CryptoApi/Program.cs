@@ -1,4 +1,6 @@
 using CryptoApi.Models.DB;
+using CryptoApi.Services;
+using CryptoApi.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,18 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<CDbM>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+builder.Services.AddTransient<CCommonM>();
+builder.Services.AddTransient<CCoinsM>();
+builder.Services.AddTransient<CCoinPairsM>();
+
+builder.Services.AddTransient<CBlocksHelperVM>();
+builder.Services.AddTransient<CCoinsVM>();
+builder.Services.AddTransient<CCoinVM>();
+builder.Services.AddTransient<CCoinPairsVM>();
+builder.Services.AddTransient<CCoinPairVM>();
+builder.Services.AddTransient<CHomeVM>();
+
 
 var app = builder.Build();
 

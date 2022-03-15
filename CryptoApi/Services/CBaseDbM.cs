@@ -4,7 +4,7 @@ namespace CryptoApi.Services
 {
     public class CBaseDbM
     {
-        public CDbM db;
+        protected CDbM db;
         public CBaseDbM (CDbM db)
         {
             this.db = db;

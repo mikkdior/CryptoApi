@@ -1,6 +1,6 @@
 ﻿namespace CryptoApi.ViewModels
 {
-    public class CCoinPairM
+    public class CCoinsVM
     {
     }
 }

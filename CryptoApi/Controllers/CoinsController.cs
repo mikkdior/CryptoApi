@@ -1,4 +1,6 @@
 ﻿using CryptoApi.Models;
+using CryptoApi.Models.DB;
+using CryptoApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,24 +8,31 @@ namespace CryptoApi.Controllers;
 public class CoinsController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    public CoinsController(ILogger<HomeController> logger)
+
+    private CDbM db;
+    private CBlocksHelperVM blocksHelper;
+
+    public CoinsController(ILogger<HomeController> logger, CDbM db, CBlocksHelperVM blocks)
     {
         _logger = logger;
+
+        this.db = db;
+        this.blocksHelper = blocks;
     }
 
     [Route("/coins")]
-    public IActionResult Index(int page)
+    public IActionResult Index(int page, [FromServices] CCoinsVM model)
     {
 
 
-        return View();
+        return View(model);
     }
     [Route("/coins/{coin}")]
-    public IActionResult Coin()
+    public IActionResult Coin([FromServices] CCoinVM model)
     {
 
 
-        return View();
+        return View(model);
     }
     public IActionResult Privacy()
     {
