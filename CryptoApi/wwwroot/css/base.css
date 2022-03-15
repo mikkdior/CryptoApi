@@ -2225,6 +2225,7 @@ body.scroll-lock {
     .coin-pairs-stats__flex {
         display: flex!important;
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -4794,34 +4795,36 @@ body.scroll-lock {
 
 .data-table {
     width       : 100%;
-    table-layout: fixed
+    /*table-layout: fixed;*/
 }
 
 .data-table__wrap {
     overflow-x   : auto;
     padding      : 0 4px 4px;
     background   : #f5f5f7;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 .data-table__header-items {
-    background-color: transparent
+    background-color: transparent;
+    
 }
 
 .data-table__header-item {
-    padding           : 12px 0;
-    font-size         : 12px;
-    line-height       : 24px;
-    color             : #89898f;
-    text-transform    : uppercase;
+    padding: 12px 0;
+    font-size: 12px;
+    line-height: 24px;
+    color: #89898f;
+    text-transform: uppercase;
     -webkit-transition: .2s ease-in;
-    -o-transition     : .2s ease-in;
-    transition        : .2s ease-in
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
+    vertical-align: middle;
 }
 
 .data-table__header-item:first-child {
     width       : 44px;
-    padding-left: 16px
+    padding-left: 16px;
 }
 
 .data-table__header-item:nth-child(2) {
@@ -6450,65 +6453,65 @@ body.scroll-lock {
     }
 }
 
-.coin-pairs-table {
+.coin-pairs-table, .coins-table {
     -webkit-transition: .2s ease-in;
-    -o-transition     : .2s ease-in;
-    transition        : .2s ease-in
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in
 }
 
-.coin-pairs-table--loading {
+.coin-pairs-table--loading, .coins-table--loading {
     -webkit-filter: grayscale(1);
-    filter        : grayscale(1);
-    opacity       : .5;
+    filter: grayscale(1);
+    opacity: .5;
     pointer-events: none;
-    cursor        : progress
+    cursor: progress
 }
 
-.coin-pairs-table .pagination {
-    padding-top   : 32px;
+.coin-pairs-table .pagination, .coins-table .pagination {
+    padding-top: 32px;
     padding-bottom: 32px
 }
 
-.coin-pairs-table__link {
+.coin-pairs-table__link, .coins-table__link {
     text-decoration: none;
-    color          : inherit
+    color: inherit
 }
 
-.coin-pairs-table .data-table__body-item-cell-wrap--lastPrice .dual-value-display__text {
-    font-size  : 16px;
+.coin-pairs-table .data-table__body-item-cell-wrap--lastPrice .dual-value-display__text, .coins-table .data-table__body-item-cell-wrap--lastPrice .dual-value-display__text {
+    font-size: 16px;
     line-height: 20px
 }
 
-.coin-pairs-table .data-table__body-item-cell-wrap--lastPrice .dual-value-display__text--secondary {
-    font-size  : 12px;
+.coin-pairs-table .data-table__body-item-cell-wrap--lastPrice .dual-value-display__text--secondary, .coins-table .data-table__body-item-cell-wrap--lastPrice .dual-value-display__text--secondary {
+    font-size: 12px;
     line-height: 16px
 }
 
-.coin-pairs-table .data-table__header-item:first-child {
+.coin-pairs-table .data-table__header-item:first-child, .coins-table .data-table__header-item:first-child {
     padding-left: 67px
 }
 
-.coin-pairs-table-filter-bar {
-    display          : -webkit-box;
-    display          : -ms-flexbox;
-    display          : flex;
-    -webkit-box-pack : justify;
-    -ms-flex-pack    : justify;
-    justify-content  : space-between;
+.coin-pairs-table-filter-bar, .coins-table-filter-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: start;
-    -ms-flex-align   : start;
-    align-items      : flex-start;
-    padding-bottom   : 20px
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-bottom: 20px
 }
 
-.coin-pairs-table-filter-bar__title {
-    font-weight   : 600;
-    font-size     : 28px;
-    line-height   : 36px;
+.coin-pairs-table-filter-bar__title, .coins-table-filter-bar__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
     letter-spacing: -.01em
 }
 
-.coin-pairs-table-filter-bar .search-input {
+.coin-pairs-table-filter-bar .search-input, .coins-table-filter-bar .search-input {
     width: 260px
 }
 

@@ -1,4 +1,4 @@
-﻿<div class="coin-pairs-table"  style="padding-bottom: 30px">
+﻿<div class="coins-table"  style="padding-bottom: 30px">
     <div class="data-table__wrap">
         <table class="data-table">
             <thead class="data-table__header">
@@ -38,7 +38,7 @@
             <tbody class="data-table__body">
                 @for (int i = 0; i < 20; i++)
                 {
-                    @await Html.PartialAsync("_CoinsTableLine")
+                    @await Html.PartialAsync("_CoinListSketch")
                 }
             </tbody>
         </table>

@@ -47,6 +47,11 @@
         </script>
         <!-- End Google Tag Manager -->
 
+        @await Html.PartialAsync("_HeadHomeContent")
+        <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
+        
+        <link rel="stylesheet" type="text/css" href="/css/media.css">
+
     </head>
     <body>
 
@@ -92,7 +97,7 @@
                                     <h1 class="coin-pairs-page__title">
                                         All Coins We Work With
                                     </h1>
-                                    @await Html.PartialAsync("_CoinsTable")
+                                    @await Html.PartialAsync("_CoinList")
                                     @await Html.PartialAsync("_Pagination")
                                 </div>
                             </div>

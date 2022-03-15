@@ -21,8 +21,7 @@
             content="CELR vs ETC ➤ Key differences between Celer Network & Ethereum Classic on letsexchange.io">
         <meta data-n-head="ssr" data-hid="og:title" name="og:title"
             content="CELR vs ETC - Difference Between Celer Network vs Ethereum Classic">
-        <meta data-n-head="ssr" data-hid="twitter:title" name="twitter:title"
-            content="CELR vs ETC - Difference Between Celer Network vs Ethereum Classic">
+        <meta data-n-head="ssr" data-hid="twitter:title" name="twitter:title"content="CELR vs ETC - Difference Between Celer Network vs Ethereum Classic">
         <meta data-n-head="ssr" data-hid="og:description" name="og:description"
             content="CELR vs ETC ➤ Key differences between Celer Network & Ethereum Classic on letsexchange.io">
         <meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description"
@@ -37,6 +36,12 @@
         <link rel="stylesheet" type="text/css" href="/css/theme.css?11487">
         <link rel="stylesheet" type="text/css" href="/css/letsexchange.css?31023">
 
+
+        @await Html.PartialAsync("_HeadHomeContent")
+        <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
+        <link rel="stylesheet" type="text/css" href="/css/media.css">
+
+
         <!-- Google Tag Manager -->
         <script>
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -46,15 +51,15 @@
             })(window,document,'script','dataLayer','GTM-PM4DDZM');
         </script>
         <!-- End Google Tag Manager -->
-
-        @await Html.PartialAsync("_HeadHome")
+        
     </head>
-    <body>
+    <body data-new-gr-c-s-check-loaded="14.1009.0" data-gr-ext-installed="" data-gr-ext-disabled="forever">
         <style type="text/css">html.hs-messages-widget-open.hs-messages-mobile,html.hs-messages-widget-open.hs-messages-mobile body{overflow:hidden!important;position:relative!important}html.hs-messages-widget-open.hs-messages-mobile body{height:100%!important;margin:0!important}#hubspot-messages-iframe-container{display:initial!important;z-index:2147483647;position:fixed!important;bottom:0!important}#hubspot-messages-iframe-container.widget-align-left{left:0!important}#hubspot-messages-iframe-container.widget-align-right{right:0!important}#hubspot-messages-iframe-container.internal{z-index:1016}#hubspot-messages-iframe-container.internal iframe{min-width:108px}#hubspot-messages-iframe-container .shadow-container{display:initial!important;z-index:-1;position:absolute;width:0;height:0;bottom:0;content:""}#hubspot-messages-iframe-container .shadow-container.internal{display:none!important}#hubspot-messages-iframe-container .shadow-container.active{width:400px;height:400px}#hubspot-messages-iframe-container iframe{display:initial!important;width:100%!important;height:100%!important;border:none!important;position:absolute!important;bottom:0!important;right:0!important;background:transparent!important}</style>
         <noscript data-n-head="ssr" data-hid="gtm-noscript" data-pbody="true">
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM4DDZM&" height="0" width="0" style="display:none;visibility:hidden" title="gtm"></iframe>
         </noscript>
         
+
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM4DDZM"height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -65,23 +70,12 @@
             <div id="__layout">
                 <div class="default-layout">
                     @await Html.PartialAsync("_Header")
-                    <main class="default-layout__content-wrapper">
+                    <main class="default-layout__content-wrapper dc-home_wrapper">
                         <section class="home_section" data-v-04936fdc="">
                             <div class="home_wrapper">
                                 <div class="home_container">
-                                    <h1 class="home_title">Fast exchange, no <br>registration, fixed and <br>floating rates. <span>Let's try!</span></h1>
-                                    <div class="home_adv">
-                                        <img src="/_nuxt/img/home-coin-bg.357439f.svg" alt="home-coin-bg" class="home_advCoin"> 
-                                        <div class="home_advItem">
-                                            <div class="home_advItemText">360+<br>supported coins</div>
-                                        </div>
-                                        <div class="home_advItem home_advItemBorders">
-                                            <div class="home_advItemText">Exchange<br>without limits</div>
-                                        </div>
-                                        <div class="home_advItem">
-                                            <div class="home_advItemText">Non-custodial<br>security</div>
-                                        </div>
-                                    </div>
+                                    <h1 class="home_title">Fast exchange, no registration, fixed and floating rates. <span>Let's try!</span></h1>
+                                    @await Html.PartialAsync("_HomeAdv")
                                 </div>
                                 @await Html.PartialAsync("_HomeExchange")
                             </div>
@@ -90,10 +84,20 @@
                             <div class="coin-pair-details-page__content">
                                 <div class="container">
                                     @await Html.PartialAsync("_Benefits")
-                                    <h2 class="dc-coins-table__title">Most Popular Coins</h2>
-                                    @await Html.PartialAsync("_CoinsTable")
-                                    <h2 class="dc-coin-pairs-table__title">Cryptocurrency Exchange Pairs</h2>
-                                    @await Html.PartialAsync("_CoinPairsTable")
+                                    <div class="dc-list-title-wrapper">
+                                        <h2 class="dc-coin-pairs-table__title">Cryptocurrency Exchange Pairs</h2>
+                                        <div class="dc-view-all">
+                                            <a href="/coins">View All</a>
+                                        </div>
+                                    </div>
+                                    @await Html.PartialAsync("_CoinList")
+                                    <div class="dc-list-title-wrapper">
+                                        <h2 class="dc-coins-table__title">Most Popular Coins</h2>
+                                        <div class="dc-view-all">
+                                            <a href="/crypto-pairs">View All</a>
+                                        </div>
+                                    </div>
+                                    @await Html.PartialAsync("_CoinPairList")
                                     @await Html.PartialAsync("_CoinPairDetailsText")
                                     @await Html.PartialAsync("_Faq")
                                 </div>

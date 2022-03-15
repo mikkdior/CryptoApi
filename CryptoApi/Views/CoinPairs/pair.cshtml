@@ -46,6 +46,11 @@ ViewData["Title"] = "CoinPair Page";
         </script>
         <!-- End Google Tag Manager -->
 
+        @await Html.PartialAsync("_HeadHomeContent")
+        <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
+        
+        <link rel="stylesheet" type="text/css" href="/css/media.css">
+
     </head>
     <body>
 
@@ -120,15 +125,17 @@ ViewData["Title"] = "CoinPair Page";
                                         </h1>
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                        @await Html.PartialAsync("_GraphRates")
-                                        @await Html.PartialAsync("_CurrencyExchange")
+                                        @await Html.PartialAsync("_GraphRates") @*GraphRates*@
+                                        @await Html.PartialAsync("_CurrencyExchange") @*CurrencyExchange*@
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                        @await Html.PartialAsync("_GraphRates")
+                                        @await Html.PartialAsync("_GraphRates") @*GraphRates*@
                                     </div>
-                                    @await Html.PartialAsync("_CoinPairList")
-                                    @await Html.PartialAsync("_CoinPairDetailsText")
-                                    @await Html.PartialAsync("_Faq")
+                                    @await Html.PartialAsync("_CoinInfo") @*CoinInfo*@
+                                    @await Html.PartialAsync("_CoinText") @*CoinText*@
+                                    @await Html.PartialAsync("_CoinPairList") @*CoinPairsList*@
+                                    @await Html.PartialAsync("_CoinPairDetailsText") @*HowTo*@
+                                    @await Html.PartialAsync("_Faq") @*Faq*@
                                 </div>
                             </div>
                         </div>
