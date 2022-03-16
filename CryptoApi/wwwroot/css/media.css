@@ -19,17 +19,37 @@
     .dc-benefits {
         padding: 50px 125px;
     }
+    .footer{
+        padding: 0;
+    }
+    .footer_wrapper{
+        padding: 35px 16px 0 16px;
+    }
     
 }
-
+@media (max-width: 1250px){
+    .coin-pairs-table .data-table__header-item:nth-child(4),
+    .coin-pairs-table .data-table__header-item:nth-child(5),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(4),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(5) {
+        display: none;
+    }
+    .container {
+        width: 900px;
+        margin: auto;
+    }
+}
 @media (max-width: 1025px) {
     .coin-pairs-stats__flex {
         align-items: center;
     }
 
-    .container, .home_wrapper {
+    .home_wrapper {
         padding: 0 40px;
     }
+    .container {
+        padding: 0 40px;
+    } 
 
     .dc-benefits {
     }
@@ -38,13 +58,26 @@
         width: 350px;
     }
     .header_wrapper, .footer {
-        padding: 0 16px 0 40px;
+        padding: 0 16px 0 16px;
+    }
+    .footer_wrapper {
+        padding: 35px 0 0 0;
+    }
+    .coin-pairs-table .data-table__header-item:nth-child(6),
+    .coin-pairs-table .data-table__header-item:nth-child(3),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(6),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(3) {
+        display: none;
+    }
+
+    .container {
+        width: 650px;
     }
 }
 
 
 @media (max-width: 949px) {
-    .home_title{
+    h1{
         text-align: center;
         font-size: 38px;
     }
@@ -56,7 +89,7 @@
         width: 730px;
         margin: auto;
     }
-    .dc-list-title-wrapper, .coin-pairs-table, .coins-table, .coin-pair-details-page__text-container, #faq, .footer_wrapper {
+    .dc-list-title-wrapper, .coin-pairs-table, .coins-table, .coin-pair-details-page__text-container, #faq, .footer_wrapper, .pagination, .container, .dc-coin-info, .dc-coin-text {
         margin: auto;
         width: 650px;
     }
@@ -79,6 +112,15 @@
     .widget_root {
         width: 650px
     }
+    .footer_wrapper {
+        width: 650px;
+    }
+    .container {
+        padding: 0 0 0 0;
+        width: 650px;
+        margin: auto;
+    }
+    
 }
 @media (max-width: 800px){
     h2 {
@@ -86,6 +128,9 @@
     }
 }
 @media (max-width: 750px) {
+    .coin-pairs-stats__title{
+        font-size: 38px;
+    }
 
     .widget_root {
         width: 450px
@@ -94,7 +139,7 @@
         width: 530px;
     }
 
-    .dc-list-title-wrapper, .coin-pairs-table, .coins-table, .coin-pair-details-page__text-container, #faq, .footer_wrapper {
+    .dc-list-title-wrapper, .coin-pairs-table, .coins-table, .coin-pair-details-page__text-container, #faq, .footer_wrapper, .pagination, .container, .dc-coin-info, .dc-coin-text {
         margin: auto;
         width: 450px;
     }
@@ -107,10 +152,16 @@
         width: 450px;
         padding: 30px;
     }
+    .footer_wrapper {
+        padding: 35px 0 0 1px;
+    }
+    .navFooter {
+        padding: 40px 0;
+    }
 }
 
 @media (max-width: 530px) {
-    .header_wrapper, .home_wrapper, .dc-list-title-wrapper, .coins-table, .coin-pairs-table, .coin-pair-details-page__text-container, #faq{
+    .header_wrapper, .home_wrapper, .dc-list-title-wrapper, .coins-table, .coin-pairs-table, .coin-pair-details-page__text-container, #faq, .pagination, .container, .dc-coin-info, .dc-coin-text {
         width: 320px;
         margin: auto;
     }
@@ -118,37 +169,88 @@
         width: 320px;
         padding: 30px;
     }
+    .dc-benefits-item {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .dc-benefits-item-info {
+        width: 100%;
+    }
+    .dc-benefits-item-img{
+        margin-bottom: 30px;
+    }
     .widget_root {
         width: 320px
+    }
+    .dc-benefits-list li:nth-child(even) .dc-benefits-item {
+        flex-direction: column;
     }
 
     .header_wrapper, .home_wrapper {
         width: 410px;
     }
     .header_wrapper {
-        width: 320px;
-        padding: 0 0 0 12px;
-    }
-    .dc-benefits-item-info {
-        width: 170px;
+        width: 323px;
+        padding: 0 0 0 1px;
     }
     .header_wrapper-open {
-        padding: 0 0 0 12px;
+        padding: 0 0 0 1px;
     }
     .widget_heading h3{
         text-align: center;
     }
     .footer_wrapper {
         width: 320px;
+        padding: 36px 0 0 0;
     }
     .toggler_main {
         padding: 10px 0px 10px 20px;
     }
+    .navFooter {
+        padding: 40px 20px;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
 
     .dc-benefits {
+    }
+    .widget_root {
+        width: 320px
+    }
+    .header_wrapper, .home_wrapper, .dc-list-title-wrapper, .coins-table, .coin-pairs-table, .coin-pair-details-page__text-container, #faq, .pagination, .container, .dc-coin-info, . dc-coin-text {
+        width: 320px;
+    }
+    .header_wrapper{
+        width: 320px;
+        margin: auto;
+    }
+    .home_wrapper {
+        width: 320px;
+        margin: auto;
+        padding: 0;
+    }
+    .home_section {
+        width: 320px;
+        margin: 0 auto 100px auto;
+    }
+    .footer_wrapper {
+        width: 320px;
+        padding: 35px 0 0 0;
+    }
+    
+    .footer {
+        padding: 0;
+    }
+    .dc-benefits {
+        width: 320px;
+    }
+    .container{
+        padding: 0;
+    }
+    .header_wrapper-open {
+        padding: 0 0 0 1px;
     }
 }
 

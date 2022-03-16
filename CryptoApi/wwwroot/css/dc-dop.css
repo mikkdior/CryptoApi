@@ -98,17 +98,21 @@
 .dc-available-info {
     position: relative;
 }
-    .dc-available-info .coin-pairs-table__btn, .dc-available-info .coins-table__btn {
-        opacity: 0;
-        transition: all 200ms;
-    }
+.dc-available-info .coin-pairs-table__btn, .dc-available-info .coins-table__btn {
+    opacity: 0;
+    transition: all 200ms;
+}
 .dc-available-info:hover .dc-buy-on-sell-icon {
     opacity: 0;
 }
 .data-table__body-item-cell-wrap--btn:hover .coin-pairs-table__btn, .data-table__body-item-cell-wrap--btn:hover .coins-table__btn {
     opacity: 1;
 }
-.dc-coin-display__icons span{
+.data-table__body-item-cell {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.dc-coin-display__icons span {
     border: 2px solid #fff;
 }
 .dc-coin-display__icons--height {
@@ -120,6 +124,7 @@
     background-color: var(--color__grey-200);
     padding: 20px;
     margin-bottom: 50px;
+    overflow: hidden;
 }
 .dc-coin-info-title {
     font-size: 32px;
@@ -128,15 +133,6 @@
 }
 .dc-coin-info-table {
     width: 100%;
-}
-.dc-coin-info-table thead {
-
-}
-.dc-coin-info-table tbody th{
-
-}
-.dc-coin-info-table tbody tr {
-
 }
 .dc-coin-info-table tbody td {
     text-align: center;
@@ -162,9 +158,15 @@
 }
 .dc-coin-text p {
     font-size: 16px;
+    line-height: 160%;
+    color: hsla(0,0%,100%,.6);
+    font-weight: 400;
 }
-.dc-coin-text p+p {
+.dc-coin-text p + p {
     margin-top: 20px;
+}
+.dual-value-display__text span {
+    color: hsla(0,0%,100%,.6);
 }
 /*/////////////////////////////////////////////*/
 :after, :before {
@@ -7702,7 +7704,7 @@ fieldset[disabled] .multiselect {
 .footer_wrapper[data-v-1ed29dc3] {
     display: flex;
     flex-direction: column;
-    padding: 35px 0 0;
+    padding: 35px 0 0 22px;
     max-width: 1310px;
     width: 100%;
     margin: 0 auto
@@ -7710,7 +7712,7 @@ fieldset[disabled] .multiselect {
 
 @media only screen and (min-width:768px) {
     .footer_wrapper[data-v-1ed29dc3] {
-        padding: 40px 0 0
+        padding: 35px 0 0 22px;
     }
 }
 

@@ -837,17 +837,17 @@
 }
 
 .footer_wrapper {
-    padding              : 35px 0 0;
-    display              : -webkit-box;
-    display              : -ms-flexbox;
-    display              : flex;
-    -webkit-box-orient   : vertical;
+    padding: 35px 0 0 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction   : column;
-    flex-direction       : column;
-    max-width            : 1310px;
-    width                : 100%;
-    margin               : 0 auto
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 1310px;
+    width: 100%;
+    margin: 0 auto
 }
 
 .navFooter {

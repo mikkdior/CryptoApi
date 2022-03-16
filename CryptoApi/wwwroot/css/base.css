@@ -2010,9 +2010,9 @@ body.scroll-lock {
     padding-bottom: 148px
 }
 
-.coin-pair-details-page .coin-pairs-stats {
+/*.coin-pair-details-page .coin-pairs-stats {
     padding-bottom: 64px
-}
+}*/
 
 .coin-pair-details-page__coin-pair-history {
     display         : -webkit-box;
@@ -2176,8 +2176,6 @@ body.scroll-lock {
 @media (max-width:767px) {
     .coin-pairs-stats__title {
         padding-bottom: 16px;
-        font-weight   : 600;
-        font-size     : 28px;
         line-height   : 32px;
         letter-spacing: -.04em;
     }
@@ -4794,8 +4792,8 @@ body.scroll-lock {
 }
 
 .data-table {
-    width       : 100%;
-    /*table-layout: fixed;*/
+    width: 100%;
+    table-layout: fixed;
 }
 
 .data-table__wrap {
@@ -6446,10 +6444,11 @@ body.scroll-lock {
 @media (max-width:767px) {
     .coin-pairs-page__title {
         padding-bottom: 16px;
-        font-weight   : 600;
-        font-size     : 28px;
-        line-height   : 32px;
-        letter-spacing: -.04em
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 32px;
+        letter-spacing: -.04em;
+        line-height: 1;
     }
 }
 
