@@ -146,14 +146,14 @@
                             data-reactid=".hbspt-forms-0.1:$0">
                             <label id="label-email-a2f998b2-03d3-4f89-954c-5ce6bde49ad5"
                                 class=""
-                                placeholder="Enter your "
                                 for="email-a2f998b2-03d3-4f89-954c-5ce6bde49ad5"
                                 data-reactid=".hbspt-forms-0.1:$0.0"><span data-reactid=".hbspt-forms-0.1:$0.0.0"></span></label>
                             <legend class="hs-field-desc"
                                 style="display:none;"
                                 data-reactid=".hbspt-forms-0.1:$0.1"></legend>
                             <div class="input"
-                                data-reactid=".hbspt-forms-0.1:$0.$email"><input id="email-a2f998b2-03d3-4f89-954c-5ce6bde49ad5"
+                                data-reactid=".hbspt-forms-0.1:$0.$email">
+                                <input id="email-a2f998b2-03d3-4f89-954c-5ce6bde49ad5"
                                 class="hs-input"
                                 type="email"
                                 name="email"
@@ -169,7 +169,7 @@
                             data-reactid=".hbspt-forms-0.1:$1">
                             <label id="label-visitor_classification-a2f998b2-03d3-4f89-954c-5ce6bde49ad5"
                                 class=""
-                                placeholder="Enter your Visitor classification"
+                                
                                 for="visitor_classification-a2f998b2-03d3-4f89-954c-5ce6bde49ad5"
                                 data-reactid=".hbspt-forms-0.1:$1.0"><span data-reactid=".hbspt-forms-0.1:$1.0.0">Visitor classification</span></label>
                             <legend class="hs-field-desc"
@@ -187,7 +187,6 @@
                             data-reactid=".hbspt-forms-0.3">
                             <div class="input"
                                 data-reactid=".hbspt-forms-0.3.0"><iframe src="https://js.hsforms.net/forms-next/shell-recaptcha"
-                                scrolling="no"
                                 height="70"
                                 width="270"
                                 style="border: none; display: block; overflow: hidden; width: 100%;"></iframe></div>
@@ -224,7 +223,7 @@
             @await Html.PartialAsync("_Copyright")
         </div>
     </footer>
-    <script type="application/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function(){
             document.querySelector('.LanguageSelect').addEventListener('click', function(){
                 this.querySelector('.multiselect').classList.toggle('active');

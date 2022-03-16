@@ -290,6 +290,8 @@
         margin: 0;
     }
 }
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 .LanguageSelect {
     width : 58px;
@@ -348,16 +350,16 @@
 }
 
 .LanguageSelect .multiselect__content-wrapper {
-    right             : calc(50% - 64px);
-    top               : calc(100% + 11px) !important;
-    border            : none;
-    background        : #12122e;
-    -webkit-box-shadow: 0 8px 20px rgba(27, 20, 58, .16);
-    box-shadow        : 0 8px 20px rgba(27, 20, 58, .16);
-    border-radius     : 8px;
-    width             : 128px;
-    padding           : 8px;
-    overflow          : hidden
+right             : calc(50% - 64px);
+top               : calc(100% + 11px) !important;
+border            : none;
+background        : #12122e;
+-webkit-box-shadow: 0 8px 20px rgba(27, 20, 58, .16);
+box-shadow        : 0 8px 20px rgba(27, 20, 58, .16);
+border-radius     : 8px;
+width             : 128px;
+padding           : 8px;
+overflow          : hidden
 }
 
 .LanguageSelect .multiselect__option {

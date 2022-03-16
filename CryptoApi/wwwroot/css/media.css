@@ -26,6 +26,7 @@
         padding: 35px 16px 0 16px;
     }
     
+    
 }
 @media (max-width: 1250px){
     .coin-pairs-table .data-table__header-item:nth-child(4),
@@ -35,11 +36,23 @@
         display: none;
     }
     .container {
-        width: 900px;
+        width: 100%;
         margin: auto;
+    }
+    .home_container {
+        max-width: 500px;
+    }
+    .home_adv img {
+        margin-top: 35px;
     }
 }
 @media (max-width: 1025px) {
+    .home_advItemBorders:before, .home_advItemBorders:after{
+        background: none;
+    }
+    .home_adv img {
+        display: none;
+    }
     .coin-pairs-stats__flex {
         align-items: center;
     }
@@ -63,18 +76,20 @@
     .footer_wrapper {
         padding: 35px 0 0 0;
     }
-    .coin-pairs-table .data-table__header-item:nth-child(6),
-    .coin-pairs-table .data-table__header-item:nth-child(3),
-    .coin-pairs-table .data-table__body-item-cell:nth-child(6),
-    .coin-pairs-table .data-table__body-item-cell:nth-child(3) {
-        display: none;
+    .coin-pairs-table .data-table__header-item:first-child {
+        width: 190px !important;
     }
-
-    .container {
-        width: 650px;
+    .coins-table .data-table__header-item:first-child {
+        width: 50px !important;
+    }
+    .home_container {
+        max-width: 350px;
+    }
+    .home_adv {
+        display: flex;
+        flex-direction: column;
     }
 }
-
 
 @media (max-width: 949px) {
     h1{
@@ -83,6 +98,9 @@
     }
     .home_title span {
         margin-top: 10px;
+    }
+    .home_wrapper {
+        align-items: baseline;
     }
 
     .header_wrapper, .home_wrapper {
@@ -120,7 +138,19 @@
         width: 650px;
         margin: auto;
     }
-    
+    .coin-pairs-table .data-table__header-item:nth-child(6),
+    .coin-pairs-table .data-table__header-item:nth-child(3),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(6),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(3) {
+        display: none;
+    }
+
+    .container {
+        width: 650px;
+    }
+    .home_container {
+        max-width: 650px;
+    }
 }
 @media (max-width: 800px){
     h2 {
@@ -128,12 +158,35 @@
     }
 }
 @media (max-width: 750px) {
-    .coin-pairs-stats__title{
+    .coin-pairs-table .data-table__header-item:first-child {
+        width: 120px !important;
+    }
+
+    .coins-table .data-table__header-item:first-child {
+        width: 50px !important;
+    }
+
+    .data-table__header-item:first-child {
+        width: 115px !important;
+    }
+
+    .coin-pair-display__icons {
+        display: none;
+    }
+
+    .coin-pairs-stats__title {
         font-size: 38px;
+    }
+
+    .data-table__header-item {
+        width: 100px !important;
     }
 
     .widget_root {
         width: 450px
+    }
+    .home_wrapper {
+        align-items: center;
     }
     .header_wrapper, .home_wrapper {
         width: 530px;
@@ -152,14 +205,42 @@
         width: 450px;
         padding: 30px;
     }
+
     .footer_wrapper {
         padding: 35px 0 0 1px;
     }
+
     .navFooter {
         padding: 40px 0;
     }
-}
 
+    .dc-list-title-wrapper {
+        flex-direction: column;
+        padding-bottom: 32px;
+    }
+
+    .dc-coin-pairs-table__title, .dc-coins-table__title {
+        padding-bottom: 0;
+    }
+
+    .dc-list-title-wrapper {
+        align-items: center;
+    }
+    .coins-table .data-table__header-item:nth-child(2),
+    .coins-table .data-table__header-item:nth-child(3),
+    .coins-table .data-table__header-item:nth-child(4) {
+        display: none;
+    }
+    .coins-table .data-table__body-item-cell:first-child,
+    .coins-table .data-table__header-item:first-child {
+        width: 150px !important;
+    }
+    .coins-table .data-table__body-item-cell:nth-child(3) div,
+    .coins-table .data-table__header-item:nth-child(3) div {
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+}
 @media (max-width: 530px) {
     .header_wrapper, .home_wrapper, .dc-list-title-wrapper, .coins-table, .coin-pairs-table, .coin-pair-details-page__text-container, #faq, .pagination, .container, .dc-coin-info, .dc-coin-text {
         width: 320px;
@@ -186,7 +267,6 @@
     .dc-benefits-list li:nth-child(even) .dc-benefits-item {
         flex-direction: column;
     }
-
     .header_wrapper, .home_wrapper {
         width: 410px;
     }
@@ -209,6 +289,23 @@
     }
     .navFooter {
         padding: 40px 20px;
+    }
+    .coin-pairs-table .data-table__header-item:nth-child(2),
+    .coin-pairs-table .data-table__body-item-cell:nth-child(2) {
+        display: none;
+    }
+    .data-table__header-item:first-child {
+        width: 213px !important;
+    }
+    .coins-table .data-table__body-item-cell:nth-child(2),
+    .coins-table .data-table__body-item-cell:nth-child(3) {
+        display: none;
+    }
+    .data-table__body-item-cell:last-child {
+         padding-right: 0; 
+    }
+    .home_widget{
+        width: 320px;
     }
 }
 
@@ -257,55 +354,54 @@
 /*/ //////////////////////////////////////////// /*/
 @media only screen and (min-width: 950px) {
     .home_advItemBorders:before {
-        display: block
+        display: block;
     }
     .home_advItemText br {
-        display: block
+        display: block;
     }
     .home_advItemText {
         padding: 0 0 0 24px;
         font-style: italic;
         font-weight: 700;
-        font-size: 14px
+        font-size: 18px;
     }
     .home_advItem {
         display: flex;
         align-items: center;
         flex: 1 1 auto;
-        padding: 12px 17.5px;
+        padding: 24px 28px;
         border-top: 1px solid #b7f348;
-        border-bottom: 1px solid #b7f348
+        border-bottom: 1px solid #b7f348;
     }
     .home_adv {
         margin: 55px 0 0
     }
     .home_container {
-        max-width: 670px;
+        
         margin: 0;
-        padding: 85px 28px 0 0
+        padding: 85px 0 0 0;
     }
     .home_advItemText:first-line {
         color: #b7f348
     }
     .home_advItemText:before {
-        display: block
+        display: block;
     }
     .home_wrapper {
         flex-direction: row;
-        align-items: flex-start
+        align-items: flex-start;
     }
     .home_title br {
-        display: none
+        display: none;
     }
     .home_title {
         max-width: 610px;
-        font-size: 38px
     }
     .home_advCoin {
-        display: block
+        display: block;
     }
     .home_advItemBorders:after {
-        display: block
+        display: block;
     }
 }
 

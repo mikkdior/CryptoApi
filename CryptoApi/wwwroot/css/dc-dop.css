@@ -1,15 +1,17 @@
 .logo {
     width: 213px;
 }
-.dc-list-title-wrapper{
+.dc-list-title-wrapper {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
+    padding-top: 100px;
 }
 .dc-view-all {
     border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 10px;
+    padding: 12px 22px;
+    margin-right: 20px;
+    border-radius: 15px;
 }
 .dc-benefits {
     background: #FFF;
@@ -17,7 +19,7 @@
     padding: 50px 250px;
     border-radius: 16px;
     color: black;
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
 }
 .dc-benefits a {
     color: blue;
@@ -54,6 +56,7 @@
 }
 .dc-benefit-title {
     font-weight: 900;
+    margin-bottom: 20px;
 }
 .dc-benefits-title {
     font-size: 32px;
@@ -122,7 +125,7 @@
 /*/////////////////////////////////////////////*/
 .dc-coin-info {
     background-color: var(--color__grey-200);
-    padding: 20px;
+    
     margin-bottom: 50px;
     overflow: hidden;
 }
@@ -167,6 +170,27 @@
 }
 .dual-value-display__text span {
     color: hsla(0,0%,100%,.6);
+}
+.collapse__content-wrap {
+    font-size: 16px;
+    color: hsla(0,0%,100%,.6);
+    font-weight: 400;
+}
+.actions {
+    margin-top: -60px;
+}
+.TopScrollBtn{
+    cursor: pointer;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 21px;
+    bottom: 92px;
+    border-radius: 50%;
+    border: 2px solid #b7f348;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*/////////////////////////////////////////////*/
 :after, :before {
@@ -7406,7 +7430,8 @@ fieldset[disabled] .multiselect {
 .home_container {
     width: 100%;
     padding: 0;
-    margin: 0 0 26px
+    margin: 0 0 26px;
+    max-width: 670px;
 }
 
 
@@ -7417,7 +7442,7 @@ fieldset[disabled] .multiselect {
 }
 
 .home_widget {
-    width: 100%
+    width: 480px;
 }
 
 
@@ -7444,7 +7469,7 @@ fieldset[disabled] .multiselect {
 .home_title span {
     font-family: 600;
     color: #b7f348;
-    font-weight: 600;
+    font-weight: 700;
     font-style: italic;
     display: block
 }
