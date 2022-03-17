@@ -27,7 +27,7 @@ namespace CryptoApi.Controllers
 
         public IActionResult Privacy()
         {
-            return View(model);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

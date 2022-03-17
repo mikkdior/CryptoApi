@@ -1,6 +1,6 @@
 ﻿namespace CryptoApi.Models.DB
 {
-    public class CCoinPairsDataM
+    public class CCoinPairDataM
     {
         public uint id { get; set; }
         public uint coin1_id { get; set; }
@@ -10,7 +10,7 @@
         public string slug { get; set; }
         public List<CCoinPairsMetaDataM> meta { get; set; }
 
-        public CCoinPairsDataM ()
+        public CCoinPairDataM ()
         {
             meta = new List<CCoinPairsMetaDataM> ();
         }

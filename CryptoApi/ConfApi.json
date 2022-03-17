@@ -1,0 +1,42 @@
+﻿{
+  "ActualizeTime": "21",
+  "Donors": {
+    "Paprika": {
+      "CommonData": {
+        "Url": "url",
+        "Limit": 2
+      },
+      "Accounts": [
+        {
+          "Key": "asdf"
+        },
+        {
+          "Key": "asdf"
+        }
+      ]
+    },
+    "Gecko": {
+      "CommonData": {
+        "Url": "url",
+        "Limit": 2
+      },
+      "Accounts": [
+        {
+          "Key": "asdf"
+        }
+      ]
+    },
+    "Market": {
+      "CommonData": {
+        "Url": "url",
+        "Limit": 200,
+        "CoinsDataUrl": "https://api.coingecko.com/api/v3/coins/list"
+      },
+      "Accounts": [
+        {
+          "Key": "asdf"
+        }
+      ]
+    }
+  }
+}

@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Buffer\CoinGecko-master\CoinGecko-master\CoinGecko\CoinGecko.csproj" />
+  </ItemGroup>
+
 </Project>

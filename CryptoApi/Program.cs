@@ -1,3 +1,4 @@
+using CryptoApi.Api;
 using CryptoApi.Models.DB;
 using CryptoApi.Services;
 using CryptoApi.ViewModels;
@@ -23,6 +24,8 @@ builder.Services.AddTransient<CCoinPairsVM>();
 builder.Services.AddTransient<CCoinPairVM>();
 builder.Services.AddTransient<CHomeVM>();
 
+builder.Services.AddTransient<CActualizerM>();
+builder.Services.AddSingleton<CApiManager>();
 
 var app = builder.Build();
 
