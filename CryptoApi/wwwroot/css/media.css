@@ -158,6 +158,9 @@
     }
 }
 @media (max-width: 750px) {
+    .dc-benefits-item-info {
+        width: 200px;
+    }
     .coin-pairs-table .data-table__header-item:first-child {
         width: 120px !important;
     }
@@ -217,15 +220,13 @@
     .dc-list-title-wrapper {
         flex-direction: column;
         padding-bottom: 32px;
+        /*align-items: center;*/
     }
 
     .dc-coin-pairs-table__title, .dc-coins-table__title {
         padding-bottom: 0;
     }
-
-    .dc-list-title-wrapper {
-        align-items: center;
-    }
+    
     .coins-table .data-table__header-item:nth-child(2),
     .coins-table .data-table__header-item:nth-child(3),
     .coins-table .data-table__header-item:nth-child(4) {

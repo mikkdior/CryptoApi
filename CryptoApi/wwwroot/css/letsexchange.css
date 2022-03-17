@@ -751,21 +751,24 @@ overflow          : hidden
     -ms-flex-align   : center;
     align-items      : center
 }
+.userBtnInfo{
+    display: block;
+}
 
 .userButtonMobile .userItem {
     -webkit-box-pack: justify;
-    -ms-flex-pack   : justify;
-    justify-content : space-between;
-    color           : #fff;
-    font-size       : 16px;
-    line-height     : 17px;
-    height          : 56px;
-    width           : 100%;
-    font-weight     : 500;
-    padding         : 0 19px 0 16px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 16px;
+    line-height: 17px;
+    height: 56px;
+    width: 100%;
+    font-weight: 500;
+    padding: 0 19px 0 16px;
     background-color: transparent;
-    border          : none;
-    cursor          : pointer
+    border: none;
+    cursor: pointer
 }
 
 .userButtonMobile .userItem .iconName {

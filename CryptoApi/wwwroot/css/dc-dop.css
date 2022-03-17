@@ -1,3 +1,22 @@
+.dc-span-from-div{
+    display: block;
+}
+.hs_email, hs_visitor_classification {
+    display: block;
+}
+.dc-home-exchange-widget-title {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: #05051f;
+    position: relative;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 32px !important;
+}
 .logo {
     width: 213px;
 }
@@ -47,7 +66,7 @@
 }
 .dc-benefits-item .dc-benefits-item-img {
     border: 1px solid black;
-    border-radius: 100px;
+    border-radius: 50%;
     padding: 30px;
 }
 .dc-benefits-item img {
@@ -921,6 +940,7 @@ button:focus {
 }
 
 .md-button .md-ripple {
+    display: block;
     padding: 0 8px;
     display: flex;
     justify-content: center;
@@ -1022,6 +1042,7 @@ button:focus {
 }
 
 .md-button-content {
+    display: block;
     position: relative;
     z-index: 2
 }
@@ -7591,7 +7612,8 @@ fieldset[disabled] .multiselect {
 
 .widget_root .widget_wrapper {
     height: 100%;
-    padding: 20px 24px 24px
+    padding: 20px 24px 24px;
+    display: block;
 }
 
 @media only screen and (min-width:500px) {
@@ -7601,14 +7623,15 @@ fieldset[disabled] .multiselect {
 }
 
 .widget_content {
+    display: block;
     position: relative;
     min-height: 250px
 }
 
-    .widget_content.widget_content-collapsed {
-        margin-top: 0;
-        min-height: 141px
-    }
+.widget_content.widget_content-collapsed {
+    margin-top: 0;
+    min-height: 141px
+}
 
 @media only screen and (min-width:500px) {
     .widget_content {
@@ -7629,7 +7652,8 @@ fieldset[disabled] .multiselect {
 }
 
 .widget_stepper {
-    padding: 16px 0
+    padding: 16px 0;
+    display: block;
 }
 
 .widget_stepper--collapsed {
@@ -7650,6 +7674,7 @@ fieldset[disabled] .multiselect {
 }
 
 .widget_spinnerWrapper {
+    display: block;
     position: absolute;
     right: 50%;
     top: 50%;
@@ -9094,7 +9119,8 @@ body.menuOpen .referral-link_container[data-v-6075e9d9] {
     width: 100%;
     background: #f0f1f5;
     height: 44px;
-    border-radius: 12px
+    border-radius: 12px;
+    display: block;
 }
 
 .toggler_wrapper[data-v-8cf84b20] {
@@ -9918,17 +9944,20 @@ a[data-v-82963a40] {
     align-items: center;
     position: relative
 }
+.widget_heading h3 {
+    margin-left: 15px;
+}
 
-    .widget_heading h3 {
-        flex: 1;
-        margin: 0;
-        padding: 0;
-        font-weight: 700;
-        color: #05051f;
-        position: relative;
-        font-size: 23px;
-        line-height: 32px
-    }
+.widget_heading h3 {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: #05051f;
+    position: relative;
+    font-size: 23px;
+    line-height: 32px
+}
 
 @media only screen and (min-width:500px) {
     .widget_heading h3 {
@@ -9960,6 +9989,7 @@ a[data-v-82963a40] {
     }
 
 .widget_circleWrapper {
+    display: block;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -10029,6 +10059,7 @@ a[data-v-82963a40] {
 }
 
 .widget_menuBar {
+    display: block;
     width: 16px;
     height: 2px;
     background: #05051f;
@@ -10192,10 +10223,12 @@ a[data-v-82963a40] {
 }
 
 .exchange-input_container {
+    display: block
     position: relative
 }
 
 .exchange-input_wrapper {
+    display: block;
     position: relative;
     border-bottom: 2px solid #dadee6;
     transition: all .2s ease
@@ -10785,21 +10818,24 @@ input[data-v-5fb88cd3]:-webkit-autofill, input[data-v-5fb88cd3]:-webkit-autofill
     right: 50%;
     transform: translate(50%,50%);
     z-index: 5;
-    bottom: 0
+    bottom: 0;
 }
 
 .exchange-start_inputs[data-v-690fd2a8] {
-    position: relative
+    position: relative;
+    display: block;
+    margin-top: 10px;
 }
 
 .exchange-start_row[data-v-690fd2a8] {
     margin-bottom: 12px;
-    position: relative
+    position: relative;
+    display: block;
 }
 
-    .exchange-start_row[data-v-690fd2a8]:last-of-type {
-        margin-bottom: 24px
-    }
+.exchange-start_row[data-v-690fd2a8]:last-of-type {
+    margin-bottom: 24px
+}
 
 .exchange-start_row--fields[data-v-690fd2a8] {
     margin-top: 16px
