@@ -10,7 +10,7 @@ public class CoinsController : Controller
     private readonly ILogger<HomeController> _logger;
 
     private CDbM db;
-    private CBlocksHelperVM blocksHelper;
+    private CBlocksHelperVM blocksHelper; 
 
     public CoinsController(ILogger<HomeController> logger, CDbM db, CBlocksHelperVM blocks)
     {
