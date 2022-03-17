@@ -35,9 +35,9 @@ namespace CryptoApi.Services
 
         }
 
-        public async Task RunNowAsync (HttpContext context)
+        public async Task RunNowAsync ()
         {
-            await RefreshDataAsync();
+            await Task.Run(RefreshDataAsync);
         }
 
         public async Task StopAsync ()

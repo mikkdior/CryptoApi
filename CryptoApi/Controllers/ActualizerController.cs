@@ -6,9 +6,13 @@ namespace CryptoApi.Controllers
     public class ActualizerController : Controller
     {
         CActualizerM actualizer;
-        public ActualizerController (CActualizerM act)
+        private CCoinsM coinsModel;
+        private CCoinPairsM coinPairsModel;
+        public ActualizerController (CActualizerM act, CCoinsM coins, CCoinPairsM pair)
         {
             this.actualizer = act;
+            this.coinsModel = coins;
+            this.coinPairsModel = pair;
         }
 
         [Route("/actualizer")]
@@ -34,8 +38,7 @@ namespace CryptoApi.Controllers
         [Route("/actualizer/run-now")]
         public string RunNow()
         {
-            
-            actualizer.RunNowAsync(HttpContext);
+            actualizer.RunNowAsync();
             return "RunNow";
         }
 
@@ -44,6 +47,13 @@ namespace CryptoApi.Controllers
         {
             actualizer.ClearAllAsync();
             return "Clear";
+        }
+
+        [Route("/actualizer/coins-count")]
+        public string CoinsCount()
+        {
+            coinsModel.Count();
+            return $"Coins count: {coinsModel.Count()}";
         }
     }
 }
