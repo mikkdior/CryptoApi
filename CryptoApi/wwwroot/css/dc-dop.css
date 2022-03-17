@@ -1,4 +1,65 @@
-.dc-span-from-div{
+.breadcrumbs__list-item-link {
+    color: #89898f;
+}
+.dc-coin-info {
+    background: #1b143a;
+}
+.dc-coin-info-custom {
+    background: #1b143a;
+}
+.dc-collapse__btn-custom:hover {
+    background: #1f1743;
+}
+.dc-data-table__body-item-custom{
+    background: #171131;
+    border-bottom: 2px solid #1b143a;
+}
+.dc-coin-pair-display__text-custom{
+    color: #fff;
+}
+.dc-data-table__wrap-custom {
+    background: #171131;
+}
+.dc-data-table__body-item-custom:nth-child(2n) {
+    background: #1f1743;
+}
+.data-table__body-item:hover, .dc-data-table__body-item-custom:nth-child(2n):hover {
+    background-color: #1b143a;
+}
+.dc-default-layout {
+    background: #1b143a;
+    color: #fff;
+}
+.dc-btn-exchange-custom {
+    color: #000000;
+    border: 1px solid #b7f348;
+    background-color: #b7f348;
+    -webkit-box-shadow: rgb(0 0 0 / 10%);
+    box-shadow: rgb(0 0 0 / 10%);
+}
+.dc-btn-exchange-custom:not([disabled]):hover, dc-btn-exchange-custom:not(.btn--unscalable, .flip-btn):not([disabled]):hover {
+    color: #000000;
+    background: #b7f348;
+    border: 1px solid #b7f348;
+    box-shadow: initial;
+}
+.dc-collapse-custom:hover {
+    background: #0f0b1f;
+}
+.dc-collapse-custom {
+    background: #1b143a;
+}
+.dc-btn__content-custom i {
+    background: #1b143a;
+}
+.dc-collapse-custom .btn span {
+    color: #FFF;
+}
+.data-table__header {
+    background: #0f0b1f;
+}
+
+.dc-span-from-div {
     display: block;
 }
 .hs_email, hs_visitor_classification {
@@ -31,6 +92,9 @@
     padding: 12px 22px;
     margin-right: 20px;
     border-radius: 15px;
+}
+.dc-view-all a{
+    color: #FFF;
 }
 .dc-benefits {
     background: #FFF;
@@ -67,11 +131,15 @@
 .dc-benefits-item .dc-benefits-item-img {
     border: 1px solid black;
     border-radius: 50%;
-    padding: 30px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    display: flex;
 }
 .dc-benefits-item img {
-    width: 150px;
-    height: 150px;
+    width: 150px !important;
+    height: 150px !important;
+    margin: auto;
 }
 .dc-benefit-title {
     font-weight: 900;
@@ -94,6 +162,7 @@
     font-size: 32px;
     line-height: 64px;
     letter-spacing: -.04em;
+    color: #FFF;
 }
 .header_wrapper a img {
     width: 213px;
@@ -144,9 +213,11 @@
 /*/////////////////////////////////////////////*/
 .dc-coin-info {
     background-color: var(--color__grey-200);
-    
     margin-bottom: 50px;
     overflow: hidden;
+}
+.dc-coin-pair-details-page__text-container-custom h2, .dc-detailed-info-block__title-custom h2 {
+    color: #fff;
 }
 .dc-coin-info-title {
     font-size: 32px;

@@ -1,5 +1,81 @@
-﻿@media (max-width: 1280px) {
-    .coin-pair-details-page__text-container .item {
+﻿@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width : 1280px) {
+    /* IE10 IE11 до 1280px по ширине*/
+    
+    .navFooterPairs, .navFooterSubscribe {
+        width: 322px;
+    }
+    .navFooterPairs {
+        /*margin-left: -50px;*/
+    }
+    .navFooter_links {
+        margin-right: 200px;
+    }
+    
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width : 1250px) {
+    /* IE10 IE11 от 1250px по ширине*/
+    #faq {
+        display: block;
+    }
+    .detailed-info-block__title{
+        margin-bottom: 15px;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width : 1025px) {
+    /* IE10 IE11 от 1280px по ширине*/
+
+    .navFooterPairs, .navFooterSubscribe {
+        width: 322px;
+    }
+
+    .navFooterPairs {
+        /*margin-left: -50px;*/
+    }
+
+    .navFooter_links {
+        margin-right: 200px;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width : 949px) {
+    /* IE10 IE11 до 949px по ширине*/
+
+    
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width : 650px) {
+    /* IE10 IE11 До 650px по ширине*/
+
+    .navFooter{
+        display:block;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width : 100px) {
+    .logo img {
+        width: 213px;
+    }
+    .navFooter {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navHeader_link{
+        /*padding-top: 20px;*/
+    }
+    .breadcrumbs__list-item-link {
+        color: #89898f;
+    }
+    .pagination__list-item, .pagination__list-item:hover {
+        width: 54px;
+        height: 44px;
+        background-color: rgba(183, 243, 72, .1);
+        border-color: #ffffff;
+        color: #ffffff;
+        opacity: 1;
+        border-radius: 8px;
+    }
+}
+/*//////////////////////////////////////////////////////////*/
+
+@media (max-width: 1280px) {
+    .coin-pair-details-page__text-container .item span{
         flex-direction: column;
     }
 

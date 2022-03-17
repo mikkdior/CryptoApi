@@ -806,8 +806,8 @@ body.scroll-lock {
 }
 
 .btn--depressed:not(:hover) {
-    color           : #262629;
-    background-color: #f0f0f2
+    color: #262629;
+    background-color: #b7f348;
 }
 
 .btn--depressed:hover svg path {
@@ -815,9 +815,8 @@ body.scroll-lock {
 }
 
 .btn--primary:not([disabled]):hover {
-    background: -o-linear-gradient(346.51deg, #513cd6, #a94dd6 84.43%);
-    background: linear-gradient(103.49deg, #513cd6, #a94dd6 84.43%);
-    color     : #fff
+    background: #b7f348;
+    color: black;
 }
 
 .btn--primary:not([disabled]):hover svg path {
@@ -2064,18 +2063,20 @@ body.scroll-lock {
 .coin-pair-details-page__description>section>p p:nth-child(2n) {
     padding-bottom: 10px
 }
-
-.coin-pair-details-page__text-container>div {
-    display          : -webkit-box;
-    display          : -ms-flexbox;
-    display          : flex;
+.coin-pair-details-page__text-container h2{
+    color: #fff;
+}
+.coin-pair-details-page__text-container > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: start;
-    -ms-flex-align   : start;
-    align-items      : flex-start;
-    -webkit-box-pack : justify;
-    -ms-flex-pack    : justify;
-    justify-content  : space-between;
-    padding-bottom   : 128px;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 128px;
 }
 @media only screen and (max-width:767px) {
     .coin-pair-details-page__text-container>div {
