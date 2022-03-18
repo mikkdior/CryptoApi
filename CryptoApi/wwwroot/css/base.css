@@ -2188,7 +2188,7 @@ body.scroll-lock {
     display     : block;
     width       : 64px;
     height      : 64px;
-    margin-right: 16px
+    margin-right: 30px;
 }
 
 .coin-pairs-stats__title .coin-pair-display .coin-icon {
@@ -2208,7 +2208,7 @@ body.scroll-lock {
 }
 
 .coin-pairs-stats__title .coin-pair-display .wrap {
-    display: none
+    /*display: none*/
 }
 
 .coin-pairs-stats__flex {
@@ -2378,12 +2378,13 @@ body.scroll-lock {
     display     : flex;
     width       : 36px;
     height      : 36px;
-    margin-right: 16px
+    margin-right: 30px
 }
 
 .coin-pair-display__icons-item {
     position: relative;
-    border  : 2px solid #fff
+    border: 2px solid #fff;
+    height: auto;
 }
 
 .coin-pair-display__icons-item:first-child {
@@ -4802,7 +4803,7 @@ body.scroll-lock {
 
 .data-table__wrap {
     overflow-x   : auto;
-    padding      : 0 4px 4px;
+    /*padding      : 0 4px 4px;*/
     background   : #f5f5f7;
     border-radius: 20px;
 }
@@ -4927,11 +4928,11 @@ body.scroll-lock {
 }
 
 .data-table__header-item--pointer {
-    cursor: pointer
+    /*cursor: pointer*/
 }
 
 .data-table__header-item--pointer:hover {
-    color: #212129
+    /*color: #212129*/
 }
 
 .data-table__body-item {

@@ -1,3 +1,9 @@
+h1 .coin-pair-display span{
+    height: max-content;
+}
+.coin-pairs-stats__title {
+    text-transform: uppercase;
+}
 .pagination__list-item--active {
     background: #b7f348;
     color: black;
@@ -98,7 +104,7 @@
 .dc-view-all {
     border: 1px solid #fff;
     padding: 12px 22px;
-    margin-right: 35px;
+    margin-right: 32px;
     border-radius: 15px;
 }
 .dc-view-all a{
@@ -6058,9 +6064,9 @@ body {
     overscroll-behavior: none
 }
 
-    body::-webkit-scrollbar {
-        display: none
-    }
+body::-webkit-scrollbar {
+    /*display: none*/
+}
 
 *, :after, :before {
     box-sizing: border-box;
