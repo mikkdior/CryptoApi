@@ -15,8 +15,6 @@ namespace CryptoApi.Api.Gecko
         {
             foreach(var coin in coins)
             {
-                Console.WriteLine(coin.Name);
-                Console.WriteLine(coin.MarketData.PriceChange24H);
                 yield return new CApiCoin
                 {
                     Image = coin.Image.Large.AbsoluteUri,
@@ -27,8 +25,9 @@ namespace CryptoApi.Api.Gecko
                     Usd = coin.MarketData.CurrentPrice["usd"].Value,
                     MarketCap = coin.MarketData.MarketCap["usd"].Value,
                     ChangeDay = coin.MarketData.PriceChangePercentage24H.Value,
-                    ChangeWeek = double.Parse(coin.MarketData.PriceChangePercentage7D),
-                    ChangeMonth = double.Parse(coin.MarketData.PriceChangePercentage30D)
+                    ChangeWeek = coin.MarketData.PriceChangePercentage7D,
+                    ChangeMonth = coin.MarketData.PriceChangePercentage30D,
+                    ChangePrice = coin.MarketData.PriceChange24H.Value
                 };
             }
         }

@@ -12,7 +12,8 @@ namespace CryptoApi.Api
         decimal Usd { get; set; }
         decimal MarketCap { get; set; }
         double ChangeDay { get; set; }
-        double ChangeWeek { get; set; }
-        double ChangeMonth { get; set; }
+        string ChangeWeek { get; set; }
+        string ChangeMonth { get; set; }
+        decimal ChangePrice { get; set; }
     }
 }
