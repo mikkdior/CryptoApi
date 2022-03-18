@@ -35,7 +35,9 @@ namespace CryptoApi.Services
                 donor_id = coin.Id,
                 name_full = coin.FullName,
                 name = coin.Name,
-                slug = coin.Name 
+                slug = coin.Name,
+                usd = coin.Usd,
+                image = coin.Image
             });
 
             if (save) await db.SaveChangesAsync();
@@ -57,11 +59,7 @@ namespace CryptoApi.Services
             return  (from c in db.Coins
                     select new CCoinDataVM()
                     {
-                        Id = c.id,
-                        FullName = c.name_full,
-                        Name = c.name,
-                        Title = c.name_full,
-                        Url = $"/coins/{c.slug}"
+                        data = c
                     }).Skip((page - 1)*count).Take(count);
         }
 
@@ -71,12 +69,8 @@ namespace CryptoApi.Services
                     where c.name == name
                     select new CCoinDataVM()
                     {
-                        Id = c.id,
-                        FullName = c.name_full,
-                        Name = c.name,
-                        Title = c.name_full,
-                        Url = $"/coins/{c.slug}"
-                    }).First<CCoinDataVM>();
+                        data = c
+                    }).FirstOrDefault<CCoinDataVM>();
         }
 
         public int GetMaxPage (int count)

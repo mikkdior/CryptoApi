@@ -1,4 +1,6 @@
-﻿namespace CryptoApi.Api
+﻿using CoinGecko.Entities.Response.Shared;
+
+namespace CryptoApi.Api
 {
     public interface IApiCoin
     {
@@ -6,6 +8,7 @@
         string Donor { get; set; }
         string FullName { get; set; }
         string Name { get; set; }
-
+        string Image { get; set; }
+        decimal Usd { get; set; }
     }
 }

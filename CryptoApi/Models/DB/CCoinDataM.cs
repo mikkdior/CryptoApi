@@ -8,6 +8,8 @@
         public string name_full { get; set; }
         public string name { get; set; }
         public string slug { get; set; }
+        public decimal usd { get; set; }
+        public string image { get; set; }
         public List<CCoinsMetaDataM> meta { get; set; }
 
         public CCoinDataM()

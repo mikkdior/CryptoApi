@@ -1,11 +1,11 @@
-﻿namespace CryptoApi.ViewModels
+﻿using CryptoApi.Models.DB;
+
+namespace CryptoApi.ViewModels
 {
     public class CCoinDataVM
     {
-        public uint Id { get; set; }
-        public string FullName { get; set; }
-        public string Name { get; set; }
-        public string Title { get; set; }
-        public string Url { get; set; }
+        public CCoinDataM data { get; set; }
+        public string Title => $"Exchange DODO to USD {data.name_full}";
+        public string Url => $"/coins/{data.slug}";
     }
 }
