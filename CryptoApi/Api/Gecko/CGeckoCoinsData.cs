@@ -15,7 +15,9 @@ namespace CryptoApi.Api.Gecko
         {
             foreach(var coin in coins)
             {
-                yield return new CApiCoin 
+                Console.WriteLine(coin.Name);
+                Console.WriteLine(coin.MarketData.PriceChange24H);
+                yield return new CApiCoin
                 {
                     Image = coin.Image.Large.AbsoluteUri,
                     Donor = key, 

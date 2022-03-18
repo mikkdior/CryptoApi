@@ -38,10 +38,10 @@ namespace CryptoApi.Services
                 slug = coin.Name,
                 usd = coin.Usd,
                 image = coin.Image,
-                market_cap = coin.MarketCap,
-                change_day = coin.ChangeDay,
-                change_week = coin.ChangeWeek,
-                change_month = coin.ChangeMonth
+                market_cap = coin.MarketCap.ToString(),
+                change_day = coin.ChangeDay.ToString(),
+                change_week = coin.ChangeWeek.ToString(),
+                change_month = coin.ChangeMonth.ToString()
             });
 
             if (save) await db.SaveChangesAsync();

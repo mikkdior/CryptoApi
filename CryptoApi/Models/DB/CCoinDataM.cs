@@ -10,10 +10,10 @@
         public string slug { get; set; }
         public decimal usd { get; set; }
         public string image { get; set; }
-        public decimal market_cap { get; set; }
-        public double change_day { get; set; }
-        public double change_week { get; set; }
-        public double change_month { get; set; }
+        public string market_cap { get; set; }
+        public string change_day { get; set; }
+        public string change_week { get; set; }
+        public string change_month { get; set; }
 
         public List<CCoinsMetaDataM> meta { get; set; }
 
