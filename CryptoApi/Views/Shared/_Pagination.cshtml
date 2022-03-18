@@ -1,4 +1,12 @@
-﻿<div class="pagination">
+﻿@model (int Count, int Page);
+
+@*Данные для пагинации:
+ссылка: ?page=2*@
+@Model.Count
+<br />
+@Model.Page
+
+<div class="pagination">
     <ul class="pagination__list">
         <li class="pagination__list-item-wrap"><a href="/custom/exchange-pairs/page2116/" class="nuxt-link-active pagination__list-item">
             2116

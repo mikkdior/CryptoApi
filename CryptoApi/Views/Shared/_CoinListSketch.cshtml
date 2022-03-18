@@ -1,4 +1,7 @@
-﻿<tr class="data-table__body-item dc-data-table__body-item-custom">
+﻿@using CryptoApi.ViewModels
+@model CCoinDataVM
+
+<tr class="data-table__body-item dc-data-table__body-item-custom">
     <td class="data-table__body-item-cell">
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--left data-table__body-item-cell-wrap--pair">
             <a href="/custom/exchange-pairs/micn/eur/info/" class="coins-table__link">
@@ -7,13 +10,13 @@
                         <span class="coin-icon coin-pair-display__icons-item coin-pair-display__icons-item--diagonal"
                         style="--size:32px;">
                             <img
-                            src="/custom/img/letsexchange/table_line_coin_logo.svg"
+                            src="@Model.data.image"
                             alt="table-linecoin-logo">
                         </span> 
                     </div>
                     <div class="wrap">
                         <div class="coin-pair-display__text coin-pair-display__text--bold dc-coin-pair-display__text-custom">
-                            <span>1</span> CryptoCoin
+                            <span>1</span> @Model.data.name_full
                         </div>
                         <div class="coin-pair-display__text coin-pair-display__text--name">
                             Smart coin info 

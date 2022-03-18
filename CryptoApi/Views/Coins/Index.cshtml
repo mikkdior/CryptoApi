@@ -1,4 +1,7 @@
-﻿@{
+﻿@using CryptoApi.ViewModels
+@model CCoinsVM
+
+@{
     ViewData["Title"] = "Coins Page";
 }
 <!DOCTYPE html>
@@ -96,8 +99,8 @@
                                     <h1 class="coin-pairs-page__title">
                                         All Coins We Work With
                                     </h1>
-                                    @await Html.PartialAsync("_CoinList")
-                                    @await Html.PartialAsync("_Pagination")
+                                    @await Html.PartialAsync("_CoinList", Model.coins)
+                                    @await Html.PartialAsync("_Pagination", (Count: Model.MaxPage, Page: Model.Page))
                                 </div>
                             </div>
                         </div>
