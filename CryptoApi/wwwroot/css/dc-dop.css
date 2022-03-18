@@ -1,3 +1,11 @@
+.pagination__list-item--active {
+    background: #b7f348;
+    color: black;
+    cursor: default;
+}
+.pagination__list-item--active:hover {
+    --color__pagination-border: #fff;
+}
 .breadcrumbs__list-item-link {
     color: #89898f;
 }
