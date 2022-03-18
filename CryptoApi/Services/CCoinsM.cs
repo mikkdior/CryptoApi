@@ -37,7 +37,11 @@ namespace CryptoApi.Services
                 name = coin.Name,
                 slug = coin.Name,
                 usd = coin.Usd,
-                image = coin.Image
+                image = coin.Image,
+                market_cap = coin.MarketCap,
+                change_day = coin.ChangeDay,
+                change_week = coin.ChangeWeek,
+                change_month = coin.ChangeMonth
             });
 
             if (save) await db.SaveChangesAsync();
