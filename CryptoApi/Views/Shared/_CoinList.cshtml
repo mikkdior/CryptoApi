@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using CryptoApi.ViewModels
+@model IEnumerable<CCoinDataVM>
+
+<div class="coins-table"  style="padding-bottom: 30px">
+    <div class="data-table__wrap dc-data-table__wrap-custom">
+        @if (Model != null && Model.Count() > 0)
+        {
+            <table class="data-table">
+                <thead class="data-table__header">
+                    <tr class="data-table__header-items">
+                        <th class="data-table__header-item data-table__header-item--pair" style="width:236px;">
+                            <div class="data-table__header-item-wrap data-table__header-item-wrap--left">
+                                <div class="header-title">
+                                    Coin Name
+                                </div>
+                            </div>
+                        </th>
+                        <th class="data-table__header-item data-table__header-item--lastPrice" style="width:200px;">
+                            <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                                <div class="header-title">
+                                    Fiat purchase
+                                </div>
+                            </div>
+                        </th>
+                        <th class="data-table__header-item data-table__header-item--pointer data-table__header-item--changePerc" style="width:120px;">
+                            <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                                <div class="data-table__header-item-icon"><i
+                                        class="svg-icon data-table__sort-direction"></i></div>
+                                <div class="header-title">
+                                    Fixed rate
+                                </div>
+                            </div>
+                        </th>
+                        <th class="data-table__header-item data-table__header-item--high24h" style="width:156px;">
+                            <div class="data-table__header-item-wrap data-table__header-item-wrap--right">
+                                <div class="header-title">
+                                    Available for exchange
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="data-table__body">
+                    @foreach (var coin in Model)
+                    {
+                        @await Html.PartialAsync("_CoinListSketch", coin)
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@using CryptoApi.ViewModels
+@model CCoinDataVM
+
+<tr class="data-table__body-item dc-data-table__body-item-custom">
+    <td class="data-table__body-item-cell">
+        <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--left data-table__body-item-cell-wrap--pair">
+            <a asp-controller="Coins" asp-action="coin" asp-route-coin="@Model.data.name" class="coins-table__link">
+                <div class="coin-pair-display dc-coins-display">
+                    <div class="dc-coin-display__icons dc-coin-display__icons--height">
+                        <span class="coin-icon coin-pair-display__icons-item coin-pair-display__icons-item--diagonal"
+                        style="--size:32px;">
+                            <img
+                            src="@Model.data.image"
+                            alt="@Model.data.name_full">
+                        </span> 
+                    </div>
+                    <div class="wrap">
+                        <div class="coin-pair-display__text coin-pair-display__text--bold dc-coin-pair-display__text-custom">
+                            <span>1</span> @Model.data.name_full
+                        </div>
+                        <div class="coin-pair-display__text coin-pair-display__text--name">
+                            Smart coin info 
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </td>
+    <td class="data-table__body-item-cell">
+        <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--lastPrice">
+            <div class="dual-value-display">
+                <div class="dual-value-display__text">
+                    <span>
+                        <img src="/custom/img/letsexchange/wallet_active.svg" alt="wallet-active">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </td>
+    <td class="data-table__body-item-cell">
+        <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--changePerc">
+            <span>
+                <img src="/custom/img/letsexchange/active_lock.svg" alt="active-lock">
+            </span>
+        </div>
+    </td>
+    <td class="data-table__body-item-cell">
+        <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--btn dc-available-info">
+            <span class="dc-buy-on-sell-icon">
+                <img src="/custom/img/letsexchange/buy-on-sell-on.svg" alt="buy-on-sell-on">
+            </span>
+            <a  asp-controller="Coins" asp-action="coin" asp-route-coin="@Model.data.name" class="btn-link btn btn--link btn--depressed btn--primary btn-exchange coins-table__btn">
+                <span class="btn__content">
+                    Exchange
+                </span>
+            </a>
+        </div>
+    </td>
+</tr>

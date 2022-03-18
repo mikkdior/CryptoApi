@@ -14,7 +14,7 @@ namespace CryptoApi.Api.Gecko
         public async Task<IApiCoinsData> GetCoinsAsync()
         {
             Inc();
-            var coins = await _client.CoinsClient.GetCoinList();
+            var coins = await _client.CoinsClient.GetAllCoinsData();
 
             return new CGeckoCoinsData(coins);
         }

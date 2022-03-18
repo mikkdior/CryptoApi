@@ -23,12 +23,14 @@ public class CoinsController : Controller
     [Route("/coins")]
     public IActionResult Index(int page, [FromServices] CCoinsVM model)
     {
+        ViewBag.Blocks = blocksHelper;
         model.Init(HttpContext);
         return View(model);
     }
     [Route("/coins/{coin}")]
     public IActionResult Coin([FromServices] CCoinVM model)
     {
+        ViewBag.Blocks = blocksHelper;
         model.Init(HttpContext);
         return View(model);
     }

@@ -1,33 +1,33 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap);
 
 :root {
-    --theme-font              : "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --color__bg               : #1b143a;
-    --color__footer-bg        : #05051f;
-    --color__text             : #ffffff;
-    --color__link-hover       : #b7f348;
-    --color__btn-hover        : #b7f348;
-    --color__btn-bg           : #b7f348;
-    --color__grey-100         : #0f0b1f;
-    --color__grey-200         : #171131;
-    --color__grey-300         : #1f1743;
+    --theme-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --color__bg: #1b143a;
+    --color__footer-bg: #05051f;
+    --color__text: #ffffff;
+    --color__link-hover: #b7f348;
+    --color__btn-hover: #b7f348;
+    --color__btn-bg: #b7f348;
+    --color__grey-100: #0f0b1f;
+    --color__grey-200: #171131;
+    --color__grey-300: #1f1743;
     --color__pagination-border: var(--color__text);
-    --color__pagination-text  : vbar(--color__text);
-    --color__pagination-bg    : rgba(183, 243, 72, .1);
-    --color__link             : var(--color__text);
-    --color__link-active      : #000000;
-    --color__btn-text         : #000000;
-    --color__btn-text-hover   : #000000;
-    --theme__radius-1         : 8px;
-    --theme__radius-2         : calc(var(--theme__radius-1) * 2);
-    --theme__btn-radius       : var(--theme__radius-2);
-    --shadow__header          : 0 4px 8px rgb(0 0 0 / 16%);
-    --shadow__btn             : 0 4px 10px rgb(0 0 0 / 10%);
-    --btn-hover-transform     : scale(1.02) translateZ(0) perspective(0.2px);
-    --collapse-radius         : var(--theme__radius-2);
-    --pagination-width        : 54px;
-    --pagination-height       : 44px;
-    --color__btn-exchange-text: var(--color__btn-text)
+    --color__pagination-text: vbar(--color__text);
+    --color__pagination-bg: rgba(183, 243, 72, .1);
+    --color__link: var(--color__text);
+    --color__link-active: #000000;
+    --color__btn-text: #000000;
+    --color__btn-text-hover: #000000;
+    --theme__radius-1: 8px;
+    --theme__radius-2: calc(var(--theme__radius-1) * 2);
+    --theme__btn-radius: var(--theme__radius-2);
+    --shadow__header: 0 4px 8px rgb(0 0 0 / 16%);
+    --shadow__btn: 0 4px 10px rgb(0 0 0 / 10%);
+    --btn-hover-transform: scale(1.02) translateZ(0) perspective(0.2px);
+    --collapse-radius: var(--theme__radius-2);
+    --pagination-width: 54px;
+    --pagination-height: 44px;
+    --color__btn-exchange-text: var(--color__btn-text);
 }
 
 .header {
@@ -290,6 +290,8 @@
         margin: 0;
     }
 }
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 .LanguageSelect {
     width : 58px;
@@ -348,16 +350,16 @@
 }
 
 .LanguageSelect .multiselect__content-wrapper {
-    right             : calc(50% - 64px);
-    top               : calc(100% + 11px) !important;
-    border            : none;
-    background        : #12122e;
-    -webkit-box-shadow: 0 8px 20px rgba(27, 20, 58, .16);
-    box-shadow        : 0 8px 20px rgba(27, 20, 58, .16);
-    border-radius     : 8px;
-    width             : 128px;
-    padding           : 8px;
-    overflow          : hidden
+right             : calc(50% - 64px);
+top               : calc(100% + 11px) !important;
+border            : none;
+background        : #12122e;
+-webkit-box-shadow: 0 8px 20px rgba(27, 20, 58, .16);
+box-shadow        : 0 8px 20px rgba(27, 20, 58, .16);
+border-radius     : 8px;
+width             : 128px;
+padding           : 8px;
+overflow          : hidden
 }
 
 .LanguageSelect .multiselect__option {
@@ -424,19 +426,19 @@
 }
 
 .multiselect__content-wrapper {
-    position                  : absolute;
-    display                   : block;
-    background                : var(--color__grey-200);
-    width                     : 100%;
-    max-height                : 240px;
-    overflow                  : auto;
-    border                    : 1px solid #e8e8e8;
-    border-top                : none;
-    border-bottom-left-radius : 5px;
+    position: absolute;
+    display: block;
+    background: #171131;
+    width: 100%;
+    max-height: 240px;
+    overflow: auto;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+    border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    z-index                   : 50;
+    z-index: 50;
     -webkit-overflow-scrolling: touch;
-    top                       : 100%
+    top: 100%;
 }
 
 .multiselect__content {
@@ -749,21 +751,24 @@
     -ms-flex-align   : center;
     align-items      : center
 }
+.userBtnInfo{
+    display: block;
+}
 
 .userButtonMobile .userItem {
     -webkit-box-pack: justify;
-    -ms-flex-pack   : justify;
-    justify-content : space-between;
-    color           : #fff;
-    font-size       : 16px;
-    line-height     : 17px;
-    height          : 56px;
-    width           : 100%;
-    font-weight     : 500;
-    padding         : 0 19px 0 16px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 16px;
+    line-height: 17px;
+    height: 56px;
+    width: 100%;
+    font-weight: 500;
+    padding: 0 19px 0 16px;
     background-color: transparent;
-    border          : none;
-    cursor          : pointer
+    border: none;
+    cursor: pointer
 }
 
 .userButtonMobile .userItem .iconName {
@@ -837,17 +842,17 @@
 }
 
 .footer_wrapper {
-    padding              : 35px 0 0;
-    display              : -webkit-box;
-    display              : -ms-flexbox;
-    display              : flex;
-    -webkit-box-orient   : vertical;
+    padding: 35px 0 0 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction   : column;
-    flex-direction       : column;
-    max-width            : 1310px;
-    width                : 100%;
-    margin               : 0 auto
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 1310px;
+    width: 100%;
+    margin: 0 auto
 }
 
 .navFooter {

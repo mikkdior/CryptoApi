@@ -1,11 +1,8 @@
 ﻿<div class="default-layout__header-wrapper">
     <header class="header header_scrolled">
         <div class="header_wrapper">
-            <a href="https://letsexchange.io/"
-               aria-current="page"
-               class="logo nuxt-link-exact-active nuxt-link-active">
-                <img src="/custom/img/letsexchange/logo-color-ukraine.0fb7621.svg"
-                     alt="site-logo">
+            <a asp-controller="Home" asp-action="Index" aria-current="page" class="logo nuxt-link-exact-active nuxt-link-active">
+               <img src="/custom/img/letsexchange/logo-color-ukraine.svg"alt="site-logo">
             </a>
             @await Html.PartialAsync("_MainMenu")
             <div class="menuToggler">

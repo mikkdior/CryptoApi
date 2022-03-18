@@ -1,5 +1,63 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model CCoinDataVM
+
+<div class="dc-coin-info dc-coin-info-custom">
+    <h2 class="dc-coin-info-title">@Model.data.name_full info</h2>
+    <table class="dc-coin-info-table">
+        <tbody>
+            <tr>
+                <th>
+                    <div class="dc-coin-info-table-header">
+                        Week
+                    </div>
+                </th>
+                <th>
+                    <div class="dc-coin-info-table-header">
+                        Month
+                    </div>
+                </th>
+                <th>
+                    <div class="dc-coin-info-table-header">
+                        Day
+                    </div>
+                </th>
+                <th>
+                    <div class="dc-coin-info-table-header">
+                        Market Cap
+                    </div>
+                </th>
+                <th>
+                    <div class="dc-coin-info-table-header">
+                        24h Change
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dc-coin-info-table-value">
+                        @Model.data.change_week%
+                    </div>
+                </td>
+                <td>
+                    <div class="dc-coin-info-table-value">
+                        @Model.data.change_month%
+                    </div>
+                </td>
+                <td>
+                    <div class="dc-coin-info-table-value">
+                        @Model.data.change_day%
+                    </div>
+                </td>
+                <td>
+                    <div class="dc-coin-info-table-value">
+                        $@Model.data.market_cap
+                    </div>
+                </td>
+                <td>
+                    <div class="dc-coin-info-table-value">
+                        @Model.data.change_price
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
