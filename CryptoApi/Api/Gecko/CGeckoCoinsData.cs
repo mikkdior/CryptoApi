@@ -22,7 +22,11 @@ namespace CryptoApi.Api.Gecko
                     Id = coin.Id, 
                     FullName = coin.Name, 
                     Name = coin.Symbol,
-                    Usd = coin.MarketData.CurrentPrice["usd"].Value
+                    Usd = coin.MarketData.CurrentPrice["usd"].Value,
+                    MarketCap = coin.MarketData.MarketCap["usd"].Value,
+                    ChangeDay = coin.MarketData.PriceChangePercentage24H.Value,
+                    ChangeWeek = double.Parse(coin.MarketData.PriceChangePercentage7D),
+                    ChangeMonth = double.Parse(coin.MarketData.PriceChangePercentage30D)
                 };
             }
         }

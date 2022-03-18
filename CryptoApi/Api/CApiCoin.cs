@@ -11,5 +11,9 @@ namespace CryptoApi.Api
         public string Name { get; set; }
         public string Image { get; set; }
         public decimal Usd { get; set; }
+        public decimal MarketCap { get; set; }
+        public double ChangeDay { get; set; }
+        public double ChangeWeek { get; set; }
+        public double ChangeMonth { get; set; }
     }
 }

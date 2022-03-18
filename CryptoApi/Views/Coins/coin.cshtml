@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CCoinVM
+
+@{
 ViewData["Title"] = "Coin Page";
 }
 <!DOCTYPE html>
@@ -106,30 +108,29 @@ ViewData["Title"] = "Coin Page";
                                                 <span class="coin-pair-display__icons">
                                                     <span class="coin-icon coin-pair-display__icons-item"
                                                         style="--size:44px;"><img
-                                                        src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/svg/black/generic.svg"
-                                                        alt="DODO-logo"></span> <span class="coin-icon coin-pair-display__icons-item"
+                                                        src="@Model.coin.data.image"
+                                                        alt="@Model.coin.data.name-logo"></span> <span class="coin-icon coin-pair-display__icons-item"
                                                         style="--size:44px;"><img
                                                         src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/usd.png"
                                                         alt="USD-logo">
                                                     </span>
                                                 </span>
                                                 <span class="wrap">
-                                                    <span class="coin-pair-display__text"><span>1</span> DODO
+                                                    <span class="coin-pair-display__text"><span>1</span> @Model.coin.data.name
                                                         /
                                                         <span class="coin-pair-display__text coin-pair-display__text--light">USD</span>
                                                     </span>
                                                 </span>
                                             </span>
-                                            Ethereum
                                         </h1>
                                         <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                            @await Html.PartialAsync("_GraphRates") @*GraphRates*@
-                                            @*@await Html.PartialAsync("_CurrencyExchange")*@
+                                            @await Html.PartialAsync("_GraphRates", Model.coin) @*GraphRates*@
+                                            @await Html.PartialAsync("_CurrencyExchange", Model.coin)
                                         </div>
                                     </div>
-                                    @await Html.PartialAsync("_CoinInfo") @*CoinInfo*@
+                                    @await Html.PartialAsync("_CoinInfo", Model.coin) @*CoinInfo*@
                                     @await Html.PartialAsync("_CoinText") @*CoinText*@
-                                    @await Html.PartialAsync("_CoinList") @*CoinList*@
+                                    @await Html.PartialAsync("_CoinList", ((CBlocksHelperVM)ViewBag.Blocks).GetCoinList(10)) @*CoinList*@
                                     @await Html.PartialAsync("_CoinPairDetailsText") @*HowTo*@
                                     @await Html.PartialAsync("_Faq") @*Faq*@
                                 </div>
