@@ -1,7 +1,7 @@
 h1 .coin-pair-display span{
     height: max-content;
 }
-.coin-pairs-stats__title {
+.dc-coin-title {
     text-transform: uppercase;
 }
 .pagination__list-item--active {
@@ -13378,7 +13378,7 @@ iframe#_hjRemoteVarsFrame {
     height: 32px;
     flex: 1 0 auto;
     border-radius: 50%;
-    margin: 0 18px 0 0
+    /*margin: 0 18px 0 0*/
 }
 
 .table[data-v-308dc461] {
@@ -13625,14 +13625,6 @@ iframe#_hjRemoteVarsFrame {
     color: hsla(0,0%,100%,.6)
 }
 
-.coin-icon {
-    max-width: 32px;
-    width: 32px;
-    height: 32px;
-    flex: 1 0 auto;
-    border-radius: 50%;
-    margin: 0 18px 0 0
-}
 
 .table {
     width: 100%;

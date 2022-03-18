@@ -115,14 +115,15 @@ ViewData["Title"] = "Coin Page";
                                                         alt="USD-logo">
                                                     </span>
                                                 </span>
-                                                @*<span class="wrap">
-                                                    <span class="coin-pair-display__text"><span>1</span> 
+                                                <span class="wrap">
+                                                    <span class="coin-pair-display__text"><span>1</span> @Model.coin.data.name
                                                         /
                                                         <span class="coin-pair-display__text coin-pair-display__text--light">USD</span>
                                                     </span>
-                                                </span>*@
+                                                </span>
+                                                Exchange&nbsp;<span class="dc-coin-title">@Model.coin.data.name</span>&nbsp;to USD
                                             </span>
-                                            @Model.coin.data.name
+                                            
                                         </h1>
                                         <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
                                             @await Html.PartialAsync("_GraphRates", Model.coin) @*GraphRates*@
