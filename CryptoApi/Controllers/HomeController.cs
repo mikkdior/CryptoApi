@@ -22,6 +22,7 @@ namespace CryptoApi.Controllers
 
         public IActionResult Index([FromServices] CHomeVM model)
         {
+            ViewBag.Blocks = blocksHelper;
             return View(model);
         }
 

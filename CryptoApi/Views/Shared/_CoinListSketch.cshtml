@@ -4,14 +4,14 @@
 <tr class="data-table__body-item dc-data-table__body-item-custom">
     <td class="data-table__body-item-cell">
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--left data-table__body-item-cell-wrap--pair">
-            <a href="/custom/exchange-pairs/micn/eur/info/" class="coins-table__link">
+            <a asp-controller="Coins" asp-action="coin" asp-route-coin="@Model.data.name" class="coins-table__link">
                 <div class="coin-pair-display dc-coins-display">
                     <div class="dc-coin-display__icons dc-coin-display__icons--height">
                         <span class="coin-icon coin-pair-display__icons-item coin-pair-display__icons-item--diagonal"
                         style="--size:32px;">
                             <img
                             src="@Model.data.image"
-                            alt="table-linecoin-logo">
+                            alt="@Model.data.name_full">
                         </span> 
                     </div>
                     <div class="wrap">
@@ -49,7 +49,7 @@
             <span class="dc-buy-on-sell-icon">
                 <img src="/custom/img/letsexchange/buy-on-sell-on.svg" alt="buy-on-sell-on">
             </span>
-            <a href="/custom/exchange-pairs/micn/eur/info/" class="btn-link btn btn--link btn--depressed btn--primary btn-exchange coins-table__btn">
+            <a  asp-controller="Coins" asp-action="coin" asp-route-coin="@Model.data.name" class="btn-link btn btn--link btn--depressed btn--primary btn-exchange coins-table__btn">
                 <span class="btn__content">
                     Exchange
                 </span>

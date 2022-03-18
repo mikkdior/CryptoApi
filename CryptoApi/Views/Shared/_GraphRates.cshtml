@@ -1,4 +1,6 @@
-﻿<div class="coin-pairs-stats__wrap">
+﻿@model CCoinDataVM
+
+<div class="coin-pairs-stats__wrap">
     <div class="coin-pairs-real-time-price-chart">
         <div class="coin-pairs-real-time-price-chart__chart">
             <div class='tradingview-widget-container'>
@@ -10,7 +12,7 @@
                     {
                         'symbols': [
                             [
-                                'ETCUSD'
+                                '@Model.data.name'
                             ]
                         ],
                         'chartOnly': false,
