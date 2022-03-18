@@ -1,6 +1,9 @@
 h1 .coin-pair-display span{
     height: max-content;
 }
+.dc-coin-pair-display__icons{
+    margin-right: 40px;
+}
 .dc-coin-title {
     text-transform: uppercase;
 }
@@ -221,7 +224,7 @@ h1 .coin-pair-display span{
     border: 2px solid #fff;
 }
 .dc-coin-display__icons--height {
-
+    margin-right: 20px;
 }
 
 /*/////////////////////////////////////////////*/

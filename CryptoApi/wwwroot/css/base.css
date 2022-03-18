@@ -2378,7 +2378,7 @@ body.scroll-lock {
     display     : flex;
     width       : 36px;
     height      : 36px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .coin-pair-display__icons-item {
