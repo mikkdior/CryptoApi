@@ -28,7 +28,6 @@ namespace CryptoApi.Services
         public async Task AddCoinAsync(IApiCoin coin, bool save = true)
         {
             if (HasCoin(coin)) return;
-
             await db.Coins.AddAsync(new CCoinDataM()
             {
                 donor = coin.Donor,
@@ -37,7 +36,12 @@ namespace CryptoApi.Services
                 name = coin.Name,
                 slug = coin.Name,
                 usd = coin.Usd,
-                image = coin.Image
+                image = coin.Image,
+                market_cap = coin.MarketCap.ToString(),
+                change_day = coin.ChangeDay.ToString(),
+                change_week = coin.ChangeWeek.ToString(),
+                change_month = coin.ChangeMonth.ToString(),
+                change_price = coin.ChangePrice.ToString()
             });
 
             if (save) await db.SaveChangesAsync();
