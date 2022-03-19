@@ -21,10 +21,10 @@ namespace CryptoApi.ViewModels
         {
             return coinsModel.GetCoins(page, count);
         }
-        public static List<(string Url, string Title)> GetPagination(int max_page, int page, int max_links_per_page, string link_start)
+        public List<(string Url, string Title)> GetPagination(int max_page, int page, string link_start = "?page=")
         {
             List<(string Url, string Title)> pag_items = new List<(string Url, string Title)>();
-
+            int max_links_per_page = 10;
             int dott_backward_page = (int)Math.Ceiling(decimal.Divide(1 + page, 2));
             int dott_forward_page = (int)Math.Ceiling(decimal.Divide(max_page + page, 2));
 

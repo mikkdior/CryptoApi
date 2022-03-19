@@ -1,4 +1,5 @@
-﻿@{
+﻿@inject CBlocksHelperVM CBlocksHelperVM
+@{
     ViewData["Title"] = "Home Page";
 }
 <!DOCTYPE html>
@@ -100,7 +101,7 @@
                                             <a asp-controller="Coins" asp-action="Index">View All</a>
                                         </div>
                                     </div>
-                                    @await Html.PartialAsync("_CoinList", ((CBlocksHelperVM)ViewBag.Blocks).GetCoinList(10))
+                                    @await Html.PartialAsync("_CoinList", CBlocksHelperVM.GetCoinList(10))
                                     @await Html.PartialAsync("_CoinPairDetailsText")
                                     @await Html.PartialAsync("_Faq")
                                 </div>

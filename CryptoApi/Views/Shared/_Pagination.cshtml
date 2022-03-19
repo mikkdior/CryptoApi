@@ -1,18 +1,16 @@
 ﻿@using CryptoApi.ViewModels
 @inject IConfiguration conf
-@model (int Count, int Page)
+@model List<(string Url, string Title)>
 @{
-    int pag_items_per_page = 10;
-    string page_query_key = "?page=";
-    List<(string Url, string Title)> pag_items = CBlocksHelperVM.GetPagination(Model.Count, Model.Page, pag_items_per_page, page_query_key);
+    string current_page = Context.Request.Query["page"] == Microsoft.Extensions.Primitives.StringValues.Empty ? "1" : Context.Request.Query["page"];
 }
 @if (Model.Count > 1)
 {
     <div class="pagination">
         <ul class="pagination__list">
-            @foreach ((string Url, string Title) item in pag_items)
+            @foreach ((string Url, string Title) item in Model)
             {
-                if (item.Title == Model.Page.ToString())
+                if (item.Title == current_page)
                 {
                     <li class="pagination__list-item-wrap">
                         <span class="pagination__list-item pagination__list-item--active">
