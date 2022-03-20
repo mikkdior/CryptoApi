@@ -26,8 +26,10 @@ namespace CryptoApi.Services
         public async Task RefreshDataAsync ()
         {
             var coins = api.GetCoinsAsync().Result;
-            
             await coinsModel.AddCoinsAsync(coins);
+
+            var pairs = api.GetCoinPairsAsync().Result;
+            await coinPairsModel.AddPairsAsync(pairs);
         }
 
         public async Task RunAsync ()
@@ -38,6 +40,19 @@ namespace CryptoApi.Services
         public async Task RunNowAsync ()
         {
             await Task.Run(RefreshDataAsync);
+        }
+
+        public async Task LoadCoinsAsync()
+        {
+        }
+
+        public async Task LoadPairsAsync()
+        {
+        }
+
+        public async Task TestAsync()
+        {
+            await Task.Run(api.TestAsync);
         }
 
         public async Task StopAsync ()
@@ -51,8 +66,15 @@ namespace CryptoApi.Services
             await db.SaveChangesAsync();
         }
 
+        public async Task ClearPairsAsync()
+        {
+            db.CoinPairs.RemoveRange(db.CoinPairs);
+            await db.SaveChangesAsync();
+        }
+
         public async Task ClearAllAsync()
         {
+            await ClearPairsAsync();
             await ClearCoinsAsync();
         }
     }

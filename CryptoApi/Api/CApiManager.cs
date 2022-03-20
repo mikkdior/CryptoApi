@@ -81,9 +81,14 @@ namespace CryptoApi.Api
             return await trueApi.GetCoinsAsync();
         }
 
-        public async Task GetPairAsync()
+        public async Task<IApiCoinPairsData> GetCoinPairsAsync()
         {
+            return await trueApi.GetCoinPairsAsync();
+        }
 
+        public async Task TestAsync()
+        {
+            await trueApi.TestAsync();
         }
     }
 }

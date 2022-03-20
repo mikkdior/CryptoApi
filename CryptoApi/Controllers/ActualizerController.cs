@@ -52,8 +52,20 @@ namespace CryptoApi.Controllers
         [Route("/actualizer/coins-count")]
         public string CoinsCount()
         {
-            coinsModel.Count();
             return $"Coins count: {coinsModel.Count()}";
+        }
+
+        [Route("/actualizer/pairs-count")]
+        public string PairsCount()
+        {
+            return $"Pairs count: {coinPairsModel.Count()}";
+        }
+
+        [Route("/actualizer/test")]
+        public string Test()
+        {
+            actualizer.TestAsync();
+            return "test";
         }
     }
 }

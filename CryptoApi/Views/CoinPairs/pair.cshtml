@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CCoinPairVM
+
+@{
 ViewData["Title"] = "CoinPair Page";
 }
 <!DOCTYPE html>
@@ -125,13 +127,13 @@ ViewData["Title"] = "CoinPair Page";
                                         </h1>
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                        @await Html.PartialAsync("_GraphRates") @*GraphRates*@
-                                        @await Html.PartialAsync("_CurrencyExchange") @*CurrencyExchange*@
+                                        @*@await Html.PartialAsync("_GraphRates")*@ @*GraphRates*@
+                                        @*@await Html.PartialAsync("_CurrencyExchange")*@ @*CurrencyExchange*@
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                        @await Html.PartialAsync("_GraphRates") @*GraphRates*@
+                                        @*@await Html.PartialAsync("_GraphRates")*@ @*GraphRates*@
                                     </div>
-                                    @await Html.PartialAsync("_CoinInfo") @*CoinInfo*@
+                                    @*@await Html.PartialAsync("_CoinInfo")*@ @*CoinInfo*@
                                     @await Html.PartialAsync("_CoinText") @*CoinText*@
                                     @await Html.PartialAsync("_CoinPairList") @*CoinPairsList*@
                                     @await Html.PartialAsync("_CoinPairDetailsText") @*HowTo*@

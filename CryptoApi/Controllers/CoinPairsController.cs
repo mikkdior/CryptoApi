@@ -23,16 +23,19 @@ public class CoinPairsController : Controller
     [Route("/crypto-pairs")]
     public IActionResult Index(int page, [FromServices] CCoinPairsVM model)
     {
+        ViewBag.Blocks = blocksHelper;
+        model.Init(HttpContext);
 
-
-        return View();
+        return View(model);
     }
 
     [Route("/crypto-pairs/{coin1}-to-{coin2}")]
     public IActionResult Pair([FromServices] CCoinPairVM model)
     {
+        ViewBag.Blocks = blocksHelper;
+        model.Init(HttpContext);
 
-        return View();
+        return View(model);
     }
     public IActionResult Privacy()
     {

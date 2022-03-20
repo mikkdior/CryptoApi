@@ -9,17 +9,23 @@ namespace CryptoApi.ViewModels
         WebApplication app;
         IConfiguration conf;
         CCoinsM coinsModel;
+        CCoinPairsM pairsModel;
 
-        public CBlocksHelperVM (IConfiguration conf, CDbM db, CCoinsM coins_model)
+        public CBlocksHelperVM (IConfiguration conf, CDbM db, CCoinsM coins_model, CCoinPairsM pairs_model)
         {
             this.db = db;
             this.coinsModel = coins_model;
+            this.pairsModel = pairs_model;
             this.conf = conf;
         }
 
         public IEnumerable<CCoinDataVM> GetCoinList(int count, int page = 1)
         {
             return coinsModel.GetCoins(page, count);
+        }
+        public IEnumerable<CCoinPairDataVM> GetPairList(int count, int page = 1)
+        {
+            return pairsModel.GetPairs(page, count);
         }
         public List<(string Url, string Title)> GetPagination(int max_page, int page, string link_start = "?page=")
         {

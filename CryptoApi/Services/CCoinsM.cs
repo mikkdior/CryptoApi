@@ -17,6 +17,18 @@ namespace CryptoApi.Services
 
             return has_coin.Count<CCoinDataM>() > 0;
         }
+        public Dictionary<string, CCoinDataM> GetCoinsByNames(string[] names)
+        {
+            var coins = db.Coins.Where(c => names.Contains(c.name)).Select(c => c).ToList();
+            var coins_dict = new Dictionary<string, CCoinDataM>();
+            
+            foreach (var coin in coins)
+            {
+                coins_dict.TryAdd(coin.name, coin);
+            }
+
+            return coins_dict;
+        }
         public bool HasCoin (CCoinDataM coin)
         {
             return HasCoin(coin.donor, coin.name);
@@ -28,6 +40,7 @@ namespace CryptoApi.Services
         public async Task AddCoinAsync(IApiCoin coin, bool save = true)
         {
             if (HasCoin(coin)) return;
+
             await db.Coins.AddAsync(new CCoinDataM()
             {
                 donor = coin.Donor,

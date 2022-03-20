@@ -4,5 +4,7 @@
     {
         bool isLimit { get; }
         Task<IApiCoinsData> GetCoinsAsync();
+        Task<IApiCoinPairsData> GetCoinPairsAsync();
+        Task TestAsync();
     }
 }

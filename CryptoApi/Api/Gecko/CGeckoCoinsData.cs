@@ -5,15 +5,18 @@ namespace CryptoApi.Api.Gecko
 {
     public class CGeckoCoinsData : IApiCoinsData
     {
-        IReadOnlyList<CoinFullData> coins;
+        IReadOnlyList<CoinFullData> coins_full;
+        IReadOnlyList<CoinList> coins;
+
         string key = "gecko";
-        public CGeckoCoinsData (IReadOnlyList<CoinFullData> coins)
+        public CGeckoCoinsData (IReadOnlyList<CoinFullData> coins_full, IReadOnlyList<CoinList> coins)
         {
             this.coins = coins;
+            this.coins_full = coins_full;
         }
         public IEnumerator<IApiCoin> GetEnumerator()
         {
-            foreach(var coin in coins)
+            foreach(var coin in coins_full)
             {
                 yield return new CApiCoin
                 {
@@ -28,6 +31,24 @@ namespace CryptoApi.Api.Gecko
                     ChangeWeek = coin.MarketData.PriceChangePercentage7D,
                     ChangeMonth = coin.MarketData.PriceChangePercentage30D,
                     ChangePrice = coin.MarketData.PriceChange24H.Value
+                };
+            }
+
+            foreach (var coin in coins)
+            {
+                yield return new CApiCoin
+                {
+                    Image = "",
+                    Donor = key,
+                    Id = coin.Id,
+                    FullName = coin.Name,
+                    Name = coin.Symbol,
+                    Usd = 0,
+                    MarketCap = 0,
+                    ChangeDay = 0,
+                    ChangeWeek = "",
+                    ChangeMonth = "",
+                    ChangePrice = 0
                 };
             }
         }

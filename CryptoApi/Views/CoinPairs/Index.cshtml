@@ -1,4 +1,5 @@
-﻿@inject CBlocksHelperVM CBlocksHelperVM
+﻿@inject CBlocksHelperVM Blocks
+@model CCoinPairsVM
 @{
     ViewData["Title"] = "CoinPairs Page";
 }
@@ -99,7 +100,7 @@
                                     </h1>
                                     @await Html.PartialAsync("_CoinPairList")
                                 </div>
-                                @await Html.PartialAsync("_Pagination")
+                                @await Html.PartialAsync("_Pagination", Blocks.GetPagination(Model.maxPage, Model.page))
                             </div>
                         </div>
                     </main>
