@@ -1,0 +1,33 @@
+﻿@using CryptoApi.Models.DB
+@model CCoinsMetaDataM
+
+<h1>Coins meta</h1>
+<div class="dc-meta-editor">
+    @using (Html.BeginForm("CoinsMeta", "Admin", FormMethod.Post))
+    {
+        <p>
+            <span>coin_id: </span>
+            @Html.Editor("coin_id")
+        </p>
+        <p>
+            <span>group: </span>
+            @Html.Editor("group")
+        </p>
+        <p>
+            <span>option: </span>
+            @Html.Editor("option")
+        </p>
+        <p>
+            <span>value: </span>
+            @Html.Editor("value")
+        </p>
+        <p>
+            <span>CCoinDataMid: </span>
+            @Html.Editor("CCoinDataMid")
+        </p>
+        <p>
+            <input type="submit" value="post"/>
+        </p>
+    }
+</div>
+<a asp-controller="Admin" asp-action="Index" class="dc-admin-back">>back</a>

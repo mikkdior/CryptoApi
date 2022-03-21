@@ -1,7 +1,7 @@
 ﻿@model CCoinVM
-
+@inject CBlocksHelperVM BlocksHelper
 @{
-ViewData["Title"] = "Coin Page";
+    ViewData["Title"] = "Coin Page";
 }
 <!DOCTYPE html>
 <html data-n-head-ssr="" lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
@@ -52,6 +52,7 @@ ViewData["Title"] = "Coin Page";
         @await Html.PartialAsync("_HeadHomeContent")
         <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
         <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <script src="/js/site.js"></script>
 
     </head>
     <body>
@@ -90,7 +91,7 @@ ViewData["Title"] = "Coin Page";
                                     <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"
                                         class="breadcrumbs__list-item">
                                         <span itemprop="item" class="breadcrumbs__list-item-link breadcrumbs__list-item-link--active">
-                                            <span>DODO to USD</span> 
+                                            <span>@Model.coin.data.name.ToUpper() &nbsp;to USD</span> 
                                             <meta itemprop="item" content="">
                                             <meta itemprop="name" content="DODO to USD">
                                             <meta itemprop="position" content="3">
@@ -106,22 +107,27 @@ ViewData["Title"] = "Coin Page";
                                         <h1 class="coin-pairs-stats__title">
                                             <span class="coin-pair-display">
                                                 <span class="coin-pair-display__icons dc-coin-pair-display__icons">
-                                                    <span class="coin-icon coin-pair-display__icons-item"
-                                                        style="--size:44px;"><img
-                                                        src="@Model.coin.data.image"
-                                                        alt="@Model.coin.data.name-logo"></span> <span class="coin-icon coin-pair-display__icons-item"
-                                                        style="--size:44px;"><img
-                                                        src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/usd.png"
-                                                        alt="USD-logo">
+                                                    <span class="coin-icon coin-pair-display__icons-item" style="--size:44px;">
+                                                        @if(Model.coin.data.image == "")
+                                                        {
+                                                            <img src="/custom/img/letsexchange/table_line_coin_logo.svg" alt="@Model.coin.data.name-logo">
+                                                        }
+                                                        else
+                                                        {
+                                                            <img src="@Model.coin.data.image" alt="@Model.coin.data.name-logo">  
+                                                        }
+                                                    </span> 
+                                                    <span class="coin-icon coin-pair-display__icons-item" style="--size:44px;">
+                                                        <img src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/usd.png" alt="USD-logo">
                                                     </span>
                                                 </span>
                                                 <span class="wrap">
-                                                    <span class="coin-pair-display__text"><span>1</span> @Model.coin.data.name
+                                                    <span class="coin-pair-display__text"><span>1</span> @Model.coin.data.name.ToUpper()
                                                         /
                                                         <span class="coin-pair-display__text coin-pair-display__text--light">USD</span>
                                                     </span>
                                                 </span>
-                                                Exchange&nbsp;<span class="dc-coin-title">@Model.coin.data.name</span>&nbsp;to USD
+                                                Exchange&nbsp;<span class="dc-coin-title">@Model.coin.data.name.ToUpper()</span>&nbsp;to USD
                                             </span>
                                             
                                         </h1>
@@ -132,7 +138,13 @@ ViewData["Title"] = "Coin Page";
                                     </div>
                                     @await Html.PartialAsync("_CoinInfo", Model.coin) @*CoinInfo*@
                                     @await Html.PartialAsync("_CoinText") @*CoinText*@
-                                    @await Html.PartialAsync("_CoinList", ((CBlocksHelperVM)ViewBag.Blocks).GetCoinList(10)) @*CoinList*@
+                                     <div class="dc-list-title-wrapper">
+                                        <h2 class="dc-coins-table__title">Most Popular Coins</h2>
+                                        <div class="dc-view-all">
+                                            <a asp-controller="Coins" asp-action="Index">View All</a>
+                                        </div>
+                                    </div>
+                                    @await Html.PartialAsync("_CoinList", BlocksHelper.GetCoinList(10)) @*CoinList*@
                                     @await Html.PartialAsync("_CoinPairDetailsText") @*HowTo*@
                                     @await Html.PartialAsync("_Faq") @*Faq*@
                                 </div>

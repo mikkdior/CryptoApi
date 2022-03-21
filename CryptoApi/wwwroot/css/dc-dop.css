@@ -1,7 +1,41 @@
-h1 .coin-pair-display span{
-    height: max-content;
+.dc-meta-editor p {
+    margin: 20px;
 }
-.dc-coin-pair-display__icons{
+.dc-meta-editor input[type="submit"] {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.dc-meta-editor {
+    margin-bottom: 50px;
+}
+.dc-admin-back {
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.dc-admin-menu {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.dc-admin-menu li {
+    border: 2px solid gray;
+    display: inline-block;
+    margin: 20px;
+    font-weight: bold;
+}
+.dc-admin-menu li a {
+    padding: 20px;
+    text-decoration: none;
+}
+/*h1 .coin-pair-display span{
+    height: max-content;
+}*/
+.collapse__content {
+    display: none;
+}
+.dc-coin-pair-display__icons {
     margin-right: 40px;
 }
 .dc-coin-title {

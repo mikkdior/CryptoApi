@@ -1,5 +1,4 @@
-﻿@using CryptoApi.ViewModels
-@inject CBlocksHelperVM CBlocksHelperVM
+﻿@inject CBlocksHelperVM BlocksHelper
 @model CCoinsVM
 @{
     ViewData["Title"] = "Coins Page";
@@ -51,8 +50,8 @@
 
         @await Html.PartialAsync("_HeadHomeContent")
         <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
-        
         <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <script src="/js/site.js"></script>
 
     </head>
     <body>
@@ -100,7 +99,7 @@
                                         All Coins We Work With
                                     </h1>
                                     @await Html.PartialAsync("_CoinList", Model.coins)
-                                    @await Html.PartialAsync("_Pagination", CBlocksHelperVM.GetPagination(Model.maxPage, Model.page)) @*(Count: Model.maxPage, Page: Model.page)*@
+                                    @await Html.PartialAsync("_Pagination", BlocksHelper.GetPagination(Model.maxPage, Model.page))
                                 </div>
                             </div>
                         </div>

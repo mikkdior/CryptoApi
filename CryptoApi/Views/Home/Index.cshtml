@@ -1,4 +1,4 @@
-﻿@inject CBlocksHelperVM CBlocksHelperVM
+﻿@inject CBlocksHelperVM BlocksHelper
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -42,6 +42,7 @@
         @await Html.PartialAsync("_HeadHomeContent")
         <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
         <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <script src="/js/site.js"></script>
 
 
         <!-- Google Tag Manager -->
@@ -94,14 +95,14 @@
                                             <a asp-controller="CoinPairs" asp-action="Index">View All</a>
                                         </div>
                                     </div>
-                                    @await Html.PartialAsync("_CoinPairList")
+                                    @await Html.PartialAsync("_CoinPairList", BlocksHelper.GetPairList(10))
                                     <div class="dc-list-title-wrapper">
                                         <h2 class="dc-coins-table__title">Most Popular Coins</h2>
                                         <div class="dc-view-all">
                                             <a asp-controller="Coins" asp-action="Index">View All</a>
                                         </div>
                                     </div>
-                                    @await Html.PartialAsync("_CoinList", CBlocksHelperVM.GetCoinList(10))
+                                    @await Html.PartialAsync("_CoinList", BlocksHelper.GetCoinList(10))
                                     @await Html.PartialAsync("_CoinPairDetailsText")
                                     @await Html.PartialAsync("_Faq")
                                 </div>

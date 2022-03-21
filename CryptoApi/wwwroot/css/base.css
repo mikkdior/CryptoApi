@@ -2146,17 +2146,18 @@ body.scroll-lock {
 }
 
 .coin-pairs-stats__title {
-    padding-bottom   : 32px;
-    font-weight      : 800;
-    font-size        : 64px;
-    line-height      : 64px;
-    letter-spacing   : -.04em;
-    display          : -webkit-box;
-    display          : -ms-flexbox;
-    display          : flex;
+    padding-bottom: 32px;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -.04em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
-    -ms-flex-align   : center;
-    align-items      : center;
+    -ms-flex-align: center;
+    /*align-items: center;*/
+    align-items: baseline;
 }
 
 @media (min-width:1024px) {

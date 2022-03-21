@@ -1,34 +1,47 @@
-﻿<tr class="data-table__body-item dc-data-table__body-item-custom">
+﻿@using CryptoApi.Models.DB;
+@model CCoinPairDataVM
+
+<tr class="data-table__body-item dc-data-table__body-item-custom">
     <td class="data-table__body-item-cell">
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--left data-table__body-item-cell-wrap--pair">
-            <a href="/custom/exchange-pairs/micn/eur/info/" class="coin-pairs-table__link">
+            <a asp-controller="CoinPairs" asp-action="pair" asp-route-coin1="@Model.coin1.name" asp-route-coin2="@Model.coin2.name" class="coin-pairs-table__link">
                 <div class="coin-pair-display">
                     <div class="coin-pair-display__icons coin-pair-display__icons--height">
                         <span
                         class="coin-icon coin-pair-display__icons-item coin-pair-display__icons-item--diagonal"
                         style="--size:32px;">
-                            <img
-                            src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/eur.png"
-                            alt="EUR-logo">
+                            @if(Model.coin1.image == "")
+                            {
+                                <img src="/custom/img/letsexchange/table_line_coin_logo.svg" alt="@Model.coin1.name_full">
+                            }
+                            else
+                            {
+                                <img src="@Model.coin1.image" alt="@Model.coin1.name_full">  
+                            }
                         </span> 
                         <span
                             class="coin-icon coin-pair-display__icons-item coin-pair-display__icons-item--diagonal"
                             style="--size:32px;">
-                            <img
-                            src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/eur.png"
-                            alt="EUR-logo">
+                            @if(Model.coin2.image == "")
+                            {
+                                <img src="/custom/img/letsexchange/table_line_coin_logo.svg" alt="@Model.coin2.name_full">
+                            }
+                            else
+                            {
+                                <img src="@Model.coin2.image" alt="@Model.coin2.name_full">  
+                            }
                         </span>
                     </div>
                     <div class="wrap">
                         <div class="coin-pair-display__text coin-pair-display__text--bold dc-coin-pair-display__text-custom">
-                            <span>1</span> MICN
+                            <span>1</span> @Model.coin1.name
                             /
-                            <span class="coin-pair-display__text coin-pair-display__text--grey coin-pair-display__text--light">EUR</span>
+                            <span class="coin-pair-display__text coin-pair-display__text--grey coin-pair-display__text--light">@Model.coin2.name</span>
                         </div>
                         <div class="coin-pair-display__text coin-pair-display__text--name">
-                            Mindexnew
+                            @Model.coin1.name_full
                             /
-                            Euro
+                            @Model.coin2.name_full
                         </div>
                     </div>
                 </div>
@@ -39,12 +52,12 @@
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--lastPrice">
             <div class="dual-value-display">
                 <div class="dual-value-display__text">
-                    0.072318
-                    <span>MICN</span>
+                    @(Model.coin1.change_price == "0" ? "-": Model.coin1.change_price)
+                    <span>@Model.coin1.name</span>
                 </div>
                 <div class="dual-value-display__text dual-value-display__text--secondary">
-                    3215.67
-                    <span>EUR</span>
+                    @(Model.coin2.change_price == "0" ? "-": Model.coin2.change_price)
+                    <span>@Model.coin2.name</span>
                 </div>
             </div>
         </div>
@@ -52,7 +65,7 @@
     <td class="data-table__body-item-cell">
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--changePerc">
             <div class="trend-badge"><i class="svg-icon caret-icon"></i>
-                0.63%
+                @(Model.data.day_percent == "0" ? "-": Model.data.day_percent)
             </div>
         </div>
     </td>
@@ -60,11 +73,11 @@
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--high24h">
             <div class="dual-value-display">
                 <div class="dual-value-display__text">
-                    0.07704092
+                    @(Model.data.day_hight_1 == "0" ? "-": Model.data.day_hight_1)
                     <span></span>
                 </div>
                 <div class="dual-value-display__text dual-value-display__text--secondary">
-                    3252.03
+                    @(Model.data.day_hight_2 == "0" ? "-": Model.data.day_hight_2)
                 </div>
             </div>
         </div>
@@ -73,11 +86,11 @@
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--low24h">
             <div class="dual-value-display">
                 <div class="dual-value-display__text">
-                    0.07304092
+                    @(Model.data.day_low_1 == "0" ? "-": Model.data.day_low_1)
                     <span></span>
                 </div>
                 <div class="dual-value-display__text dual-value-display__text--secondary">
-                    3151.03
+                    @(Model.data.day_low_2 == "0" ? "-": Model.data.day_low_2)
                 </div>
             </div>
         </div>
@@ -86,7 +99,7 @@
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--cap">
             <div class="dual-value-display">
                 <div class="dual-value-display__text">
-                    377869595474
+                    @(Model.coin1.market_cap == "0" ? "-": Model.coin1.market_cap)
                     <span></span>
                 </div>
             </div>
