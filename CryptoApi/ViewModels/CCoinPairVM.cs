@@ -6,6 +6,7 @@ namespace CryptoApi.ViewModels
     {
         private CCoinPairsM model;
         private IConfiguration conf;
+        public CCoinPairDataVM pair;
 
         public CCoinPairVM(CCoinPairsM model, IConfiguration conf)
         {
@@ -18,7 +19,7 @@ namespace CryptoApi.ViewModels
             string coin1 = (string)context.GetRouteValue("coin1");
             string coin2 = (string)context.GetRouteValue("coin2");
 
-            var pair = model.GetPairByNames(coin1, coin2);
+            pair = model.GetPairByNames(coin1, coin2);
         }
     }
 }

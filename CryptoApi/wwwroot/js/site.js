@@ -1,4 +1,15 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿document.addEventListener('DOMContentLoaded', function () {
+    //faq hide/open answers
+    document.querySelectorAll('.collapse__btn').forEach((main) => {
+        function isAnswerOpened(answer){
+            return answer.style.display != 'none';
+        }
+        function toggle(answer){
+            answer.style.display = isAnswerOpened(answer) ? 'none' : 'block';
+        }
+        main.addEventListener('click', function (e) {
+            let answer = main.parentNode.querySelector('.collapse__content');
+            toggle(answer);
+        })
+    });
+});

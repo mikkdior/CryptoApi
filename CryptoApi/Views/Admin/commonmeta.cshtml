@@ -1,0 +1,25 @@
+﻿@using CryptoApi.Models.DB
+@model CCommonMetaDataM
+
+<h1>Common meta</h1>
+<div class="dc-meta-editor">
+    @using (Html.BeginForm("CommonMeta", "Admin", FormMethod.Post))
+    {
+        <p>
+            <span>group: </span>
+            @Html.Editor("group")
+        </p>
+        <p>
+            <span>option: </span>
+            @Html.Editor("option")
+        </p>
+        <p>
+            <span>value: </span>
+            @Html.Editor("value")
+        </p>
+        <p>
+            <input type="submit" value="post"/>
+        </p>
+    }
+</div>
+<a asp-controller="Admin" asp-action="Index" class="dc-admin-back">>back</a>

@@ -1,4 +1,5 @@
-﻿<div class="coin-pairs-table"  style="padding-bottom: 30px">
+﻿@model IEnumerable<CCoinPairDataVM>
+<div class="coin-pairs-table"  style="padding-bottom: 30px">
     <div class="data-table__wrap dc-data-table__wrap-custom">
         <table class="data-table">
             <thead class="data-table__header">
@@ -61,10 +62,10 @@
                 </tr>
             </thead>
             <tbody class="data-table__body">
-                @for (int i = 0; i < 20; i++)
-                {
-                    @await Html.PartialAsync("_CoinPairListSketch")
-                }
+                @foreach (var pair in Model)
+                    {
+                        @await Html.PartialAsync("_CoinPairListSketch", pair)
+                    }
             </tbody>
         </table>
     </div>

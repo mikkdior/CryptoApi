@@ -1,7 +1,7 @@
 ﻿@model CCoinPairVM
-
+@inject CBlocksHelperVM BlocksHelper
 @{
-ViewData["Title"] = "CoinPair Page";
+    ViewData["Title"] = "CoinPair Page";
 }
 <!DOCTYPE html>
 <html data-n-head-ssr="" lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
@@ -50,8 +50,8 @@ ViewData["Title"] = "CoinPair Page";
 
         @await Html.PartialAsync("_HeadHomeContent")
         <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
-        
         <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <script src="/js/site.js"></script>
 
     </head>
     <body>
@@ -91,7 +91,7 @@ ViewData["Title"] = "CoinPair Page";
                                         class="breadcrumbs__list-item">
                                         <span itemprop="item"
                                             class="breadcrumbs__list-item-link breadcrumbs__list-item-link--active">
-                                            <span>CELR Vs ETC</span> 
+                                            <span>@Model.pair.coin1.name.ToUpper() vs @Model.pair.coin2.name.ToUpper()</span> 
                                             <meta
                                                 itemprop="item" content="">
                                             <meta itemprop="name" content="CELR Vs ETC">
@@ -108,22 +108,36 @@ ViewData["Title"] = "CoinPair Page";
                                     <div class="coin-pairs-stats">
                                         <h1 class="coin-pairs-stats__title">
                                             <span class="coin-pair-display">
-                                                <span class="coin-pair-display__icons"><span class="coin-icon coin-pair-display__icons-item"
-                                                    style="--size:44px;"><img
-                                                    src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/svg/black/generic.svg"
-                                                    alt="CELR-logo"></span> <span class="coin-icon coin-pair-display__icons-item"
-                                                    style="--size:44px;"><img
-                                                    src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.16.1/32/color/etc.png"
-                                                    alt="ETC-logo"></span>
+                                                <span class="coin-pair-display__icons">
+                                                    <span class="coin-icon coin-pair-display__icons-item" style="--size:44px;">
+                                                        @if(Model.pair.coin1.image == "")
+                                                        {
+                                                            <img src="/custom/img/letsexchange/table_line_coin_logo.svg" alt="@Model.pair.coin1.name">
+                                                        }
+                                                        else
+                                                        {
+                                                            <img src="@Model.pair.coin1.image" alt="@Model.pair.coin1.name">  
+                                                        }
+                                                    </span> 
+                                                    <span class="coin-icon coin-pair-display__icons-item" style="--size:44px;">
+                                                        @if(Model.pair.coin2.image == "")
+                                                        {
+                                                            <img src="/custom/img/letsexchange/table_line_coin_logo.svg" alt="@Model.pair.coin2.name">
+                                                        }
+                                                        else
+                                                        {
+                                                            <img src="@Model.pair.coin2.image" alt="@Model.pair.coin2.name">  
+                                                        }
+                                                    </span>
                                                 </span>
                                                 <span class="wrap">
-                                                    <span class="coin-pair-display__text"><span>1</span> CELR
+                                                    <span class="coin-pair-display__text"><span>1</span> @Model.pair.coin1.name.ToUpper()
                                                         /
-                                                        <span class="coin-pair-display__text coin-pair-display__text--light">ETC</span>
+                                                        <span class="coin-pair-display__text coin-pair-display__text--light">@Model.pair.coin2.name.ToUpper()</span>
                                                     </span>
                                                 </span>
                                             </span>
-                                            CELR Vs ETC
+                                            @Model.pair.coin1.name.ToUpper() vs @Model.pair.coin2.name.ToUpper()
                                         </h1>
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
@@ -135,7 +149,13 @@ ViewData["Title"] = "CoinPair Page";
                                     </div>
                                     @*@await Html.PartialAsync("_CoinInfo")*@ @*CoinInfo*@
                                     @await Html.PartialAsync("_CoinText") @*CoinText*@
-                                    @await Html.PartialAsync("_CoinPairList") @*CoinPairsList*@
+                                    <div class="dc-list-title-wrapper">
+                                        <h2 class="dc-coin-pairs-table__title">Cryptocurrency Exchange Pairs</h2>
+                                        <div class="dc-view-all">
+                                            <a asp-controller="CoinPairs" asp-action="Index">View All</a>
+                                        </div>
+                                    </div>
+                                    @await Html.PartialAsync("_CoinPairList", BlocksHelper.GetPairList(10)) @*CoinPairsList*@
                                     @await Html.PartialAsync("_CoinPairDetailsText") @*HowTo*@
                                     @await Html.PartialAsync("_Faq") @*Faq*@
                                 </div>

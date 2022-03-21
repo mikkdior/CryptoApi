@@ -1,4 +1,4 @@
-﻿@inject CBlocksHelperVM Blocks
+﻿@inject CBlocksHelperVM BlocksHelper
 @model CCoinPairsVM
 @{
     ViewData["Title"] = "CoinPairs Page";
@@ -51,6 +51,7 @@
         @await Html.PartialAsync("_HeadHomeContent")
         <link rel="stylesheet" type="text/css" href="/css/dc-dop.css">
         <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <script src="/js/site.js"></script>
 
     </head>
     <body>
@@ -98,9 +99,9 @@
                                     <h1 class="coin-pairs-page__title">
                                         Cryptocurrency Exchange Pairs
                                     </h1>
-                                    @await Html.PartialAsync("_CoinPairList")
+                                    @await Html.PartialAsync("_CoinPairList", Model.pairs)
+                                    @await Html.PartialAsync("_Pagination", BlocksHelper.GetPagination(Model.maxPage, Model.page))
                                 </div>
-                                @await Html.PartialAsync("_Pagination", Blocks.GetPagination(Model.maxPage, Model.page))
                             </div>
                         </div>
                     </main>
