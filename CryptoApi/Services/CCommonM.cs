@@ -19,7 +19,7 @@ namespace CryptoApi.Services
         {
             get
             {
-                return db.CommonMeta.Where(x => x.group == group && x.option == option).First();
+                return db.CommonMeta.Where(x => x.group == group && x.option == option).FirstOrDefault();
             }
         }
     }

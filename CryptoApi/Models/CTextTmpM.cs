@@ -7,6 +7,7 @@ namespace CryptoApi.Models
         static private Dictionary<string, string> ParsePairs (string pairs)
         {
             Dictionary<string, string> result = new Dictionary<string, string> ();
+            if (pairs == null) return result;
             string[] pairs_data = pairs.Split(";");
 
             foreach (string pair in pairs_data)
@@ -29,13 +30,16 @@ namespace CryptoApi.Models
 
             foreach (var field in fields_info)
             {
-                result.Add(field.Name, (string)field.GetValue(fields));
+                if (field.Name == "Item") continue;
+
+                result.Add(field.Name, (string)field.GetValue(fields).ToString());
             }
 
             return result;
         }
         static private string ParseText(string text, Dictionary<string, string> pairs)
         {
+            if (text == null) return "";
             string new_text = text;
 
             new_text = Regex.Replace(text, @"{{(.+?)}}", match =>

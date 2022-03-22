@@ -33,7 +33,7 @@
         {
             get
             {
-                return meta.Where(x => x.group == group && x.option == option).First();
+                return meta.Where(x => x.group == group && x.option == option).FirstOrDefault();
             }
         }
     }
