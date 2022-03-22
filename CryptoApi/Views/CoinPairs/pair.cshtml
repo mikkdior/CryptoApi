@@ -141,11 +141,12 @@
                                         </h1>
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                        @*@await Html.PartialAsync("_GraphRates")*@ @*GraphRates*@
-                                        @*@await Html.PartialAsync("_CurrencyExchange")*@ @*CurrencyExchange*@
+                                        @await Html.PartialAsync("_GraphRates", new CCoinDataVM(){ data = Model.pair.coin1 }) @*GraphRates*@
+                                        @await Html.PartialAsync("_CurrencyExchange", new CCoinDataVM(){ data = Model.pair.coin1 }) @*CurrencyExchange*@
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
-                                        @*@await Html.PartialAsync("_GraphRates")*@ @*GraphRates*@
+                                        @await Html.PartialAsync("_GraphRates",  new CCoinDataVM(){ data = Model.pair.coin2 }) @*GraphRates*@
+                                        @await Html.PartialAsync("_CurrencyExchange", new CCoinDataVM(){ data = Model.pair.coin2 }) @*CurrencyExchange*@
                                     </div>
                                     @*@await Html.PartialAsync("_CoinInfo")*@ @*CoinInfo*@
                                     @await Html.PartialAsync("_CoinText") @*CoinText*@

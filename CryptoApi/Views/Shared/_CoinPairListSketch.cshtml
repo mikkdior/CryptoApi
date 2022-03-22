@@ -34,7 +34,7 @@
                     </div>
                     <div class="wrap">
                         <div class="coin-pair-display__text coin-pair-display__text--bold dc-coin-pair-display__text-custom">
-                            <span>1</span> @Model.coin1.name
+                            @Model.coin1.name
                             /
                             <span class="coin-pair-display__text coin-pair-display__text--grey coin-pair-display__text--light">@Model.coin2.name</span>
                         </div>
@@ -55,10 +55,18 @@
                     @(Model.coin1.change_price == "0" ? "-": Model.coin1.change_price)
                     <span>@Model.coin1.name</span>
                 </div>
-                <div class="dual-value-display__text dual-value-display__text--secondary">
-                    @(Model.coin2.change_price == "0" ? "-": Model.coin2.change_price)
-                    <span>@Model.coin2.name</span>
-                </div>
+                @if(Model.coin2.change_price == "0"){
+                    <div class="dual-value-display__text dual-value-display__text--secondary">
+                        -
+                    </div>
+                }
+                else
+                {
+                    <div class="dual-value-display__text dual-value-display__text--secondary">
+                        @Model.coin2.change_price
+                        <span>@Model.coin2.name</span>
+                    </div>
+                }
             </div>
         </div>
     </td>
@@ -107,8 +115,7 @@
     </td>
     <td class="data-table__body-item-cell">
         <div class="data-table__body-item-cell-wrap data-table__body-item-cell-wrap--right data-table__body-item-cell-wrap--btn">
-            <a href="/custom/exchange-pairs/micn/eur/info/"
-                class="btn-link btn btn--link btn--depressed btn--primary btn-exchange coin-pairs-table__btn dc-btn-exchange-custom">
+            <a  asp-controller="CoinPairs" asp-action="Pair" asp-route-coin1="@Model.coin1.name" asp-route-coin2="@Model.coin2.name" class="btn-link btn btn--link btn--depressed btn--primary btn-exchange coin-pairs-table__btn dc-btn-exchange-custom">
                 <span class="btn__content">
                     Exchange
                 </span>

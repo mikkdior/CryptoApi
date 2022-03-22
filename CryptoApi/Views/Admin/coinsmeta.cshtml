@@ -1,5 +1,6 @@
 ﻿@using CryptoApi.Models.DB
 @model CCoinsMetaDataM
+@inject CBlocksHelperVM BlocksHelper
 
 <h1>Coins meta</h1>
 <div class="dc-meta-editor">
@@ -7,7 +8,13 @@
     {
         <p>
             <label>coin_id: </label>
-            @Html.Editor("coin_id")
+            <select name="coin_pair_id" id="coin_pair_id" >
+                <option value="" selected disabled hidden></option>
+                @foreach (var coin in BlocksHelper.GetCoinList(100))
+                {
+                    <option value="@coin.data.id">@coin.data.id (@coin.data.name ---/--- @coin.data.name_full)</option>
+                }
+            </select>
         </p>
         <p>
             <label>group: </label>
@@ -19,7 +26,7 @@
         </p>
         <p>
             <label>value: </label>
-            @Html.Editor("value")
+            @Html.TextAreaFor(m => m.value)
         </p>
         <p>
             <label>CCoinDataMid: </label>

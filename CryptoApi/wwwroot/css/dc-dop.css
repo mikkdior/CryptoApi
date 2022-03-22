@@ -6,11 +6,11 @@
 }
 .dc-admin-container h1{
     text-align: center;
+    margin-bottom: 50px;
 }
 .dc-meta-editor form {
     text-align: center;
     padding-right: 120px;
-    margin-top: 50px;
 }
 .dc-meta-editor label {
     display: inline-block;
@@ -25,6 +25,17 @@
     cursor: pointer;
     margin-left: 120px;
 }
+.dc-meta-editor input[type="text"], .dc-meta-editor input[type="number"] {
+    width: 50%;
+}
+.dc-meta-editor textarea{
+    width: 50%;
+    height: 20%;
+}
+.dc-meta-editor select {
+    width: 50%;
+    cursor: pointer;
+}
 .dc-meta-editor {
     margin-bottom: 50px;
 }
@@ -34,10 +45,14 @@
     text-decoration: none;
     font-weight: bold;
     margin-left: 20px;
+    background: #fff;
+    border-radius: 3px;
 }
 .dc-admin-menu {
     list-style: none;
     margin-bottom: 10px;
+    text-align: center;
+    padding: 0;
 }
 .dc-admin-menu li {
     border: 2px solid gray;
