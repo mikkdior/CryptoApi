@@ -1,4 +1,5 @@
-﻿@inject CBlocksHelperVM BlocksHelper
+﻿@model CHomeVM
+@inject CBlocksHelperVM BlocksHelper
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -90,7 +91,7 @@
                                 <div class="container">
                                     @await Html.PartialAsync("_Benefits")
                                     <div class="dc-list-title-wrapper">
-                                        <h2 class="dc-coin-pairs-table__title">Cryptocurrency Exchange Pairs</h2>
+                                        <h2 class="dc-coin-pairs-table__title">Popular Cryptocurrency Exchange Pairs</h2>
                                         <div class="dc-view-all">
                                             <a asp-controller="CoinPairs" asp-action="Index">View All</a>
                                         </div>
@@ -103,8 +104,8 @@
                                         </div>
                                     </div>
                                     @await Html.PartialAsync("_CoinList", BlocksHelper.GetCoinList(10))
-                                    @await Html.PartialAsync("_CoinPairDetailsText")
-                                    @await Html.PartialAsync("_Faq")
+                                    @await Html.PartialAsync("_TextBlocks", Model.TextBlocks)
+                                    @await Html.PartialAsync("_Faq", Model.Faq)
                                 </div>
                             </div>
                         </div>

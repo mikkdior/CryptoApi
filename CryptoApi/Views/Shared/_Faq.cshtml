@@ -1,22 +1,26 @@
-﻿<div id="faq" class="detailed-info-block">
+﻿@model IEnumerable<CTextBlockVM>
+
+<div id="faq" class="detailed-info-block">
     <div class="detailed-info-block__title dc-detailed-info-block__title-custom">
         <h2>Frequently Asked Questions</h2>
     </div>
     <div class="detailed-info-block__info-wrap">
-        @for (int i = 0; i < 4; i++)
+        @foreach (var block in Model)
         {
             <div class="collapse dc-collapse-custom">
                 <button class="btn btn--unscalable collapse__btn dc-collapse__btn-custom">
                     <span class="btn__content dc-btn__content-custom"> 
                         <span class="btn__content-item">
-                            <span class="collapse__btn-text">Do you need to convert DODO to Dollar today?</span> 
+                            <span class="collapse__btn-text">@block.title</span> 
                             <i class="svg-icon collapse__svg dc-faq-btn">&#129122;</i>
                         </span> 
                     </span>
                 </button>
                 <div class="collapse__content">
                     <div class="collapse__content-wrap">
-                        <div class="detailed-info-block__text"><p>Have a look at our live chart to make sure you are choosing the best moment to sell DODO with credit card. There, you can find the crypto price for 2022, the crypto market cap, trading volume, and other data needed to exchange coins with profit.</p></div>
+                        <div class="detailed-info-block__text">
+                            @block.text
+                        </div>
                     </div>
                 </div>
             </div>

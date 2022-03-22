@@ -1,0 +1,11 @@
+﻿@model IEnumerable<CTextBlockVM>
+
+<div class="dc-text-blocks">
+    @foreach (var block in Model)
+    {
+        <h2 class="dc-text-blocks-title">@block.title</h2>
+        <div class="dc-text-blocks-content">
+            @block.text
+        </div>
+    }
+</div>

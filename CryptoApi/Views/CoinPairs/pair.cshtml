@@ -142,14 +142,13 @@
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
                                         @await Html.PartialAsync("_GraphRates", new CCoinDataVM(){ data = Model.pair.coin1 }) @*GraphRates*@
-                                        @await Html.PartialAsync("_CurrencyExchange", new CCoinDataVM(){ data = Model.pair.coin1 }) @*CurrencyExchange*@
+                                        @await Html.PartialAsync("_CurrencyExchange", (Model.pair.coin1.name, Model.pair.coin2.name)) @*CurrencyExchange*@
                                     </div>
                                     <div class="coin-pairs-stats__flex"  style="padding-bottom: 20px">
                                         @await Html.PartialAsync("_GraphRates",  new CCoinDataVM(){ data = Model.pair.coin2 }) @*GraphRates*@
-                                        @await Html.PartialAsync("_CurrencyExchange", new CCoinDataVM(){ data = Model.pair.coin2 }) @*CurrencyExchange*@
                                     </div>
                                     @*@await Html.PartialAsync("_CoinInfo")*@ @*CoinInfo*@
-                                    @await Html.PartialAsync("_CoinText") @*CoinText*@
+                                    @await Html.PartialAsync("_Description", Model.Description) @*CoinPairText*@
                                     <div class="dc-list-title-wrapper">
                                         <h2 class="dc-coin-pairs-table__title">Cryptocurrency Exchange Pairs</h2>
                                         <div class="dc-view-all">
@@ -157,8 +156,8 @@
                                         </div>
                                     </div>
                                     @await Html.PartialAsync("_CoinPairList", BlocksHelper.GetPairList(10)) @*CoinPairsList*@
-                                    @await Html.PartialAsync("_CoinPairDetailsText") @*HowTo*@
-                                    @await Html.PartialAsync("_Faq") @*Faq*@
+                                    @await Html.PartialAsync("_TextBlocks", Model.TextBlocks) @*HowTo*@
+                                    @await Html.PartialAsync("_Faq", Model.Faq) @*Faq*@
                                 </div>
                             </div>
                         </div>
