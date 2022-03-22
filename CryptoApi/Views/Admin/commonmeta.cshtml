@@ -6,15 +6,15 @@
     @using (Html.BeginForm("CommonMeta", "Admin", FormMethod.Post))
     {
         <p>
-            <span>group: </span>
+            <label>group: </label>
             @Html.Editor("group")
         </p>
         <p>
-            <span>option: </span>
+            <label>option: </label>
             @Html.Editor("option")
         </p>
         <p>
-            <span>value: </span>
+            <label>value: </label>
             @Html.Editor("value")
         </p>
         <p>

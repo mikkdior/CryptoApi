@@ -4,12 +4,26 @@
     padding: 20px;
     margin: auto;
 }
+.dc-admin-container h1{
+    text-align: center;
+}
+.dc-meta-editor form {
+    text-align: center;
+    padding-right: 120px;
+    margin-top: 50px;
+}
+.dc-meta-editor label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
 .dc-meta-editor p {
     margin: 20px;
 }
 .dc-meta-editor input[type="submit"] {
     padding: 10px 20px;
     cursor: pointer;
+    margin-left: 120px;
 }
 .dc-meta-editor {
     margin-bottom: 50px;
