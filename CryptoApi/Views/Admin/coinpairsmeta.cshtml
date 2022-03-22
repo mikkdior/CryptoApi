@@ -6,19 +6,19 @@
     @using (Html.BeginForm("CoinPairsMeta", "Admin", FormMethod.Post))
     {
         <p>
-            <span>coin_pair_id: </span>
+            <label>coin_pair_id: </label>
             @Html.Editor("coin_pair_id")
         </p>
         <p>
-            <span>group: </span>
+            <label>group: </label>
             @Html.Editor("group")
         </p>
         <p>
-            <span>option: </span>
+            <label>option: </label>
             @Html.Editor("option")
         </p>
         <p>
-            <span>value: </span>
+            <label>value: </label>
             @Html.Editor("value")
         </p>
         <p>
