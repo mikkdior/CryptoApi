@@ -1,3 +1,9 @@
+.dc-admin-container{
+    width: 1200px;
+    background: lightgray;
+    padding: 20px;
+    margin: auto;
+}
 .dc-meta-editor p {
     margin: 20px;
 }
