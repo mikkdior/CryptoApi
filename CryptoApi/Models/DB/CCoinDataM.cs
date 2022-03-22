@@ -15,12 +15,26 @@
         public string change_week { get; set; }
         public string change_month { get; set; }
         public string change_price { get; set; }
+        public ICollection<CCoinsMetaDataM> meta { get; set; }
 
-        public List<CCoinsMetaDataM> meta { get; set; }
-
-        public CCoinDataM()
+        public CCoinDataM ()
         {
-            meta = new List<CCoinsMetaDataM>();
+            meta = new List<CCoinsMetaDataM> ();
+        }
+
+        public IEnumerable<CCoinsMetaDataM> this[string group]
+        {
+            get
+            {
+                return meta.Where(x => x.group == group);
+            }
+        }
+        public CCoinsMetaDataM this[string group, string option]
+        {
+            get
+            {
+                return meta.Where(x => x.group == group && x.option == option).First();
+            }
         }
     }
 }

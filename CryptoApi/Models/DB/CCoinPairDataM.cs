@@ -13,5 +13,25 @@
         public string day_low_1 { get; set; }
         public string day_low_2 { get; set; }
         public string market_cap { get; set; }
+        public ICollection<CCoinPairsMetaDataM> meta { get; set; }
+        public CCoinPairDataM ()
+        {
+            meta = new List<CCoinPairsMetaDataM> ();
+        }
+
+        public IEnumerable<CCoinPairsMetaDataM> this[string group]
+        {
+            get
+            {
+                return meta.Where(x => x.group == group);
+            }
+        }
+        public CCoinPairsMetaDataM this[string group, string option]
+        {
+            get
+            {
+                return meta.Where(x => x.group == group && x.option == option).First();
+            }
+        }
     }
 }
