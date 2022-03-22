@@ -1,6 +1,7 @@
 ﻿using CryptoApi.Api;
 using CryptoApi.Models.DB;
 using CryptoApi.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace CryptoApi.Services
 {
@@ -73,21 +74,26 @@ namespace CryptoApi.Services
 
         public IEnumerable<CCoinDataVM> GetCoins (int page, int count)
         {
-            return  (from c in db.Coins
-                    select new CCoinDataVM()
-                    {
-                        data = c
-                    }).Skip((page - 1)*count).Take(count);
+            return db.Coins
+                //.Include(c => c.meta)
+                .Select(c => new CCoinDataVM()
+                {
+                    data = c
+                })
+                .Skip((page - 1) * count)
+                .Take(count);
         }
 
         public CCoinDataVM GetCoinByName (string name)
         {
-            return (from c in db.Coins
-                    where c.name == name
-                    select new CCoinDataVM()
-                    {
-                        data = c
-                    }).FirstOrDefault<CCoinDataVM>();
+            return db.Coins
+                .Where(c => c.name == name)
+                .Include(c => c.meta)
+                .Select(c => new CCoinDataVM()
+                {
+                    data = c
+                })
+                .FirstOrDefault();
         }
 
         public int GetMaxPage (int count)

@@ -26,6 +26,12 @@ namespace CryptoApi.Controllers
             return View(model);
         }
 
+        [Route("/test")]
+        public string Test()
+        {
+            return "";
+        }
+
         public IActionResult Privacy()
         {
             return View();

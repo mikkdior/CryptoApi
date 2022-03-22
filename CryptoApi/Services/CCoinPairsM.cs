@@ -1,6 +1,7 @@
 ﻿using CryptoApi.Api;
 using CryptoApi.Models.DB;
 using CryptoApi.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace CryptoApi.Services
 {
@@ -52,14 +53,19 @@ namespace CryptoApi.Services
         public IEnumerable<CCoinPairDataVM> GetPairs(int page, int count)
         {
             return (from p in db.CoinPairs
+                    
                     join c1 in db.Coins on p.coin1_id equals c1.id
                     join c2 in db.Coins on p.coin2_id equals c2.id
+                    
                     select new CCoinPairDataVM()
                     {
                         data = p,
                         coin1 = c1,
                         coin2 = c2
-                    }).Skip((page - 1) * count).Take(count);
+                    })
+                    //.Include(p => p.meta)
+                    .Skip((page - 1) * count)
+                    .Take(count);
         }
 
         public CCoinPairDataVM GetPairByNames(string name1, string name2)
@@ -74,7 +80,9 @@ namespace CryptoApi.Services
                         data = p,
                         coin1 = c1,
                         coin2 = c2
-                    }).FirstOrDefault<CCoinPairDataVM>();
+                    })
+                    .Include(p => p.meta)
+                    .FirstOrDefault<CCoinPairDataVM>();
         }
 
         public int GetMaxPage(int count)
