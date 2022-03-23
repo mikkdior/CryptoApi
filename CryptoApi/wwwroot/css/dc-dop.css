@@ -1,5 +1,5 @@
 .dc-description{
-    margin-bottom: 100px;
+    margin-top: 100px;
 }
 .dc-description-title{
     
@@ -130,6 +130,7 @@
     background: #1b143a;
 }
 .dc-coin-info-custom {
+    margin-top: 100px;
     background: #1b143a;
 }
 .dc-collapse__btn-custom:hover {

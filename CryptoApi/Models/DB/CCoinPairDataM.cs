@@ -23,7 +23,10 @@
         {
             get
             {
-                return meta.Where(x => x.group == group);
+                int c = meta.Count;
+                IEnumerable<CCoinPairsMetaDataM> data = meta.Where(x => x.group == group);
+                return data;
+                /*return meta.Where(x => x.group == group);*/
             }
         }
         public CCoinPairsMetaDataM this[string group, string option]

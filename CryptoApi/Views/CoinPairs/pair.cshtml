@@ -2,6 +2,8 @@
 @inject CBlocksHelperVM BlocksHelper
 @{
     ViewData["Title"] = "CoinPair Page";
+    var similiar_pairs = BlocksHelper.GetPairList(Model.pair.data);
+    Console.Write("");
 }
 <!DOCTYPE html>
 <html data-n-head-ssr="" lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
@@ -149,13 +151,17 @@
                                     </div>
                                     @*@await Html.PartialAsync("_CoinInfo")*@ @*CoinInfo*@
                                     @await Html.PartialAsync("_Description", Model.Description) @*CoinPairText*@
-                                    <div class="dc-list-title-wrapper">
-                                        <h2 class="dc-coin-pairs-table__title">Cryptocurrency Exchange Pairs</h2>
-                                        <div class="dc-view-all">
-                                            <a asp-controller="CoinPairs" asp-action="Index">View All</a>
+                                    @if (similiar_pairs.Count() > 0)
+                                    {
+                                        <div class="dc-list-title-wrapper">
+                                            <h2 class="dc-coin-pairs-table__title">Similiar Pairs</h2>
+                                            <div class="dc-view-all">
+                                                <a asp-controller="CoinPairs" asp-action="Index">View All</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    @await Html.PartialAsync("_CoinPairList", BlocksHelper.GetPairList(10)) @*CoinPairsList*@
+                                        @await Html.PartialAsync("_CoinPairList", similiar_pairs) @*CoinPairsList*@
+                                    }
+                                
                                     @await Html.PartialAsync("_TextBlocks", Model.TextBlocks) @*HowTo*@
                                     @await Html.PartialAsync("_Faq", Model.Faq) @*Faq*@
                                 </div>

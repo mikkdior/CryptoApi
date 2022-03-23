@@ -93,19 +93,12 @@ namespace CryptoApi.Services
                     coin2 = data.Coin2
                 })
                 .FirstOrDefault();
-            /*return (from p in db.CoinPairs
-                    join c1 in db.Coins on p.coin1_id equals c1.id
-                    join c2 in db.Coins on p.coin2_id equals c2.id
-                    where c1.name == name1
-                    where c2.name == name2
-                    select new CCoinPairDataVM()
-                    {
-                        data = p,
-                        coin1 = c1,
-                        coin2 = c2
-                    })
-                    .Include(p => p.meta)
-                    .FirstOrDefault<CCoinPairDataVM>();*/
+        }
+        public IEnumerable<CCoinPairDataM> GetSimiliarPairs(CCoinPairDataM pair)
+        {
+            return from item in pair["pairs"]
+                   where item.coinpairid == pair.id
+                   select db.CoinPairs.Find(uint.Parse(item.value));
         }
 
         public int GetMaxPage(int count)

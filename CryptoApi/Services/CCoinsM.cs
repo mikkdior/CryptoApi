@@ -95,6 +95,12 @@ namespace CryptoApi.Services
                 })
                 .FirstOrDefault();
         }
+        public IEnumerable<CCoinDataM> GetSimiliarCoins(CCoinDataM coin)
+        {
+            return from item in coin["coins"]
+                   where item.coinid == coin.id
+                   select db.Coins.Find(uint.Parse(item.value));
+        }
 
         public int GetMaxPage (int count)
         {
