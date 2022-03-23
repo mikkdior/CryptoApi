@@ -23,6 +23,15 @@ namespace CryptoApi.ViewModels
         {
             return coinsModel.GetCoins(page, count);
         }
+        // метод возвращает список монет относительно текущей. 
+        // в таблице CoinsMeta в группе common c именем link_id лежат id монет, которые нужно выбрать из базы
+        // в классе CCoinsM реализовать метод IEnumerable<CCoinDataVM> GetCoins(uint[] ids) и использовать его здесь
+        // аналогично сделать для пар
+        public IEnumerable<CCoinDataVM> GetCoinList(CCoinDataM coin)
+        {
+            
+            return default;
+        }
         public IEnumerable<CCoinPairDataVM> GetPairList(int count, int page = 1)
         {
             return pairsModel.GetPairs(page, count);

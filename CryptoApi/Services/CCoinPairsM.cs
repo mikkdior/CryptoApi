@@ -70,7 +70,30 @@ namespace CryptoApi.Services
 
         public CCoinPairDataVM GetPairByNames(string name1, string name2)
         {
-            return (from p in db.CoinPairs
+            return db.CoinPairs
+                .Join
+                (
+                    db.Coins,
+                    pair => pair.coin1_id,
+                    coin => coin.id,
+                    (pair, coin) => new { Pair = pair, Coin = coin }
+                )
+                .Join
+                (
+                    db.Coins,
+                    data => data.Pair.coin2_id,
+                    coin => coin.id,
+                    (data, coin) => new { Pair = data.Pair, Coin1 = data.Coin, Coin2 = coin }
+                )
+                .Where(data => data.Coin1.name == name1 && data.Coin2.name == name2)
+                .Select(data => new CCoinPairDataVM()
+                {
+                    data = data.Pair,
+                    coin1 = data.Coin1,
+                    coin2 = data.Coin2
+                })
+                .FirstOrDefault();
+            /*return (from p in db.CoinPairs
                     join c1 in db.Coins on p.coin1_id equals c1.id
                     join c2 in db.Coins on p.coin2_id equals c2.id
                     where c1.name == name1
@@ -82,7 +105,7 @@ namespace CryptoApi.Services
                         coin2 = c2
                     })
                     .Include(p => p.meta)
-                    .FirstOrDefault<CCoinPairDataVM>();
+                    .FirstOrDefault<CCoinPairDataVM>();*/
         }
 
         public int GetMaxPage(int count)
