@@ -1,4 +1,43 @@
-.dc-admin-container{
+.dc-description{
+    margin-bottom: 100px;
+}
+.dc-description-title{
+    
+}
+.dc-description-content {
+    margin-top: 50px;
+    color: hsla(0,0%,100%,.6);
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 32px;
+}
+.dc-text-blocks {
+    margin: 100px 0;
+}
+.dc-text-blocks .dc-text-block + .dc-text-block {
+    margin-top: 100px;
+}
+.dc-text-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.dc-text-block-title, .dc-description-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;
+}
+.dc-text-block-content {
+    padding-top: 20px;
+    color: hsla(0,0%,100%,.6);
+    max-width: 65%;
+    min-width: 65%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 32px;
+    padding-left: 10px;
+}
+.dc-admin-container {
     width: 1200px;
     background: lightgray;
     padding: 20px;
@@ -140,6 +179,7 @@
 }
 .dc-collapse-custom .btn span {
     color: #FFF;
+    padding-left: 3px;
 }
 .data-table__header {
     background: #0f0b1f;

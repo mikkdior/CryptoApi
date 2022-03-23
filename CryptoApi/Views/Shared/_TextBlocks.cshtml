@@ -3,9 +3,11 @@
 <div class="dc-text-blocks">
     @foreach (var block in Model)
     {
-        <h2 class="dc-text-blocks-title">@block.title</h2>
-        <div class="dc-text-blocks-content">
-            @block.text
+        <div class="dc-text-block">
+            <h2 class="dc-text-block-title">@block.title</h2>
+            <div class="dc-text-block-content">
+                @block.text
+            </div>
         </div>
     }
 </div>

@@ -5700,7 +5700,7 @@ body.scroll-lock {
     display: -ms-flexbox;
     display: flex;
     width  : 100%;
-    padding: 80px 0 64px
+    padding: 80px 0 64px;
 }
 
 @media (max-width:767px) {
