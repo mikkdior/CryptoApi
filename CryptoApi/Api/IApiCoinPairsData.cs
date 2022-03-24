@@ -2,6 +2,6 @@
 {
     public interface IApiCoinPairsData
     {
-        IEnumerator<IApiCoinPair> GetEnumerator();
+        IEnumerable<IApiCoinPair> GetEnumerable();
     }
 }

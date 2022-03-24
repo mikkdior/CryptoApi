@@ -14,7 +14,7 @@ namespace CryptoApi.Api.Gecko
             this.coins = coins;
             this.coins_full = coins_full;
         }
-        public IEnumerator<IApiCoin> GetEnumerator()
+        public IEnumerable<IApiCoin> GetEnumerable()
         {
             foreach(var coin in coins_full)
             {

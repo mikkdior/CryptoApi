@@ -56,7 +56,7 @@ namespace CryptoApi.ViewModels
             string coin1 = (string)context.GetRouteValue("coin1");
             string coin2 = (string)context.GetRouteValue("coin2");
 
-            pair = model.GetPairByNames(coin1, coin2);
+            pair = model.GetPairByNames(coin1, coin2); 
         }
     }
 }

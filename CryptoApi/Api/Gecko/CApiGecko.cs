@@ -18,7 +18,7 @@ namespace CryptoApi.Api.Gecko
             Inc();
             CurrentCoins = await _client.CoinsClient.GetAllCoinsData();
             var coins = await _client.CoinsClient.GetCoinList();
-
+            Console.WriteLine($"current coins: {CurrentCoins}");
             return new CGeckoCoinsData(CurrentCoins, coins);
         }
         public async Task<IApiCoinPairsData> GetCoinPairsAsync()
