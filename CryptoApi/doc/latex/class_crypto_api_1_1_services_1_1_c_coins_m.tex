@@ -1,0 +1,56 @@
+\hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m}{}\doxysection{Crypto\+Api.\+Services.\+CCoinsM Class Reference}
+\label{class_crypto_api_1_1_services_1_1_c_coins_m}\index{CryptoApi.Services.CCoinsM@{CryptoApi.Services.CCoinsM}}
+Inheritance diagram for Crypto\+Api.\+Services.\+CCoinsM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_crypto_api_1_1_services_1_1_c_coins_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a62e8408cfdf97edf469ce5f0e7aa0fda}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a62e8408cfdf97edf469ce5f0e7aa0fda}} 
+{\bfseries CCoinsM} (\mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_db_m}{CDbM}} db)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_ac39201a9c214b6bfbcff4b3ae3d9b495}\label{class_crypto_api_1_1_services_1_1_c_coins_m_ac39201a9c214b6bfbcff4b3ae3d9b495}} 
+\mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}}? {\bfseries Has\+Coin} (string donor, string name)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_aa67603c60a7add412ec81c200a2f87e8}\label{class_crypto_api_1_1_services_1_1_c_coins_m_aa67603c60a7add412ec81c200a2f87e8}} 
+Dictionary$<$ string, \mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}} $>$ {\bfseries Get\+Coins\+By\+Names} (string\mbox{[}$\,$\mbox{]} names)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a76ea9a27735a15e6bb76090925dd5f5d}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a76ea9a27735a15e6bb76090925dd5f5d}} 
+\mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}}? {\bfseries Has\+Coin} (\mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}} coin)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a0b8580dfe0a2c03ba448688673b1bae6}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a0b8580dfe0a2c03ba448688673b1bae6}} 
+\mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}}? {\bfseries Has\+Coin} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a62702f66893240da82a550da47eb68ed}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a62702f66893240da82a550da47eb68ed}} 
+async Task {\bfseries Add\+Coin\+Async} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin, bool save=true)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_ab5ddafa381cca0cfa4b9d21609a85a73}\label{class_crypto_api_1_1_services_1_1_c_coins_m_ab5ddafa381cca0cfa4b9d21609a85a73}} 
+async Task {\bfseries Update\+Coin\+Async} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin, \mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}}? has\+\_\+coin, bool save=true)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a42bdd37494e00032d0c70230576fb86d}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a42bdd37494e00032d0c70230576fb86d}} 
+\mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}} {\bfseries Api\+To\+Data} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin, \mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_coin_data_m}{CCoin\+DataM}}? data=null)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_aeee302db51c3605f53505e5e41839407}\label{class_crypto_api_1_1_services_1_1_c_coins_m_aeee302db51c3605f53505e5e41839407}} 
+async Task {\bfseries Add\+Coins\+Async} (IEnumerable$<$ \mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} $>$ coins)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a31baf2bd3a285b00c026845bb8aff2d4}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a31baf2bd3a285b00c026845bb8aff2d4}} 
+int {\bfseries Count} ()
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a885a0f8ea21e65cc5b79a1ba637f9069}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a885a0f8ea21e65cc5b79a1ba637f9069}} 
+IEnumerable$<$ \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_coin_data_v_m}{CCoin\+Data\+VM}} $>$ {\bfseries Get\+Coins} (int page, int count)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_a0b0206d0040f435fccab1f42198b272f}\label{class_crypto_api_1_1_services_1_1_c_coins_m_a0b0206d0040f435fccab1f42198b272f}} 
+\mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_coin_data_v_m}{CCoin\+Data\+VM}} {\bfseries Get\+Coin\+By\+Name} (string name)
+\item 
+\mbox{\Hypertarget{class_crypto_api_1_1_services_1_1_c_coins_m_adbb3a7f75cdc4977f918d5942d5ea6c3}\label{class_crypto_api_1_1_services_1_1_c_coins_m_adbb3a7f75cdc4977f918d5942d5ea6c3}} 
+int {\bfseries Get\+Max\+Page} (int count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Services/CCoins\+M.\+cs\end{DoxyCompactItemize}

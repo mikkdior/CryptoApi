@@ -10,13 +10,9 @@ namespace CryptoApi.Services
         public CCoinsM(CDbM db) : base(db)
         {
         }
-        public bool HasCoin(string donor, string name)
+        public CCoinDataM? HasCoin(string donor, string name)
         {
-            var has_coin = from c in db.Coins
-                           where c.donor == donor && c.name == name
-                           select c;
-
-            return has_coin.Count<CCoinDataM>() > 0;
+            return db.Coins.SingleOrDefault(coin => coin.donor == donor && coin.name == name);
         }
         public Dictionary<string, CCoinDataM> GetCoinsByNames(string[] names)
         {
@@ -30,40 +26,57 @@ namespace CryptoApi.Services
 
             return coins_dict;
         }
-        public bool HasCoin (CCoinDataM coin)
+        public CCoinDataM? HasCoin (CCoinDataM coin)
         {
             return HasCoin(coin.donor, coin.name);
         }
-        public bool HasCoin(IApiCoin coin)
+        public CCoinDataM? HasCoin(IApiCoin coin)
         {
             return HasCoin(coin.Donor, coin.Name);
         }
         public async Task AddCoinAsync(IApiCoin coin, bool save = true)
         {
-            if (HasCoin(coin)) return;
-
-            await db.Coins.AddAsync(new CCoinDataM()
-            {
-                donor = coin.Donor,
-                donor_id = coin.Id,
-                name_full = coin.FullName,
-                name = coin.Name,
-                slug = coin.Name,
-                usd = coin.Usd,
-                image = coin.Image,
-                market_cap = coin.MarketCap.ToString(),
-                change_day = coin.ChangeDay.ToString(),
-                change_week = coin.ChangeWeek.ToString(),
-                change_month = coin.ChangeMonth.ToString(),
-                change_price = coin.ChangePrice.ToString()
-            });
-
+            await db.Coins.AddAsync(ApiToData(coin));
             if (save) await db.SaveChangesAsync();
         }
-
-        public async Task AddCoinsAsync(IApiCoinsData coins)
+        public async Task UpdateCoinAsync(IApiCoin coin, CCoinDataM? has_coin, bool save = true)
         {
-            foreach (var coin in coins) await AddCoinAsync(coin, false);
+            ApiToData(coin, has_coin);
+            if (save) await db.SaveChangesAsync();
+        }
+        public CCoinDataM ApiToData (IApiCoin coin, CCoinDataM? data = null)
+        {
+            var new_coin = data ?? new CCoinDataM();
+
+            new_coin.donor = coin.Donor;
+            new_coin.donor_id = coin.Id;
+            new_coin.name_full = coin.FullName;
+            new_coin.name = coin.Name;
+            new_coin.slug = coin.Name;
+            new_coin.usd = coin.Usd;
+            new_coin.image = coin.Image;
+            new_coin.market_cap = coin.MarketCap.ToString();
+            new_coin.change_day = coin.ChangeDay.ToString();
+            new_coin.change_week = coin.ChangeWeek.ToString();
+            new_coin.change_month = coin.ChangeMonth.ToString();
+            new_coin.change_price = coin.ChangePrice.ToString();
+
+            return new_coin;
+        }
+        public async Task AddCoinsAsync(IEnumerable<IApiCoin> coins)
+        {
+            if (coins == null) return;
+
+            foreach (var coin in coins)
+            {
+                var has_coin = HasCoin(coin);
+
+                if (has_coin != null) 
+                    await UpdateCoinAsync(coin, has_coin, false);
+                else
+                    await AddCoinAsync(coin, false);
+            }
+
             await db.SaveChangesAsync();
         }
 

@@ -8,7 +8,7 @@
 
         public Task<IApiCoinPairsData> GetCoinPairsAsync()
         {
-            throw new NotImplementedException();
+            return default;
         }
 
         public async Task<IApiCoinsData> GetCoinsAsync()

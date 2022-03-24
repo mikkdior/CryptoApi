@@ -11,7 +11,7 @@ namespace CryptoApi.Api.Gecko
             this.coins = coins;
         }
 
-        public IEnumerator<IApiCoinPair> GetEnumerator()
+        public IEnumerable<IApiCoinPair> GetEnumerable()
         {
             Console.WriteLine($"coins count:{coins.Count}");
             foreach (CoinFullData coin in coins)

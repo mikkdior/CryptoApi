@@ -3,7 +3,7 @@
     public class CCoinPairsMetaDataM
     {
         public uint id { get; set; }
-        public uint coinpairid { get; set; }
+        public uint coinpairsid { get; set; }
         public string group { get; set; }
         public string option { get; set; }
         public string value { get; set; }

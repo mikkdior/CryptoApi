@@ -2,9 +2,10 @@
   "ActualizeTime": "21",
   "Donors": {
     "Paprika": {
+      "Enable": false,
       "CommonData": {
         "Url": "url",
-        "Limit": 2
+        "Limit": 20
       },
       "Accounts": [
         {
@@ -16,17 +17,14 @@
       ]
     },
     "Gecko": {
+      "Enable": true,
       "CommonData": {
-        "Url": "url",
-        "Limit": 2
+        "Limit": 20
       },
-      "Accounts": [
-        {
-          "Key": "asdf"
-        }
-      ]
+      "Accounts": []
     },
     "Market": {
+      "Enable": false,
       "CommonData": {
         "Url": "url",
         "Limit": 200,

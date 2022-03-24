@@ -22,16 +22,21 @@ namespace CryptoApi.Services
             var donors = conf.GetSection("Donors");
             api.Init(donors);
         }
-
         public async Task RefreshDataAsync ()
+        {
+            await RefreshCoinsAsync();
+            await RefreshPairsAsync();
+        }
+        public async Task RefreshCoinsAsync()
         {
             var coins = api.GetCoinsAsync().Result;
             await coinsModel.AddCoinsAsync(coins);
-
+        }
+        public async Task RefreshPairsAsync()
+        {
             var pairs = api.GetCoinPairsAsync().Result;
             await coinPairsModel.AddPairsAsync(pairs);
         }
-
         public async Task RunAsync ()
         {
 
@@ -44,10 +49,12 @@ namespace CryptoApi.Services
 
         public async Task LoadCoinsAsync()
         {
+            await Task.Run(RefreshCoinsAsync);
         }
 
         public async Task LoadPairsAsync()
         {
+            await Task.Run(RefreshPairsAsync);
         }
 
         public async Task TestAsync()
