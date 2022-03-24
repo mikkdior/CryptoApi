@@ -146,7 +146,7 @@ namespace CryptoApi.Services
         public IEnumerable<CCoinPairDataM> GetSimiliarPairs(CCoinPairDataM pair)
         {
             return from item in pair["pairs"]
-                   where item.coinpairid == pair.id
+                   where item.coinpairsid == pair.id
                    select db.CoinPairs.Find(uint.Parse(item.value));
         }
 
