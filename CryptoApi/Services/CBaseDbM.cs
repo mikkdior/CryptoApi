@@ -1,13 +1,15 @@
 ﻿using CryptoApi.Models.DB;
 
-namespace CryptoApi.Services
+namespace CryptoApi.Services;
+
+public class CBaseDbM
 {
-    public class CBaseDbM
+    protected CDbM db;
+    /// <summary>
+    ///     Конструктор модели сервиса базы данных.
+    /// </summary>
+    public CBaseDbM (CDbM db)
     {
-        protected CDbM db;
-        public CBaseDbM (CDbM db)
-        {
-            this.db = db;
-        }
+        this.db = db;
     }
 }

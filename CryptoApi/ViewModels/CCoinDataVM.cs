@@ -1,10 +1,12 @@
 ﻿using CryptoApi.Models.DB;
 
-namespace CryptoApi.ViewModels
-{
-    public class CCoinDataVM
-    {
-        public CCoinDataM data { get; set; }
+namespace CryptoApi.ViewModels;
 
-    }
+/// <summary>
+///     Вью-Модель данных монеты.
+/// </summary>
+public class CCoinDataVM
+{
+    public CCoinDataM data { get; set; }
+
 }
