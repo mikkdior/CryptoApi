@@ -2,7 +2,7 @@
   "ActualizeTime": "21",
   "Donors": {
     "Paprika": {
-      "Enable": true,
+      "Enable": false,
       "CommonData": {
         "Limit": 20
       },
@@ -16,15 +16,14 @@
       "Accounts": []
     },
     "Market": {
-      "Enable": false,
+      "Enable": true,
       "CommonData": {
-        "Key": "8ebb1a91-71c4-4615-8171-2329c07b945e",
         "Limit": 200,
         "CoinsDataUrl": "https://api.coingecko.com/api/v3/coins/list"
       },
       "Accounts": [
         {
-          "Key": "asdf"
+          "Key": "8ebb1a91-71c4-4615-8171-2329c07b945e"
         }
       ]
     }
