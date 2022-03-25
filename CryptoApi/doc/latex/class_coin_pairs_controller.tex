@@ -1,5 +1,10 @@
 \hypertarget{class_coin_pairs_controller}{}\doxysection{Coin\+Pairs\+Controller Class Reference}
 \label{class_coin_pairs_controller}\index{CoinPairsController@{CoinPairsController}}
+
+
+Контроллер страниц всех пар и конкретной пары.  
+
+
 Inheritance diagram for Coin\+Pairs\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +15,24 @@ Inheritance diagram for Coin\+Pairs\+Controller\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_coin_pairs_controller_a312f06f7fe8e54c6dde8ac45679ce8a0}\label{class_coin_pairs_controller_a312f06f7fe8e54c6dde8ac45679ce8a0}} 
-{\bfseries Coin\+Pairs\+Controller} (ILogger$<$ Home\+Controller $>$ logger, \mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_db_m}{CDbM}} db, \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_blocks_helper_v_m}{CBlocks\+Helper\+VM}} blocks)
-\item 
+{\bfseries Coin\+Pairs\+Controller} (ILogger$<$ \mbox{\hyperlink{class_home_controller}{Home\+Controller}} $>$ logger, \mbox{\hyperlink{class_c_db_m}{CDbM}} db, \mbox{\hyperlink{class_c_blocks_helper_v_m}{CBlocks\+Helper\+VM}} blocks)
+\begin{DoxyCompactList}\small\item\em Конструктор. заполняет необходимые поля при создании модели. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coin_pairs_controller_a1a53ce3b759239b765a38c9e85d64e6c}\label{class_coin_pairs_controller_a1a53ce3b759239b765a38c9e85d64e6c}} 
-IAction\+Result {\bfseries Index} (int page, \mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_coin_pairs_v_m}{CCoin\+Pairs\+VM}} model)
-\item 
+IAction\+Result {\bfseries Index} (int page, \mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_c_coin_pairs_v_m}{CCoin\+Pairs\+VM}} model)
+\begin{DoxyCompactList}\small\item\em Отображает страницу всех пар. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coin_pairs_controller_ab6886d4359363a462e98d735491aa695}\label{class_coin_pairs_controller_ab6886d4359363a462e98d735491aa695}} 
-IAction\+Result {\bfseries Pair} (\mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_coin_pair_v_m}{CCoin\+Pair\+VM}} model)
-\item 
+IAction\+Result {\bfseries Pair} (\mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_c_coin_pair_v_m}{CCoin\+Pair\+VM}} model)
+\begin{DoxyCompactList}\small\item\em Отображает страницу конкретной пары. Через get параметры принимает идентификаторы самих пар. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coin_pairs_controller_addab7561eb8dbf53d917a93d1d2cb572}\label{class_coin_pairs_controller_addab7561eb8dbf53d917a93d1d2cb572}} 
 IAction\+Result {\bfseries Privacy} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Отображает страницу Privacy. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coin_pairs_controller_aacab99cb6f38a56334b3940f57dd462d}\label{class_coin_pairs_controller_aacab99cb6f38a56334b3940f57dd462d}} 
 IAction\+Result {\bfseries Error} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Отображает страницу ошибки. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Контроллер страниц всех пар и конкретной пары. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

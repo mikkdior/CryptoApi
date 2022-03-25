@@ -1,64 +1,87 @@
 ﻿using CryptoApi.Services;
 
-namespace CryptoApi.ViewModels
+namespace CryptoApi.ViewModels;
+
+/// <summary>
+///     Вью-Модель (сервис) страницы монеты.
+/// </summary>
+public class CCoinVM
 {
-    public class CCoinVM
+    public CCoinDataVM coin;
+    private CCoinsM model;
+    private IConfiguration conf;
+    private CCommonM commonModel;
+
+    /// <summary>
+    ///     Используя паттерн Buider генерирует модель текстового блока "Описания" и возвращает ее.
+    /// </summary>
+    public CTextBlockVM Description
     {
-        public CCoinDataVM coin;
-        private CCoinsM model;
-        private IConfiguration conf;
-        private CCommonM commonModel;
-
-        public CTextBlockVM Description
+        get 
         {
-            get 
-            {
-                return new CTextBlockBuilder()
-                    .SetTitle(commonModel["coin desc", "title"]?.value)
-                    .SetTitleValues(coin.data["desc", "title"]?.value)
-                    .SetTitleData(coin.data)
-                    .SetText(commonModel["coin desc", "text"]?.value)
-                    .SetTextValues(coin.data["desc", "text"]?.value)
-                    .SetTextData(coin.data)
-                    .Build(); 
-            }
+            return new CTextBlockBuilder()
+                .SetTitle(commonModel["coin desc", "title"]?.value)
+                .SetTitleValues(coin.data["desc", "title"]?.value)
+                .SetTitleData(coin.data)
+                .SetText(commonModel["coin desc", "text"]?.value)
+                .SetTextValues(coin.data["desc", "text"]?.value)
+                .SetTextData(coin.data)
+                .Build(); 
         }
+    }
 
-        public IEnumerable<CTextBlockVM> TextBlocks => GetTextBlock("coin texts");
-        public IEnumerable<CTextBlockVM> Faq => GetTextBlock("coin faq");
+    /// <summary>
+    ///     Используя метод GetTextBlock генерирует перечисление моделей текстовых блоков и возвращает их.
+    /// </summary>
+    public IEnumerable<CTextBlockVM> TextBlocks => GetTextBlock("coin texts");
 
-        public IEnumerable<CTextBlockVM> GetTextBlock(string group)
-        {
-            for (var i = 0; i < commonModel[group].Count() / 2; i++)
-            {
-                string title = commonModel[group, $"title{i + 1}"].value;
-                string text = commonModel[group, $"text{i + 1}"].value;
+    /// <summary>
+    ///     Используя метод GetTextBlock генерирует перечисление моделей текстовых блоков "Faq" и возвращает их.
+    /// </summary>
+    public IEnumerable<CTextBlockVM> Faq => GetTextBlock("coin faq");
 
-                yield return new CTextBlockBuilder()
-                    .SetTitle(title)
-                    .SetTitleValues(coin.data["desc", "title"]?.value)
-                    .SetTitleData(coin.data)
-                    .SetText(text)
-                    .SetTextValues(coin.data["desc", "text"]?.value)
-                    .SetTextData(coin.data)
-                    .Build();
-            }
-        }
-        public CCoinVM (CCoinsM model, IConfiguration conf, CCommonM common_model)
+    /// <summary>
+    ///     Генерирует перечисление моделей текстовых блоков по имени группы и возвращает их.
+    /// </summary>
+    public IEnumerable<CTextBlockVM> GetTextBlock(string group)
+    {
+        for (var i = 0; i < commonModel[group].Count() / 2; i++)
         {
-            this.model = model;
-            this.conf = conf;
-            this.commonModel = common_model;
+            string title = commonModel[group, $"title{i + 1}"].value;
+            string text = commonModel[group, $"text{i + 1}"].value;
+
+            yield return new CTextBlockBuilder()
+                .SetTitle(title)
+                .SetTitleValues(coin.data["desc", "title"]?.value)
+                .SetTitleData(coin.data)
+                .SetText(text)
+                .SetTextValues(coin.data["desc", "text"]?.value)
+                .SetTextData(coin.data)
+                .Build();
         }
-        public void Init (HttpContext context)
-        {
-            string? name = (string?)context.GetRouteValue("coin");
-            coin = model.GetCoinByName(name);
-            Console.WriteLine("-------------------------");
-            Console.WriteLine(Description.title);
-            Console.WriteLine("-------------------------");
-            Console.WriteLine(Description.text);
-            Console.WriteLine("-------------------------");
-        }
+    }
+
+    /// <summary>
+    ///     Конструктор. заполняет  необходимые поля при создании модели.
+    /// </summary>
+    public CCoinVM (CCoinsM model, IConfiguration conf, CCommonM common_model)
+    {
+        this.model = model;
+        this.conf = conf;
+        this.commonModel = common_model;
+    }
+
+    /// <summary>
+    ///     Ручная инициализация (заполнение нужных полей).
+    /// </summary>
+    public void Init (HttpContext context)
+    {
+        string? name = (string?)context.GetRouteValue("coin");
+        coin = model.GetCoinByName(name);
+        Console.WriteLine("-------------------------");
+        Console.WriteLine(Description.title);
+        Console.WriteLine("-------------------------");
+        Console.WriteLine(Description.text);
+        Console.WriteLine("-------------------------");
     }
 }

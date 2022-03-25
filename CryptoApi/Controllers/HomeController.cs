@@ -4,43 +4,60 @@ using CryptoApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CryptoApi.Controllers
+namespace CryptoApi.Controllers;
+
+/// <summary>
+///     Контроллер главной страницы.
+/// </summary>
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly ILogger<HomeController> _logger;
+    private CDbM db;
+    private CBlocksHelperVM blocksHelper;
+
+    /// <summary>
+    ///     Конструктор. заполняет  необходимые поля при создании модели.
+    /// </summary>
+    public HomeController(ILogger<HomeController> logger, CDbM db, CBlocksHelperVM blocks)
     {
-        private readonly ILogger<HomeController> _logger;
-        private CDbM db;
-        private CBlocksHelperVM blocksHelper;
+        _logger = logger;
 
-        public HomeController(ILogger<HomeController> logger, CDbM db, CBlocksHelperVM blocks)
-        {
-            _logger = logger;
+        this.db = db;
+        this.blocksHelper = blocks;
+    }
 
-            this.db = db;
-            this.blocksHelper = blocks;
-        }
+    /// <summary>
+    ///     Отображает главную страницу.
+    /// </summary>
+    public IActionResult Index([FromServices] CHomeVM model)
+    {
+        ViewBag.Blocks = blocksHelper;
+        return View(model);
+    }
 
-        public IActionResult Index([FromServices] CHomeVM model)
-        {
-            ViewBag.Blocks = blocksHelper;
-            return View(model);
-        }
+    /// <summary>
+    ///     Test.
+    /// </summary>
+    [Route("/test")]
+    public string Test()
+    {
+        return "";
+    }
 
-        [Route("/test")]
-        public string Test()
-        {
-            return "";
-        }
+    /// <summary>
+    ///     Отображает страницу Privacy.
+    /// </summary>
+    public IActionResult Privacy()
+    {
+        return View();
+    }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+    /// <summary>
+    ///     Отображает страницу ошибки.
+    /// </summary>
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

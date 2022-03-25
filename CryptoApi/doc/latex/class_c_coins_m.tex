@@ -1,0 +1,67 @@
+\hypertarget{class_c_coins_m}{}\doxysection{CCoinsM Class Reference}
+\label{class_c_coins_m}\index{CCoinsM@{CCoinsM}}
+
+
+Модель (сервис), для работы с Coin\+Pairs из БД.  
+
+
+Inheritance diagram for CCoinsM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_coins_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_coins_m_a0c859df2540f1610c25d6588898a3aba}\label{class_c_coins_m_a0c859df2540f1610c25d6588898a3aba}} 
+{\bfseries CCoinsM} (\mbox{\hyperlink{class_c_db_m}{CDbM}} db)
+\begin{DoxyCompactList}\small\item\em Конструктор. Передает модель БД родителю. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_a31dc4c2a50822fd160206b729c9d2d72}\label{class_c_coins_m_a31dc4c2a50822fd160206b729c9d2d72}} 
+Dictionary$<$ string, \mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}} $>$ {\bfseries Get\+Coins\+By\+Names} (string\mbox{[}$\,$\mbox{]} names)
+\begin{DoxyCompactList}\small\item\em Возвращает словарь с моделями монет по ключу name монеты. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_a15ce1cf4f56b83bd3fb4d9cacaa51a5c}\label{class_c_coins_m_a15ce1cf4f56b83bd3fb4d9cacaa51a5c}} 
+\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}}? {\bfseries Has\+Coin} (string donor, string name)
+\begin{DoxyCompactList}\small\item\em Проверяет, есть ли пара в БД, используя donor \& id монеты. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_ac29de9c72e75cba172d88ecd9f0857df}\label{class_c_coins_m_ac29de9c72e75cba172d88ecd9f0857df}} 
+\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}}? {\bfseries Has\+Coin} (\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}} coin)
+\begin{DoxyCompactList}\small\item\em Проверяет, есть ли пара в БД, используя id монеты. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_ad9ec432a49d03b230c20417a9262520d}\label{class_c_coins_m_ad9ec432a49d03b230c20417a9262520d}} 
+\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}}? {\bfseries Has\+Coin} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin)
+\begin{DoxyCompactList}\small\item\em Проверяет, есть ли пара в БД, используя name монеты. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_a9756efb343b32ef78007a9b8287af428}\label{class_c_coins_m_a9756efb343b32ef78007a9b8287af428}} 
+async Task {\bfseries Add\+Coin\+Async} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin, bool save=true)
+\begin{DoxyCompactList}\small\item\em Асинхронно добавляет монету. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_aa81de632c7d2d5a1cc14ad9887dac6a7}\label{class_c_coins_m_aa81de632c7d2d5a1cc14ad9887dac6a7}} 
+async Task {\bfseries Update\+Coin\+Async} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin, \mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}}? has\+\_\+coin, bool save=true)
+\begin{DoxyCompactList}\small\item\em Асинхронно обновляет монету. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_acbd6de9b4c757f9b12f024a34adb8fdf}\label{class_c_coins_m_acbd6de9b4c757f9b12f024a34adb8fdf}} 
+\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}} {\bfseries Api\+To\+Data} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} coin, \mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}}? data=null)
+\begin{DoxyCompactList}\small\item\em Асинхронно вытягивает монету. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_ae5edb26c5516b5cffb9c3c63f0c124b3}\label{class_c_coins_m_ae5edb26c5516b5cffb9c3c63f0c124b3}} 
+async Task {\bfseries Add\+Coins\+Async} (IEnumerable$<$ \mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin}{IApi\+Coin}} $>$ coins)
+\begin{DoxyCompactList}\small\item\em Асинхронно добавляет монеты. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_a8ebf5e349f4c57c0f575c90e9758345a}\label{class_c_coins_m_a8ebf5e349f4c57c0f575c90e9758345a}} 
+int {\bfseries Count} ()
+\begin{DoxyCompactList}\small\item\em Возвращает количество монет. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_ae9e3c8e29f1e7609db4495c010b1ad78}\label{class_c_coins_m_ae9e3c8e29f1e7609db4495c010b1ad78}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_data_v_m}{CCoin\+Data\+VM}} $>$ {\bfseries Get\+Coins} (int page, int count)
+\begin{DoxyCompactList}\small\item\em Достает монеты из БД используя исходное заданное количество и номер страницы. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_aab783db76f09170d1878ed2ae6edaa76}\label{class_c_coins_m_aab783db76f09170d1878ed2ae6edaa76}} 
+\mbox{\hyperlink{class_c_coin_data_v_m}{CCoin\+Data\+VM}} {\bfseries Get\+Coin\+By\+Name} (string name)
+\begin{DoxyCompactList}\small\item\em Достает монету из БД используя name монеты. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_a21c27dc20c162d0781067ad783739a87}\label{class_c_coins_m_a21c27dc20c162d0781067ad783739a87}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}} $>$ {\bfseries Get\+Similiar\+Coins} (\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}} coin)
+\begin{DoxyCompactList}\small\item\em Достает похожие монеты из БД используя id исходной пары. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coins_m_adf0238d205823c4451afaa3dcc9465f2}\label{class_c_coins_m_adf0238d205823c4451afaa3dcc9465f2}} 
+int {\bfseries Get\+Max\+Page} (int count)
+\begin{DoxyCompactList}\small\item\em Возвращает число максимально возможной страницы для пагинации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Модель (сервис), для работы с Coin\+Pairs из БД. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Services/CCoins\+M.\+cs\end{DoxyCompactItemize}

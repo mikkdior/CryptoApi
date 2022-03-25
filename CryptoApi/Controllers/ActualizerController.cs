@@ -1,71 +1,101 @@
 ﻿using CryptoApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CryptoApi.Controllers
+namespace CryptoApi.Controllers;
+
+/// <summary>
+///     Контроллер API Актуалайзера. Задача актулизатора - актулизировать данные по курсу валют существующих монет и добавления новых.
+/// </summary>
+public class ActualizerController : Controller
 {
-    public class ActualizerController : Controller
+    CActualizerM actualizer;
+    private CCoinsM coinsModel;
+    private CCoinPairsM coinPairsModel;
+
+    /// <summary>
+    ///     Конструктор. заполняет  необходимые поля при создании модели.
+    /// </summary>
+    public ActualizerController (CActualizerM act, CCoinsM coins, CCoinPairsM pair)
     {
-        CActualizerM actualizer;
-        private CCoinsM coinsModel;
-        private CCoinPairsM coinPairsModel;
-        public ActualizerController (CActualizerM act, CCoinsM coins, CCoinPairsM pair)
-        {
-            this.actualizer = act;
-            this.coinsModel = coins;
-            this.coinPairsModel = pair;
-        }
+        this.actualizer = act;
+        this.coinsModel = coins;
+        this.coinPairsModel = pair;
+    }
 
-        [Route("/actualizer")]
-        public IActionResult Index()
-        {
-            return View();
-        }
+    /// <summary>
+    ///     Отображает главную страницу API актуалайзера.
+    /// </summary>
+    [Route("/actualizer")]
+    public IActionResult Index()
+    {
+        return View();
+    }
 
-        [Route("/actualizer/run")]
-        public string Run()
-        {
-            actualizer.RunAsync();
-            return "run";
-        }
+    /// <summary>
+    ///     Запускает работу API актуалайзера.
+    /// </summary>
+    [Route("/actualizer/run")]
+    public string Run()
+    {
+        actualizer.RunAsync();
+        return "run";
+    }
 
-        [Route("/actualizer/stop")]
-        public string Stop()
-        {
-            actualizer.StopAsync();
-            return "stop";
-        }
+    /// <summary>
+    ///     Останавливает работу актуалайзера.
+    /// </summary>
+    [Route("/actualizer/stop")]
+    public string Stop()
+    {
+        actualizer.StopAsync();
+        return "stop";
+    }
 
-        [Route("/actualizer/run-now")]
-        public string RunNow()
-        {
-            actualizer.RunNowAsync();
-            return "RunNow";
-        }
+    /// <summary>
+    ///     Запускает работу API актуалайзера.
+    /// </summary>
+    [Route("/actualizer/run-now")]
+    public string RunNow()
+    {
+        actualizer.RunNowAsync();
+        return "RunNow";
+    }
 
-        [Route("/actualizer/clear")]
-        public string Clear()
-        {
-            actualizer.ClearAllAsync();
-            return "Clear";
-        }
+    /// <summary>
+    ///     Очищает данные API актуалайзера.
+    /// </summary>
+    [Route("/actualizer/clear")]
+    public string Clear()
+    {
+        actualizer.ClearAllAsync();
+        return "Clear";
+    }
 
-        [Route("/actualizer/coins-count")]
-        public string CoinsCount()
-        {
-            return $"Coins count: {coinsModel.Count()}";
-        }
+    /// <summary>
+    ///     Выводит количество монет используя API актуалайзер.
+    /// </summary>
+    [Route("/actualizer/coins-count")]
+    public string CoinsCount()
+    {
+        return $"Coins count: {coinsModel.Count()}";
+    }
 
-        [Route("/actualizer/pairs-count")]
-        public string PairsCount()
-        {
-            return $"Pairs count: {coinPairsModel.Count()}";
-        }
+    /// <summary>
+    ///     Выводит количество пар используя API актуалайзер.
+    /// </summary>
+    [Route("/actualizer/pairs-count")]
+    public string PairsCount()
+    {
+        return $"Pairs count: {coinPairsModel.Count()}";
+    }
 
-        [Route("/actualizer/test")]
-        public string Test()
-        {
-            actualizer.TestAsync();
-            return "test";
-        }
+    /// <summary>
+    ///     Тест API актуалайзера.
+    /// </summary>
+    [Route("/actualizer/test")]
+    public string Test()
+    {
+        actualizer.TestAsync();
+        return "test";
     }
 }

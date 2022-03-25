@@ -1,0 +1,36 @@
+\hypertarget{class_c_blocks_helper_v_m}{}\doxysection{CBlocks\+Helper\+VM Class Reference}
+\label{class_c_blocks_helper_v_m}\index{CBlocksHelperVM@{CBlocksHelperVM}}
+
+
+Вспомогательный класс (сервис) для удобства работы в файлах cshtml.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_blocks_helper_v_m_a3eaca253e1a28244ecb21053c8347117}\label{class_c_blocks_helper_v_m_a3eaca253e1a28244ecb21053c8347117}} 
+{\bfseries CBlocks\+Helper\+VM} (IConfiguration conf, \mbox{\hyperlink{class_c_db_m}{CDbM}} db, \mbox{\hyperlink{class_c_coins_m}{CCoinsM}} coins\+\_\+model, \mbox{\hyperlink{class_c_coin_pairs_m}{CCoin\+PairsM}} pairs\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Конструктор. заполняет необходимые поля при создании модели. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_blocks_helper_v_m_a7e54b0d144acbccc8aa27c2a23c8ee6c}\label{class_c_blocks_helper_v_m_a7e54b0d144acbccc8aa27c2a23c8ee6c}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_data_v_m}{CCoin\+Data\+VM}} $>$ {\bfseries Get\+Coin\+List} (int count, int page=1)
+\begin{DoxyCompactList}\small\item\em Возвращает список монет относительно кол-\/ва и номера страницы. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_blocks_helper_v_m_ad0ff67aefc6ef3753216753647c533da}\label{class_c_blocks_helper_v_m_ad0ff67aefc6ef3753216753647c533da}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_data_v_m}{CCoin\+Data\+VM}} $>$ {\bfseries Get\+Coin\+List} (\mbox{\hyperlink{class_c_coin_data_m}{CCoin\+DataM}} coin)
+\begin{DoxyCompactList}\small\item\em Возвращает список похожих монет относительно текущей. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_blocks_helper_v_m_a7d22a4e8950b477905fa79f909f99018}\label{class_c_blocks_helper_v_m_a7d22a4e8950b477905fa79f909f99018}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_pair_data_v_m}{CCoin\+Pair\+Data\+VM}} $>$ {\bfseries Get\+Pair\+List} (int count, int page=1)
+\begin{DoxyCompactList}\small\item\em Возвращает список пар относительно кол-\/ва и номера страницы. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_blocks_helper_v_m_a1c6ed7e9efc9f39ea1a22be749127789}\label{class_c_blocks_helper_v_m_a1c6ed7e9efc9f39ea1a22be749127789}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_pair_data_v_m}{CCoin\+Pair\+Data\+VM}} $>$ {\bfseries Get\+Pair\+List} (\mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}} pair)
+\begin{DoxyCompactList}\small\item\em Возвращает список похожих пар относительно текущей. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_blocks_helper_v_m_a3662ec9872b98d703dfc57c58c1e9d5d}\label{class_c_blocks_helper_v_m_a3662ec9872b98d703dfc57c58c1e9d5d}} 
+List$<$(string Url, string Title)$>$ {\bfseries Get\+Pagination} (int max\+\_\+page, int page, string link\+\_\+start=\char`\"{}?page=\char`\"{})
+\begin{DoxyCompactList}\small\item\em Возвращает акутальный список ссылок пагинации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Вспомогательный класс (сервис) для удобства работы в файлах cshtml. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View\+Models/CBlocks\+Helper\+VM.\+cs\end{DoxyCompactItemize}

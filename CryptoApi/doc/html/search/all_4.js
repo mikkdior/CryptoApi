@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['iapi_0',['IApi',['../interface_crypto_api_1_1_api_1_1_i_api.html',1,'CryptoApi::Api']]],
-  ['iapicoin_1',['IApiCoin',['../interface_crypto_api_1_1_api_1_1_i_api_coin.html',1,'CryptoApi::Api']]],
-  ['iapicoinpair_2',['IApiCoinPair',['../interface_crypto_api_1_1_api_1_1_i_api_coin_pair.html',1,'CryptoApi::Api']]],
-  ['iapicoinpairsdata_3',['IApiCoinPairsData',['../interface_crypto_api_1_1_api_1_1_i_api_coin_pairs_data.html',1,'CryptoApi::Api']]],
-  ['iapicoinsdata_4',['IApiCoinsData',['../interface_crypto_api_1_1_api_1_1_i_api_coins_data.html',1,'CryptoApi::Api']]],
-  ['iapifactory_5',['IApiFactory',['../interface_crypto_api_1_1_api_1_1_i_api_factory.html',1,'CryptoApi::Api']]]
+  ['error_0',['Error',['../class_coin_pairs_controller.html#aacab99cb6f38a56334b3940f57dd462d',1,'CoinPairsController.Error()'],['../class_coins_controller.html#a9c8a2c1c7f5bb2960ece2e448773fd20',1,'CoinsController.Error()'],['../class_home_controller.html#adc49f0c0411d8867649e540a082a18c5',1,'HomeController.Error()']]],
+  ['errorviewmodel_1',['ErrorViewModel',['../class_crypto_api_1_1_models_1_1_error_view_model.html',1,'CryptoApi::Models']]]
 ];
