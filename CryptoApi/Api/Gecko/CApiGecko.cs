@@ -6,18 +6,18 @@ namespace CryptoApi.Api.Gecko
 {
     public class CApiGecko : CBaseApi, IApi
     {
-        private readonly ICoinGeckoClient _client;
+        private readonly ICoinGeckoClient client;
         private IReadOnlyList<CoinFullData> CurrentCoins;
 
         public CApiGecko(IConfigurationSection conf, IConfigurationSection acc) : base(conf, acc)
         {
-            _client = CoinGeckoClient.Instance;
+            client = CoinGeckoClient.Instance;
         }
         public async Task<IApiCoinsData> GetCoinsAsync()
         {
             Inc();
-            CurrentCoins = await _client.CoinsClient.GetAllCoinsData();
-            var coins = await _client.CoinsClient.GetCoinList();
+            CurrentCoins = await client.CoinsClient.GetAllCoinsData();
+            var coins = await client.CoinsClient.GetCoinList();
             Console.WriteLine($"current coins: {CurrentCoins}");
             return new CGeckoCoinsData(CurrentCoins, coins);
         }
@@ -28,7 +28,7 @@ namespace CryptoApi.Api.Gecko
 
         public async Task TestAsync()
         {
-            var markets = await _client.CoinsClient.GetCoinMarkets("zoc");
+            var markets = await client.CoinsClient.GetCoinMarkets("zoc");
 
             foreach(var market in markets)
             {

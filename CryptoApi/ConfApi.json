@@ -2,9 +2,9 @@
   "ActualizeTime": "21",
   "Donors": {
     "Paprika": {
-      "Enable": false,
+      "Enable": true,
       "CommonData": {
-        "Url": "url",
+        "CoinsDataUrl": "https://api.coinpaprika.com/v1/coins",
         "Limit": 20
       },
       "Accounts": [
@@ -17,7 +17,7 @@
       ]
     },
     "Gecko": {
-      "Enable": true,
+      "Enable": false,
       "CommonData": {
         "Limit": 20
       },

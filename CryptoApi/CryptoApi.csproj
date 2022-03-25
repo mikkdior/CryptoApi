@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoinGecko\CoinGecko.csproj" />
+    <ProjectReference Include="..\CoinpaprikaAPI\CoinpaprikaAPI.csproj" />
   </ItemGroup>
 
 </Project>

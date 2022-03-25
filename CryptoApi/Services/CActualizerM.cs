@@ -25,7 +25,7 @@ namespace CryptoApi.Services
         public async Task RefreshDataAsync ()
         {
             await RefreshCoinsAsync();
-            await RefreshPairsAsync();
+            //await RefreshPairsAsync();
         }
         public async Task RefreshCoinsAsync()
         {
