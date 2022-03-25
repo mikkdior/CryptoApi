@@ -140,6 +140,16 @@ public class CCoinsM : CBaseDbM
     }
 
     /// <summary>
+    ///     Достает похожие монеты из БД используя id исходной пары.
+    /// </summary>
+    public IEnumerable<CCoinDataVM> GetCoins(CCoinDataM coin)
+    {
+        return from item in coin["coins"]
+               where item.coinid == coin.id
+               select new CCoinDataVM() { data = db.Coins.Find(uint.Parse(item.value)) };
+    }
+
+    /// <summary>
     ///     Достает монету из БД используя name монеты.
     /// </summary>
     public CCoinDataVM GetCoinByName (string name)
@@ -152,16 +162,6 @@ public class CCoinsM : CBaseDbM
                 data = c
             })
             .FirstOrDefault();
-    }
-
-    /// <summary>
-    ///     Достает похожие монеты из БД используя id исходной пары.
-    /// </summary>
-    public IEnumerable<CCoinDataM> GetSimiliarCoins(CCoinDataM coin)
-    {
-        return from item in coin["coins"]
-               where item.coinid == coin.id
-               select db.Coins.Find(uint.Parse(item.value));
     }
 
     /// <summary>

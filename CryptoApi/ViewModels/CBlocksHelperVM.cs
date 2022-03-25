@@ -34,11 +34,8 @@ public class CBlocksHelperVM
     /// <summary>
     ///     Возвращает список похожих монет относительно текущей.
     /// </summary>
-    public IEnumerable<CCoinDataVM> GetCoinList(CCoinDataM coin)
-    {
-        return  from coin_m in coinsModel.GetSimiliarCoins(coin)
-                select new CCoinDataVM() { data = coin_m };
-    }
+    public IEnumerable<CCoinDataVM> GetCoinList(CCoinDataM coin) => coinsModel.GetCoins(coin);
+    
     /// <summary>
     ///     Возвращает список пар относительно кол-ва и номера страницы.
     /// </summary>
@@ -49,16 +46,8 @@ public class CBlocksHelperVM
     /// <summary>
     ///     Возвращает список похожих пар относительно текущей.
     /// </summary>
-    public IEnumerable<CCoinPairDataVM> GetPairList(CCoinPairDataM pair)
-    {
-        return from pair_m in pairsModel.GetSimiliarPairs(pair)
-               select new CCoinPairDataVM() 
-               { 
-                   data = pair_m, 
-                   coin1 = db.Coins.Find(pair_m.coin1_id), 
-                   coin2 = db.Coins.Find(pair_m.coin2_id) 
-               };
-    }
+    public IEnumerable<CCoinPairDataVM> GetPairList(CCoinPairDataM pair) => pairsModel.GetPairs(pair);
+    
     /// <summary>
     ///     Возвращает акутальный список ссылок пагинации.
     /// </summary>

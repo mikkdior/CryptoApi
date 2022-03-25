@@ -152,6 +152,22 @@ public class CCoinPairsM : CBaseDbM
     }
 
     /// <summary>
+    ///     Достает похожие пары из БД используя id исходной пары.
+    /// </summary>
+    public IEnumerable<CCoinPairDataVM> GetPairs(CCoinPairDataM pair)
+    {
+        return from item in pair["pairs"]
+               where item.coinpairsid == pair.id
+               let pair_m = db.CoinPairs.Find(uint.Parse(item.value))
+               select new CCoinPairDataVM()
+               {
+                   data = pair_m,
+                   coin1 = db.Coins.Find(pair_m.coin1_id),
+                   coin2 = db.Coins.Find(pair_m.coin2_id)
+               };
+    }
+
+    /// <summary>
     ///     Достает пару из БД используя name монет.
     /// </summary>
     public CCoinPairDataVM GetPairByNames(string name1, string name2)
@@ -180,16 +196,6 @@ public class CCoinPairsM : CBaseDbM
                 coin2 = data.Coin2
             })
             .FirstOrDefault();
-    }
-
-    /// <summary>
-    ///     Достает похожие пары из БД используя id исходной пары.
-    /// </summary>
-    public IEnumerable<CCoinPairDataM> GetSimiliarPairs(CCoinPairDataM pair)
-    {
-        return from item in pair["pairs"]
-               where item.coinpairsid == pair.id
-               select db.CoinPairs.Find(uint.Parse(item.value));
     }
 
     /// <summary>
