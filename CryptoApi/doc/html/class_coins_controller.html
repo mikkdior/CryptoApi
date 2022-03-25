@@ -68,6 +68,9 @@ $(function() {
   <div class="headertitle"><div class="title">CoinsController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Контроллер страниц всех монет и конкретной монеты.  
+ <a href="class_coins_controller.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CoinsController:</div>
 <div class="dyncontent">
@@ -78,22 +81,29 @@ Inheritance diagram for CoinsController:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aed2033523a2fc6878174974c741d99a6"><td class="memItemLeft" align="right" valign="top"><a id="aed2033523a2fc6878174974c741d99a6" name="aed2033523a2fc6878174974c741d99a6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CoinsController</b> (ILogger&lt; HomeController &gt; logger, <a class="el" href="class_crypto_api_1_1_models_1_1_d_b_1_1_c_db_m.html">CDbM</a> db, <a class="el" href="class_crypto_api_1_1_view_models_1_1_c_blocks_helper_v_m.html">CBlocksHelperVM</a> blocks)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CoinsController</b> (ILogger&lt; <a class="el" href="class_home_controller.html">HomeController</a> &gt; logger, <a class="el" href="class_c_db_m.html">CDbM</a> db, <a class="el" href="class_c_blocks_helper_v_m.html">CBlocksHelperVM</a> blocks)</td></tr>
+<tr class="memdesc:aed2033523a2fc6878174974c741d99a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор. заполняет необходимые поля при создании модели. <br /></td></tr>
 <tr class="separator:aed2033523a2fc6878174974c741d99a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d9d98b76efd49bde0b5e563880580a"><td class="memItemLeft" align="right" valign="top"><a id="a00d9d98b76efd49bde0b5e563880580a" name="a00d9d98b76efd49bde0b5e563880580a"></a>
-IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (int page, [FromServices] <a class="el" href="class_crypto_api_1_1_view_models_1_1_c_coins_v_m.html">CCoinsVM</a> model)</td></tr>
+IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (int page, [FromServices] <a class="el" href="class_c_coins_v_m.html">CCoinsVM</a> model)</td></tr>
+<tr class="memdesc:a00d9d98b76efd49bde0b5e563880580a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу всех монет. <br /></td></tr>
 <tr class="separator:a00d9d98b76efd49bde0b5e563880580a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b889209b2d8fede6a46d053a39c572"><td class="memItemLeft" align="right" valign="top"><a id="ae7b889209b2d8fede6a46d053a39c572" name="ae7b889209b2d8fede6a46d053a39c572"></a>
-IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Coin</b> ([FromServices] <a class="el" href="class_crypto_api_1_1_view_models_1_1_c_coin_v_m.html">CCoinVM</a> model)</td></tr>
+IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Coin</b> ([FromServices] <a class="el" href="class_c_coin_v_m.html">CCoinVM</a> model)</td></tr>
+<tr class="memdesc:ae7b889209b2d8fede6a46d053a39c572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу конкретной монеты. Через get параметры принимает идентификатор самой монеты. <br /></td></tr>
 <tr class="separator:ae7b889209b2d8fede6a46d053a39c572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d59968e0997ca12eaae871e2e1c23a0"><td class="memItemLeft" align="right" valign="top"><a id="a3d59968e0997ca12eaae871e2e1c23a0" name="a3d59968e0997ca12eaae871e2e1c23a0"></a>
 IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Privacy</b> ()</td></tr>
+<tr class="memdesc:a3d59968e0997ca12eaae871e2e1c23a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу Privacy. <br /></td></tr>
 <tr class="separator:a3d59968e0997ca12eaae871e2e1c23a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c8a2c1c7f5bb2960ece2e448773fd20"><td class="memItemLeft" align="right" valign="top"><a id="a9c8a2c1c7f5bb2960ece2e448773fd20" name="a9c8a2c1c7f5bb2960ece2e448773fd20"></a>
 IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Error</b> ()</td></tr>
+<tr class="memdesc:a9c8a2c1c7f5bb2960ece2e448773fd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу ошибки. <br /></td></tr>
 <tr class="separator:a9c8a2c1c7f5bb2960ece2e448773fd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Контроллер страниц всех монет и конкретной монеты. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Controllers/CoinsController.cs</li>
 </ul>
 </div><!-- contents -->

@@ -1,5 +1,10 @@
 \hypertarget{class_coins_controller}{}\doxysection{Coins\+Controller Class Reference}
 \label{class_coins_controller}\index{CoinsController@{CoinsController}}
+
+
+Контроллер страниц всех монет и конкретной монеты.  
+
+
 Inheritance diagram for Coins\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +15,24 @@ Inheritance diagram for Coins\+Controller\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_coins_controller_aed2033523a2fc6878174974c741d99a6}\label{class_coins_controller_aed2033523a2fc6878174974c741d99a6}} 
-{\bfseries Coins\+Controller} (ILogger$<$ Home\+Controller $>$ logger, \mbox{\hyperlink{class_crypto_api_1_1_models_1_1_d_b_1_1_c_db_m}{CDbM}} db, \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_blocks_helper_v_m}{CBlocks\+Helper\+VM}} blocks)
-\item 
+{\bfseries Coins\+Controller} (ILogger$<$ \mbox{\hyperlink{class_home_controller}{Home\+Controller}} $>$ logger, \mbox{\hyperlink{class_c_db_m}{CDbM}} db, \mbox{\hyperlink{class_c_blocks_helper_v_m}{CBlocks\+Helper\+VM}} blocks)
+\begin{DoxyCompactList}\small\item\em Конструктор. заполняет необходимые поля при создании модели. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coins_controller_a00d9d98b76efd49bde0b5e563880580a}\label{class_coins_controller_a00d9d98b76efd49bde0b5e563880580a}} 
-IAction\+Result {\bfseries Index} (int page, \mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_coins_v_m}{CCoins\+VM}} model)
-\item 
+IAction\+Result {\bfseries Index} (int page, \mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_c_coins_v_m}{CCoins\+VM}} model)
+\begin{DoxyCompactList}\small\item\em Отображает страницу всех монет. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coins_controller_ae7b889209b2d8fede6a46d053a39c572}\label{class_coins_controller_ae7b889209b2d8fede6a46d053a39c572}} 
-IAction\+Result {\bfseries Coin} (\mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_crypto_api_1_1_view_models_1_1_c_coin_v_m}{CCoin\+VM}} model)
-\item 
+IAction\+Result {\bfseries Coin} (\mbox{[}From\+Services\mbox{]} \mbox{\hyperlink{class_c_coin_v_m}{CCoin\+VM}} model)
+\begin{DoxyCompactList}\small\item\em Отображает страницу конкретной монеты. Через get параметры принимает идентификатор самой монеты. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coins_controller_a3d59968e0997ca12eaae871e2e1c23a0}\label{class_coins_controller_a3d59968e0997ca12eaae871e2e1c23a0}} 
 IAction\+Result {\bfseries Privacy} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Отображает страницу Privacy. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_coins_controller_a9c8a2c1c7f5bb2960ece2e448773fd20}\label{class_coins_controller_a9c8a2c1c7f5bb2960ece2e448773fd20}} 
 IAction\+Result {\bfseries Error} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Отображает страницу ошибки. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Контроллер страниц всех монет и конкретной монеты. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -68,6 +68,9 @@ $(function() {
   <div class="headertitle"><div class="title">CoinPairsController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Контроллер страниц всех пар и конкретной пары.  
+ <a href="class_coin_pairs_controller.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CoinPairsController:</div>
 <div class="dyncontent">
@@ -78,22 +81,29 @@ Inheritance diagram for CoinPairsController:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a312f06f7fe8e54c6dde8ac45679ce8a0"><td class="memItemLeft" align="right" valign="top"><a id="a312f06f7fe8e54c6dde8ac45679ce8a0" name="a312f06f7fe8e54c6dde8ac45679ce8a0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CoinPairsController</b> (ILogger&lt; HomeController &gt; logger, <a class="el" href="class_crypto_api_1_1_models_1_1_d_b_1_1_c_db_m.html">CDbM</a> db, <a class="el" href="class_crypto_api_1_1_view_models_1_1_c_blocks_helper_v_m.html">CBlocksHelperVM</a> blocks)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CoinPairsController</b> (ILogger&lt; <a class="el" href="class_home_controller.html">HomeController</a> &gt; logger, <a class="el" href="class_c_db_m.html">CDbM</a> db, <a class="el" href="class_c_blocks_helper_v_m.html">CBlocksHelperVM</a> blocks)</td></tr>
+<tr class="memdesc:a312f06f7fe8e54c6dde8ac45679ce8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор. заполняет необходимые поля при создании модели. <br /></td></tr>
 <tr class="separator:a312f06f7fe8e54c6dde8ac45679ce8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a53ce3b759239b765a38c9e85d64e6c"><td class="memItemLeft" align="right" valign="top"><a id="a1a53ce3b759239b765a38c9e85d64e6c" name="a1a53ce3b759239b765a38c9e85d64e6c"></a>
-IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (int page, [FromServices] <a class="el" href="class_crypto_api_1_1_view_models_1_1_c_coin_pairs_v_m.html">CCoinPairsVM</a> model)</td></tr>
+IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (int page, [FromServices] <a class="el" href="class_c_coin_pairs_v_m.html">CCoinPairsVM</a> model)</td></tr>
+<tr class="memdesc:a1a53ce3b759239b765a38c9e85d64e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу всех пар. <br /></td></tr>
 <tr class="separator:a1a53ce3b759239b765a38c9e85d64e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6886d4359363a462e98d735491aa695"><td class="memItemLeft" align="right" valign="top"><a id="ab6886d4359363a462e98d735491aa695" name="ab6886d4359363a462e98d735491aa695"></a>
-IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Pair</b> ([FromServices] <a class="el" href="class_crypto_api_1_1_view_models_1_1_c_coin_pair_v_m.html">CCoinPairVM</a> model)</td></tr>
+IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Pair</b> ([FromServices] <a class="el" href="class_c_coin_pair_v_m.html">CCoinPairVM</a> model)</td></tr>
+<tr class="memdesc:ab6886d4359363a462e98d735491aa695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу конкретной пары. Через get параметры принимает идентификаторы самих пар. <br /></td></tr>
 <tr class="separator:ab6886d4359363a462e98d735491aa695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addab7561eb8dbf53d917a93d1d2cb572"><td class="memItemLeft" align="right" valign="top"><a id="addab7561eb8dbf53d917a93d1d2cb572" name="addab7561eb8dbf53d917a93d1d2cb572"></a>
 IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Privacy</b> ()</td></tr>
+<tr class="memdesc:addab7561eb8dbf53d917a93d1d2cb572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу Privacy. <br /></td></tr>
 <tr class="separator:addab7561eb8dbf53d917a93d1d2cb572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacab99cb6f38a56334b3940f57dd462d"><td class="memItemLeft" align="right" valign="top"><a id="aacab99cb6f38a56334b3940f57dd462d" name="aacab99cb6f38a56334b3940f57dd462d"></a>
 IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Error</b> ()</td></tr>
+<tr class="memdesc:aacab99cb6f38a56334b3940f57dd462d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает страницу ошибки. <br /></td></tr>
 <tr class="separator:aacab99cb6f38a56334b3940f57dd462d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Контроллер страниц всех пар и конкретной пары. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Controllers/CoinPairsController.cs</li>
 </ul>
 </div><!-- contents -->
