@@ -1,0 +1,61 @@
+\hypertarget{class_c_coin_pairs_m}{}\doxysection{CCoin\+PairsM Class Reference}
+\label{class_c_coin_pairs_m}\index{CCoinPairsM@{CCoinPairsM}}
+
+
+Модель (сервис), для работы с Coin\+Pairs из БД.  
+
+
+Inheritance diagram for CCoin\+PairsM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_coin_pairs_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a307d802f0458ef11096365e4b4bd3ddc}\label{class_c_coin_pairs_m_a307d802f0458ef11096365e4b4bd3ddc}} 
+{\bfseries CCoin\+PairsM} (\mbox{\hyperlink{class_c_db_m}{CDbM}} db, \mbox{\hyperlink{class_c_coins_m}{CCoinsM}} coins)
+\begin{DoxyCompactList}\small\item\em Конструктор. заполняет необходимые поля при создании модели. Передает модель БД родителю. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a26edf9e438455bdab2e4029562b490d1}\label{class_c_coin_pairs_m_a26edf9e438455bdab2e4029562b490d1}} 
+bool {\bfseries Has\+Pair} (uint id1, uint id2)
+\begin{DoxyCompactList}\small\item\em Проверяет, есть ли пара в БД, используя id двух монет. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_addba772f805c7253cd2a6f8f88549721}\label{class_c_coin_pairs_m_addba772f805c7253cd2a6f8f88549721}} 
+\mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}}? {\bfseries Has\+Pair} (string name1, string name2)
+\begin{DoxyCompactList}\small\item\em Проверяет, есть ли пара в БД, используя name двух монет. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a3554bcf48b1606b33cb3f55066ef0d74}\label{class_c_coin_pairs_m_a3554bcf48b1606b33cb3f55066ef0d74}} 
+async Task {\bfseries Add\+Pair\+Async} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin_pair}{IApi\+Coin\+Pair}} pair, bool save=true)
+\begin{DoxyCompactList}\small\item\em Асинхронно добавляет пару. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a9d363ab8681bd1fd553eb86f91cff934}\label{class_c_coin_pairs_m_a9d363ab8681bd1fd553eb86f91cff934}} 
+async Task {\bfseries Update\+Pair\+Async} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin_pair}{IApi\+Coin\+Pair}} pair, \mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}} old\+\_\+pair, bool save=true)
+\begin{DoxyCompactList}\small\item\em Асинхронно обновляет пару. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_ae5272c9ce771ed3f8824839fecf38427}\label{class_c_coin_pairs_m_ae5272c9ce771ed3f8824839fecf38427}} 
+\mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}} {\bfseries Api\+To\+Data} (\mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin_pair}{IApi\+Coin\+Pair}} pair, \mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}}? data=null)
+\begin{DoxyCompactList}\small\item\em Асинхронно вытягивает пару. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a9e995d914d1512fcb17ceb1b6764686b}\label{class_c_coin_pairs_m_a9e995d914d1512fcb17ceb1b6764686b}} 
+async Task {\bfseries Add\+Pairs\+Async} (IEnumerable$<$ \mbox{\hyperlink{interface_crypto_api_1_1_api_1_1_i_api_coin_pair}{IApi\+Coin\+Pair}} $>$ pairs)
+\begin{DoxyCompactList}\small\item\em Асинхронно добавляет пары. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_ae0c2a2b3f03cd9a664dd0f568e9f9717}\label{class_c_coin_pairs_m_ae0c2a2b3f03cd9a664dd0f568e9f9717}} 
+int {\bfseries Count} ()
+\begin{DoxyCompactList}\small\item\em Возвращает количество пар. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a0a20e640ac00039b07d091bd99d0adec}\label{class_c_coin_pairs_m_a0a20e640ac00039b07d091bd99d0adec}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_pair_data_v_m}{CCoin\+Pair\+Data\+VM}} $>$ {\bfseries Get\+Pairs} (int page, int count)
+\begin{DoxyCompactList}\small\item\em Достает пары из БД используя исходное заданное количество и номер страницы. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a34cf1a0d70131b9bc16e8b3a270d9720}\label{class_c_coin_pairs_m_a34cf1a0d70131b9bc16e8b3a270d9720}} 
+\mbox{\hyperlink{class_c_coin_pair_data_v_m}{CCoin\+Pair\+Data\+VM}} {\bfseries Get\+Pair\+By\+Names} (string name1, string name2)
+\begin{DoxyCompactList}\small\item\em Достает пару из БД используя name монет. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a9912a236579ba9b86164709d86b503e4}\label{class_c_coin_pairs_m_a9912a236579ba9b86164709d86b503e4}} 
+IEnumerable$<$ \mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}} $>$ {\bfseries Get\+Similiar\+Pairs} (\mbox{\hyperlink{class_c_coin_pair_data_m}{CCoin\+Pair\+DataM}} pair)
+\begin{DoxyCompactList}\small\item\em Достает похожие пары из БД используя id исходной пары. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_coin_pairs_m_a1f053fbb76db4458515c6357146fcb82}\label{class_c_coin_pairs_m_a1f053fbb76db4458515c6357146fcb82}} 
+int {\bfseries Get\+Max\+Page} (int count)
+\begin{DoxyCompactList}\small\item\em Возвращает число максимально возможной страницы для пагинации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Модель (сервис), для работы с Coin\+Pairs из БД. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Services/CCoin\+Pairs\+M.\+cs\end{DoxyCompactItemize}
