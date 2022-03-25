@@ -24,8 +24,8 @@ namespace CryptoApi.Services
         }
         public async Task RefreshDataAsync ()
         {
-            await RefreshCoinsAsync();
-            //await RefreshPairsAsync();
+            //await RefreshCoinsAsync();
+            await RefreshPairsAsync();
         }
         public async Task RefreshCoinsAsync()
         {
@@ -35,6 +35,7 @@ namespace CryptoApi.Services
         public async Task RefreshPairsAsync()
         {
             var pairs = api.GetCoinPairsAsync().Result;
+            Console.WriteLine("pairs count " + pairs.Count());
             await coinPairsModel.AddPairsAsync(pairs);
         }
         public async Task RunAsync ()

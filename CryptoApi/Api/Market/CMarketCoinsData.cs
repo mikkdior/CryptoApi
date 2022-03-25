@@ -1,6 +1,6 @@
 ﻿namespace CryptoApi.Api.Market
 {
-    public class CMarketData
+    public class CMarketCoinsData
     {
     }
 }

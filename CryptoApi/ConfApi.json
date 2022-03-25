@@ -4,17 +4,9 @@
     "Paprika": {
       "Enable": true,
       "CommonData": {
-        "CoinsDataUrl": "https://api.coinpaprika.com/v1/coins",
         "Limit": 20
       },
-      "Accounts": [
-        {
-          "Key": "asdf"
-        },
-        {
-          "Key": "asdf"
-        }
-      ]
+      "Accounts": []
     },
     "Gecko": {
       "Enable": false,
@@ -26,7 +18,7 @@
     "Market": {
       "Enable": false,
       "CommonData": {
-        "Url": "url",
+        "Key": "8ebb1a91-71c4-4615-8171-2329c07b945e",
         "Limit": 200,
         "CoinsDataUrl": "https://api.coingecko.com/api/v3/coins/list"
       },

@@ -13,10 +13,8 @@ namespace CryptoApi.Api.Gecko
 
         public IEnumerable<IApiCoinPair> GetEnumerable()
         {
-            Console.WriteLine($"coins count:{coins.Count}");
             foreach (CoinFullData coin in coins)
             {
-                Console.WriteLine("coin!!!!");
                 foreach(var data in coin.MarketData.CurrentPrice)
                 {
                     CoinFullData coin2 = null;// Find(data.Key);
