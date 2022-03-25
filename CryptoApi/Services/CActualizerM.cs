@@ -10,13 +10,15 @@ namespace CryptoApi.Services
         private CCoinPairsM coinPairsModel;
         private CApiManager api;
         private IConfiguration conf;
+        private IRunnerM runner;
 
-        public CActualizerM (CDbM db, CCoinsM coins, CCoinPairsM pair, CApiManager api)
+        public CActualizerM (CDbM db, CCoinsM coins, CCoinPairsM pair, CApiManager api, IRunnerM runner)
         {
             this.db = db;
             this.coinsModel = coins;
             this.coinPairsModel = pair;
             this.api = api;
+            this.runner = runner;
 
             conf = new ConfigurationBuilder().AddJsonFile("ConfApi.json").Build();
             var donors = conf.GetSection("Donors");
@@ -40,7 +42,7 @@ namespace CryptoApi.Services
         }
         public async Task RunAsync ()
         {
-
+            runner.Run(Int32.Parse(conf["ActualizeTime"]), () => RefreshDataAsync());
         }
 
         public async Task RunNowAsync ()
@@ -65,7 +67,7 @@ namespace CryptoApi.Services
 
         public async Task StopAsync ()
         {
-
+            runner.Stop();
         }
 
         public async Task ClearCoinsAsync()

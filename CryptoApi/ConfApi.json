@@ -2,7 +2,7 @@
   "ActualizeTime": "21",
   "Donors": {
     "Paprika": {
-      "Enable": false,
+      "Enable": true,
       "CommonData": {
         "Limit": 20
       },
@@ -16,10 +16,11 @@
       "Accounts": []
     },
     "Market": {
-      "Enable": true,
+      "Enable": false,
       "CommonData": {
         "Limit": 200,
-        "CoinsDataUrl": "https://api.coingecko.com/api/v3/coins/list"
+        "CoinsDataUrl": "https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
+        "PairsDataUrl": "https://pro-api.coinmarketcap.com/v1/cryptocurrency/market-pairs/latest"
       },
       "Accounts": [
         {

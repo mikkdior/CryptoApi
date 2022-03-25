@@ -17,9 +17,13 @@ namespace CryptoApi.Api.Market
         public async Task<IApiCoinsData> GetCoinsAsync()
         {
             Inc();
+            Console.WriteLine("data:");
             string str = makeAPICall();
+            //var data = CMarketJsonParser.Parse(str);
             Console.WriteLine(str);
-            return default;
+            //Console.WriteLine("count: " + data.data.Count);
+            return null;
+            //return new CMarketCoinsData(data.data);
         }
 
         public Task TestAsync()
@@ -31,11 +35,12 @@ namespace CryptoApi.Api.Market
         {
             string API_KEY = key;
             var URL = new UriBuilder("https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest");
+            //var URL = new UriBuilder("https://pro-api.coinmarketcap.com/v1/cryptocurrency/market-pairs/latest");
 
             var queryString = HttpUtility.ParseQueryString(string.Empty);
-            queryString["start"] = "1";
-            queryString["limit"] = "5000";
-            queryString["convert"] = "USD";
+            //queryString["start"] = "1";
+            //queryString["limit"] = "5000";
+            //queryString["convert"] = "USD";
 
             URL.Query = queryString.ToString();
 

@@ -18,8 +18,8 @@ namespace CryptoApi.Api.Paprika
             return new CPaprikaCoinPairsData(coins, id =>
             {
                 var data = new Dictionary<string, OhlcValue>();
-                var curs = new string[] { "usd", "btc" };
-
+                var curs = new string[] { "USD", "btc" };
+                
                 foreach (var cur in curs)
                 {
                     var res = client.GetLatestOhlcForCoinAsync(id, cur).Result;
@@ -29,7 +29,7 @@ namespace CryptoApi.Api.Paprika
                     data.Add(cur, res.Value[0]);
 
                 }
-
+                Console.WriteLine(data.Count());
                 return data;
             });
         }

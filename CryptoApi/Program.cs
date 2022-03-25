@@ -26,6 +26,7 @@ builder.Services.AddTransient<CHomeVM>();
 
 builder.Services.AddTransient<CActualizerM>();
 builder.Services.AddSingleton<CApiManager>();
+builder.Services.AddSingleton<IRunnerM, CRunnerM>();
 
 var app = builder.Build();
 

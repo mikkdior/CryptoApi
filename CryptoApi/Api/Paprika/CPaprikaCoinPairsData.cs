@@ -15,7 +15,7 @@ namespace CryptoApi.Api.Paprika
         }
         public IEnumerable<IApiCoinPair> GetEnumerable()
         {
-            int limit = 100;
+            int limit = 10;
 
             foreach (CoinInfo coin in coins)
             {
