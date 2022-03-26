@@ -1,31 +1,8 @@
-﻿<div class="default-layout__header-wrapper">
-    <header class="header header_scrolled">
-        <div class="header_wrapper">
-            <a asp-controller="Home" asp-action="Index" aria-current="page" class="logo nuxt-link-exact-active nuxt-link-active">
-               <img src="/custom/img/letsexchange/logo-color-ukraine.svg"alt="site-logo">
-            </a>
-            @await Html.PartialAsync("_MainMenu")
-            <div class="menuToggler">
-                <div class="toggler_main">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNCA1QzMuNDQ3NzIgNSAzIDUuNDQ3NzIgMyA2QzMgNi41NTIyOCAzLjQ0NzcyIDcgNCA3VjVaTTIwIDdDMjAuNTUyMyA3IDIxIDYuNTUyMjggMjEgNkMyMSA1LjQ0NzcyIDIwLjU1MjMgNSAyMCA1VjdaTTQgN0gyMFY1SDRWN1oiIGZpbGw9IndoaXRlIi8+CiAgPHBhdGggZD0iTTQgMTdDMy40NDc3MiAxNyAzIDE3LjQ0NzcgMyAxOEMzIDE4LjU1MjMgMy40NDc3MiAxOSA0IDE5VjE3Wk0yMCAxOUMyMC41NTIzIDE5IDIxIDE4LjU1MjMgMjEgMThDMjEgMTcuNDQ3NyAyMC41NTIzIDE3IDIwIDE3VjE5Wk00IDE5SDIwVjE3SDRWMTlaIiBmaWxsPSJ3aGl0ZSIvPgogIDxwYXRoIGQ9Ik00IDExQzMuNDQ3NzIgMTEgMyAxMS40NDc3IDMgMTJDMyAxMi41NTIzIDMuNDQ3NzIgMTMgNCAxM0w0IDExWk0yMCAxM0MyMC41NTIzIDEzIDIxIDEyLjU1MjMgMjEgMTJDMjEgMTEuNDQ3NyAyMC41NTIzIDExIDIwIDExTDIwIDEzWk00IDEzTDIwIDEzTDIwIDExTDQgMTFMNCAxM1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="
-                                               alt="main">
-                </div>
-            </div>
-        </div>
-        <div class="TopScrollBtn"
-             style="display: none;"
-             data-v-68d8f3cc="">
-             <svg width="28"
-                                     height="14"
-                                     viewBox="0 0 28 14"
-                                     fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     data-v-68d8f3cc="">
-                <path d="M0.286486 13.7295C0.672401 14.0902 1.29951 14.0902 1.68543 13.7295L13.9865 2.20934L26.3116 13.7295C26.6975 14.0902 27.3246 14.0902 27.7106 13.7295C28.0965 13.3688 28.0965 12.7826 27.7106 12.4219L14.7101 0.270532C14.5171 0.0901783 14.2759 1.66122e-06 14.0106 1.63803e-06C13.7694 1.61694e-06 13.5041 0.0901782 13.3111 0.270532L0.310608 12.4219C-0.0994262 12.7826 -0.0994281 13.3688 0.286486 13.7295Z"
-                      fill="#B7F348"></path>
-                <path d="M0.286486 13.7295C0.672401 14.0902 1.29951 14.0902 1.68543 13.7295L13.9865 2.20934L26.3116 13.7295C26.6975 14.0902 27.3246 14.0902 27.7106 13.7295C28.0965 13.3688 28.0965 12.7826 27.7106 12.4219L14.7101 0.270532C14.5171 0.0901783 14.2759 1.66122e-06 14.0106 1.63803e-06C13.7694 1.61694e-06 13.5041 0.0901782 13.3111 0.270532L0.310608 12.4219C-0.0994262 12.7826 -0.0994281 13.3688 0.286486 13.7295Z"
-                      stroke="#B7F348"></path>
-            </svg>
-        </div>
-    </header>
-</div>
+﻿<header>
+    <div class="dc-container">
+        >header
+        @await Html.PartialAsync("_Logo")
+        @await Html.PartialAsync("_MainMenu")
+        @await Html.PartialAsync("_Auth")
+    </div> 
+</header>

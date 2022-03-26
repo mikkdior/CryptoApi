@@ -1,0 +1,32 @@
+﻿@using CryptoApi.ViewModels
+@inject IConfiguration conf
+@model List<(string Url, string Title)>
+@{
+    string current_page = Context.Request.Query["page"] == Microsoft.Extensions.Primitives.StringValues.Empty ? "1" : Context.Request.Query["page"];
+}
+@if (Model.Count > 1)
+{
+    <div class="pagination">
+        <ul class="pagination__list">
+            @foreach ((string Url, string Title) item in Model)
+            {
+                if (item.Title == current_page)
+                {
+                    <li class="pagination__list-item-wrap">
+                        <span class="pagination__list-item pagination__list-item--active">
+                            @item.Title
+                        </span>
+                    </li>
+                }
+                else
+                {
+                    <li class="pagination__list-item-wrap">
+                        <a href="@item.Url" class="nuxt-link-active pagination__list-item">
+                            @item.Title
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+}

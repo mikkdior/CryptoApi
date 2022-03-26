@@ -1,13 +1,6 @@
 ﻿@model IEnumerable<CTextBlockVM>
 
-<div class="dc-text-blocks">
-    @foreach (var block in Model)
-    {
-        <div class="dc-text-block">
-            <h2 class="dc-text-block-title">@block.title</h2>
-            <div class="dc-text-block-content">
-                @block.text
-            </div>
-        </div>
-    }
-</div>
+@foreach(var block in Model)
+{
+    @await Html.PartialAsync("_TextBlock", block)
+}

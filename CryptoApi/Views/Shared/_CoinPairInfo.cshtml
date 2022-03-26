@@ -1,0 +1,8 @@
+﻿@model (CCoinDataVM coindata, IEnumerable<CTextBlockVM> textblocks)
+<div class="dc-coin-info"> @*flex*@
+    >coin-info
+    <h1>title</h1>
+    @await Html.PartialAsync("_Desc", Model.textblocks)
+    @await Html.PartialAsync("_Table", Model.coindata)
+    @await Html.PartialAsync("_CoinWidget")
+</div>

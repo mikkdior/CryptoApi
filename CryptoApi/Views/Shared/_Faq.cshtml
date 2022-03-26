@@ -1,29 +1,8 @@
 ﻿@model IEnumerable<CTextBlockVM>
 
-<div id="faq" class="detailed-info-block">
-    <div class="detailed-info-block__title dc-detailed-info-block__title-custom">
-        <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="detailed-info-block__info-wrap">
-        @foreach (var block in Model)
-        {
-            <div class="collapse dc-collapse-custom">
-                <button class="btn btn--unscalable collapse__btn dc-collapse__btn-custom">
-                    <span class="btn__content dc-btn__content-custom"> 
-                        <span class="btn__content-item">
-                            <span class="collapse__btn-text">@block.title</span> 
-                            <i class="svg-icon collapse__svg dc-faq-btn">&#129122;</i>
-                        </span> 
-                    </span>
-                </button>
-                <div class="collapse__content">
-                    <div class="collapse__content-wrap">
-                        <div class="detailed-info-block__text">
-                            @block.text
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+<div class="dc-faq">
+    >faq
+    @await Html.PartialAsync("_TextBlock")
+    @await Html.PartialAsync("_TextBlock")
+    @await Html.PartialAsync("_TextBlock")
 </div>

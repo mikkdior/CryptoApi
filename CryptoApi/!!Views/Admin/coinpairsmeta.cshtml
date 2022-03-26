@@ -1,0 +1,36 @@
+﻿@using CryptoApi.Models.DB
+@model CCoinPairsMetaDataM
+@inject CBlocksHelperVM BlocksHelper
+
+<h1>CoinPairs meta</h1>
+<div class="dc-meta-editor">
+    @using (Html.BeginForm("CoinPairsMeta", "Admin", FormMethod.Post))
+    {
+        <p>
+            <label>coin_pair_id: </label>
+            <select name="coin_pair_id" id="coin_pair_id" >
+                <option value="" selected disabled hidden></option>
+                @foreach (var pair in BlocksHelper.GetPairList(100))
+                {
+                    <option value="@pair.data.id">@pair.data.id (@pair.coin1.name & @pair.coin2.name)</option>
+                }
+            </select>
+        </p>
+        <p>
+            <label>group: </label>
+            @Html.Editor("group")
+        </p>
+        <p>
+            <label>option: </label>
+            @Html.Editor("option")
+        </p>
+        <p>
+            <label>value: </label>
+            @Html.TextAreaFor(m => m.value)
+        </p>
+        <p>
+            <input type="submit" value="post"/>
+        </p>
+    }
+</div>
+<a asp-controller="Admin" asp-action="Index" class="dc-admin-back">>back</a>
