@@ -2,14 +2,14 @@
   "ActualizeTime": "21",
   "Donors": {
     "Paprika": {
-      "Enable": true,
+      "Enable": false,
       "CommonData": {
         "Limit": 20
       },
       "Accounts": []
     },
     "Gecko": {
-      "Enable": false,
+      "Enable": true,
       "CommonData": {
         "Limit": 20
       },
