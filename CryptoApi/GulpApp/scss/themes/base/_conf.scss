@@ -1,0 +1,73 @@
+//--------------------------------------
+// PATHS
+$dc-img-url: '../img/';
+$dc-fonts-url: '../fonts/';
+$dc-sprite-img: 'sprite.png';
+// /PATHS
+//--------------------------------------
+// VARS
+// Общие отступы
+$dc-shift: 15px; // отсупы
+$dc-side-shift: 15px; // боковые отступы
+$dc-vert-shift: 10px; // вертикальные отступы
+
+$dc-mob-shift: 10px; // отступы на мобильном
+$dc-mob-side-shift: $dc-mob-shift; // боковые отступы
+$dc-mob-vert-shift: $dc-mob-shift; // вертикальные отступы
+
+// Внешние отступы
+$dc-out-shift: $dc-shift; // отсупы
+$dc-out-side-shift: $dc-side-shift; // боковые отступы
+$dc-out-vert-shift: $dc-vert-shift; // вертикальные отступы
+
+$dc-out-mob-shift: 15px; // отступы на мобильном
+$dc-out-mob-side-shift: $dc-out-mob-shift; // боковые отступы
+$dc-out-mob-vert-shift: $dc-out-mob-shift; // вертикальные отступы
+
+// Внутренние отступы
+$dc-in-shift: $dc-shift; // отсупы
+$dc-in-side-shift: $dc-side-shift; // боковые отступы
+$dc-in-vert-shift: $dc-vert-shift; // вертикальные отступы
+
+$dc-in-mob-shift: 15px; // отступы на мобильном
+$dc-in-mob-side-shift: $dc-in-mob-shift; // боковые отступы
+$dc-in-mob-vert-shift: $dc-in-mob-shift; // вертикальные отступы
+
+$dc-animation-time: 200ms; // стандартное время анимации
+
+$dc-border-size: 1px;
+// /VARS
+//--------------------------------------
+// FONTS
+$dc-vendor-fonts-link: (
+    roboto: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap',
+    open-sans: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap',
+);
+
+$dc-fonts-link: ();
+
+$dc-fonts: (
+    common: open-sans,
+    //common-bold: 'Open Sans Bold',
+    //common-italic: 'Open Sans Italic',
+    main: roboto,
+    use: open-sans,
+    alert: roboto,
+    error: open-sans,
+    accent: roboto
+);
+// /FONTS
+//--------------------------------------
+// CSS GROUPS
+$dc-btns-css: (
+    'button', '[type="button"]',
+    '[type="submit"]', '[type="reset"]',
+    '.dcg-btn'
+);
+
+$dc-inps-css: (
+    '[type="text"]', '[type="email"]', '[type="password"]',
+    'textarea', 'select'
+);
+// /CSS GROUPS
+//--------------------------------------

@@ -1,0 +1,83 @@
+/*.....................................*/
+/* TEMPLATE: _menu */
+.dc-menu {
+
+    display: flex;
+
+    &__more {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        &::after {
+            display: block;
+
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        white-space: nowrap;
+
+        transition-property: background, color;
+    }
+
+    li {
+        position: relative;
+
+        &:hover {
+            .dc-menu__more {
+                &::after {
+                }
+            }
+
+            >a {
+            }
+
+            >ul {
+                display: block;
+            }
+        }
+    }
+
+    >li {
+
+        >a {
+        }
+
+        ul {
+            position: absolute;
+            display: none;
+            min-width: 100px;
+
+            >li:last-child>a {
+            }
+        }
+
+        >ul {
+            top: 100%;
+            left: 0;
+
+            ul {
+                left: 100%;
+                top: 0;
+            }
+        }
+
+        &:hover {
+            >.dc-menu__more {
+                transform: rotate(180deg);
+            }
+
+            >a {
+            }
+        }
+    }
+}
+/* /TEMPLATE: _menu */
+/*.....................................*/

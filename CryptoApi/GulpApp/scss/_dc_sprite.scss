@@ -1,0 +1,35 @@
+/*------------------------------------------------------------*/
+/* SPRITE */
+@import '_sprite.scss';
+//.....................................
+@mixin dc-sprites ($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .dc-icon-#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+//.....................................
+@mixin sprite-image($sprite) {}
+//.....................................
+@mixin dc-sprites-images($sprites) {
+    $sprite-name: '';
+    $i: 0;
+
+    @each $sprite in $sprites {
+        @if ($i > 0) { $sprite-name: $sprite-name + ', '; }
+        $sprite-name: $sprite-name + '.dcg-i-' + nth($sprite, 10);
+        $i: + 1;
+    }
+
+  #{$sprite-name} {
+      background-image: url(#{$dc-img-url}#{$dc-sprite-img});
+      display: inline-block;
+  }
+}
+//.....................................
+@include dc-sprites-images($spritesheet-sprites);
+@include dc-sprites($spritesheet-sprites);
+/* /SPRITE */
+/*------------------------------------------------------------*/

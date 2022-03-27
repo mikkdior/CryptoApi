@@ -1,0 +1,253 @@
+/*------------------------------------------------------------*/
+/* VENDORS */
+/*.....................................*/
+// popup
+.ui-widget-overlay {}
+
+.ui-dialog {
+
+    & &-titlebar {
+
+        span {}
+
+        .ui-dialog-titlebar-close {
+
+            &::before {}
+
+            &:hover {}
+        }
+    }
+
+    & &-content {}
+}
+// /popup
+/*.....................................*/
+// checkbox
+.ui-checkboxradio-label {
+
+    &.ui-checkboxradio-checked {
+        &::before {}
+    }
+
+    .ui-checkboxradio-icon {}
+}
+// /checkbox
+
+// radio
+.ui-checkboxradio-radio-label {
+
+    &.ui-checkboxradio-checked {
+        &::before {}
+    }
+
+    .ui-checkboxradio-icon {}
+
+    .ui-checkboxradio-icon-space {}
+
+    &.ui-checkboxradio-checked {
+
+        .ui-checkboxradio-icon {}
+    }
+}
+// /radio
+/*.....................................*/
+// меню выбора (select)
+.ui-selectmenu-button {
+
+    .ui-selectmenu-icon {
+
+        &:before {}
+    }
+
+    &.ui-selectmenu-button-open {
+
+        .ui-selectmenu-icon {
+            &:before {}
+        }
+    }
+
+    .ui-selectmenu-text {}
+}
+
+.ui-selectmenu-menu {
+
+    ul {
+
+        li {
+
+            .ui-menu-item-wrapper {
+
+                &.ui-state-active, &:hover {}
+            }
+        }
+    }
+}
+// / меню выбора (select)
+/*.....................................*/
+// scroll для блока
+.dcj-scroll {
+
+    &.jspScrollable {
+        .jspPane {}
+    }
+
+    .jspContainer {}
+
+    .jspPane {}
+
+    .jspVerticalBar {}
+
+    .jspTrack {}
+
+    .jspDrag {}
+}
+// /scroll для блока
+/*.....................................*/
+//// выбор даты (календарь)
+//.ui-datepicker {
+//	background: map-get($ss-datapicker, 'background-color');
+//	border: solid map-get($ss-datapicker, 'border-size') map-get($ss-datapicker, 'border-color');
+//    z-index: 3 !important;
+//    padding: 0;
+//
+//	.ui-datepicker-header {
+//		border-bottom: solid map-get($ss-datapicker, 'border-size') map-get($ss-datapicker, 'border-color');
+//		font-weight: bold;
+//
+//		.ui-datepicker-prev:before {
+//			content: '\27A4';
+//			display: block;
+//			margin-top: 2px;
+//			transform: rotate(180deg);
+//		}
+//
+//		.ui-datepicker-next:before {
+//			content: '\27A4';
+//			display: block;
+//			margin-top: 2px;
+//		}
+//	}
+//	& thead {
+//		border-bottom: solid map-get($ss-datapicker, 'border-size') map-get($ss-datapicker, 'border-color');
+//	}
+//
+//	& li {
+//		text-align: center;
+//	}
+//
+//	& a {
+//		text-align: center !important;
+//		border: solid map-get($ss-datapicker, 'border-size') map-get($ss-datapicker, 'border-color');
+//        color: map-get($ss-datapicker, 'color');
+//        text-decoration: none;
+//
+//		&:hover {
+//			background: map-get($ss-datapicker, 'background-color');
+//		}
+//	}
+//}
+//// /выбор даты (календарь)
+///*.....................................*/
+//// ползунок (slider)
+//.dcj-slider-range {
+//    border-radius: map-get($ss-slider-range, 'border-radius');
+//    background: map-get($ss-slider-range, 'background-color-main');
+//    height: map-get($ss-slider-range, 'height-main');
+//
+//    .ui-slider-range {
+//        background: map-get($ss-slider-range, 'background-color-slider');
+//    }
+//
+//    .ui-slider-handle {
+//        border-radius: map-get($ss-slider-range, 'border-radius-handle');
+//        width: map-get($ss-slider-range, 'size-handle') !important;
+//        height: map-get($ss-slider-range, 'size-handle') !important;
+//        background: map-get($ss-slider-range, 'background-color-handle');
+//        outline: none;
+//        top: 0;
+//        bottom: 0;
+//        margin: auto;
+//    }
+//}
+//// /ползунок (slider)
+///*.....................................*/
+// изменения размера
+.ui-resizable {
+    &-has-n {}
+
+    &-has-e {}
+
+    &-has-s {}
+
+    &-has-w {}
+
+    &-handle {}
+
+    // top
+    &-n {}
+
+    // right
+    &-e {}
+
+    // bottom
+    &-s {}
+
+    // left
+    &-w {}
+}
+// /изменения размера
+/*.....................................*/
+// tabs - вкладки
+.ui-tabs {
+
+    & &-nav {
+
+        li {
+
+            a {}
+
+            &.ui-tabs-active a, &:hover a {}
+        }
+    }
+
+    & &-panel {}
+
+    &-vertical {
+
+        .ui-tabs-nav {
+
+            li {
+
+                a {}
+            }
+        }
+
+        .ui-tabs-panel {}
+    }
+}
+// /tabs - вкладки
+/*.....................................*/
+// handsontable - exel-таблица
+.handsontable {
+    th {
+
+        div {}
+
+        &.ht__active_highlight {}
+    }
+
+    td {
+
+        &.htDimmed {}
+
+        &.current, &.area {}
+    }
+
+    .wtBorder {}
+
+    textarea.handsontableInput {}
+}
+// /handsontable - exel-таблица
+/*.....................................*/
+/* /VENDORS */
+/*------------------------------------------------------------*/

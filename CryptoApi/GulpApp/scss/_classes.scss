@@ -1,0 +1,174 @@
+/*.....................................*/
+/* CLASSES */
+/* bootstrap */
+
+/* /bootstrap */
+/*.....................................*/
+// test
+.dc-bg-red { background: red; }
+.dc-cl-red { color: red; }
+
+.dc-bg-green { background: green; }
+.dc-cl-green { color: green; }
+
+.dc-bg-blue { background: blue; }
+.dc-cl-blue { color: blue; }
+// /test
+/*.....................................*/
+html, body {}
+
+body {
+
+    @include media-breakpoint-down (sm) {}
+}
+
+ul, li {}
+
+a {
+
+    &:hover {}
+
+    &:visited {}
+
+    @include media-breakpoint-down (sm) {}
+}
+/*.....................................*/
+/* Стили для всех заголовков */
+@include dc-titles {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+
+h1, .dcg-h1 {
+
+}
+
+h2, .dcg-h2 {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+
+h3, .dcg-h3 {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+/*.....................................*/
+/* button, [type="button"], [type="submit"], [type="reset"], .ssg-btn */
+@include dc-btns {
+
+    &:hover {}
+
+    &.dcg-btn_light {
+
+        &:hover {}
+    }
+
+    &.dcg-btn_dark {
+
+        &:hover {}
+    }
+
+    &.dcg-btn_color {
+
+        &:hover {}
+    }
+
+    &.dcg-btn_big {
+
+    }
+
+    &.dcg-btn_small {
+
+        img {}
+    }
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+/* /button, [type="button"], [type="submit"], [type="reset"], .ssg-button */
+/*.....................................*/
+/* [type="text"], [type="email"], [type="password"], textarea, select */
+@include dc-inps {
+
+    &::-webkit-input-placeholder {}
+
+    &::-moz-placeholder {}
+
+    &:-moz-placeholder {}
+
+    &:-ms-input-placeholder {}
+
+    &:focus {
+
+    }
+
+    &.dcg-input_light {
+
+        &:focus {}
+    }
+
+    &.dcg-input_dark {
+
+        &:focus {}
+    }
+
+    &.dcg-input_color {
+
+        &:focus {}
+    }
+
+    &.dcg-input_big {}
+
+    &.dcg-input_small {}
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+
+textarea {}
+/* /[type="text"], [type="email"], [type="password"], textarea, select */
+/*.....................................*/
+/* section - блоки сайта */
+.dcg-section {
+
+    & + & {}
+
+    &_dark {}
+
+    &_gray {}
+
+    &_light {}
+
+    &_clr {}
+
+    &_alert {}
+
+    &_error {}
+
+    &_accent {}
+
+    &_text {}
+
+    &_original {}
+
+    &_translate {}
+
+    &_translucent {}
+
+    @include media-breakpoint-down (sm) {
+
+        & + & {}
+    }
+}
+/* /section */
+/*.....................................*/
+/* /CLASSES */
+/*------------------------------------------------------------*/

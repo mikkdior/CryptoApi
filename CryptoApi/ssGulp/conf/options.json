@@ -1,0 +1,16 @@
+{
+    "LiveReload": false,
+    "LiveReloadPath": "dist/",
+    "LiveReloadBrowser": "",
+    "Doc": false,
+    "WatchDelay": 1000,
+
+    "DocFiles": [
+        "lib/ss/jquery.ss",
+        "lib/ss/jquery.ss.f",
+        "lib/ss/jquery.ss.fn",
+        "lib/ss/jquery.ss.f.ready",
+        "lib/ss/jquery.ss.fn.gallery",
+        "lib/ss/jquery.ss.fn.ajax-form"
+    ]
+}

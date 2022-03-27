@@ -1,0 +1,47 @@
+/*------------------------------------------------------------*/
+/* TYPOGRAPHY */
+.dcg-tpg {
+    p {}
+
+    blockquote {}
+
+    img {}
+
+    a {}
+    a:hover {}
+    a:visited {}
+
+    ul, ol {}
+
+    li {}
+
+    ul {
+        li {
+            &::before {}
+        }
+    }
+
+    ol {
+        li {}
+    }
+
+
+    table {}
+    tr {}
+    td {}
+
+    h1, h2, h3, h4, h5, h6 {}
+    h1 {}
+    h2 {}
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {}
+
+    b {}
+    i {}
+
+    @include media-breakpoint-down (sm) {}
+}
+/* /TYPOGRAPHY */
+/*------------------------------------------------------------*/

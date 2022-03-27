@@ -1,0 +1,10 @@
+mixin _menu (Items, Main = 'dc-menu')
+    block
+    - if (Items)
+        ul(class=Main)&attributes(attributes)
+            each item in Items
+                li
+                    a(href=item.url)= item.text
+                    if item.items
+                        span.dc-menu__more
+                        +_menu(item.items, '')
