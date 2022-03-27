@@ -1,0 +1,5 @@
+mixin _footer (Scripts)
+    +_wrapper('footer').dc-footer&attributes(attributes)
+        block
+    each src in Scripts
+        script(src=src)

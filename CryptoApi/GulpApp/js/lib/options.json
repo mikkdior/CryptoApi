@@ -1,0 +1,28 @@
+{
+    "debug": false,
+
+    "lib": {
+        "jquery-3.3.1.min": true,
+        "elevator.min": false,
+        "jquery.cookie": false,
+        "jquery.maskedinput.min": false,
+        "jquery.mousewheel": false,
+        "autosize": false,
+        "dc/jquery.dc": true,
+        "dc/jquery.dc.d": true,
+        "dc/jquery.dc.e": true,
+        "dc/jquery.dc.f": true,
+        "dc/jquery.dc.fn": true,
+        "dc/jquery.dc.f.tpl": false,
+        "dc/jquery.dc.f.ready": true,
+        "dc/jquery.dc.f.boxScroll": false,
+        "dc/jquery.dc.fn.tpl": true,
+        "dc/jquery.dc.fn.tl": false,
+        "dc/jquery.dc.fn.gallery": false,
+        "dc/jquery.dc.fn.input-caption": false,
+        "dc/jquery.dc.fn.ajax-form": false,
+        "dc/jquery.dc.fn.slider": false,
+        "dc/jquery.dc.fn.hiding-panel": false,
+        "dc/jquery.dc.fn.listen": true
+    }
+}

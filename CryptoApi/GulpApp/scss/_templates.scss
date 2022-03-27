@@ -1,0 +1,129 @@
+/*.....................................*/
+/* TEMPLATE: classes */
+.dc-classes {
+    // background: #e4e3e3;
+    width: 1024px;
+    margin: auto;
+    section {
+        text-align: center;
+    }
+    &__checkbox-wrapper {
+        label {
+            display: block;
+        }
+    }
+    &__container {
+        padding: 15px;
+        text-align: center;
+    }
+    &__container-headline {
+        text-align: center;
+    }
+    &__container-list {
+        font-size: 20px;
+    }
+/*..................................... Buttons*/
+.dcg-button {
+    width: 150px;
+    margin: 10px;
+}
+/*..................................... Inputs*/
+.dcg-input {
+    width: 200px;
+    margin: 10px;
+}
+/*.....................................*/
+    @include media-breakpoint-down (sm) {}
+}
+/* /TEMPLATE: classes */
+/*.....................................*/
+
+/*.....................................*/
+/* TEMPLATE: _logo */
+.dc-logo {}
+/* /TEMPLATE: _logo */
+/*.....................................*/
+
+/*.....................................*/
+/* TEMPLATE: _menu */
+.dc-menu {
+
+    display: flex;
+
+    &__more {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        &::after {
+            display: block;
+
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        white-space: nowrap;
+
+        transition-property: background, color;
+    }
+
+    li {
+        position: relative;
+
+        &:hover {
+            .dc-menu__more {
+                &::after {
+                }
+            }
+
+            >a {
+            }
+
+            >ul {
+                display: block;
+            }
+        }
+    }
+
+    >li {
+
+        >a {
+        }
+
+        ul {
+            position: absolute;
+            display: none;
+            min-width: 100px;
+
+            >li:last-child>a {
+            }
+        }
+
+        >ul {
+            top: 100%;
+            left: 0;
+
+            ul {
+                left: 100%;
+                top: 0;
+            }
+        }
+
+        &:hover {
+            >.dc-menu__more {
+                transform: rotate(180deg);
+            }
+
+            >a {
+            }
+        }
+    }
+}
+/* /TEMPLATE: _menu */
+/*.....................................*/

@@ -1,0 +1,27 @@
+/*============================================================*/
+/* BOOTSTRAP */
+@import '_bootstrap.scss';
+/* /BOOTSTRAP */
+/*============================================================*/
+$theme_name: 'base';
+$theme: 'themes/' + $theme_name + '/';
+
+@import '_mixins.scss';
+@import 'themes/base/_conf.scss';
+@import '_conf.scss';
+@import '_fonts.scss';
+@import 'themes/base/_typography.scss';
+@import '_typography.scss';
+@import '_dc_sprite.scss';
+@import 'themes/base/_classes.scss';
+@import '_classes.scss';
+@import 'themes/base/_vendors.scss';
+@import '_vendors.scss';
+@import 'themes/base/_js.scss';
+@import '_js.scss';
+@import '_pages.scss';
+/*------------------------------------------------------------*/
+/* TEMPLATES */
+@import '_templates.scss';
+/* /TEMPLATES */
+/*------------------------------------------------------------*/

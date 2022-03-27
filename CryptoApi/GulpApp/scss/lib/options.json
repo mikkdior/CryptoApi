@@ -1,0 +1,11 @@
+{
+    "debug": false,
+
+    "lib": {
+        "reset": true,
+        "hover-min": true,
+        "animate.min": true,
+        "font-awesome.min": true,
+        "classes": true
+    }
+}

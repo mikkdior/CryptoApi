@@ -1,0 +1,9 @@
+mixin _main-wrapper ()
+    doctype html
+    html
+        +head()
+        body
+            +header&attributes(attributes)
+            main&attributes(attributes)
+                block
+            +footer&attributes(attributes)

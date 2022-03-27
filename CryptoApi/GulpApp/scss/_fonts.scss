@@ -1,0 +1,23 @@
+/*------------------------------------------------------------*/
+/* FONTS */
+@each $key, $font in $dc-vendor-fonts-link {
+    @import url(#{$font});
+}
+
+@each $key, $font in $dc-fonts-link {
+    @font-face {
+        font-family: $key;
+        src: url(#{$dc-fonts-url}#{$font});
+    }
+}
+
+// Генерация классов на основе карты $ss-fonts.
+// Пример класса: .ss-font-common
+@each $key, $font in $dc-fonts {
+    $class_name: '.dc-font-' + $key;
+    #{$class_name} {
+        font-family: $font;
+    }
+}
+/* FONTS */
+/*------------------------------------------------------------*/

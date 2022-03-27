@@ -1,0 +1,39 @@
+/*.....................................*/
+/* TEMPLATE: classes */
+.dc-classes {
+    // background: #e4e3e3;
+    width: 1024px;
+    margin: auto;
+    section {
+        text-align: center;
+    }
+    &__checkbox-wrapper {
+        label {
+            display: block;
+        }
+    }
+    &__container {
+        padding: 15px;
+        text-align: center;
+    }
+    &__container-headline {
+        text-align: center;
+    }
+    &__container-list {
+        font-size: 20px;
+    }
+/*..................................... Buttons*/
+.dcg-button {
+    width: 150px;
+    margin: 10px;
+}
+/*..................................... Inputs*/
+.dcg-input {
+    width: 200px;
+    margin: 10px;
+}
+/*.....................................*/
+    @include media-breakpoint-down (sm) {}
+}
+/* /TEMPLATE: classes */
+/*.....................................*/

@@ -1,0 +1,84 @@
+/*---------------------------------------------------------------*/
+/* СОКРАЩЕНИЯ СОВПАДАЮТ С АБРЕВИАТУРАМИ EMMET-CSS */
+
+/* position */
+.ssg-pos     { position: static; }
+.ssg-posr    { position: relative; }
+.ssg-posa    { position: absolute; }
+.ssg-posf    { position: fixed; }
+/* /position */
+
+/* float */
+.ssg-fln { float: none; }
+.ssg-fr  { float: right; }
+.ssg-fl  { float: left; }
+/* /float */
+
+/* display */
+.ssg-d   { display: block; }
+.ssg-dn  { display: none; }
+.ssg-di  { display: inline; }
+.ssg-dib { display: inline-block; }
+/* /display */
+
+/* overflow */
+.ssg-oh  { overflow: hidden; }
+.ssg-ovv { overflow: visible; }
+.ssg-os  { overflow: scroll; }
+.ssg-oa  { overflow: auto; }
+/* overflow */
+
+/* cursor */
+.ssg-cup     { cursor: pointer; }
+.ssg-cud     { cursor: default; }
+.ssg-cuh     { cursor: hand; }
+.ssg-cuhe    { cursor: help; }
+.ssg-cum     { cursor: move; }
+.ssg-cut     { cursor: text; }
+/* /cursor */
+
+/* margin */
+.ssg-ma { margin: auto; }
+.ssg-m0 { margin: 0; }
+/* /margin */
+
+/* padding */
+.ssg-p0 { padding: 0; }
+/* /padding */
+
+/* width */
+.ssg-wa      { width: auto; }
+.ssg-w100    { width: 100%; }
+/* /width */
+
+/* height */
+.ssg-ha      { height: auto; }
+.ssg-h100    { height: 100%; }
+/* /height */
+
+/* font-weight */
+.ssg-fwn { font-weight: normal; }
+.ssg-fwb { font-weight: bold; }
+/* /font-weight */
+
+/* font-style */
+.ssg-fsn { font-style: normal; }
+.ssg-fsi { font-style: italic; }
+/* /font-style */
+
+/* vertical-align */
+.ssg-va      { vertical-align: top; }
+.ssg-vm      { vertical-align: middle; }
+.ssg-vabl    { vertical-align: baseline; }
+.ssg-vb      { vertical-align: bottom; }
+.ssg-vs      { vertical-align: sub; }
+/* /vertical-align */
+
+/* text-align */
+.ssg-ta,
+.ssg-tal { text-align: left; }
+.ssg-tac { text-align: center; }
+.ssg-tar { text-align: right; }
+.ssg-taj { text-align: justify; }
+/* /text-align */
+/*---------------------------------------------------------------*/
