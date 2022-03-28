@@ -113,12 +113,12 @@ function CUri () {
     //...................................
     /*
     Содержит путь на основе файла ./ss-gulp/conf/uri.json
-    к директории с картинками для спрайтов в исходной директории.
+    к директории с картинками для svg-спрайтов в исходной директории.
 
-    Пример: "./app/images/sprite/".
+    Пример: "./app/images/svg-sprite/".
      */
-    Object.defineProperty(_Self, 'InSprite', {
-        get: function () { return _Self.InImages + _Uri.InSprite; }
+    Object.defineProperty(_Self, 'InSvgSprite', {
+        get: function () { return _Self.InImages + _Uri.InSvgSprite; }
     });
     //...................................
     /*
@@ -624,6 +624,22 @@ function CUri () {
         get: function () {
             var list = [
                 _Self.InSprite + '*.*'
+            ];
+
+            return list;
+        }
+    });
+    //...................................
+    /*
+    Содержит массив путей
+    к файлам картинок для svg-спрайтов в исходной директории.
+
+    Пример: "['./app/images/svg-sprite/*.svg']".
+     */
+    Object.defineProperty(_Self, 'InSvgSpriteCompilePaths', {
+        get: function () {
+            var list = [
+                _Self.InSvgSprite + '*.svg'
             ];
 
             return list;

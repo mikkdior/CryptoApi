@@ -1,13 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     @await Html.PartialAsync("_Head")
-    <body>
+    <body class="@ViewData["BodyClass"]">
         @await Html.PartialAsync("_Header")
-        <div class="dc-container">
-            <main role="main">
-                @RenderBody()
-            </main>
-        </div>
+        @RenderBody()
         @await Html.PartialAsync("_Footer")
         @await Html.PartialAsync("_Scripts")
         @*@await RenderSectionAsync("Scripts", required: false)*@

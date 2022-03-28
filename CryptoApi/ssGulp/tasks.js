@@ -14,9 +14,11 @@ var Gulp = require('gulp'),
     Sass = require('gulp-sass'),
     Autoprefixer = require('gulp-autoprefixer'),
     Csso = require('gulp-csso'), // css-минификатор // TODO: не убирает комментарии
-
+    
     // Images
     SpritesMith = require('gulp.spritesmith'), // генерация спрайтов
+    SvgStore = require('gulp-svgstore'); // генерация svg-спрайтов
+    SvgMin = require('gulp-svgmin'); // минификатор svg
 
     // SS
     Conf = require('./conf'),
@@ -94,6 +96,16 @@ Gulp.task('_sprite', function (done) {
     done();
 });
 //...........................................
+// Создаёт svg-спрайты и стили для них на основе картинок в директории ./app/images/svg-sprite/
+Gulp.task('_svg-sprite', function (done) {
+    Gulp.src(Conf.InSvgSpriteCompilePaths)
+        .pipe(Plumber())
+        .pipe(SvgStore())
+        .pipe(Gulp.dest(Conf.OutImages));
+
+    done();
+});
+//...........................................
 // Компилирует все библиотечные файлы
 Gulp.task('_libs', function (done) {
     Gulp.start(['_css_lib', '_js_lib']);
@@ -103,7 +115,7 @@ Gulp.task('_libs', function (done) {
 //...........................................
 // Компилирует все файлы
 Gulp.task('_compile_all', function (done) {
-    Gulp.start(['_sprite', '_libs', '_js', '_scss_templates', '_scss']);
+    Gulp.start(['_sprite', '_svg-sprite', '_libs', '_js', '_scss_templates', '_scss']);
 
     done();
 });
@@ -114,6 +126,7 @@ Gulp.task('_watch_all', function (done) {
     Lib.watch(Conf.InScssWatchPaths, ['_scss']);
     Lib.watch(Conf.InScssTemplatesWatchPaths, ['_scss_templates']);
     Lib.watch(Conf.InSpriteWatchPaths, ['_sprite']);
+    Lib.watch(Conf.InSvgSpriteWatchPaths, ['_sprite']);
 
     if (Conf.InScssLibOptions.debug || Conf.InComponentsOptions.debug)
         Lib.watch(Conf.InAllScssLibPaths, ['_css_lib']);
