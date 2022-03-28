@@ -2,8 +2,12 @@
 // /* TEMPLATE: logo */
 .dc-logo {
 
-    @include media-breakpoint-down (sm) {
+    img {
+        width: 179px;
+        height: 45px;
+    }
 
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: logo */

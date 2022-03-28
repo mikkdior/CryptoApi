@@ -1,9 +1,24 @@
 // /*.....................................*/
 // /* TEMPLATE: header */
 .dc-header {
+    background: #3665AC;
+    color: #FFFFFF;
+    padding: 30px 0;
+
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #0FD4E2;
+    }
+
+    .dc-main-menu {
+        margin-left: 29px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: header */

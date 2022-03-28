@@ -12,9 +12,17 @@
 // /*.....................................*/
 // /* TEMPLATE: auth */
 .dc-auth {
+    padding-top: 4px;
+
+    svg {
+        color: #FFF;
+        width: 20px;
+        display: inline-block;
+        height: 40px;
+        padding-right: 5px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: auth */
@@ -210,9 +218,24 @@
 // /*.....................................*/
 // /* TEMPLATE: header */
 .dc-header {
+    background: #3665AC;
+    color: #FFFFFF;
+    padding: 30px 0;
+
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #0FD4E2;
+    }
+
+    .dc-main-menu {
+        margin-left: 29px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: header */
@@ -233,8 +256,12 @@
 // /* TEMPLATE: logo */
 .dc-logo {
 
-    @include media-breakpoint-down (sm) {
+    img {
+        width: 179px;
+        height: 45px;
+    }
 
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: logo */
@@ -254,9 +281,23 @@
 // /*.....................................*/
 // /* TEMPLATE: main-menu */
 .dc-main-menu {
+    letter-spacing: 0.5px;
+
+    .navbar {
+        padding: 11px 0px 0 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        li {
+            padding: 0 3px;
+        }
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: main-menu */
