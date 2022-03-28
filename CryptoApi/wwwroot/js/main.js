@@ -275,18 +275,18 @@ jQuery('.dc-logo').dcTpl(function ($, Export) {
 // /logo
 //--------------------------------------------
 
+// main-desc
+jQuery('.dc-main-desc').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /main-desc
+//--------------------------------------------
+
 // main-menu
 jQuery('.dc-main-menu').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /main-menu
-//--------------------------------------------
-
-// market-update
-jQuery('.dc-market-update').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /market-update
 //--------------------------------------------
 
 // news-list
@@ -301,48 +301,6 @@ jQuery('.dc-news-sketch').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /news-sketch
-//--------------------------------------------
-
-// page-head
-jQuery('.dc-page-head').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head
-//--------------------------------------------
-
-// page-head-coin
-jQuery('.dc-page-head-coin').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head-coin
-//--------------------------------------------
-
-// page-head-coins
-jQuery('.dc-page-head-coins').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head-coins
-//--------------------------------------------
-
-// page-head-main
-jQuery('.dc-page-head-main').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head-main
-//--------------------------------------------
-
-// page-head-pair
-jQuery('.dc-page-head-pair').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head-pair
-//--------------------------------------------
-
-// page-head-pairs
-jQuery('.dc-page-head-pairs').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head-pairs
 //--------------------------------------------
 
 // pagination
