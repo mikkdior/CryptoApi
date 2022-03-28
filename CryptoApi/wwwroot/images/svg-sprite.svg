@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="calendar" viewBox="0 0 18 20"><g fill="none">
+<path d="M12 1V5M6 1V5M1 9H17M17 9V17C17 18.1046 16.1046 19 15 19H3C1.89543 19 1 18.1046 1 17V5C1 3.89543 1.89543 3 3 3H15C16.1046 3 17 3.89543 17 5V9Z" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="done symb" viewBox="0 0 14 11"><g fill="none">
+<path d="M1.79999 5.97142L5.09999 9.39999L12.8 1.39999" stroke="#0FD4E2" stroke-width="2" stroke-linecap="round"/>
+</g></symbol><symbol id="download" viewBox="0 0 16 17"><g fill="none">
+<path d="M15 10.625V14.125C15 15.0915 14.2165 15.875 13.25 15.875H2.75C1.7835 15.875 1 15.0915 1 14.125V10.625M8 11.5L8 1M8 11.5L4.5 8M8 11.5L11.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol></svg>
