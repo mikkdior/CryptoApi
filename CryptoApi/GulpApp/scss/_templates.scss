@@ -241,17 +241,6 @@
 // /*.....................................*/
 
 // /*.....................................*/
-// /* TEMPLATE: main-desc */
-.dc-main-desc {
-
-    @include media-breakpoint-down (sm) {
-
-    }
-}
-// /* /TEMPLATE: main-desc */
-// /*.....................................*/
-
-// /*.....................................*/
 // /* TEMPLATE: main-menu */
 .dc-main-menu {
 
@@ -260,6 +249,17 @@
     }
 }
 // /* /TEMPLATE: main-menu */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: market-update */
+.dc-market-update {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: market-update */
 // /*.....................................*/
 
 // /*.....................................*/
@@ -282,6 +282,72 @@
     }
 }
 // /* /TEMPLATE: news-sketch */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: page-head */
+.dc-page-head {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: page-head */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: page-head-coin */
+.dc-page-head-coin {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: page-head-coin */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: page-head-coins */
+.dc-page-head-coins {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: page-head-coins */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: page-head-main */
+.dc-page-head-main {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: page-head-main */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: page-head-pair */
+.dc-page-head-pair {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: page-head-pair */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: page-head-pairs */
+.dc-page-head-pairs {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: page-head-pairs */
 // /*.....................................*/
 
 // /*.....................................*/

@@ -1,17 +1,91 @@
 ﻿@model CHomeVM
 @inject CBlocksHelperVM BlocksHelper
+
 @{
     ViewData["Title"] = "Home Page";
+    ViewData["Page"] = "main";
 }
-@*@await Html.PartialAsync("_MainDesc")
-@await Html.PartialAsync("_ExchangeWidget")
-@await Html.PartialAsync("_Services")
-@await Html.PartialAsync("_Coins")
-@await Html.PartialAsync("_Coins")
-@await Html.PartialAsync("_CoinPairs")
-@await Html.PartialAsync("_Advantages")
-@await Html.PartialAsync("_Faq")
-@await Html.PartialAsync("_Partners")
-@await Html.PartialAsync("_NewsList")*@
 
-<svg icon="calendar"></svg>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_Services")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_Coins")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_MarketUpdate")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_CoinPairs")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_Advantages")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_Faq")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_Partners")*@
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_NewsList")*@
+            </div>
+        </div>
+    </div>
+</section>
+
+@section PageHead {
+    <div class="row">
+        <div class="col">
+            @*@await Html.PartialAsync("_PageHeadMain")*@
+        </div>
+        <div class="col">
+            @*@await Html.PartialAsync("_ExchangeWidget")*@
+        </div>
+    </div>
+}

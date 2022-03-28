@@ -18,8 +18,14 @@
 html, body {}
 
 body {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
 
-    @include media-breakpoint-down (sm) {}
+    @include media-breakpoint-down (sm) {
+    }
 }
 
 ul, li {}
@@ -42,25 +48,49 @@ a {
 }
 
 h1, .dcg-h1 {
-
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
 }
 
 h2, .dcg-h2 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 
 h3, .dcg-h3 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
 
     @include media-breakpoint-down (sm) {
+    }
+}
 
+h4, .dcg-h4 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include media-breakpoint-down (sm) {
     }
 }
 /*.....................................*/
-/* button, [type="button"], [type="submit"], [type="reset"], .ssg-btn */
+/* button, [type="button"], [type="submit"], [type="reset"], .dcg-btn */
 @include dc-btns {
+    
 
     &:hover {}
 
@@ -163,6 +193,11 @@ textarea {}
 
     &_translucent {}
 
+    &__head {
+        .dcg-h2 {}
+        .dcg-btn {}
+    }
+
     @include media-breakpoint-down (sm) {
 
         & + & {}
@@ -170,5 +205,10 @@ textarea {}
 }
 /* /section */
 /*.....................................*/
+/* common */
+.dcg-shadow {}
+/*.....................................*/
+
+/* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/
