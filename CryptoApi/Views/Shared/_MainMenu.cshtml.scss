@@ -1,0 +1,24 @@
+// /*.....................................*/
+// /* TEMPLATE: main-menu */
+.dc-main-menu {
+    letter-spacing: 0.5px;
+
+    .navbar {
+        padding: 11px 0px 0 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        li {
+            padding: 0 3px;
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: main-menu */
+// /*.....................................*/

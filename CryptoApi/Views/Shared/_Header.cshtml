@@ -1,8 +1,15 @@
-﻿<header>
-    <div class="dc-container">
-        >header
-        @await Html.PartialAsync("_Logo")
-        @await Html.PartialAsync("_MainMenu")
-        @await Html.PartialAsync("_Auth")
+﻿<header class="dc-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                @await Html.PartialAsync("_Logo")
+            </div>
+            <div class="col-8">
+                @await Html.PartialAsync("_MainMenu")
+            </div>
+            <div class="col-1 text-right">
+                @await Html.PartialAsync("_Auth")
+            </div>
+        </div>
     </div> 
 </header>

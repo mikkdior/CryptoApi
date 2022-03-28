@@ -1,3 +1,418 @@
+// /*.....................................*/
+// /* TEMPLATE: about-small */
+.dc-about-small {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: about-small */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: auth */
+.dc-auth {
+    padding-top: 4px;
+
+    svg {
+        color: #FFF;
+        width: 20px;
+        display: inline-block;
+        height: 40px;
+        padding-right: 5px;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: auth */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: breadcrumbs */
+.dc-breadcrumbs {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: breadcrumbs */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coin */
+.dc-coin {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coin */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coin-info */
+.dc-coin-info {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coin-info */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coin-pair */
+.dc-coin-pair {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coin-pair */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coin-pair-info */
+.dc-coin-pair-info {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coin-pair-info */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coin-pairs */
+.dc-coin-pairs {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coin-pairs */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coins */
+.dc-coins {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coins */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: coin-widget */
+.dc-coin-widget {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: coin-widget */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: contacts */
+.dc-contacts {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: contacts */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: copyright */
+.dc-copyright {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: copyright */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: desc */
+.dc-desc {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: desc */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: exchange-widget */
+.dc-exchange-widget {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: exchange-widget */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: faq */
+.dc-faq {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: faq */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: footer */
+.dc-footer {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: footer */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: guide */
+.dc-guide {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: guide */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: guide-list */
+.dc-guide-list {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: guide-list */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: head */
+.dc-head {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: head */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: header */
+.dc-header {
+    background: #3665AC;
+    color: #FFFFFF;
+    padding: 30px 0;
+
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #0FD4E2;
+    }
+
+    .dc-main-menu {
+        margin-left: 29px;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: header */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: layout */
+.dc-layout {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: layout */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: logo */
+.dc-logo {
+
+    img {
+        width: 179px;
+        height: 45px;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: logo */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: main-desc */
+.dc-main-desc {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: main-desc */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: main-menu */
+.dc-main-menu {
+    letter-spacing: 0.5px;
+
+    .navbar {
+        padding: 11px 0px 0 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        li {
+            padding: 0 3px;
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: main-menu */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: news-list */
+.dc-news-list {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: news-list */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: news-sketch */
+.dc-news-sketch {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: news-sketch */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: pagination */
+.dc-pagination {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: pagination */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: partners */
+.dc-partners {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: partners */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: service */
+.dc-service {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: service */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: services */
+.dc-services {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: services */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: soc-icons */
+.dc-soc-icons {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: soc-icons */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: table */
+.dc-table {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: table */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: text-block */
+.dc-text-block {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: text-block */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: text-blocks */
+.dc-text-blocks {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: text-blocks */
+// /*.....................................*/
+
 /*.....................................*/
 /* TEMPLATE: classes */
 .dc-classes {

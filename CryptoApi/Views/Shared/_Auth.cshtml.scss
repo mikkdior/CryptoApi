@@ -1,0 +1,18 @@
+// /*.....................................*/
+// /* TEMPLATE: auth */
+.dc-auth {
+    padding-top: 4px;
+
+    svg {
+        color: #FFF;
+        width: 20px;
+        display: inline-block;
+        height: 40px;
+        padding-right: 5px;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: auth */
+// /*.....................................*/
