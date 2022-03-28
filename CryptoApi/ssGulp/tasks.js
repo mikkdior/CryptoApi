@@ -125,8 +125,8 @@ Gulp.task('_watch_all', function (done) {
     Lib.watch(Conf.InJsWatchPaths, ['_js']);
     Lib.watch(Conf.InScssWatchPaths, ['_scss']);
     Lib.watch(Conf.InScssTemplatesWatchPaths, ['_scss_templates']);
-    Lib.watch(Conf.InSpriteWatchPaths, ['_sprite']);
-    Lib.watch(Conf.InSvgSpriteWatchPaths, ['_sprite']);
+    //Lib.watch(Conf.InSpriteWatchPaths, ['_sprite']);
+    //Lib.watch(Conf.InSvgSpriteWatchPaths, ['_sprite']);
 
     if (Conf.InScssLibOptions.debug || Conf.InComponentsOptions.debug)
         Lib.watch(Conf.InAllScssLibPaths, ['_css_lib']);
