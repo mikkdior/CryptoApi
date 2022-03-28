@@ -2,15 +2,80 @@
 @inject CBlocksHelperVM BlocksHelper
 @{
     ViewData["Title"] = "Coin Page";
-    //var similiar_coins = BlocksHelper.GetCoinList(Model.coin.data);
+    ViewData["Page"] = "coin";
 }
-@await Html.PartialAsync("_Breadcrumbs")
-<h1>title</h1>
-@await Html.PartialAsync("_CoinWidget")
-@await Html.PartialAsync("_ExchangeWidget")
-@await Html.PartialAsync("_CoinInfo")
 
-@await Html.PartialAsync("_CoinPairs")
-@await Html.PartialAsync("_Coins")
-@await Html.PartialAsync("_TextBlocks")
-@await Html.PartialAsync("_Faq")
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="dcg-h2">Basic information about DODO</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_TextBlocks")*@
+            </div>
+            <div class="col">
+                @*@await Html.PartialAsync("_CoinInfo")*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_CoinPairs")*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_Coins")*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section dcg-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_SectionTextBlocks")*@
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section dcg-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @*@await Html.PartialAsync("_SectionTextBlock")*@
+            </div>
+        </div>
+    </div>
+</section>
+
+@section PageHead {
+    <div class="row">
+        <div class="col">
+            @*@await Html.PartialAsync("_Breadcrumbs")*@
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="dcg-h1">Exchange DODO to USD</h1>
+            @*@await Html.PartialAsync("_CoinWidget")*@
+        </div>
+        <div class="col">
+            @*@await Html.PartialAsync("_ExchangeWidget")*@
+        </div>
+    </div>
+}

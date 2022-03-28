@@ -7313,10 +7313,45 @@ a.text-dark:hover, a.text-dark:focus {
   color: blue; }
 
 /*.....................................*/
+body {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px; }
+
 /*.....................................*/
 /* Стили для всех заголовков */
+h1, .dcg-h1 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px; }
+
+h2, .dcg-h2 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px; }
+
+h3, .dcg-h3 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px; }
+
+h4, .dcg-h4 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px; }
+
 /*.....................................*/
-/* button, [type="button"], [type="submit"], [type="reset"], .ssg-btn */
+/* button, [type="button"], [type="submit"], [type="reset"], .dcg-btn */
 /* /button, [type="button"], [type="submit"], [type="reset"], .ssg-button */
 /*.....................................*/
 /* [type="text"], [type="email"], [type="password"], textarea, select */
@@ -7325,6 +7360,9 @@ a.text-dark:hover, a.text-dark:focus {
 /* section - блоки сайта */
 /* /section */
 /*.....................................*/
+/* common */
+/*.....................................*/
+/* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/

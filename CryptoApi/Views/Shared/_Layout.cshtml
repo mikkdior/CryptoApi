@@ -1,9 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     @await Html.PartialAsync("_Head")
-    <body class="@ViewData["BodyClass"]">
+
+    <body class="dc-body-@ViewData["Page"]">
         @await Html.PartialAsync("_Header")
-        @RenderBody()
+        <main class="dc-page dc-page-@ViewData["Page"]">
+            @if (IsSectionDefined("PageHead"))
+            {
+                <section class="dcg-section">
+                    <div class="container">
+                        @RenderSection("PageHead")
+                    </div>
+                </section>
+            }
+            
+            @RenderBody()
+        </main>
         @await Html.PartialAsync("_Footer")
         @await Html.PartialAsync("_Scripts")
         @*@await RenderSectionAsync("Scripts", required: false)*@

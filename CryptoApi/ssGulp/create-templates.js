@@ -83,10 +83,21 @@ function CCreateTemplates (Path) {
     }
     //...................................
     function filterContent(content, template_name) {
-        content = content.replace(ReplaceWord, template_name);
+        content = content.replace(ReplaceWord, template_name.toLowerCase());
         content = content.replace(/\/\/- /g, '');
 
         return content;
+    }
+    //...................................
+    function parseTemplateName(name) {
+        let words = name.split('-');
+        let result = '';
+
+        for (let word of words) {
+            result += word[0].toUpperCase() + word.slice(1);
+        }
+
+        return result;
     }
     //...................................
     function filterFileName(file_name, template_name) {
@@ -94,7 +105,7 @@ function CCreateTemplates (Path) {
         let ext = file_name.replace('template.', '');
         ext = ext == key ? ext : key + '.' + ext;
 
-        return template_name + '.' + ext;
+        return '_' + parseTemplateName(template_name) + '.' + ext;
     }
     //...................................
     // /PRIVATE
