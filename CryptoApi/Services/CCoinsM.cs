@@ -85,13 +85,14 @@ public class CCoinsM : CBaseDbM
         new_coin.name_full = coin.FullName;
         new_coin.name = coin.Name;
         new_coin.slug = coin.Name;
-        new_coin.usd = coin.Usd;
         new_coin.image = coin.Image;
+
+        /*new_coin.usd = coin.Usd;
         new_coin.market_cap = coin.MarketCap.ToString();
         new_coin.change_day = coin.ChangeDay.ToString();
         new_coin.change_week = coin.ChangeWeek.ToString();
         new_coin.change_month = coin.ChangeMonth.ToString();
-        new_coin.change_price = coin.ChangePrice.ToString();
+        new_coin.change_price = coin.ChangePrice.ToString();*/
 
         return new_coin;
     }
@@ -145,7 +146,7 @@ public class CCoinsM : CBaseDbM
     public IEnumerable<CCoinDataVM> GetCoins(CCoinDataM coin)
     {
         return from item in coin["coins"]
-               where item.coinid == coin.id
+               where item.coins_id == coin.id
                select new CCoinDataVM() { data = db.Coins.Find(uint.Parse(item.value)) };
     }
 
