@@ -1,15 +1,25 @@
 // /*.....................................*/
 // /* TEMPLATE: auth */
 .dc-auth {
-    padding-top: 4px;
+    padding-top: 3px;
+    padding-left: 5px;
+    width: max-content;
 
-    svg {
-        color: #FFF;
-        width: 20px;
-        display: inline-block;
-        height: 40px;
-        padding-right: 5px;
+    .dcg-button_auth {
+        border: 0;
+        background: transparent;
+
+        
+        svg {
+            color: #FFF;
+            width: 20px;
+            display: inline-block;
+            height: 40px;
+            padding-right: 5px;
+            padding-bottom: 1px;
+        }
     }
+
 
     @include media-breakpoint-down (sm) {
     }

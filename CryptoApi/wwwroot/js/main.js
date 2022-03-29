@@ -275,18 +275,18 @@ jQuery('.dc-logo').dcTpl(function ($, Export) {
 // /logo
 //--------------------------------------------
 
-// main-desc
-jQuery('.dc-main-desc').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /main-desc
-//--------------------------------------------
-
 // main-menu
 jQuery('.dc-main-menu').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /main-menu
+//--------------------------------------------
+
+// market-update
+jQuery('.dc-market-update').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /market-update
 //--------------------------------------------
 
 // news-list
@@ -303,6 +303,34 @@ jQuery('.dc-news-sketch').dcTpl(function ($, Export) {
 // /news-sketch
 //--------------------------------------------
 
+// page-head-coins
+jQuery('.dc-page-head-coins').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /page-head-coins
+//--------------------------------------------
+
+// page-head-main
+jQuery('.dc-page-head-main').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /page-head-main
+//--------------------------------------------
+
+// page-head-pair
+jQuery('.dc-page-head-pair').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /page-head-pair
+//--------------------------------------------
+
+// page-head-pairs
+jQuery('.dc-page-head-pairs').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /page-head-pairs
+//--------------------------------------------
+
 // pagination
 jQuery('.dc-pagination').dcTpl(function ($, Export) {
    var $self = $(this);
@@ -315,6 +343,20 @@ jQuery('.dc-partners').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /partners
+//--------------------------------------------
+
+// section-text-block
+jQuery('.dc-section-text-block').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /section-text-block
+//--------------------------------------------
+
+// section-text-blocks
+jQuery('.dc-section-text-blocks').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /section-text-blocks
 //--------------------------------------------
 
 // service

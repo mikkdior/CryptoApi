@@ -2,8 +2,16 @@
 // /* TEMPLATE: about-small */
 .dc-about-small {
 
-    @include media-breakpoint-down (sm) {
+    p {
+        color: #a0b6d8;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: -0.25px;
+    }
 
+    width: 80%;
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: about-small */
@@ -12,15 +20,25 @@
 // /*.....................................*/
 // /* TEMPLATE: auth */
 .dc-auth {
-    padding-top: 4px;
+    padding-top: 3px;
+    padding-left: 5px;
+    width: max-content;
 
-    svg {
-        color: #FFF;
-        width: 20px;
-        display: inline-block;
-        height: 40px;
-        padding-right: 5px;
+    .dcg-button_auth {
+        border: 0;
+        background: transparent;
+
+        
+        svg {
+            color: #FFF;
+            width: 20px;
+            display: inline-block;
+            height: 40px;
+            padding-right: 5px;
+            padding-bottom: 1px;
+        }
     }
+
 
     @include media-breakpoint-down (sm) {
     }
@@ -43,8 +61,18 @@
 // /* TEMPLATE: coin */
 .dc-coin {
 
-    @include media-breakpoint-down (sm) {
+    .dc-icon-arrow-right {
+        display: none;
+        margin-right: 4px;
+    }
 
+    &:hover {
+        .dc-icon-arrow-right {
+            display: inline-block;
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: coin */
@@ -64,9 +92,17 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pair */
 .dc-coin-pair {
+    .dcg-btn_small {
+        display: none;
+    }
+
+    &:hover {
+        .dcg-btn_small {
+            display: inline-block;
+        }
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coin-pair */
@@ -86,9 +122,40 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pairs */
 .dc-coin-pairs {
+    .dc-icon-arrow-right {
+        width: 15px;
+        height: 15px;
+        margin-left: 7px;
+    }
+
+    .dc-grid_pairs {
+        justify-content: space-between;
+        padding-top: 9px;
+
+        .dc-grid_pair {
+            width: 265px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            &-name {
+                margin-right: auto;
+                margin-left: 10px;
+                letter-spacing: 0px;
+                font-weight: 600;
+            }
+        }
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coin-pairs */
@@ -97,9 +164,41 @@
 // /*.....................................*/
 // /* TEMPLATE: coins */
 .dc-coins {
+    .dc-icon-arrow-right {
+        width: 15px;
+        height: 15px;
+        margin-left: 7px;
+    }
+
+    .dc-grid_coins {
+        justify-content: space-between;
+        padding-top: 9px;
+
+        .dc-grid_coin {
+            width: 265px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            &-name {
+                margin-right: auto;
+                margin-left: 10px;
+                letter-spacing: 0px;
+                font-weight: 600;
+            }
+        }
+    }
+
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coins */
@@ -120,8 +219,17 @@
 // /* TEMPLATE: contacts */
 .dc-contacts {
 
-    @include media-breakpoint-down (sm) {
+    h3 ~ h3 {
+        padding-top: 5px;
+    }
 
+    a {
+        color: #c0cee5;
+        font-weight: 700;
+        letter-spacing: -0.9px;
+    }
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: contacts */
@@ -130,9 +238,10 @@
 // /*.....................................*/
 // /* TEMPLATE: copyright */
 .dc-copyright {
+    margin-top: 45px;
+    letter-spacing: -0.5px;
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: copyright */
@@ -154,7 +263,6 @@
 .dc-exchange-widget {
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: exchange-widget */
@@ -174,9 +282,23 @@
 // /*.....................................*/
 // /* TEMPLATE: footer */
 .dc-footer {
+    width: 100%;
+    bottom: 0;
+    /*position: absolute;*/
+    background: #3665AC;
+    color: #FFFFFF;
+    letter-spacing: -0.4px; /* ??? */
+    font-size: 15px;
+    padding: 34px 0 60px 0;
+
+
+
+    h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: footer */
@@ -221,10 +343,12 @@
     background: #3665AC;
     color: #FFFFFF;
     padding: 30px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 
     a {
         color: #FFFFFF;
-        text-decoration: none;
     }
 
     a:hover {
@@ -232,7 +356,7 @@
     }
 
     .dc-main-menu {
-        margin-left: 29px;
+        margin-left: 27px;
     }
 
     @include media-breakpoint-down (sm) {
@@ -270,19 +394,23 @@
 // /*.....................................*/
 // /* TEMPLATE: main-menu */
 .dc-main-menu {
-    letter-spacing: 0.5px;
+    letter-spacing: 0px;
 
-    .navbar {
-        padding: 11px 0px 0 0;
-    }
+    &__nav {
+        padding: 12px 0px 0 0;
 
-    .navbar-nav {
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
+        ul {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
 
-        li {
-            padding: 0 3px;
+            li {
+                padding: 0 3px;
+
+                a:hover, a.dcg-active {
+                    color: #0FD4E2;
+                }
+            }
         }
     }
 
@@ -326,28 +454,6 @@
 // /*.....................................*/
 
 // /*.....................................*/
-// /* TEMPLATE: page-head */
-.dc-page-head {
-
-    @include media-breakpoint-down (sm) {
-
-    }
-}
-// /* /TEMPLATE: page-head */
-// /*.....................................*/
-
-// /*.....................................*/
-// /* TEMPLATE: page-head-coin */
-.dc-page-head-coin {
-
-    @include media-breakpoint-down (sm) {
-
-    }
-}
-// /* /TEMPLATE: page-head-coin */
-// /*.....................................*/
-
-// /*.....................................*/
 // /* TEMPLATE: page-head-coins */
 .dc-page-head-coins {
 
@@ -361,9 +467,43 @@
 // /*.....................................*/
 // /* TEMPLATE: page-head-main */
 .dc-page-head-main {
+    padding-top: 30px;
+
+    .dcg-advantages {
+        margin-top: 39px;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+
+        
+
+        li ~ li {
+            margin-left: 20px;
+        }
+
+        .dcg-advantage {
+            display: flex;
+            line-height: 1.3;
+
+            .dcg-head-done {
+                background: white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                margin-right: 12px;
+                margin-top: 1px;
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+                    fill: green;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: page-head-main */
@@ -414,11 +554,70 @@
 // /*.....................................*/
 
 // /*.....................................*/
-// /* TEMPLATE: service */
-.dc-service {
+// /* TEMPLATE: section-text-block */
+.dc-section-text-block {
 
     @include media-breakpoint-down (sm) {
 
+    }
+}
+// /* /TEMPLATE: section-text-block */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: section-text-blocks */
+.dc-section-text-blocks {
+
+    @include media-breakpoint-down (sm) {
+
+    }
+}
+// /* /TEMPLATE: section-text-blocks */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: service */
+.dc-service {
+    width: 360px;
+    height: 275px;
+    border-radius: 7px;
+    padding: 8px 20px;
+
+    .dc-service_head {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 7px;
+
+        img {
+            width: 93px;
+            height: 93px;
+        }
+
+        h3 {
+            padding-top: 7px;
+            padding-left: 18px;
+            width: 175px;
+        }
+    }
+
+    .dc-service_content {
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    .dc-service_details {
+
+        a svg {
+            width: 18px;
+            height: 15px;
+            margin-left: 2px;
+            margin-bottom: 4px;
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: service */
@@ -427,6 +626,13 @@
 // /*.....................................*/
 // /* TEMPLATE: services */
 .dc-services {
+    ul{
+        display: flex;
+        li~li{
+            margin-left: 20px;
+        }
+    }
+
 
     @include media-breakpoint-down (sm) {
 
@@ -438,9 +644,22 @@
 // /*.....................................*/
 // /* TEMPLATE: soc-icons */
 .dc-soc-icons {
+    /*h3 {
+        margin-bottom: 5px;
+    }*/
+    li {
+        display: inline-block;
+    }
+
+    svg {
+        color: #d6e0ee;
+        width: 16px;
+        margin-right: 16px;
+        height: 16px;
+        fill: #d6e0ee;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: soc-icons */

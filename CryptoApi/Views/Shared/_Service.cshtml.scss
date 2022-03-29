@@ -1,9 +1,46 @@
 // /*.....................................*/
 // /* TEMPLATE: service */
 .dc-service {
+    width: 360px;
+    height: 275px;
+    border-radius: 7px;
+    padding: 8px 20px;
+
+    .dc-service_head {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 7px;
+
+        img {
+            width: 93px;
+            height: 93px;
+        }
+
+        h3 {
+            padding-top: 7px;
+            padding-left: 18px;
+            width: 175px;
+        }
+    }
+
+    .dc-service_content {
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    .dc-service_details {
+
+        a svg {
+            width: 18px;
+            height: 15px;
+            margin-left: 2px;
+            margin-bottom: 4px;
+        }
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: service */

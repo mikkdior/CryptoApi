@@ -1,8 +1,19 @@
-﻿@model IEnumerable<CCoinPairDataVM>
+﻿@*@model IEnumerable<CCoinPairDataVM>*@
 
 <div class="dc-coin-pairs">
-    >coin-pairs
-    @await Html.PartialAsync("_CoinPair")
-    @await Html.PartialAsync("_CoinPair")
-    @await Html.PartialAsync("_CoinPair")
+    <div class="dcg-section__head">
+        <h2 class="dcg-h2">Popular Coin Pairs</h2>
+        <a asp-controller="CoinPairs" asp-action="Index" class="dcg-btn dcg-btn_big">
+            Viev Full Pairs List
+            <svg icon="arrow-right-light" class="dc-icon-arrow-right"></svg>
+        </a>
+    </div>
+    <ul class="dc-grid dc-grid_pairs">
+        @for(int i = 0; i < 8; i++)
+        {
+            <li>
+                @await Html.PartialAsync("_CoinPair")
+            </li>
+        }
+    </ul>
 </div>

@@ -2,8 +2,18 @@
 // /* TEMPLATE: coin */
 .dc-coin {
 
-    @include media-breakpoint-down (sm) {
+    .dc-icon-arrow-right {
+        display: none;
+        margin-right: 4px;
+    }
 
+    &:hover {
+        .dc-icon-arrow-right {
+            display: inline-block;
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: coin */
