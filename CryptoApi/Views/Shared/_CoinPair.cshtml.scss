@@ -1,8 +1,91 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pair */
 .dc-coin-pair {
+    margin-bottom: 26px;
+    width: 265px;
+    height: 190px;
+    position: relative;
+    margin-top: -60px;
+    border-radius: 7px;
+    background: #fff;
 
-    
+    &__wrapper {
+        width: 265px;
+        height: 190px;
+        padding: 10px 20px;
+        border-radius: 7px;
+    }
+
+    .dcg-icon-arrow-right {
+        margin: 17px 7px 0 0px;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__coin {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 7px;
+        margin-bottom: 3px;
+    }
+
+    &__change-values {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+
+        &_pos {
+            color: #28A745;
+        }
+
+        &_neg {
+            color: #EA3F3F;
+        }
+    }
+
+    &__coin-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__value {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dcg-h3 {
+        font-size: 20px;
+        margin: 0 0 0 10px;
+    }
+
+    .dcg-btn {
+        display: none;
+    }
+
+    &:hover {
+        z-index: 100;
+
+        .dcg-btn {
+            display: flex;
+        }
+    }
+
+    &:hover &__wrapper {
+        position: absolute;
+        z-index: 100;
+    }
 
     @include media-breakpoint-down (sm) {
     }

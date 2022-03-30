@@ -128,6 +128,20 @@ jQuery('.dc-about-small').dcTpl(function ($, Export) {
 // /about-small
 //--------------------------------------------
 
+// advantage
+jQuery('.dc-advantage').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /advantage
+//--------------------------------------------
+
+// advantages
+jQuery('.dc-advantages').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /advantages
+//--------------------------------------------
+
 // auth
 jQuery('.dc-auth').dcTpl(function ($, Export) {
    var $self = $(this);

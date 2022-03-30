@@ -4,14 +4,14 @@
     <div class="dcg-section__head">
         <h2 class="dcg-h2">Popular Coin Pairs</h2>
         <a asp-controller="CoinPairs" asp-action="Index" class="dcg-btn dcg-btn_big">
-            Viev Full Pairs List
-            <svg icon="arrow-right-light" class="dc-icon-arrow-right"></svg>
+            View Full Pairs List
+            <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
         </a>
     </div>
     <div class="row">
         @for(int k = 0; k < 4; k++)
         {
-            <div class="col-3">
+            <div class="col-3 dc-coin-pairs__grid-column">
                 @await Html.PartialAsync("_CoinPair")
                 @await Html.PartialAsync("_CoinPair")
             </div>

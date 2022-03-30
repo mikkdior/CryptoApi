@@ -145,9 +145,24 @@ h4, .dcg-h4 {
     &.dcg-btn_small {
         width: 225px;
         height: 40px;
-        display: inline-block;
+        display: flex;
+        text-align: center;
+        background: #0056B3;
+        color: #fff;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.2px;
 
-        img {
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            margin-right: 9px;
+        }
+
+        &:hover {
+            background: #3665ac;
         }
     }
 
@@ -371,21 +386,16 @@ textarea {}
 }
 
 /*.....................................*/
-.dc-icon-arrow-right {
-    fill: #0056B3;
+.dcg-icon-arrow-right {
+    width: 15px;
+    height: 15px;
 }
-.dc-arrow-change{
+.dcg-arrow-change{
     width: 13px;
     height: 8px;
 }
 /*.....................................*/
-.dc-change-values {
-    &_pos {
-    }
 
-    &_neg {
-    }
-}
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/

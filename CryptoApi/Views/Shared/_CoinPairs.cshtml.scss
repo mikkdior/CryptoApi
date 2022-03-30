@@ -1,62 +1,25 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pairs */
 .dc-coin-pairs {
-    .dc-icon-arrow-right {
-        width: 15px;
-        height: 15px;
-        margin-left: 0;
-        margin-top: 17px;
+    .dcg-h2 {
     }
 
-    .dc-grid__coin-pair {
-        padding: 20px;
-        border-radius: 7px;
+    .dc-coin-pairs__grid-column {
+        
+    }
 
-        .dc-grid__coin-pair_head {
-            display: flex;
-            justify-content: space-between;
+    .dcg-section__head {
+        margin-bottom: 70px;
+    }
 
-            .dc-grid__coin-pair-coin {
-                display: flex;
-                flex-direction: column;
-                padding: 8px 7px;
-                margin-bottom: 3px;
-
-                .dc-grid__coin-pair-coin_head {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 8px;
-
-                    img {
-                        width: 30px;
-                        height: 30px;
-                    }
-
-                    .dc-grid__coin-pair-coin_name {
-                        font-size: 20px;
-                        margin: 0 0 0 10px;
-                    }
-                }
-
-                .dc-change-values {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-            }
-        }
-
-        .dc-grid__coin-pair_value {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-        }
+    .dcg-icon-arrow-right {
+        margin-left: 11px;
+        margin-bottom: 1px;
     }
 
 
-
-
+    .dcg-btn_big {
+    }
 
     @include media-breakpoint-down (sm) {
     }
