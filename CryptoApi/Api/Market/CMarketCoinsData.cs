@@ -15,17 +15,15 @@
             {
                 yield return new CApiCoin
                 {
-                    Image = "",
                     Donor = key,
                     Id = coin.id.ToString(),
                     FullName = coin.name,
                     Name = coin.symbol,
-                    Usd = coin.quote["USD"].price,
+                    Image = null,
+                    UsdPrice = coin.quote["USD"].price,
                     MarketCap = coin.quote["USD"].market_cap,
-                    ChangeDay = (double)coin.quote["USD"].percent_change_24h,
-                    ChangeWeek = coin.quote["USD"].percent_change_7d.ToString(),
-                    ChangeMonth = "",
-                    ChangePrice = (decimal)coin.quote["USD"].volume_change_24h
+                    Low = null,
+                    High = null
                 };
             }
         }

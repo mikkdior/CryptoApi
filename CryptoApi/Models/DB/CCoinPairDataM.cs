@@ -5,7 +5,6 @@
 /// </summary>
 public class CCoinPairDataM
 {
-    public uint id { get; set; }
     public uint coin1_id { get; set; }
     public uint coin2_id { get; set; }
     public string price_1 { get; set; }

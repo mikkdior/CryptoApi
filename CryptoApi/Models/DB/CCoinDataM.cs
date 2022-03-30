@@ -11,7 +11,7 @@ public class CCoinDataM
     public string name_full { get; set; }
     public string name { get; set; }
     public string slug { get; set; }
-    public string image { get; set; }
+    public string? image { get; set; }
     public DateTime last_updated { get; set; }
 
     public ICollection<CCoinsMetaDataM> meta { get; set; }
@@ -23,6 +23,7 @@ public class CCoinDataM
     public CCoinDataM ()
     {
         meta = new List<CCoinsMetaDataM> ();
+        ext = new List<CCoinsExtDataM> ();
     }
 
     /// <summary>

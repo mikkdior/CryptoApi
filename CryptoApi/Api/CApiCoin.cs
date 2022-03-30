@@ -12,11 +12,9 @@ public class CApiCoin : IApiCoin
     public string Donor { get; set; }
     public string FullName { get; set; }
     public string Name { get; set; }
-    public string Image { get; set; }
-    public decimal Usd { get; set; }
-    public decimal MarketCap { get; set; }
-    public double ChangeDay { get; set; }
-    public string ChangeWeek { get; set; }
-    public string ChangeMonth { get; set; }
-    public decimal ChangePrice { get; set; }
+    public string? Image { get; set; }
+    public decimal? UsdPrice { get; set; }
+    public decimal? MarketCap { get; set; }
+    public decimal? Low { get; set; }
+    public decimal? High { get; set; }
 }

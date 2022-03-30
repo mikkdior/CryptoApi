@@ -8,12 +8,10 @@ namespace CryptoApi.Api
         string Donor { get; set; }
         string FullName { get; set; }
         string Name { get; set; }
-        string Image { get; set; }
-        decimal Usd { get; set; }
-        decimal MarketCap { get; set; }
-        double ChangeDay { get; set; }
-        string ChangeWeek { get; set; }
-        string ChangeMonth { get; set; }
-        decimal ChangePrice { get; set; }
+        string? Image { get; set; }
+        decimal? UsdPrice { get; set; }
+        decimal? MarketCap { get; set; }
+        decimal? Low { get; set; }
+        decimal? High { get; set; }
     }
 }

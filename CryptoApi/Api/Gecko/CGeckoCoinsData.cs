@@ -25,12 +25,10 @@ namespace CryptoApi.Api.Gecko
                     Id = coin.Id, 
                     FullName = coin.Name, 
                     Name = coin.Symbol,
-                    Usd = coin.MarketData.CurrentPrice["usd"].Value,
-                    MarketCap = coin.MarketData.MarketCap["usd"].Value,
-                    ChangeDay = coin.MarketData.PriceChangePercentage24H.Value,
-                    ChangeWeek = coin.MarketData.PriceChangePercentage7D,
-                    ChangeMonth = coin.MarketData.PriceChangePercentage30D,
-                    ChangePrice = coin.MarketData.PriceChange24H.Value
+                    UsdPrice = coin.MarketData.CurrentPrice["usd"],
+                    MarketCap = coin.MarketData.MarketCap["usd"],
+                    Low = coin.MarketData.Low24H["usd"],
+                    High = coin.MarketData.High24H["usd"]
                 };
             }
 
@@ -38,17 +36,10 @@ namespace CryptoApi.Api.Gecko
             {
                 yield return new CApiCoin
                 {
-                    Image = "",
                     Donor = key,
                     Id = coin.Id,
                     FullName = coin.Name,
-                    Name = coin.Symbol,
-                    Usd = 0,
-                    MarketCap = 0,
-                    ChangeDay = 0,
-                    ChangeWeek = "",
-                    ChangeMonth = "",
-                    ChangePrice = 0
+                    Name = coin.Symbol
                 };
             }
         }
