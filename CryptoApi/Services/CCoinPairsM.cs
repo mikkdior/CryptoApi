@@ -23,15 +23,28 @@ public class CCoinPairsM : CBaseDbM
 
     private IEnumerable<CCoinPairDataM> GetPairsData ()
     {
-        yield break;
+        foreach (var coin1 in coinsModel.GetTrueCoins())
+        {
+            foreach (var coin2 in coinsModel.GetTrueCoins())
+            {
+                yield return new CCoinPairDataM(coin1, coin2, GetMeta(coin1.id, coin2.id));
+            }
+        }
+    }
+
+    public IEnumerable<CCoinPairsMetaDataM> GetMeta (uint id1, uint id2)
+    {
+        return db.CoinPairsMeta
+            .Where(m => m.coin_1_id == id1 && m.coin_2_id == id2);
     }
 
     /// <summary>
     ///     Возвращает количество пар.
     /// </summary>
-    public int Count()
+    public uint Count()
     {
-        return 0;// db.CoinPairs.Count();
+        int count = coinsModel.TrueCount();
+        return (uint)(count*count);
     }
 
     /// <summary>

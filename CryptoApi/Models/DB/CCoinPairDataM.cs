@@ -5,24 +5,25 @@
 /// </summary>
 public class CCoinPairDataM
 {
-    public uint coin1_id { get; set; }
-    public uint coin2_id { get; set; }
-    public string price_1 { get; set; }
-    public string price_2 { get; set; }
-    public string day_percent { get; set; }
-    public string day_hight_1 { get; set; }
-    public string day_hight_2 { get; set; }
-    public string day_low_1 { get; set; }
-    public string day_low_2 { get; set; }
-    public string market_cap { get; set; }
-    public ICollection<CCoinPairsMetaDataM> meta { get; set; }
+    public uint coin1_id => coin_1.id;
+    public uint coin2_id => coin_2.id;
+    public decimal? price_1 { get; set; }
+    public decimal? price_2 { get; set; }
+    public decimal? day_percent { get; set; }
+    public decimal? day_high_1 { get; set; }
+    public decimal? day_high_2 { get; set; }
+    public decimal? day_low_1 { get; set; }
+    public decimal? day_low_2 { get; set; }
+    public decimal? market_cap { get; set; }
+    public IEnumerable<CCoinPairsMetaDataM> meta { get; private set; }
+    public CCoinDataM coin_1 { get; private set; }
+    public CCoinDataM coin_2 { get; private set; }
 
-    /// <summary>
-    ///     Конструктор. заполняет  необходимые поля при создании модели.
-    /// </summary>
-    public CCoinPairDataM ()
+    public CCoinPairDataM(CCoinDataM coin1, CCoinDataM coin2, IEnumerable<CCoinPairsMetaDataM> meta)
     {
-        meta = new List<CCoinPairsMetaDataM> ();
+        coin_1 = coin1;
+        coin_2 = coin2;
+        this.meta = meta;
     }
 
     /// <summary>
@@ -39,4 +40,6 @@ public class CCoinPairDataM
     {
         get => meta.Where(x => x.group == group && x.option == option).FirstOrDefault();
     }
+
+    
 }

@@ -133,6 +133,11 @@ public class CCoinsM : CBaseDbM
         return db.Coins.Count<CCoinDataM>();
     }
 
+    public int TrueCount()
+    {
+        return GetTrueCoins().Count();
+    }
+
     /// <summary>
     ///     Достает монеты из БД используя исходное заданное количество и номер страницы.
     /// </summary>
@@ -146,6 +151,13 @@ public class CCoinsM : CBaseDbM
             })
             .Skip((page - 1) * count)
             .Take(count);
+    }
+
+    public IEnumerable<CCoinDataM> GetTrueCoins()
+    {
+        return db.Coins
+            .Include(c => c.ext)
+            .Where(c => c.ext.Count() > 0);
     }
 
     /// <summary>
