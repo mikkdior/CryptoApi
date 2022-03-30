@@ -145,6 +145,7 @@ h4, .dcg-h4 {
     &.dcg-btn_small {
         width: 225px;
         height: 40px;
+        display: inline-block;
 
         img {
         }
@@ -372,6 +373,18 @@ textarea {}
 /*.....................................*/
 .dc-icon-arrow-right {
     fill: #0056B3;
+}
+.dc-arrow-change{
+    width: 13px;
+    height: 8px;
+}
+/*.....................................*/
+.dc-change-values {
+    &_pos {
+    }
+
+    &_neg {
+    }
 }
 /* /common */
 /* /CLASSES */

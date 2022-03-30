@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/"><symbol id="arrow-down" viewBox="0 0 11 8"><g fill="none">
-<path d="M6.27611 0.955216C5.87592 0.462673 5.12408 0.462674 4.72389 0.955217L0.324855 6.36941C-0.206125 7.02292 0.258936 8 1.10097 8L9.89903 8C10.7411 8 11.2061 7.02292 10.6751 6.36941L6.27611 0.955216Z" fill="#28A745"/>
+<path d="M6.27611 7.04478C5.87592 7.53733 5.12408 7.53733 4.72389 7.04478L0.324855 1.63059C-0.206125 0.977077 0.258936 8.12147e-08 1.10097 1.35535e-07L9.89903 7.03103e-07C10.7411 7.57423e-07 11.2061 0.977079 10.6751 1.63059L6.27611 7.04478Z" fill="#EA3F3F"/>
 </g></symbol><symbol id="arrow-right-dark" viewBox="0 0 17 10"><g fill="none">
 <path d="M1 5H15M15 5L10.3333 9M15 5L10.3333 1" stroke="#004188" stroke-width="1.5" stroke-linecap="round"/>
 </g></symbol><symbol id="arrow-right-light" viewBox="0 0 17 10"><g fill="none">

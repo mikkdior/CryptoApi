@@ -7385,7 +7385,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     height: 50px; }
   button.dcg-btn_small, [type="button"].dcg-btn_small, [type="submit"].dcg-btn_small, [type="reset"].dcg-btn_small, .dcg-btn.dcg-btn_small {
     width: 225px;
-    height: 40px; }
+    height: 40px;
+    display: inline-block; }
   button.dcg-btn_pag, [type="button"].dcg-btn_pag, [type="submit"].dcg-btn_pag, [type="reset"].dcg-btn_pag, .dcg-btn.dcg-btn_pag {
     border: 1.5px solid #ADADAD; }
   button.dcg-btn_pag-active, [type="button"].dcg-btn_pag-active, [type="submit"].dcg-btn_pag-active, [type="reset"].dcg-btn_pag-active, .dcg-btn.dcg-btn_pag-active {
@@ -7484,6 +7485,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-icon-arrow-right {
   fill: #0056B3; }
 
+.dc-arrow-change {
+  width: 13px;
+  height: 8px; }
+
+/*.....................................*/
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/
@@ -7564,36 +7570,42 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-coin:hover .dc-icon-arrow-right {
   display: inline-block; }
 
-.dc-coin-pair .dcg-btn_small {
-  display: none; }
-
-.dc-coin-pair:hover .dcg-btn_small {
-  display: inline-block; }
-
 .dc-coin-pairs .dc-icon-arrow-right {
   width: 15px;
   height: 15px;
-  margin-left: 7px; }
+  margin-left: 0;
+  margin-top: 17px; }
 
-.dc-coin-pairs .dc-grid_pairs {
-  justify-content: space-between;
-  padding-top: 9px; }
-  .dc-coin-pairs .dc-grid_pairs .dc-grid_pair {
-    width: 265px;
-    height: 60px;
+.dc-coin-pairs .dc-grid__coin-pair {
+  padding: 20px;
+  border-radius: 7px; }
+  .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_head {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 10px; }
-    .dc-coin-pairs .dc-grid_pairs .dc-grid_pair img {
-      width: 30px;
-      height: 30px; }
-    .dc-coin-pairs .dc-grid_pairs .dc-grid_pair-name {
-      margin-right: auto;
-      margin-left: 10px;
-      letter-spacing: 0px;
-      font-weight: 600; }
+    justify-content: space-between; }
+    .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_head .dc-grid__coin-pair-coin {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 7px;
+      margin-bottom: 3px; }
+      .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_head .dc-grid__coin-pair-coin .dc-grid__coin-pair-coin_head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px; }
+        .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_head .dc-grid__coin-pair-coin .dc-grid__coin-pair-coin_head img {
+          width: 30px;
+          height: 30px; }
+        .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_head .dc-grid__coin-pair-coin .dc-grid__coin-pair-coin_head .dc-grid__coin-pair-coin_name {
+          font-size: 20px;
+          margin: 0 0 0 10px; }
+      .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_head .dc-grid__coin-pair-coin .dc-change-values {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+  .dc-coin-pairs .dc-grid__coin-pair .dc-grid__coin-pair_value {
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
 
 .dc-coins .dc-icon-arrow-right {
   width: 15px;
@@ -7709,15 +7721,14 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   padding: 8px 20px; }
   .dc-service .dc-service_head {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 7px; }
+    margin-bottom: 6px; }
     .dc-service .dc-service_head img {
       width: 93px;
       height: 93px; }
     .dc-service .dc-service_head h3 {
       padding-top: 7px;
-      padding-left: 18px;
+      padding-left: 17px;
       width: 175px; }
   .dc-service .dc-service_content p {
     margin-bottom: 15px; }
@@ -7726,11 +7737,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     height: 15px;
     margin-left: 2px;
     margin-bottom: 4px; }
-
-.dc-services ul {
-  display: flex; }
-  .dc-services ul li ~ li {
-    margin-left: 20px; }
 
 .dc-soc-icons {
   /*h3 {

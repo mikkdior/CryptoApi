@@ -8,12 +8,13 @@
             <svg icon="arrow-right-light" class="dc-icon-arrow-right"></svg>
         </a>
     </div>
-    <ul class="dc-grid dc-grid_pairs">
-        @for(int i = 0; i < 8; i++)
+    <div class="row">
+        @for(int k = 0; k < 4; k++)
         {
-            <li>
+            <div class="col-3">
                 @await Html.PartialAsync("_CoinPair")
-            </li>
+                @await Html.PartialAsync("_CoinPair")
+            </div>
         }
-    </ul>
+    </div>
 </div>

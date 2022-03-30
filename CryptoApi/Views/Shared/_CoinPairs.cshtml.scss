@@ -4,35 +4,59 @@
     .dc-icon-arrow-right {
         width: 15px;
         height: 15px;
-        margin-left: 7px;
+        margin-left: 0;
+        margin-top: 17px;
     }
 
-    .dc-grid_pairs {
-        justify-content: space-between;
-        padding-top: 9px;
+    .dc-grid__coin-pair {
+        padding: 20px;
+        border-radius: 7px;
 
-        .dc-grid_pair {
-            width: 265px;
-            height: 60px;
+        .dc-grid__coin-pair_head {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            margin-bottom: 10px;
 
-            img {
-                width: 30px;
-                height: 30px;
-            }
+            .dc-grid__coin-pair-coin {
+                display: flex;
+                flex-direction: column;
+                padding: 8px 7px;
+                margin-bottom: 3px;
 
-            &-name {
-                margin-right: auto;
-                margin-left: 10px;
-                letter-spacing: 0px;
-                font-weight: 600;
+                .dc-grid__coin-pair-coin_head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 8px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .dc-grid__coin-pair-coin_name {
+                        font-size: 20px;
+                        margin: 0 0 0 10px;
+                    }
+                }
+
+                .dc-change-values {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
         }
+
+        .dc-grid__coin-pair_value {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
     }
+
+
+
+
 
     @include media-breakpoint-down (sm) {
     }

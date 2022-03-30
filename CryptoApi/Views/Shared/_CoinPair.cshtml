@@ -1,30 +1,37 @@
 ﻿@using CryptoApi.Models.DB;
 @*@model CCoinPairDataVM*@
 
-<div class="dc-coin-pair dc-grid_pair dcg-shadow-hover">
-    <div class="dc-coin-pair_head">
-        <div class="dc-coin-pair-coin1">
-            <img src="images/test-coin-image.png" alt="coin-image">
-            <span class="dc-grid_coin-name">
-                Bitcoin  (BTC)
-            </span>
-            <span>
-                -4,83% <svg icon="arrow-right-dark" class="dc-icon-arrow-right"></svg>
+<div class="dc-coin-pair dc-grid__coin-pair dcg-shadow-hover">
+    <div class="dc-grid__coin-pair_head">
+        <div class="dc-grid__coin-pair-coin">
+            <div class="dc-grid__coin-pair-coin_head">
+                <img src="images/test-coin-image.png" alt="coin-image">
+                <h3 class="dc-grid__coin-pair-coin_name">
+                    BTC
+                </h3>
+            </div>
+                
+            <span class="dc-change-values">
+                <span class="dc-change-values_pos">-4,83%</span>
+                <svg icon="arrow-down" class="dc-change-values_neg dc-arrow-change"></svg>
             </span>
         </div>
         <svg icon="arrow-right-dark" class="dc-icon-arrow-right"></svg>
-        <div class="dc-coin-pair-coin2">
-            <img src="images/test-coin-image.png" alt="coin-image">
-            <span class="dc-grid_coin-name">
-                Ethereum  (ETH)
-            </span>
-            <span>
-                +5,16% <svg icon="arrow-right-dark" class="dc-icon-arrow-right"></svg>
+        <div class="dc-grid__coin-pair-coin">
+            <div class="dc-grid__coin-pair-coin_head">
+                <img src="images/test-coin-image.png" alt="coin-image">
+                <h3 class="dc-grid__coin-pair-coin_name">
+                    ETH
+                </h3>
+            </div>
+            <span class="dc-change-values">
+                <span class="dc-change-values_pos">+5,16%</span>
+                <svg icon="arrow-up" class="dc-change-values_pos dc-arrow-change"></svg>
             </span>
         </div>
     </div>
-    <span>
+    <span class="dc-grid__coin-pair_value">
         1 BTC = 13.90605686 ETH
     </span>
-    <a class="dcg-btn_small" asp-controller="CoinPairs" asp-action="Pair" asp-route-coin1="btc" asp-route-coin2="eth">Exchange</a>
+    <a class="dcg-btn dcg-btn_small" asp-controller="CoinPairs" asp-action="Pair" asp-route-coin1="btc" asp-route-coin2="eth">Exchange</a>
 </div>

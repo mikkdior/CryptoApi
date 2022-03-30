@@ -1,15 +1,8 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pair */
 .dc-coin-pair {
-    .dcg-btn_small {
-        display: none;
-    }
 
-    &:hover {
-        .dcg-btn_small {
-            display: inline-block;
-        }
-    }
+    
 
     @include media-breakpoint-down (sm) {
     }
