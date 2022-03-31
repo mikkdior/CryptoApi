@@ -1,21 +1,17 @@
 // /*.....................................*/
 // /* TEMPLATE: coins */
 .dc-coins {
-    .dc-icon-arrow-right {
-        width: 15px;
-        height: 15px;
+    .dcg-h2 {
+    }
+
+    .dcg-icon-arrow-right {
         margin-left: 7px;
     }
 
-    .dc-grid_coins {
+    &__list {
         justify-content: space-between;
         padding-top: 9px;
-
-        .dc-grid_coin {
-            
-        }
     }
-
 
     @include media-breakpoint-down (sm) {
     }

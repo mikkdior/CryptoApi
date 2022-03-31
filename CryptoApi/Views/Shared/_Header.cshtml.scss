@@ -6,18 +6,14 @@
     padding: 30px 0;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 200;
 
     a {
         color: #FFFFFF;
-    }
 
-    a:hover {
-        color: #0FD4E2;
-    }
-
-    .dc-main-menu {
-        margin-left: 27px;
+        :hover {
+            color: #0FD4E2;
+        }
     }
 
     @include media-breakpoint-down (sm) {

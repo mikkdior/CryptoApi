@@ -2,14 +2,19 @@
 // /* TEMPLATE: about-small */
 .dc-about-small {
 
-    p {
+    width: 80%;
+
+    .dcg-h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    &__content {
         color: #a0b6d8;
         font-weight: 700;
         font-size: 14px;
         letter-spacing: -0.25px;
     }
-
-    width: 80%;
 
     @include media-breakpoint-down (sm) {
     }

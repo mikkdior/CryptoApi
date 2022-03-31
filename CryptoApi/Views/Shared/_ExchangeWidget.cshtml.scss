@@ -1,6 +1,9 @@
 // /*.....................................*/
 // /* TEMPLATE: exchange-widget */
 .dc-exchange-widget {
+    height: 355px;
+    width: 396px;
+    margin-left: auto;
 
     @include media-breakpoint-down (sm) {
     }

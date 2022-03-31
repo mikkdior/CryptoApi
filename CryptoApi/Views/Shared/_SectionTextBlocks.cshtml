@@ -1,3 +1,8 @@
-﻿<div class="dc-section-text-blocks">
-    section-text-blocks
+﻿@model IEnumerable<(string title, string content)>
+
+<div class="dc-section-text-blocks">
+    @foreach (var item in Model)
+    {
+        @await Html.PartialAsync("_SectionTextBlock", item)
+    }
 </div>

@@ -3,19 +3,11 @@
 .dc-footer {
     width: 100%;
     bottom: 0;
-    /*position: absolute;*/
     background: #3665AC;
     color: #FFFFFF;
     letter-spacing: -0.4px; /* ??? */
     font-size: 15px;
     padding: 34px 0 60px 0;
-
-
-
-    h3 {
-        color: #FFF;
-        font-size: 20px;
-    }
 
     @include media-breakpoint-down (sm) {
     }

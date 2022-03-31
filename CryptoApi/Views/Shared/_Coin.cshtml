@@ -1,9 +1,10 @@
 ﻿@*@model CCoinDataVM*@
-
-<a class="dc-coin dcg-shadow-hover" asp-controller="Coins" asp-action="Coin" asp-route-coin="btc">
-    <img src="images/test-coin-image.png" alt="coin-image">
-    <span class="dc-grid_coin-name">
-        Bitcoin  (BTC)
-    </span>
-    <svg icon="arrow-right-dark" class="dc-icon-arrow-right"></svg>
-</a>
+<div class="dc-coin dcg-shadow-hover">
+    <a class="dc-coin__link" asp-controller="Coins" asp-action="Coin" asp-route-coin="btc">
+        <img src="images/test-coin-image.png" alt="coin-image">
+        <span class="dc-coin__name">
+            Bitcoin  (BTC)
+        </span>
+        <svg icon="arrow-right-dark" class="dcg-icon-arrow-right"></svg>
+    </a>
+</div>

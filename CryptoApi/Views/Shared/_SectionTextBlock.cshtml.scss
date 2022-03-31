@@ -1,9 +1,19 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
+    margin-bottom: 24px;
+
+    .dcg-h2 {
+        text-align: start;
+        padding: 0;
+    }
+
+    &__content {
+        width: 680px;
+        margin-left: auto;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: section-text-block */

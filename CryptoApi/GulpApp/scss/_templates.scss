@@ -2,14 +2,19 @@
 // /* TEMPLATE: about-small */
 .dc-about-small {
 
-    p {
+    width: 80%;
+
+    .dcg-h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    &__content {
         color: #a0b6d8;
         font-weight: 700;
         font-size: 14px;
         letter-spacing: -0.25px;
     }
-
-    width: 80%;
 
     @include media-breakpoint-down (sm) {
     }
@@ -60,11 +65,10 @@
     padding-left: 5px;
     width: max-content;
 
-    .dcg-button_auth {
+    &__auth {
         border: 0;
         background: transparent;
 
-        
         svg {
             color: #FFF;
             width: 20px;
@@ -74,7 +78,6 @@
             padding-bottom: 1px;
         }
     }
-
 
     @include media-breakpoint-down (sm) {
     }
@@ -98,31 +101,34 @@
 .dc-coin {
     width: 265px;
     height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 15px;
     margin-bottom: 10px;
+
+    .dc-coin__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dcg-icon-arrow-right {
+        display: none;
+        margin-right: 4px;
+    }
 
     img {
         width: 30px;
         height: 30px;
     }
 
-    &-name {
+    &__name {
         margin-right: auto;
         margin-left: 10px;
         letter-spacing: 0px;
         font-weight: 600;
     }
 
-    .dc-icon-arrow-right {
-        display: none;
-        margin-right: 4px;
-    }
-
     &:hover {
-        .dc-icon-arrow-right {
+        .dcg-icon-arrow-right {
             display: inline-block;
         }
     }
@@ -285,21 +291,17 @@
 // /*.....................................*/
 // /* TEMPLATE: coins */
 .dc-coins {
-    .dc-icon-arrow-right {
-        width: 15px;
-        height: 15px;
+    .dcg-h2 {
+    }
+
+    .dcg-icon-arrow-right {
         margin-left: 7px;
     }
 
-    .dc-grid_coins {
+    &__list {
         justify-content: space-between;
         padding-top: 9px;
-
-        .dc-grid_coin {
-            
-        }
     }
-
 
     @include media-breakpoint-down (sm) {
     }
@@ -321,8 +323,12 @@
 // /*.....................................*/
 // /* TEMPLATE: contacts */
 .dc-contacts {
+    .dcg-h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
 
-    h3 ~ h3 {
+    .dcg-h3 ~ .dcg-h3 {
         padding-top: 5px;
     }
 
@@ -344,6 +350,10 @@
     margin-top: 45px;
     letter-spacing: -0.5px;
 
+    &__content {
+
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }
@@ -364,6 +374,9 @@
 // /*.....................................*/
 // /* TEMPLATE: exchange-widget */
 .dc-exchange-widget {
+    height: 355px;
+    width: 396px;
+    margin-left: auto;
 
     @include media-breakpoint-down (sm) {
     }
@@ -387,19 +400,11 @@
 .dc-footer {
     width: 100%;
     bottom: 0;
-    /*position: absolute;*/
     background: #3665AC;
     color: #FFFFFF;
     letter-spacing: -0.4px; /* ??? */
     font-size: 15px;
     padding: 34px 0 60px 0;
-
-
-
-    h3 {
-        color: #FFF;
-        font-size: 20px;
-    }
 
     @include media-breakpoint-down (sm) {
     }
@@ -448,18 +453,14 @@
     padding: 30px 0;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 200;
 
     a {
         color: #FFFFFF;
-    }
 
-    a:hover {
-        color: #0FD4E2;
-    }
-
-    .dc-main-menu {
-        margin-left: 27px;
+        :hover {
+            color: #0FD4E2;
+        }
     }
 
     @include media-breakpoint-down (sm) {
@@ -498,6 +499,7 @@
 // /* TEMPLATE: main-menu */
 .dc-main-menu {
     letter-spacing: 0px;
+    margin-left: 27px;
 
     &__nav {
         padding: 12px 0px 0 0;
@@ -510,7 +512,7 @@
             li {
                 padding: 0 3px;
 
-                a:hover, a.dcg-active {
+                a:hover{
                     color: #0FD4E2;
                 }
             }
@@ -572,38 +574,44 @@
 .dc-page-head-main {
     padding-top: 30px;
 
-    .dcg-advantages {
+    &__advantages {
         margin-top: 39px;
         font-size: 20px;
         letter-spacing: 0.2px;
 
-        
-
         li ~ li {
             margin-left: 20px;
         }
+    }
 
-        .dcg-advantage {
-            display: flex;
-            line-height: 1.3;
+    &__advantage {
+        display: flex;
+        line-height: 1.3;
+    }
 
-            .dcg-head-done {
-                background: white;
-                border-radius: 50%;
-                width: 20px;
-                height: 20px;
-                text-align: center;
-                margin-right: 12px;
-                margin-top: 1px;
+    &__done {
+        background: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-right: 12px;
+        margin-top: 1px;
 
-                svg {
-                    width: 14px;
-                    height: 14px;
-                    fill: green;
-                    margin-bottom: 8px;
-                }
-            }
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: green;
+            margin-bottom: 8px;
         }
+    }
+
+    &__text {
+        color: #FFF;
+    }
+
+    &__text-light {
+        color: #CBCBCB;
     }
 
     @include media-breakpoint-down (sm) {
@@ -659,9 +667,19 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
+    margin-bottom: 24px;
+
+    .dcg-h2 {
+        text-align: start;
+        padding: 0;
+    }
+
+    &__content {
+        width: 680px;
+        margin-left: auto;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: section-text-block */
@@ -670,9 +688,9 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-blocks */
 .dc-section-text-blocks {
+    padding: 30px 0;
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: section-text-blocks */
@@ -686,7 +704,13 @@
     border-radius: 7px;
     padding: 8px 20px;
 
-    .dc-service_head {
+    .dcg-h3 {
+        padding-top: 7px;
+        padding-left: 17px;
+        width: 175px;
+    }
+
+    &__head {
         display: flex;
         align-items: center;
         margin-bottom: 6px;
@@ -695,23 +719,15 @@
             width: 93px;
             height: 93px;
         }
-
-        h3 {
-            padding-top: 7px;
-            padding-left: 17px;
-            width: 175px;
-        }
     }
 
-    .dc-service_content {
-        p {
-            margin-bottom: 15px;
-        }
+    &__content {
+        margin-bottom: 15px;
     }
 
-    .dc-service_details {
+    &__details {
 
-        a svg {
+        svg {
             width: 18px;
             height: 15px;
             margin-left: 2px;
@@ -729,8 +745,11 @@
 // /* TEMPLATE: services */
 .dc-services {
 
-    @include media-breakpoint-down (sm) {
+    .dcg-h2{
 
+    } 
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: services */
@@ -739,19 +758,27 @@
 // /*.....................................*/
 // /* TEMPLATE: soc-icons */
 .dc-soc-icons {
-    /*h3 {
-        margin-bottom: 5px;
-    }*/
+    .dcg-h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .dcg-h3 ~ .dcg-h3 {
+        padding-top: 5px;
+    }
+
     li {
         display: inline-block;
     }
 
-    svg {
-        color: #d6e0ee;
-        width: 16px;
-        margin-right: 16px;
-        height: 16px;
-        fill: #d6e0ee;
+    a {
+        svg {
+            color: #d6e0ee;
+            width: 16px;
+            margin-right: 16px;
+            height: 16px;
+            fill: #d6e0ee;
+        }
     }
 
     @include media-breakpoint-down (sm) {

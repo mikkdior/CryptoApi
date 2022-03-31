@@ -1,4 +1,4 @@
-﻿@model CCoinVM
+﻿@*@model CCoinVM*@
 @inject CBlocksHelperVM BlocksHelper
 @{
     ViewData["Title"] = "Coin Page";
@@ -43,17 +43,26 @@
     </div>
 </section>
 
-<section class="dcg-section dcg-section-gray">
+<section class="dcg-section dcg-section_gray">
     <div class="container">
         <div class="row">
             <div class="col">
-                @*@await Html.PartialAsync("_SectionTextBlocks")*@
+                @{
+                    string content1 = "On our platform, you can exchange DODO to Dollar without any hassle, issues, and limits. Along with an opportunity to swap more than 330 cryptocurrencies, you can use a bank card or a bank account to convert DODO to USD and get profit from every swap.";
+                    string content2 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
+                    string content3 = "Our DODO to USD converter is developed to provide a perfect user experience for both professionals and newbies. Our users can count on the following benefits: No limitations. Our users can swap as many coins as you need. No mandatory account registration and verification. If you exchange crypto, you decide whether to handle it anonymously or benefit from perks offered if you open an account. Non-custodial services. The service doesn’t keep yourcoins needed for your DODO to Dollar conversion.";
+                    string title1 = "Exchange DODO to USD";
+                    string title2 = "How to Convert DODO to Dollar";
+                    string title3 = "DODO to USD Exchange Benefits";
+                }
+
+                @await Html.PartialAsync("_SectionTextBlocks", new[] { (title1, content1), (title2, content2), (title3, content3) })
             </div>
         </div>
     </div>
 </section>
 
-<section class="dcg-section dcg-section-gray">
+<section class="dcg-section dcg-section_gray">
     <div class="container">
         <div class="row">
             <div class="col">

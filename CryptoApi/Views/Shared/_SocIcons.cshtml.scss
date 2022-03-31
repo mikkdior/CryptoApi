@@ -1,19 +1,27 @@
 // /*.....................................*/
 // /* TEMPLATE: soc-icons */
 .dc-soc-icons {
-    /*h3 {
-        margin-bottom: 5px;
-    }*/
+    .dcg-h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .dcg-h3 ~ .dcg-h3 {
+        padding-top: 5px;
+    }
+
     li {
         display: inline-block;
     }
 
-    svg {
-        color: #d6e0ee;
-        width: 16px;
-        margin-right: 16px;
-        height: 16px;
-        fill: #d6e0ee;
+    a {
+        svg {
+            color: #d6e0ee;
+            width: 16px;
+            margin-right: 16px;
+            height: 16px;
+            fill: #d6e0ee;
+        }
     }
 
     @include media-breakpoint-down (sm) {

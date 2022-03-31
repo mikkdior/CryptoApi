@@ -1,3 +1,14 @@
-﻿<div class="dc-section-text-block">
-    section-text-block
+﻿@model (string title, string content)
+
+<div class="dc-section-text-block">
+    <div class="row">
+        <div class="col-4">
+            <h2 class="dcg-h2">@Model.title</h2>
+        </div>
+        <div class="col-8"> 
+            <p class="dc-section-text-block__content">
+                @Model.content
+            </p>
+        </div>
+    </div>
 </div>

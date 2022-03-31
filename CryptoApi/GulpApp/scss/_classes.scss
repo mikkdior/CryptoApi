@@ -269,6 +269,7 @@ textarea {}
     }
 
     &_gray {
+        background: #F8F8F8;
     }
 
     &_light {
@@ -351,38 +352,7 @@ textarea {}
 /*.....................................*/
 
 .dcg-active {
-
-}
-/*.....................................*/
-
-.dc-exchange-widget {
-    height: 355px;
-    width: 396px;
-    margin-left: auto;
-}
-
-/*.....................................*/
-.dc-text-dark {
-    color: #black;
-}
-
-.dc-text-light {
-    color: #CBCBCB;
-}
-.dc-text {
-    color: #FFF;
-}
-
-/*.....................................*/
-.dc-grid {
-    display: flex;
-    border-radius: 7px;
-    flex-wrap: wrap;
-
-    &_pairs {
-        li {
-        }
-    }
+    color: #0FD4E2;
 }
 
 /*.....................................*/

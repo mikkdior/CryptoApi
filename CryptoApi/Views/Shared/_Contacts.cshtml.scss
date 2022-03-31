@@ -1,8 +1,12 @@
 // /*.....................................*/
 // /* TEMPLATE: contacts */
 .dc-contacts {
+    .dcg-h3 {
+        color: #FFF;
+        font-size: 20px;
+    }
 
-    h3 ~ h3 {
+    .dcg-h3 ~ .dcg-h3 {
         padding-top: 5px;
     }
 
