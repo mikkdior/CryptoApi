@@ -2,8 +2,17 @@
 // /* TEMPLATE: contacts */
 .dc-contacts {
 
-    @include media-breakpoint-down (sm) {
+    h3 ~ h3 {
+        padding-top: 5px;
+    }
 
+    a {
+        color: #c0cee5;
+        font-weight: 700;
+        letter-spacing: -0.9px;
+    }
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: contacts */

@@ -1,0 +1,24 @@
+// /*.....................................*/
+// /* TEMPLATE: advantage */
+.dc-advantage {
+    &__image-wrapper {
+        svg {
+        }
+    }
+
+    .dcg-h3 {
+    }
+
+    &__text {
+        a {
+        }
+
+        &_dark {
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: advantage */
+// /*.....................................*/

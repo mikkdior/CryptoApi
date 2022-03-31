@@ -1,5 +1,6 @@
-﻿@model (string coin1, string coin2)
+﻿@model (string coin1_name, string coin2_name)
 
-<div class="dc-exchange-widget">
-    >exchange-widget
+<div class="dc-exchange-widget dcg-shadow">
+    <iframe id="iframe-widget" src="https://changenow.io/embeds/exchange-widget/v2/widget.html?from=@Model.coin1_name&horizontal=false&lang=en-US&link_id=e4e6bf0d16d712&to=@Model.coin2_name&toTheMoon=true" style="height: 356px; width: 100%; border: none"></iframe>
+    @*<script defer src="https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js"></script>*@
 </div>

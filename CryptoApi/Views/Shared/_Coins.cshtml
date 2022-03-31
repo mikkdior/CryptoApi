@@ -1,9 +1,20 @@
-﻿@model IEnumerable<CCoinDataVM>
+﻿@*@model IEnumerable<CCoinDataVM>*@
 
 <div class="dc-coins">
-    >coins
-    @await Html.PartialAsync("_Coin")
-    @await Html.PartialAsync("_Coin")
-    @await Html.PartialAsync("_Coin")
+    <div class="dcg-section__head">
+        <h2 class="dcg-h2">Popular Crypto-Fiat Amounts</h2>
+        <a asp-controller="Coins" asp-action="Index" class="dcg-btn dcg-btn_big">
+            Find out more Amounts
+            <svg icon="arrow-right-light" class="dc-icon-arrow-right"></svg>
+        </a>
+    </div>
+    <div class="row">
+        @for(int i = 0; i < 16; i++)
+        {
+            <div class="col-3">
+                @await Html.PartialAsync("_Coin")
+            </div>
+        }
+    </div>
 </div>
 

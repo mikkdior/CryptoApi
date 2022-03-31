@@ -128,6 +128,20 @@ jQuery('.dc-about-small').dcTpl(function ($, Export) {
 // /about-small
 //--------------------------------------------
 
+// advantage
+jQuery('.dc-advantage').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /advantage
+//--------------------------------------------
+
+// advantages
+jQuery('.dc-advantages').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /advantages
+//--------------------------------------------
+
 // auth
 jQuery('.dc-auth').dcTpl(function ($, Export) {
    var $self = $(this);
@@ -303,20 +317,6 @@ jQuery('.dc-news-sketch').dcTpl(function ($, Export) {
 // /news-sketch
 //--------------------------------------------
 
-// page-head
-jQuery('.dc-page-head').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head
-//--------------------------------------------
-
-// page-head-coin
-jQuery('.dc-page-head-coin').dcTpl(function ($, Export) {
-   var $self = $(this);
-});
-// /page-head-coin
-//--------------------------------------------
-
 // page-head-coins
 jQuery('.dc-page-head-coins').dcTpl(function ($, Export) {
    var $self = $(this);
@@ -357,6 +357,20 @@ jQuery('.dc-partners').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /partners
+//--------------------------------------------
+
+// section-text-block
+jQuery('.dc-section-text-block').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /section-text-block
+//--------------------------------------------
+
+// section-text-blocks
+jQuery('.dc-section-text-blocks').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /section-text-blocks
 //--------------------------------------------
 
 // service

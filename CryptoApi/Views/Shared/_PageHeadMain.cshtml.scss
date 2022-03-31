@@ -1,9 +1,43 @@
 // /*.....................................*/
 // /* TEMPLATE: page-head-main */
 .dc-page-head-main {
+    padding-top: 30px;
+
+    .dcg-advantages {
+        margin-top: 39px;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+
+        
+
+        li ~ li {
+            margin-left: 20px;
+        }
+
+        .dcg-advantage {
+            display: flex;
+            line-height: 1.3;
+
+            .dcg-head-done {
+                background: white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                margin-right: 12px;
+                margin-top: 1px;
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+                    fill: green;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: page-head-main */

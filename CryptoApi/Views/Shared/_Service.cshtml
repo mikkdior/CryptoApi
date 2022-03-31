@@ -1,3 +1,19 @@
-﻿<div class="dc-service">
-    >service
+﻿@model (string img_path, string title, string content, (string name, string url) link)
+
+<div class="dc-service dcg-shadow-hover">
+    <div class="dc-service_head">
+        <img src="@Model.img_path" alt="image">
+        <h3>@Model.title</h3>
+    </div>
+    <div class="dc-service_content">
+        <p class="dc-text-dark">
+            @Model.content
+        </p>
+    </div>
+    <div class="dc-service_details">
+        <a href="@Model.link.url">
+            @Model.link.name
+            <svg icon="arrow-right-dark" class="dc-icon-arrow-right"></svg>
+        </a>
+    </div>
 </div>

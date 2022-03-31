@@ -1,9 +1,27 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pairs */
 .dc-coin-pairs {
+    .dcg-h2 {
+    }
+
+    .dc-coin-pairs__grid-column {
+        
+    }
+
+    .dcg-section__head {
+        margin-bottom: 70px;
+    }
+
+    .dcg-icon-arrow-right {
+        margin-left: 11px;
+        margin-bottom: 1px;
+    }
+
+
+    .dcg-btn_big {
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coin-pairs */
