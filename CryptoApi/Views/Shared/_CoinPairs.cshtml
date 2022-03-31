@@ -9,10 +9,9 @@
         </a>
     </div>
     <div class="row">
-        @for(int k = 0; k < 4; k++)
+        @for(int k = 0; k < 8; k++)
         {
-            <div class="col-3 dc-coin-pairs__grid-column">
-                @await Html.PartialAsync("_CoinPair")
+            <div class="col-3">
                 @await Html.PartialAsync("_CoinPair")
             </div>
         }

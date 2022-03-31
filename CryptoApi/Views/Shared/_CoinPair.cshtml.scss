@@ -32,11 +32,14 @@
         margin-bottom: 3px;
     }
 
-    &__change-values {
+    &__change {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-weight: 600;
+
+        &-val {
+            font-weight: 600;
+        }
 
         &_pos {
             color: #28A745;
