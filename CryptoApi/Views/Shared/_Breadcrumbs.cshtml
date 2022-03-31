@@ -1,3 +1,17 @@
-﻿<div class="dc-breadcrumbs">
-    >breadcrumbs
+﻿@model IEnumerable<string>
+
+<div class="dc-breadcrumbs">
+    <div class="dc-breadcrumbs__breadcrumb">
+        Home
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="dc-breadcrumbs__breadcrumb">
+            <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
+            <span>
+                @item
+            </span>
+        </div>
+    }
 </div>

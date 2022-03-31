@@ -2,8 +2,17 @@
 // /* TEMPLATE: breadcrumbs */
 .dc-breadcrumbs {
 
-    @include media-breakpoint-down (sm) {
+    &__breadcrumb {
+        display: inline-block;
+        color: #CBCBCB;
+        font-size: 14px;
+        font-weight: 600;
+    }
 
+    .dcg-icon-arrow-right {
+    }
+
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: breadcrumbs */

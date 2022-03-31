@@ -7564,6 +7564,12 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       padding-right: 5px;
       padding-bottom: 1px; }
 
+.dc-breadcrumbs__breadcrumb {
+  display: inline-block;
+  color: #CBCBCB;
+  font-size: 14px;
+  font-weight: 600; }
+
 .dc-coin {
   width: 265px;
   height: 60px;
