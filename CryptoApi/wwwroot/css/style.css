@@ -7437,7 +7437,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     text-align: center;
     padding: 30px 0; }
   .dcg-section_subheader {
-    padding: 145px 0 30px 0; }
+    padding: 100px 0 93px 0; }
+    .dcg-section_subheader .dc-subheader-main {
+      margin-top: 45px; }
   .dcg-section_gray {
     background: #F8F8F8; }
   .dcg-section_light {
@@ -7549,6 +7551,30 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     font-size: 14px;
     letter-spacing: -0.25px; }
 
+.dc-advantage {
+  padding: 10px; }
+  .dc-advantage__image-wrapper svg {
+    width: 40px;
+    height: 40px;
+    fill: #3665ac; }
+  .dc-advantage .dcg-h3 {
+    margin-bottom: 12px;
+    margin-top: 9px; }
+  .dc-advantage__text {
+    line-height: 1.5; }
+
+.dc-advantages .dcg-h2 {
+  padding-bottom: 0;
+  margin-bottom: 7px; }
+
+.dc-advantages__desc {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 46px; }
+
+.dc-advantages .dc-advantage {
+  margin-top: 20px; }
+
 .dc-auth {
   padding-top: 3px;
   padding-left: 5px;
@@ -7564,11 +7590,18 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       padding-right: 5px;
       padding-bottom: 1px; }
 
-.dc-breadcrumbs__breadcrumb {
-  display: inline-block;
-  color: #CBCBCB;
-  font-size: 14px;
-  font-weight: 600; }
+.dc-breadcrumbs {
+  padding-bottom: 22px; }
+  .dc-breadcrumbs__breadcrumb {
+    display: inline-block;
+    color: #CBCBCB;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px; }
+  .dc-breadcrumbs .dcg-icon-arrow-right {
+    width: 17px;
+    height: 17px;
+    margin: 0px 10px 3px 10px; }
 
 .dc-coin {
   width: 265px;
@@ -7665,6 +7698,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   justify-content: space-between;
   padding-top: 9px; }
 
+.dc-coin-widget__wrapper {
+  border-radius: 7px;
+  overflow: hidden;
+  height: 271px; }
+
 .dc-contacts .dcg-h3 {
   color: #FFF;
   font-size: 20px; }
@@ -7682,9 +7720,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   letter-spacing: -0.5px; }
 
 .dc-exchange-widget {
-  height: 355px;
-  width: 396px;
-  margin-left: auto; }
+  width: 396px; }
 
 .dc-footer {
   width: 100%;
@@ -7695,6 +7731,36 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   /* ??? */
   font-size: 15px;
   padding: 34px 0 60px 0; }
+
+.dc-head-advantages {
+  width: 590px;
+  float: left; }
+  .dc-head-advantages__list {
+    margin-top: 39px;
+    font-size: 20px;
+    letter-spacing: 0.2px; }
+    .dc-head-advantages__list li ~ li {
+      margin-left: 20px; }
+  .dc-head-advantages__advantage {
+    display: flex;
+    line-height: 1.3; }
+  .dc-head-advantages__done {
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 12px;
+    margin-top: 1px; }
+    .dc-head-advantages__done svg {
+      width: 14px;
+      height: 14px;
+      fill: green;
+      margin-bottom: 8px; }
+  .dc-head-advantages__text {
+    color: #FFF; }
+  .dc-head-advantages__text-light {
+    color: #CBCBCB; }
 
 .dc-header {
   background: #3665AC;
@@ -7725,35 +7791,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
         padding: 0 3px; }
         .dc-main-menu__nav ul li a:hover {
           color: #0FD4E2; }
-
-.dc-page-head-main {
-  padding-top: 30px; }
-  .dc-page-head-main__advantages {
-    margin-top: 39px;
-    font-size: 20px;
-    letter-spacing: 0.2px; }
-    .dc-page-head-main__advantages li ~ li {
-      margin-left: 20px; }
-  .dc-page-head-main__advantage {
-    display: flex;
-    line-height: 1.3; }
-  .dc-page-head-main__done {
-    background: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    margin-right: 12px;
-    margin-top: 1px; }
-    .dc-page-head-main__done svg {
-      width: 14px;
-      height: 14px;
-      fill: green;
-      margin-bottom: 8px; }
-  .dc-page-head-main__text {
-    color: #FFF; }
-  .dc-page-head-main__text-light {
-    color: #CBCBCB; }
 
 .dc-section-text-block {
   margin-bottom: 24px; }
@@ -7807,6 +7844,30 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   margin-right: 16px;
   height: 16px;
   fill: #d6e0ee; }
+
+.dc-subheader-coin .dcg-h1 {
+  margin-bottom: 39px; }
+
+.dc-subheader-coin .dc-exchange-widget {
+  margin-left: auto; }
+
+.dc-subheader-main::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.dc-subheader-main .dcg-h1 {
+  float: left;
+  width: 590px;
+  padding-top: 30px;
+  margin-bottom: 0; }
+
+.dc-subheader-main .dc-page-head-main {
+  float: left;
+  width: 700px; }
+
+.dc-subheader-main .dc-exchange-widget {
+  margin-left: auto; }
 
 /*.....................................*/
 /* TEMPLATE: classes */

@@ -1,0 +1,16 @@
+﻿<div class="dc-subheader-coin">
+    <div class="row">
+        <div class="col">
+            @await Html.PartialAsync("_Breadcrumbs", new[] { "Cryptocurrency Exchange Pairs", "DODO to USD" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="dcg-h1">Exchange <strong>DODO</strong> to <strong>USD</strong></h1>
+            @await Html.PartialAsync("_CoinWidget")
+        </div>
+        <div class="col">
+            @await Html.PartialAsync("_ExchangeWidget", ("btc", "eth"))
+        </div>
+    </div>
+</div>

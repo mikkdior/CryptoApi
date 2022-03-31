@@ -1,9 +1,11 @@
-﻿<div class="dc-advantage">
+﻿@model (string svg_icon, string title, string content)
+
+<div class="dc-advantage">
     <div class="dc-advantage__image-wrapper">
-        <svg icon="plus"></svg>
+        <svg icon="@Model.svg_icon"></svg>
     </div>
-    <h3 class="dcg-h3">title</h3>
-    <p class="dc-advantage__text dc-advantage__text_dark">
-        <a href="#">link</a>
+    <h3 class="dcg-h3">@Model.title</h3>
+    <p class="dc-advantage__text">
+        @Model.content
     </p>
 </div>

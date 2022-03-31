@@ -74,18 +74,5 @@
 </section>
 
 @section PageHead {
-    <div class="row">
-        <div class="col">
-            @await Html.PartialAsync("_Breadcrumbs", new[] { "Cryptocurrency Exchange Pairs", "DODO to USD" })
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h1 class="dcg-h1">Exchange DODO to USD</h1>
-            @*@await Html.PartialAsync("_CoinWidget")*@
-        </div>
-        <div class="col">
-            @*@await Html.PartialAsync("_ExchangeWidget")*@
-        </div>
-    </div>
+    @await Html.PartialAsync("_SubheaderCoin")
 }

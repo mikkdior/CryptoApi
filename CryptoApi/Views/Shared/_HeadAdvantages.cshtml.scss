@@ -1,0 +1,52 @@
+// /*.....................................*/
+// /* TEMPLATE: head-advantages */
+.dc-head-advantages {
+    width: 590px;
+    float: left;
+
+    &__list {
+        margin-top: 39px;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+
+
+        li ~ li {
+            margin-left: 20px;
+        }
+    }
+
+    &__advantage {
+        display: flex;
+        line-height: 1.3;
+    }
+
+    &__done {
+        background: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-right: 12px;
+        margin-top: 1px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: green;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__text {
+        color: #FFF;
+    }
+
+    &__text-light {
+        color: #CBCBCB;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: head-advantages */
+// /*.....................................*/

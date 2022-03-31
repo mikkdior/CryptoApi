@@ -268,6 +268,13 @@ jQuery('.dc-head').dcTpl(function ($, Export) {
 // /head
 //--------------------------------------------
 
+// head-advantages
+jQuery('.dc-head-advantages').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /head-advantages
+//--------------------------------------------
+
 // header
 jQuery('.dc-header').dcTpl(function ($, Export) {
    var $self = $(this);
@@ -392,6 +399,20 @@ jQuery('.dc-soc-icons').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /soc-icons
+//--------------------------------------------
+
+// subheader-coin
+jQuery('.dc-subheader-coin').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /subheader-coin
+//--------------------------------------------
+
+// subheader-main
+jQuery('.dc-subheader-main').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /subheader-main
 //--------------------------------------------
 
 // table

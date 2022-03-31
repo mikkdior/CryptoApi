@@ -25,20 +25,23 @@
 // /*.....................................*/
 // /* TEMPLATE: advantage */
 .dc-advantage {
+    padding: 10px;
+
     &__image-wrapper {
         svg {
+            width: 40px;
+            height: 40px;
+            fill: #3665ac;
         }
     }
 
     .dcg-h3 {
+        margin-bottom: 12px;
+        margin-top: 9px;
     }
 
     &__text {
-        a {
-        }
-
-        &_dark {
-        }
+        line-height: 1.5;
     }
 
     @include media-breakpoint-down (sm) {
@@ -50,9 +53,22 @@
 // /*.....................................*/
 // /* TEMPLATE: advantages */
 .dc-advantages {
+    .dcg-h2 {
+        padding-bottom: 0;
+        margin-bottom: 7px;
+    }
+
+    &__desc {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 46px;
+    }
+
+    .dc-advantage {
+        margin-top: 20px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: advantages */
@@ -88,15 +104,20 @@
 // /*.....................................*/
 // /* TEMPLATE: breadcrumbs */
 .dc-breadcrumbs {
+    padding-bottom: 22px;
 
     &__breadcrumb {
         display: inline-block;
         color: #CBCBCB;
         font-size: 14px;
         font-weight: 600;
+        letter-spacing: 0.2px;
     }
 
     .dcg-icon-arrow-right {
+        width: 17px;
+        height: 17px;
+        margin: 0px 10px 3px 10px;
     }
 
     @include media-breakpoint-down (sm) {
@@ -322,8 +343,13 @@
 // /* TEMPLATE: coin-widget */
 .dc-coin-widget {
 
-    @include media-breakpoint-down (sm) {
+    &__wrapper {
+        border-radius: 7px;
+        overflow: hidden;
+        height: 271px;
+    }
 
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: coin-widget */
@@ -383,9 +409,7 @@
 // /*.....................................*/
 // /* TEMPLATE: exchange-widget */
 .dc-exchange-widget {
-    height: 355px;
     width: 396px;
-    margin-left: auto;
 
     @include media-breakpoint-down (sm) {
     }
@@ -452,6 +476,59 @@
     }
 }
 // /* /TEMPLATE: head */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: head-advantages */
+.dc-head-advantages {
+    width: 590px;
+    float: left;
+
+    &__list {
+        margin-top: 39px;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+
+
+        li ~ li {
+            margin-left: 20px;
+        }
+    }
+
+    &__advantage {
+        display: flex;
+        line-height: 1.3;
+    }
+
+    &__done {
+        background: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-right: 12px;
+        margin-top: 1px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: green;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__text {
+        color: #FFF;
+    }
+
+    &__text-light {
+        color: #CBCBCB;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: head-advantages */
 // /*.....................................*/
 
 // /*.....................................*/
@@ -581,47 +658,6 @@
 // /*.....................................*/
 // /* TEMPLATE: page-head-main */
 .dc-page-head-main {
-    padding-top: 30px;
-
-    &__advantages {
-        margin-top: 39px;
-        font-size: 20px;
-        letter-spacing: 0.2px;
-
-        li ~ li {
-            margin-left: 20px;
-        }
-    }
-
-    &__advantage {
-        display: flex;
-        line-height: 1.3;
-    }
-
-    &__done {
-        background: white;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        margin-right: 12px;
-        margin-top: 1px;
-
-        svg {
-            width: 14px;
-            height: 14px;
-            fill: green;
-            margin-bottom: 8px;
-        }
-    }
-
-    &__text {
-        color: #FFF;
-    }
-
-    &__text-light {
-        color: #CBCBCB;
-    }
 
     @include media-breakpoint-down (sm) {
     }
@@ -794,6 +830,54 @@
     }
 }
 // /* /TEMPLATE: soc-icons */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: subheader-coin */
+.dc-subheader-coin {
+    .dcg-h1 {
+        margin-bottom: 39px;
+    }
+
+    .dc-exchange-widget{
+        margin-left: auto;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: subheader-coin */
+// /*.....................................*/
+
+// /*.....................................*/
+// /* TEMPLATE: subheader-main */
+.dc-subheader-main {
+    &::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .dcg-h1 {
+        float: left;
+        width: 590px;
+        padding-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .dc-page-head-main {
+        float: left;
+        width: 700px;
+    }
+
+    .dc-exchange-widget {
+        margin-left: auto;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: subheader-main */
 // /*.....................................*/
 
 // /*.....................................*/

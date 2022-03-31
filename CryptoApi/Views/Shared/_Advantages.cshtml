@@ -1,3 +1,28 @@
 ﻿<div class="dc-advantages">
-    advantages
+    <h2 class="dcg-h2">Atomex hybrid exchange</h2>
+    <div class="dc-advantages__desc">
+        <span>
+            Combines advantages of centralized and decentralized exchanges
+        </span>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            @await Html.PartialAsync("_Advantage", ("crown", "You're in control", "Private keys are kept encrypted on your computer. Cross-chain transactions are carried out using atomic swaps."))
+        </div>
+        <div class="col-4">
+            @await Html.PartialAsync("_Advantage", ("piggy-bank", "No additional fees", "You pay only miner commission for both regular and cross-chain transactions."))
+        </div>
+        <div class="col-4">
+            @await Html.PartialAsync("_Advantage", ("user-secret", "Stay incognito", "No registration or identity verification required. However, all addresses are checked against abuses and suspicious origin of funds."))
+        </div>
+        <div class="col-4">
+            @await Html.PartialAsync("_Advantage", ("person", "Liquidity providers", "Your counterparty is not an ordinary user, but a professional market maker whose task is to ensure sufficient liquidity."))
+        </div>
+        <div class="col-4">
+            @await Html.PartialAsync("_Advantage", ("trading-api", "Trading APIs", "Atomex provides websocket API for wallets and market makers. Contact us if you have questions regarding integration."))
+        </div>
+        <div class="col-4">
+            @await Html.PartialAsync("_Advantage", ("income", "Passive income", "Staking Tezos brings passive income automatically. Decentralized Lending features coming soon. You can check delegation instruction."))
+        </div>
+    </div>
 </div>

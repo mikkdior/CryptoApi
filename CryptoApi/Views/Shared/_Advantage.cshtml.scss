@@ -1,20 +1,23 @@
 // /*.....................................*/
 // /* TEMPLATE: advantage */
 .dc-advantage {
+    padding: 10px;
+
     &__image-wrapper {
         svg {
+            width: 40px;
+            height: 40px;
+            fill: #3665ac;
         }
     }
 
     .dcg-h3 {
+        margin-bottom: 12px;
+        margin-top: 9px;
     }
 
     &__text {
-        a {
-        }
-
-        &_dark {
-        }
+        line-height: 1.5;
     }
 
     @include media-breakpoint-down (sm) {

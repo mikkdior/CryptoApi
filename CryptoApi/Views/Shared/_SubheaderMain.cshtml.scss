@@ -1,0 +1,30 @@
+// /*.....................................*/
+// /* TEMPLATE: subheader-main */
+.dc-subheader-main {
+    &::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .dcg-h1 {
+        float: left;
+        width: 590px;
+        padding-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .dc-page-head-main {
+        float: left;
+        width: 700px;
+    }
+
+    .dc-exchange-widget {
+        margin-left: auto;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: subheader-main */
+// /*.....................................*/

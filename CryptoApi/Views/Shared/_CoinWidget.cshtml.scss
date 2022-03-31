@@ -2,8 +2,13 @@
 // /* TEMPLATE: coin-widget */
 .dc-coin-widget {
 
-    @include media-breakpoint-down (sm) {
+    &__wrapper {
+        border-radius: 7px;
+        overflow: hidden;
+        height: 271px;
+    }
 
+    @include media-breakpoint-down (sm) {
     }
 }
 // /* /TEMPLATE: coin-widget */
