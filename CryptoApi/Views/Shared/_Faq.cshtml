@@ -1,19 +1,12 @@
 ﻿@model IEnumerable<CTextBlockVM>
 
 <div class="dc-faq">
-    @{
-        string question1 = "What is XMR and BTC exchange pair?";
-        string question2 = "How to convert Monero to Bitcoin?";
-        string question3 = "What is the limit for XMR to BTC exchange?";
-        string question4 = "What is XMR and BTC exchange pair?";
-        string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
-    }
-
-    <h2 class="dcg-h2">Frequently Asked Questions</h2>
-    @await Html.PartialAsync("_SectionTextBlocks", new[] { (question1, answer), (question2, answer), (question3, answer), (question4, answer)})
-            
-    >faq
-    @await Html.PartialAsync("_TextBlock")
-    @await Html.PartialAsync("_TextBlock")
-    @await Html.PartialAsync("_TextBlock")
+    <div class="row">
+        <div class="col-4">
+            <h2 class="dcg-h2">Frequently Asked Questions</h2>
+        </div>
+        <div class="col-8"> 
+            @await Html.PartialAsync("_SectionTextBlocks", (Model, true))
+        </div>
+    </div>
 </div>

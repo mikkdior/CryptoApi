@@ -370,6 +370,46 @@ textarea {}
 }
 /*.....................................*/
 
+.dcg-value-up {
+    
+    color: #28A745;
+    font-weight: 600;
+
+    &::after {
+        content: "▲";
+        margin-left: 6px;
+    }
+}
+.dcg-value-down {
+    color: #EA3F3F;
+    font-weight: 600;
+
+    &::after {
+        content: "▼";
+        margin-left: 6px;
+    }
+}
+
+.dcg-desc-wrapper {
+    &_coin {
+        width: 680px;
+    }
+
+    &_pair {
+        width: 680px; // 
+    }
+}
+.dcg-toggle {
+    
+
+    &_view {
+    }
+
+    &_hide {
+        display: none;
+    }
+}
+
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/

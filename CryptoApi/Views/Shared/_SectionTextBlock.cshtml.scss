@@ -2,6 +2,7 @@
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
     margin-bottom: 24px;
+    display: flex;
 
     .dcg-h2 {
         text-align: start;
@@ -9,8 +10,8 @@
     }
 
     &__content {
-        width: 680px;
         margin-left: auto;
+        padding-left: 60px;
     }
 
     @include media-breakpoint-down (sm) {

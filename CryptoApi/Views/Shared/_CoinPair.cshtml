@@ -1,32 +1,30 @@
 ﻿@using CryptoApi.Models.DB;
 @*@model CCoinPairDataVM*@
 
-<div class="dc-coin-pair dcg-shadow-hover">
-    <div class="dc-coin-pair__wrapper">
+<div class="dc-coin-pair">
+    <div class="dc-coin-pair__wrapper dcg-shadow-hover">
         <div class="dc-coin-pair__head">
             <div class="dc-coin-pair__coin">
                 <a asp-controller="Coins" asp-action="Coin" asp-route-coin="btc" class="dc-coin-pair__coin-head">
-                    <img src="images/test-coin-image.png" alt="coin-image">
+                    <img src="/images/test-coin-image.png" alt="coin-image">
                     <h3 class="dcg-h3">
                         BTC
                     </h3>
                 </a>
-                <span class="dc-coin-pair__change dc-coin-pair__change_neg">
-                    <span class="dc-coin-pair__change-val">-4,83%</span>
-                    <svg icon="arrow-down" class="dcg-arrow-change"></svg>
+                <span class="dcg-percent-change dcg-percent-change_neg">
+                    <span class="dcg-value-down">-4,83%</span>
                 </span>
             </div>
             <svg icon="arrow-right-dark" class="dcg-icon-arrow-right"></svg>
             <div class="dc-coin-pair__coin">
                 <a asp-controller="Coins" asp-action="Coin" asp-route-coin="btc" class="dc-coin-pair__coin-head">
-                    <img src="images/test-coin-image.png" alt="coin-image">
-                    <h3 class="dcg-h3">
+                    <img src="/images/test-coin-image.png" alt="coin-image">
+                    <h3 class="dcg-h3"> 
                         ETH
                     </h3>
                 </a>
-                <span class="dc-coin-pair__change dc-coin-pair__change_pos">
-                    <span class="dc-coin-pair__change-val">+5,16%</span>
-                    <svg icon="arrow-up" class="dcg-arrow-change"></svg>
+                <span class="dcg-percent-change dcg-percent-change_pos">
+                    <span class="dcg-value-up">+5,16%</span>
                 </span>
             </div>
         </div>

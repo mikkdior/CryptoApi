@@ -7237,6 +7237,29 @@ a.text-dark:hover, a.text-dark:focus {
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /* TYPOGRAPHY */
+.dcg-tpg p {
+  margin-bottom: 10px; }
+
+.dcg-tpg p + p {
+  margin-bottom: 40px; }
+
+.dcg-tpg table {
+  width: 100%; }
+
+.dcg-tpg tr {
+  border-bottom: 1px solid #ECECEC; }
+
+.dcg-tpg td {
+  padding: 10px 0 19px 0; }
+
+.dcg-tpg h2 {
+  text-align: start !important; }
+
+.dcg-tpg h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: start; }
+
 /* /TYPOGRAPHY */
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -7490,6 +7513,29 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   height: 8px; }
 
 /*.....................................*/
+.dcg-value-up {
+  color: #28A745;
+  font-weight: 600; }
+  .dcg-value-up::after {
+    content: "▲";
+    margin-left: 6px; }
+
+.dcg-value-down {
+  color: #EA3F3F;
+  font-weight: 600; }
+  .dcg-value-down::after {
+    content: "▼";
+    margin-left: 6px; }
+
+.dcg-desc-wrapper_coin {
+  width: 680px; }
+
+.dcg-desc-wrapper_pair {
+  width: 680px; }
+
+.dcg-toggle_hide {
+  display: none; }
+
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/
@@ -7633,7 +7679,24 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   position: relative;
   margin-top: -60px;
   border-radius: 7px;
-  background: #fff; }
+  background: #fff;
+  /*&__change {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-val {
+            font-weight: 600;
+        }
+
+        &_pos {
+            color: #28A745;
+        }
+
+        &_neg {
+            color: #EA3F3F;
+        }
+    }*/ }
   .dc-coin-pair__wrapper {
     width: 265px;
     height: 190px;
@@ -7649,16 +7712,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     flex-direction: column;
     padding: 8px 7px;
     margin-bottom: 3px; }
-  .dc-coin-pair__change {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .dc-coin-pair__change-val {
-      font-weight: 600; }
-    .dc-coin-pair__change_pos {
-      color: #28A745; }
-    .dc-coin-pair__change_neg {
-      color: #EA3F3F; }
   .dc-coin-pair__coin-head {
     display: flex;
     align-items: center;
@@ -7721,6 +7774,33 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-exchange-widget {
   width: 396px; }
+
+.dc-faq .dcg-h2 {
+  text-align: start; }
+
+.dc-faq .dc-section-text-block {
+  margin-left: auto;
+  width: 680px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ECECEC; }
+  .dc-faq .dc-section-text-block .dcg-h3 {
+    padding: 0;
+    text-align: start; }
+  .dc-faq .dc-section-text-block__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; }
+    .dc-faq .dc-section-text-block__wrapper .dcg-h3 {
+      margin-bottom: 0; }
+  .dc-faq .dc-section-text-block__content {
+    display: none;
+    padding-right: 10px;
+    padding-left: 0px; }
+  .dc-faq .dc-section-text-block .dcg-toggle {
+    width: 16px;
+    height: 16px; }
 
 .dc-footer {
   width: 100%;
@@ -7793,13 +7873,14 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
           color: #0FD4E2; }
 
 .dc-section-text-block {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  display: flex; }
   .dc-section-text-block .dcg-h2 {
     text-align: start;
     padding: 0; }
   .dc-section-text-block__content {
-    width: 680px;
-    margin-left: auto; }
+    margin-left: auto;
+    padding-left: 60px; }
 
 .dc-section-text-blocks {
   padding: 30px 0; }

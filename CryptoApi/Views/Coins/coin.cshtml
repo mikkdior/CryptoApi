@@ -9,15 +9,33 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="dcg-h2">Basic information about DODO</h2>
+                <h2 class="dcg-h2 text-left m-0">Basic information about DODO</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                @*@await Html.PartialAsync("_TextBlocks")*@
+            <div class="col-8">
+                <div class="dcg-desc-wrapper dcg-desc-wrapper_coin">
+                    @{
+                        string content = @"
+                            <h3>Convert XMR to ETH</h3>
+                            <p>
+                                HitBTC is a platform for digital asset and currency exchange where you can quickly and securely trade Bitcoin, Ethereum, EOS, Tether and many other cryptocurrencies, Several trading options are present, including spot and OTC markets. The platform's interface is very intuitive and easy to navigate.
+                            </p>
+                            <p>
+                                HitBTC is a global cryptocurrency trading platform established in 2013, offering fast and secure 24/7 exchange of XMR to ETH and many other digital assets.
+                            </p>
+                            <h3>XMR to ETH Real-Time Price Chart Explained</h3>
+                            <p>
+                                HitBTC features a price chart that combines a representation of a digital asset's Exponential Moving Average (EMA) with a candlestick visualization of its price history. The EMA consists of the two lines running across the chart that are formed using Monero's historical data when paired with Monero and represent XMR's performance for a given amount of time in terms of ETH. EMAS are among the most widely used methods (in the crypto sphere as well as the world of stocks) of measuring the way a cryptocurrency is trending.
+                            </p>";
+                        
+                    }
+
+                    @await Html.PartialAsync("_TextBlock", new CTextBlockVM("", content))
+                </div>
             </div>
-            <div class="col">
-                @*@await Html.PartialAsync("_CoinInfo")*@
+            <div class="col-4"> 
+                @await Html.PartialAsync("_CoinInfo")
             </div>
         </div>
     </div>
@@ -27,7 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @*@await Html.PartialAsync("_CoinPairs")*@
+                @await Html.PartialAsync("_CoinPairs")
             </div>
         </div>
     </div>
@@ -37,7 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @*@await Html.PartialAsync("_Coins")*@
+                @await Html.PartialAsync("_Coins")
             </div>
         </div>
     </div>
@@ -48,26 +66,34 @@
         <div class="row">
             <div class="col">
                 @{
-                    string content1 = "On our platform, you can exchange DODO to Dollar without any hassle, issues, and limits. Along with an opportunity to swap more than 330 cryptocurrencies, you can use a bank card or a bank account to convert DODO to USD and get profit from every swap.";
+                    string content1 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
                     string content2 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
                     string content3 = "Our DODO to USD converter is developed to provide a perfect user experience for both professionals and newbies. Our users can count on the following benefits: No limitations. Our users can swap as many coins as you need. No mandatory account registration and verification. If you exchange crypto, you decide whether to handle it anonymously or benefit from perks offered if you open an account. Non-custodial services. The service doesn’t keep yourcoins needed for your DODO to Dollar conversion.";
                     string title1 = "Exchange DODO to USD";
                     string title2 = "How to Convert DODO to Dollar";
                     string title3 = "DODO to USD Exchange Benefits";
+                    IEnumerable<CTextBlockVM> tbs = new List<CTextBlockVM>() { new CTextBlockVM(title1, content1), new CTextBlockVM(title2, content2), new CTextBlockVM(title3, content3)};
                 }
-
-                @await Html.PartialAsync("_SectionTextBlocks", new[] { (title1, content1), (title2, content2), (title3, content3) })
+                @await Html.PartialAsync("_SectionTextBlocks", (tbs, false))
             </div>
         </div>
     </div>
 </section>
 
-<section class="dcg-section dcg-section_gray">
+<section class="dcg-section">
     <div class="container">
         <div class="row">
             <div class="col">
-                @*@await Html.PartialAsync("_Faq")*@
-                @*@await Html.PartialAsync("_SectionTextBlock")*@
+                @{
+                    string question1 = "What is XMR and BTC exchange pair?";
+                    string question2 = "How to convert Monero to Bitcoin?";
+                    string question3 = "How to compare XMR and BTC?";
+                    string question4 = "What is the limit for XMR to BTC exchange?";
+                    string question5 = "What is XMR and BTC exchange pair?";
+                    string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
+                }
+
+                @await Html.PartialAsync("_Faq", new[] { new CTextBlockVM(question1, answer), new CTextBlockVM(question2, answer), new CTextBlockVM(question3, answer), new CTextBlockVM(question4, answer), new CTextBlockVM(question5, answer) })
             </div>
         </div>
     </div>

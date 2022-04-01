@@ -1,14 +1,28 @@
-﻿@model (string title, string content)
+﻿@model (CTextBlockVM text_block, bool need_toggle)
 
 <div class="dc-section-text-block">
-    <div class="row">
-        <div class="col-4">
-            <h2 class="dcg-h2">@Model.title</h2>
+    
+    @if (Model.need_toggle)
+    {
+        <div class="dc-section-text-block__wrapper dcg-btn">
+            <h3 class="dcg-h3">@Model.text_block.title</h3>
+            <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
+            <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
         </div>
-        <div class="col-8"> 
-            <p class="dc-section-text-block__content">
-                @Model.content
-            </p>
+        <p class="dc-section-text-block__content">
+            @Model.text_block.text
+        </p>
+    }
+    else{
+        <div class="row">
+            <div class="col-4">
+                <h2 class="dcg-h2">@Model.text_block.title</h2>
+            </div>
+            <div class="col-8">
+                <p class="dc-section-text-block__content">
+                    @Model.text_block.text
+                </p>
+            </div>
         </div>
-    </div>
+    }
 </div>

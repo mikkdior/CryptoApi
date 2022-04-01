@@ -1,47 +1,93 @@
 /*------------------------------------------------------------*/
 /* TYPOGRAPHY */
 .dcg-tpg {
-    p {}
+    p {
+        margin-bottom: 10px;
+    }
 
-    blockquote {}
+    p + p {
+        margin-bottom: 40px;
+    }
 
-    img {}
+    blockquote {
+    }
 
-    a {}
-    a:hover {}
-    a:visited {}
+    img {
+    }
 
-    ul, ol {}
+    a {
+    }
 
-    li {}
+    a:hover {
+    }
+
+    a:visited {
+    }
+
+    ul, ol {
+    }
+
+    li {
+    }
 
     ul {
         li {
-            &::before {}
+            &::before {
+            }
         }
     }
 
     ol {
-        li {}
+        li {
+        }
     }
 
 
-    table {}
-    tr {}
-    td {}
+    table {
+        width: 100%;
+    }
 
-    h1, h2, h3, h4, h5, h6 {}
-    h1 {}
-    h2 {}
-    h3 {}
-    h4 {}
-    h5 {}
-    h6 {}
+    tr {
+        border-bottom: 1px solid #ECECEC;
+    }
 
-    b {}
-    i {}
+    td {
+        padding: 10px 0 19px 0;
+    }
 
-    @include media-breakpoint-down (sm) {}
+    h1, h2, h3, h4, h5, h6 {
+    }
+
+    h1 {
+    }
+
+    h2 {
+        text-align: start !important;
+    }
+
+    h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: start;
+    }
+
+    h4 {
+    }
+
+    h5 {
+    }
+
+    h6 {
+    }
+
+    b {
+    }
+
+    i {
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
 }
 /* /TYPOGRAPHY */
 /*------------------------------------------------------------*/

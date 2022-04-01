@@ -1,5 +1,11 @@
 ﻿@model CTextBlockVM
 
-<div class="dc-text-block">
-    >text-block
+<div class="dc-text-block dcg-tpg dcg-desc-wrapper dcg-desc-wrapper_coin">
+    @if (Model.title != "")
+    {
+        <h2 class="dcg-h2">@Model.title</h2>
+    }
+    <div class="dc-text-block__content">
+        @Html.Raw(Model.text)
+    </div>
 </div>
