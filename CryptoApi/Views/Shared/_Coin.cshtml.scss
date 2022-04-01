@@ -3,13 +3,13 @@
 .dc-coin {
     width: 265px;
     height: 60px;
-    padding: 15px;
     margin-bottom: 10px;
 
     .dc-coin__link {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px;
     }
 
     .dcg-icon-arrow-right {

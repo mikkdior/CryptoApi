@@ -131,13 +131,13 @@
 .dc-coin {
     width: 265px;
     height: 60px;
-    padding: 15px;
     margin-bottom: 10px;
 
     .dc-coin__link {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px;
     }
 
     .dcg-icon-arrow-right {
@@ -183,19 +183,18 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pair */
 .dc-coin-pair {
-    margin-bottom: 26px;
+    margin-top: 26px;
     width: 265px;
-    height: 190px;
+    height: 130px;
     position: relative;
-    margin-top: -60px;
     border-radius: 7px;
-    background: #fff;
 
     &__wrapper {
         width: 265px;
         height: 190px;
         padding: 10px 20px;
         border-radius: 7px;
+        background: #fff;
     }
 
     .dcg-icon-arrow-right {
@@ -213,24 +212,6 @@
         padding: 8px 7px;
         margin-bottom: 3px;
     }
-
-    /*&__change {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-val {
-            font-weight: 600;
-        }
-
-        &_pos {
-            color: #28A745;
-        }
-
-        &_neg {
-            color: #EA3F3F;
-        }
-    }*/
 
     &__coin-head {
         display: flex;
@@ -296,11 +277,10 @@
     }
 
     .dc-coin-pairs__grid-column {
-        
     }
 
     .dcg-section__head {
-        margin-bottom: 70px;
+        margin-bottom: -15px;
     }
 
     .dcg-icon-arrow-right {
@@ -423,6 +403,7 @@
 
     .dcg-h2 {
         text-align: start;
+        padding: 0;
     }
 
 
@@ -773,7 +754,15 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-blocks */
 .dc-section-text-blocks {
-    padding: 30px 0;
+    /*padding: 30px 0;*/
+
+    .dc-section-text-block, .dc-section-text-block__content {
+        margin-bottom: 0;
+    }
+
+    .dc-section-text-block + .dc-section-text-block {
+        margin-top: 37px;
+    }
 
     @include media-breakpoint-down (sm) {
     }

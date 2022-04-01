@@ -7458,7 +7458,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     font-weight: 700; }
   .dcg-section h2 {
     text-align: center;
-    padding: 30px 0; }
+    padding: 0 0 30px 0; }
   .dcg-section_subheader {
     padding: 100px 0 93px 0; }
     .dcg-section_subheader .dc-subheader-main {
@@ -7478,7 +7478,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0; }
+    padding: 0 0 30px 0; }
     .dcg-section__head .dcg-h2 {
       margin: 0;
       padding: 0; }
@@ -7652,12 +7652,12 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-coin {
   width: 265px;
   height: 60px;
-  padding: 15px;
   margin-bottom: 10px; }
   .dc-coin .dc-coin__link {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 15px; }
   .dc-coin .dcg-icon-arrow-right {
     display: none;
     margin-right: 4px; }
@@ -7673,35 +7673,17 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     display: inline-block; }
 
 .dc-coin-pair {
-  margin-bottom: 26px;
+  margin-top: 26px;
   width: 265px;
-  height: 190px;
+  height: 130px;
   position: relative;
-  margin-top: -60px;
-  border-radius: 7px;
-  background: #fff;
-  /*&__change {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-val {
-            font-weight: 600;
-        }
-
-        &_pos {
-            color: #28A745;
-        }
-
-        &_neg {
-            color: #EA3F3F;
-        }
-    }*/ }
+  border-radius: 7px; }
   .dc-coin-pair__wrapper {
     width: 265px;
     height: 190px;
     padding: 10px 20px;
-    border-radius: 7px; }
+    border-radius: 7px;
+    background: #fff; }
   .dc-coin-pair .dcg-icon-arrow-right {
     margin: 17px 7px 0 0px; }
   .dc-coin-pair__head {
@@ -7738,7 +7720,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     z-index: 100; }
 
 .dc-coin-pairs .dcg-section__head {
-  margin-bottom: 70px; }
+  margin-bottom: -15px; }
 
 .dc-coin-pairs .dcg-icon-arrow-right {
   margin-left: 11px;
@@ -7776,7 +7758,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   width: 396px; }
 
 .dc-faq .dcg-h2 {
-  text-align: start; }
+  text-align: start;
+  padding: 0; }
 
 .dc-faq .dc-section-text-block {
   margin-left: auto;
@@ -7883,7 +7866,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     padding-left: 60px; }
 
 .dc-section-text-blocks {
-  padding: 30px 0; }
+  /*padding: 30px 0;*/ }
+  .dc-section-text-blocks .dc-section-text-block, .dc-section-text-blocks .dc-section-text-block__content {
+    margin-bottom: 0; }
+  .dc-section-text-blocks .dc-section-text-block + .dc-section-text-block {
+    margin-top: 37px; }
 
 .dc-service {
   width: 360px;

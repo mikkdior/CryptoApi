@@ -1,7 +1,15 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-blocks */
 .dc-section-text-blocks {
-    padding: 30px 0;
+    /*padding: 30px 0;*/
+
+    .dc-section-text-block, .dc-section-text-block__content {
+        margin-bottom: 0;
+    }
+
+    .dc-section-text-block + .dc-section-text-block {
+        margin-top: 37px;
+    }
 
     @include media-breakpoint-down (sm) {
     }

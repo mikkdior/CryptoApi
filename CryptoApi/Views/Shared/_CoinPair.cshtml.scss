@@ -1,19 +1,18 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pair */
 .dc-coin-pair {
-    margin-bottom: 26px;
+    margin-top: 26px;
     width: 265px;
-    height: 190px;
+    height: 130px;
     position: relative;
-    margin-top: -60px;
     border-radius: 7px;
-    background: #fff;
 
     &__wrapper {
         width: 265px;
         height: 190px;
         padding: 10px 20px;
         border-radius: 7px;
+        background: #fff;
     }
 
     .dcg-icon-arrow-right {
@@ -31,24 +30,6 @@
         padding: 8px 7px;
         margin-bottom: 3px;
     }
-
-    /*&__change {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-val {
-            font-weight: 600;
-        }
-
-        &_pos {
-            color: #28A745;
-        }
-
-        &_neg {
-            color: #EA3F3F;
-        }
-    }*/
 
     &__coin-head {
         display: flex;
