@@ -4,5 +4,8 @@
     @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (BlocksHelper.GetCoinList(10))
         .Add("title 1", i => i.data.name)
         .Add("title 2", i => i.data.name_full)
+        .Add("title 3", i => i.data.last_updated.ToString())
+        .Add("title 4", i => "<span class='dcg-value-down'>-2.32%</span>")
+
     )
 </div>
