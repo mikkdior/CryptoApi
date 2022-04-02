@@ -1,3 +1,22 @@
-﻿<div class="dc-table">
-    >table
+﻿@model ITableVM
+
+<div class="dc-table">
+    <table>
+        <tr>
+            @foreach(string title in Model.keys)
+            {
+                <th>@title</th>
+            }
+        </tr>
+        
+        @foreach (var row in Model.rows)
+        {
+            <tr>
+                @foreach(var value in row)
+                {
+                    <td>@value</td>
+                }
+            </tr>
+        }
+    </table>
 </div>
