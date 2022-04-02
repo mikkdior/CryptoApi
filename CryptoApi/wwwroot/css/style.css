@@ -7386,8 +7386,16 @@ h4, .dcg-h4 {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px; }
+
+h5, .dcg-h5 {
+  font-family: 'Nunito';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left; }
 
 /*.....................................*/
 /* button, [type="button"], [type="submit"], [type="reset"], .dcg-btn */
@@ -7527,15 +7535,18 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     content: "▼";
     margin-left: 6px; }
 
+/*.....................................*/
 .dcg-desc-wrapper_coin {
   width: 680px; }
 
 .dcg-desc-wrapper_pair {
   width: 680px; }
 
+/*.....................................*/
 .dcg-toggle_hide {
   display: none; }
 
+/*.....................................*/
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/
@@ -7652,7 +7663,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-coin {
   width: 265px;
   height: 60px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  background: #fff; }
   .dc-coin .dc-coin__link {
     display: flex;
     justify-content: space-between;
@@ -7664,10 +7676,10 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   .dc-coin img {
     width: 30px;
     height: 30px; }
-  .dc-coin__name {
+  .dc-coin .dcg-h5 {
     margin-right: auto;
     margin-left: 10px;
-    letter-spacing: 0px;
+    margin-bottom: 0;
     font-weight: 600; }
   .dc-coin:hover .dcg-icon-arrow-right {
     display: inline-block; }
@@ -7706,7 +7718,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     display: inline-block;
     width: 100%;
     text-align: center; }
-  .dc-coin-pair .dcg-h3 {
+  .dc-coin-pair .dcg-h4 {
     font-size: 20px;
     margin: 0 0 0 10px; }
   .dc-coin-pair .dcg-btn {
@@ -7720,7 +7732,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     z-index: 100; }
 
 .dc-coin-pairs .dcg-section__head {
-  margin-bottom: -15px; }
+  padding-bottom: 15px; }
 
 .dc-coin-pairs .dcg-icon-arrow-right {
   margin-left: 11px;
@@ -7855,6 +7867,63 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
         .dc-main-menu__nav ul li a:hover {
           color: #0FD4E2; }
 
+.dc-news-list .dcg-section__head {
+  padding-bottom: 38px; }
+
+.dc-news-sketch {
+  border-radius: 7px;
+  background: #fff; }
+  .dc-news-sketch .dcg-icon-arrow-right {
+    width: 18px;
+    height: 16px;
+    margin: 0px 0px 2px 2px; }
+  .dc-news-sketch__content-wrapper {
+    padding: 20px; }
+  .dc-news-sketch__tags {
+    display: flex; }
+  .dc-news-sketch__tag {
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 4px 13px 3px 13px;
+    text-align: center;
+    display: flex; }
+  .dc-news-sketch__tag ~ .dc-news-sketch__tag {
+    margin-left: 8px; }
+  .dc-news-sketch .dcg-h4 {
+    margin-top: 15px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    color: #000; }
+  .dc-news-sketch__text {
+    color: #63696F; }
+  .dc-news-sketch__details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .dc-news-sketch__date {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase; }
+    .dc-news-sketch__date svg {
+      width: 18px;
+      height: 20px;
+      margin-right: 8px; }
+    .dc-news-sketch__date span {
+      font-weight: 700;
+      font-size: 14px; }
+
+.dc-partners .dcg-h2 {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.dc-partners__partner {
+  width: 265px;
+  margin: 55px 0 30px 0;
+  padding: 0px 7px; }
+
 .dc-section-text-block {
   margin-bottom: 24px;
   display: flex; }
@@ -7876,7 +7945,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   width: 360px;
   height: 275px;
   border-radius: 7px;
-  padding: 8px 20px; }
+  padding: 8px 20px;
+  background: #fff; }
   .dc-service .dcg-h3 {
     padding-top: 7px;
     padding-left: 17px;

@@ -1,6 +1,17 @@
 ﻿<div class="dc-news-list">
-    >news-list
-    @await Html.PartialAsync("_NewsSketch")
-    @await Html.PartialAsync("_NewsSketch")
-    @await Html.PartialAsync("_NewsSketch")
+    <div class="dcg-section__head">
+        <h2 class="dcg-h2">Latest News</h2>
+        <a href="#" class="dcg-btn dcg-btn_big">
+            View All
+            <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
+        </a>
+    </div>
+    <div class="row">
+        @for (int i = 0; i < 3; i++)
+        {
+            <div class="col-4">
+                @await Html.PartialAsync("_NewsSketch")
+            </div>
+        }
+    </div>
 </div>
