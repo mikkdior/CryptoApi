@@ -7676,11 +7676,13 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   .dc-coin img {
     width: 30px;
     height: 30px; }
-  .dc-coin .dcg-h5 {
+  .dc-coin .dcg-h3 {
     margin-right: auto;
     margin-left: 10px;
     margin-bottom: 0;
-    font-weight: 600; }
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0; }
   .dc-coin:hover .dcg-icon-arrow-right {
     display: inline-block; }
 
@@ -7718,7 +7720,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     display: inline-block;
     width: 100%;
     text-align: center; }
-  .dc-coin-pair .dcg-h4 {
+  .dc-coin-pair .dcg-h3 {
     font-size: 20px;
     margin: 0 0 0 10px; }
   .dc-coin-pair .dcg-btn {
@@ -7743,7 +7745,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-coins__list {
   justify-content: space-between;
-  padding-top: 9px; }
+  padding-top: 8px; }
 
 .dc-coin-widget__wrapper {
   border-radius: 7px;
@@ -7891,11 +7893,13 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     display: flex; }
   .dc-news-sketch__tag ~ .dc-news-sketch__tag {
     margin-left: 8px; }
-  .dc-news-sketch .dcg-h4 {
-    margin-top: 15px;
-    line-height: 1.25;
-    margin-bottom: 15px;
-    color: #000; }
+  .dc-news-sketch .dcg-h3 {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px; }
   .dc-news-sketch__text {
     color: #63696F; }
   .dc-news-sketch__details {

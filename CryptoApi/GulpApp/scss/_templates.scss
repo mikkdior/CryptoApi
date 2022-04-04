@@ -151,11 +151,13 @@
         height: 30px;
     }
 
-    .dcg-h5 {
+    .dcg-h3 {
         margin-right: auto;
         margin-left: 10px;
         margin-bottom: 0;
         font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0;
     }
 
     &:hover {
@@ -232,7 +234,7 @@
         text-align: center;
     }
 
-    .dcg-h4 {
+    .dcg-h3 {
         font-size: 20px;
         margin: 0 0 0 10px;
     }
@@ -311,7 +313,7 @@
 
     &__list {
         justify-content: space-between;
-        padding-top: 9px;
+        padding-top: 8px;
     }
 
     @include media-breakpoint-down (sm) {
@@ -693,11 +695,13 @@
         margin-left: 8px;
     }
 
-    .dcg-h4 {
-        margin-top: 15px;
-        line-height: 1.25;
-        margin-bottom: 15px;
+    .dcg-h3 {
+        margin-top: 17px;
+        margin-bottom: 17px;
         color: #000;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
     }
 
     &__text {
