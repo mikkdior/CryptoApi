@@ -2,6 +2,7 @@
 using CryptoApi.Models.DB;
 using CryptoApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 
 namespace CryptoApi.Controllers;
@@ -31,7 +32,7 @@ public class HomeController : Controller
     /// </summary>
     public IActionResult Index([FromServices] CHomeVM model)
     {
-        ViewBag.Blocks = blocksHelper;
+        
         return View(model);
     }
 

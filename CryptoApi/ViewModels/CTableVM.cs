@@ -1,19 +1,24 @@
-﻿namespace CryptoApi.ViewModels
+﻿using Microsoft.AspNetCore.Html;
+using System.Text.Encodings.Web;
+
+namespace CryptoApi.ViewModels
 {
     public class CTableVM<TRow> : ITableVM
     {
         public delegate string DGetItem(TRow data);
-        private Dictionary<string, DGetItem> items = new();
+        public delegate IHtmlContent DGetHtmlItem(TRow data);
+        private Dictionary<string, DGetHtmlItem> items = new();
         public IEnumerable<string> keys => items.Keys;
-        public IEnumerable<IEnumerable<string>> rows => GetRows();
+        public IEnumerable<IEnumerable<IHtmlContent>> rows => GetRows();
 
         IEnumerable<TRow> data { get; set; }
 
         public CTableVM (IEnumerable<TRow> data)
         {
+            
             this.data = data;
         }
-        public IEnumerable<DGetItem> GetEnumerable()
+        public IEnumerable<DGetHtmlItem> GetEnumerable()
         {
             foreach (var item in items)
             {
@@ -23,13 +28,22 @@
 
         public CTableVM<TRow> Add (string title, DGetItem callback)
         {
-            items.Add (title, callback);
+            items.Add(title, i =>
+            {
+                return new HtmlContentBuilder().Append(callback(i));
+            });
+
+            return this;
+        }
+        public CTableVM<TRow> Add(string title, DGetHtmlItem callback)
+        {
+            items.Add(title, callback);
             return this;
         }
 
-        private IEnumerable<IEnumerable<string>> GetRows ()
+        private IEnumerable<IEnumerable<IHtmlContent>> GetRows ()
         {
-            IEnumerable<string> GetItems (TRow row)
+            IEnumerable<IHtmlContent> GetItems (TRow row)
             {
                 foreach(var item in items)
                 {

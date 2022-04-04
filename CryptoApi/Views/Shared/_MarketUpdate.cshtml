@@ -1,8 +1,11 @@
-﻿@inject CBlocksHelperVM BlocksHelper
+﻿@using CryptoApi.ViewModels
+@inject CBlocksHelperVM BlocksHelper
 
 <div class="dc-market-update">
+
     @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (BlocksHelper.GetCoinList(10))
         .Add("title 1", i => i.data.name)
         .Add("title 2", i => i.data.name_full)
+        .Add("title 3", i => Html.Partial("_Coin"))
     )
 </div>
