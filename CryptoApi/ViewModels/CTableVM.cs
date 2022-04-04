@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Html;
 using System.Text.Encodings.Web;
+using System.Web;
 
 namespace CryptoApi.ViewModels
 {
@@ -30,7 +31,7 @@ namespace CryptoApi.ViewModels
         {
             items.Add(title, i =>
             {
-                return new HtmlContentBuilder().Append(callback(i));
+                return new HtmlContentBuilder().AppendHtml(callback(i));
             });
 
             return this;

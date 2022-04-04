@@ -1,8 +1,8 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
-    margin-bottom: 24px;
-    display: flex;
+    
+    /*display: flex;*/
 
     .dcg-h2 {
         text-align: start;
@@ -10,6 +10,7 @@
     }
 
     &__content {
+        margin-bottom: 0;
         margin-left: auto;
         padding-left: 60px;
     }

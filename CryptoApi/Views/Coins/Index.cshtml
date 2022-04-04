@@ -3,8 +3,21 @@
 @{
     ViewData["Title"] = "Coins Page";
 }
-@await Html.PartialAsync("_Breadcrumbs")
-<h1>title</h1>
-@*           small desc            *@
-@await Html.PartialAsync("_Coins")
-@*@await Html.PartialAsync("_Pagination")*@
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_MarketCoins")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_Pagination", BlocksHelper.GetPagination(Model.maxPage, Model.page))
+            </div>
+        </div>
+    </div>
+</section>
+
+@section PageHead {
+    @await Html.PartialAsync("_SubheaderCoins")
+}

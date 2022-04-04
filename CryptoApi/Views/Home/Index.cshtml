@@ -64,7 +64,7 @@
                     string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
                 }
 
-                @await Html.PartialAsync("_Faq", new[] { new CTextBlockVM(question1, answer), new CTextBlockVM(question2, answer), new CTextBlockVM(question3, answer), new CTextBlockVM(question4, answer), new CTextBlockVM(question5, answer) })
+                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)(new[] { (question1, answer), (question2, answer), (question3, answer), (question4, answer), (question5, answer) })))
             </div>
         </div>
     </div>

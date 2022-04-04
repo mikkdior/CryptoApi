@@ -1,8 +1,8 @@
-﻿@model (IEnumerable<CTextBlockVM> text_blocks, bool need_toggle)
+﻿@model IEnumerable<(string title, string text)>
 
 <div class="dc-section-text-blocks">
-    @foreach (var item in Model.text_blocks)
+    @foreach (var item in Model)
     {
-        @await Html.PartialAsync("_SectionTextBlock", (item, Model.need_toggle))
+        @await Html.PartialAsync("_SectionTextBlock", (item.title, "_TextBlock", (object)("", item.text)))
     }
 </div>

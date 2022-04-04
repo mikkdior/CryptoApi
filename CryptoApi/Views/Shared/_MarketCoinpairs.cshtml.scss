@@ -1,12 +1,10 @@
 // /*.....................................*/
-// /* TEMPLATE: table */
-.dc-table {
-    .dcg-shadow-hover {
-        box-shadow: unset;
-    }
+// /* TEMPLATE: market-coinpairs */
+.dc-market-coinpairs {
 
     @include media-breakpoint-down (sm) {
+
     }
 }
-// /* /TEMPLATE: table */
+// /* /TEMPLATE: market-coinpairs */
 // /*.....................................*/

@@ -1,0 +1,19 @@
+﻿@inject CBlocksHelperVM BlocksHelper
+@{
+    int counter = 0;
+}
+<div class="dc-market-coins dcg-shadow dcg-table-sort-icons">
+    <div class="dc-market-coins__header">
+        @await Html.PartialAsync("_MarketSearch")
+        <a class="dc-market-coins__search-by" href="#">Sort coins by <svg icon="sort-down-arrow"></svg></a>
+    </div>  
+    @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (BlocksHelper.GetCoinList(10))
+        .Add("#", i => (++counter).ToString())
+        .Add("Name", i => Html.Partial("_Coin"))
+        .Add("Price", i => $"<span class='text-primary'>${i.data.ext.Last().usd_price}</span>")
+        .Add("Volume (24h)", i => i.data.ext.Last().volume_24h.ToString())
+        .Add("Market Cap", i => "$" + i.data.ext.Last().market_cap.ToString())
+        .Add("Change (24h)", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
+        .Add("Exchange", i => $"<div class='dc-market-coins__exchange'><a class='btn dcg-btn' asp-controller='Coins' asp-action='Coin' asp-route-coin='{i.data.name}'>Exchange</a><svg icon='exchange-cycle-dark'></svg></div>")
+    )
+</div>

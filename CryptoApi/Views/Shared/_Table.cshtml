@@ -1,11 +1,21 @@
 ﻿@model ITableVM
 
-<div class="dc-table">
+<div class="dc-table dcg-tpg">
     <table>
         <tr>
+            @{
+                int counter = Model.keys.Count();
+            }
             @foreach(string title in Model.keys)
             {
-                <th>@title</th>
+                if (--counter == 0)
+                {
+                    <th>@title</th>
+                }
+                else
+                {
+                    <th><a href="#">@title</a></th>
+                }
             }
         </tr>
         

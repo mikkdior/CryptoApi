@@ -31,7 +31,7 @@
                         
                     }
 
-                    @await Html.PartialAsync("_TextBlock", new CTextBlockVM("", content))
+                    @await Html.PartialAsync("_TextBlock", ("", content))
                 </div>
             </div>
             <div class="col-4"> 
@@ -72,9 +72,9 @@
                     string title1 = "Exchange DODO to USD";
                     string title2 = "How to Convert DODO to Dollar";
                     string title3 = "DODO to USD Exchange Benefits";
-                    IEnumerable<CTextBlockVM> tbs = new List<CTextBlockVM>() { new CTextBlockVM(title1, content1), new CTextBlockVM(title2, content2), new CTextBlockVM(title3, content3)};
+                    IEnumerable<(string title, string text)> tbs = new List<(string title, string text)>() { (title1, content1), (title2, content2), (title3, content3)};
                 }
-                @await Html.PartialAsync("_SectionTextBlocks", (tbs, false))
+                @await Html.PartialAsync("_SectionTextBlocks", tbs)
             </div>
         </div>
     </div>
@@ -92,8 +92,7 @@
                     string question5 = "What is XMR and BTC exchange pair?";
                     string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
                 }
-
-                @await Html.PartialAsync("_Faq", new[] { new CTextBlockVM(question1, answer), new CTextBlockVM(question2, answer), new CTextBlockVM(question3, answer), new CTextBlockVM(question4, answer), new CTextBlockVM(question5, answer) })
+                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)(new[] { (question1, answer), (question2, answer), (question3, answer), (question4, answer), (question5, answer) })))
             </div>
         </div>
     </div>

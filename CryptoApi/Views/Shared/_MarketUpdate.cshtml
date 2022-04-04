@@ -1,11 +1,27 @@
 ﻿@using CryptoApi.ViewModels
 @inject CBlocksHelperVM BlocksHelper
+@*"<span class='dcg-value-up'>{i.data.ext.Last().volume_24h.ToString()}</span>"*@
+@using Microsoft.AspNetCore.Html;
+@{
+    int counter = 0;
+}
 
-<div class="dc-market-update">
-
+<div class="dc-market-update dcg-table-sort-icons">
+    <div class="dcg-section__head">
+        <h2 class="dcg-h2">Market Update</h2>
+        <a asp-controller="Coins" asp-action="Index" class="dcg-btn dcg-btn_big">
+            View All
+            <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
+        </a>
+    </div>
     @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (BlocksHelper.GetCoinList(10))
-        .Add("title 1", i => i.data.name)
-        .Add("title 2", i => i.data.name_full)
-        .Add("title 3", i => Html.Partial("_Coin"))
+        .Add("#", i => (++counter).ToString())
+        .Add("Name", i => Html.Partial("_Coin"))
+        .Add("Price", i => $"<span class='text-primary'>${i.data.ext.Last().usd_price}</span>")
+        .Add("Volume (24h)", i => i.data.ext.Last().volume_24h.ToString())
+        .Add("Circulating Supply", i => i.data.ext.Last().circulating_supply.ToString())
+        .Add("Market Cap", i => "$" + i.data.ext.Last().market_cap.ToString())
+        .Add("Change (24h)", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
+        .Add("Price Graph (7d)", i => "<img src='/images/graph.png'>")
     )
 </div>

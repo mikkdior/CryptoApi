@@ -203,6 +203,7 @@ h5, .dcg-h5 {
     text-align: left;
     padding: 11px 12px 10px 20px;
     height: 40px;
+    border: 0;
 
     &::-webkit-input-placeholder {
     }
@@ -241,7 +242,7 @@ h5, .dcg-h5 {
         width: 910px;
     }
 
-    &.dcg-input_ьiddle {
+    &.dcg-input_middle {
         width: 550px;
     }
 
@@ -423,7 +424,12 @@ textarea {}
     }
 }
 /*.....................................*/
-
+.dcg-table-sort-icons {
+    table th ~ th::after {
+        content: " ⇅";
+        color: darkgray;
+    }
+}
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/

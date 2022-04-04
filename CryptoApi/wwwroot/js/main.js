@@ -327,6 +327,27 @@ jQuery('.dc-main-menu').dcTpl(function ($, Export) {
 // /main-menu
 //--------------------------------------------
 
+// market-coinpairs
+jQuery('.dc-market-coinpairs').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /market-coinpairs
+//--------------------------------------------
+
+// market-coins
+jQuery('.dc-market-coins').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /market-coins
+//--------------------------------------------
+
+// market-search
+jQuery('.dc-market-search').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /market-search
+//--------------------------------------------
+
 // market-update
 jQuery('.dc-market-update').dcTpl(function ($, Export) {
    var $self = $(this);
@@ -430,6 +451,13 @@ jQuery('.dc-subheader-coin').dcTpl(function ($, Export) {
    var $self = $(this);
 });
 // /subheader-coin
+//--------------------------------------------
+
+// subheader-coins
+jQuery('.dc-subheader-coins').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /subheader-coins
 //--------------------------------------------
 
 // subheader-main

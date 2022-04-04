@@ -1,0 +1,35 @@
+// /*.....................................*/
+// /* TEMPLATE: market-search */
+.dc-market-search {
+    width: 910px;
+
+    form {
+        width: 100%;
+    }
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    .dcg-inp {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .dcg-btn {
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: market-search */
+// /*.....................................*/

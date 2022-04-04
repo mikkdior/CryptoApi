@@ -1,0 +1,83 @@
+// /*.....................................*/
+// /* TEMPLATE: market-coins */
+.dc-market-coins {
+    border-radius: 7px;
+    padding: 20px;
+    margin-top: -160px;
+    background: #fff;
+    padding-bottom: 0;
+
+    .dc-table {
+        th a {
+            font-weight: 400 !important;
+        }
+
+        th:first-child {
+            width: 39px;
+        }
+
+        th:last-child {
+            text-align: end;
+            padding-right: 26px;
+
+            &::after {
+                content: "";
+            }
+        }
+
+        th:nth-child(2) {
+            width: 93px;
+        }
+    }
+
+    &__search-by {
+        font-size: 14px;
+        font-weight: 400 !important;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        width: 110px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 31px;
+
+        .dcg-btn {
+            display: none;
+        }
+
+        svg {
+            width: 13px;
+            height: 6px;
+        }
+    }
+
+    &__exchange {
+
+        .dcg-btn {
+            background: #0056B3;
+            width: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+        }
+
+        .dcg-btn:hover {
+            color: #fff;
+        }
+
+        svg {
+            width: 13px;
+            height: 6px;
+        }
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: market-coins */
+            // /*.....................................*/

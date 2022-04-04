@@ -1,9 +1,11 @@
 // /*.....................................*/
 // /* TEMPLATE: market-update */
 .dc-market-update {
-
+    .dcg-section__head{
+        padding-bottom: 40px;
+    } 
+    
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: market-update */

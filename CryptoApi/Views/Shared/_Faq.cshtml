@@ -1,12 +1,17 @@
-﻿@model IEnumerable<CTextBlockVM>
+﻿@model IEnumerable<(string title, string text)>
 
 <div class="dc-faq">
-    <div class="row">
-        <div class="col-4">
-            <h2 class="dcg-h2">Frequently Asked Questions</h2>
+    @foreach(var item in Model)
+    {
+        <div class="dc-faq-item">
+            <div class="dc-faq-item__wrapper dcg-btn">
+                <h3 class="dcg-h3">@item.title</h3>
+                <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
+                <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
+            </div>
+            <p class="dc-faq-item__content">
+                @item.text
+            </p>
         </div>
-        <div class="col-8"> 
-            @await Html.PartialAsync("_SectionTextBlocks", (Model, true))
-        </div>
-    </div>
+    }
 </div>

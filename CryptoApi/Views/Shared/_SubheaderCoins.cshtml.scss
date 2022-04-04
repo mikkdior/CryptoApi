@@ -1,0 +1,29 @@
+// /*.....................................*/
+// /* TEMPLATE: subheader-coins */
+.dc-subheader-coins {
+    margin-bottom: 75px;
+
+    .dcg-h1 {
+        text-align: center;
+        width: 489px;
+        margin: auto;
+        margin-top: 45px;
+    }
+
+    &__desc {
+        text-align: center;
+        color: #FFF;
+        width: 521px;
+        margin: auto;
+        margin-top: 18px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+    }
+
+    @include media-breakpoint-down (sm) {
+    }
+}
+// /* /TEMPLATE: subheader-coins */
+// /*.....................................*/

@@ -1,10 +1,17 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-blocks */
 .dc-section-text-blocks {
-    /*padding: 30px 0;*/
-
-    .dc-section-text-block, .dc-section-text-block__content {
+    .dc-section-text-block {
         margin-bottom: 0;
+    }
+
+    .dc-text-block {
+        margin-left: auto;
+        width: 680px;
+
+        .dcg-h2 {
+            margin-bottom: 0;
+        }
     }
 
     .dc-section-text-block + .dc-section-text-block {

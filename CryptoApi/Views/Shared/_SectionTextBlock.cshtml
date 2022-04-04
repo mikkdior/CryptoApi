@@ -1,28 +1,13 @@
-﻿@model (CTextBlockVM text_block, bool need_toggle)
+﻿@model (string title, string template, object data)
+@*??? !!! !@# в общем, сам разберёшься... *@
 
 <div class="dc-section-text-block">
-    
-    @if (Model.need_toggle)
-    {
-        <div class="dc-section-text-block__wrapper dcg-btn">
-            <h3 class="dcg-h3">@Model.text_block.title</h3>
-            <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
-            <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
+    <div class="row">
+        <div class="col-4">
+            <h2 class="dcg-h2 p-0 text-left">@Model.title</h2>
         </div>
-        <p class="dc-section-text-block__content">
-            @Model.text_block.text
-        </p>
-    }
-    else{
-        <div class="row">
-            <div class="col-4">
-                <h2 class="dcg-h2">@Model.text_block.title</h2>
-            </div>
-            <div class="col-8">
-                <p class="dc-section-text-block__content">
-                    @Model.text_block.text
-                </p>
-            </div>
+        <div class="col-8"> 
+            @await Html.PartialAsync(Model.template, Model.data)
         </div>
-    }
+    </div>
 </div>
