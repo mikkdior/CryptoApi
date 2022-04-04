@@ -55,7 +55,25 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @*@await Html.PartialAsync("_Faq")*@
+                @{
+                    string question1 = "What is XMR and BTC exchange pair?";
+                    string question2 = "How to convert Monero to Bitcoin?";
+                    string question3 = "How to compare XMR and BTC?";
+                    string question4 = "What is the limit for XMR to BTC exchange?";
+                    string question5 = "What is XMR and BTC exchange pair?";
+                    string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
+                }
+
+                @await Html.PartialAsync("_Faq", new[] { new CTextBlockVM(question1, answer), new CTextBlockVM(question2, answer), new CTextBlockVM(question3, answer), new CTextBlockVM(question4, answer), new CTextBlockVM(question5, answer) })
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dcg-section dcg-section_gray">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_Partners")
             </div>
         </div>
     </div>
@@ -64,16 +82,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @*@await Html.PartialAsync("_Partners")*@
-            </div>
-        </div>
-    </div>
-</section>
-<section class="dcg-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                @*@await Html.PartialAsync("_NewsList")*@
+                @await Html.PartialAsync("_NewsList")
             </div>
         </div>
     </div>

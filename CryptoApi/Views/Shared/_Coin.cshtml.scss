@@ -4,6 +4,7 @@
     width: 265px;
     height: 60px;
     margin-bottom: 10px;
+    background: #fff;
 
     .dc-coin__link {
         display: flex;
@@ -22,11 +23,13 @@
         height: 30px;
     }
 
-    &__name {
+    .dcg-h3 {
         margin-right: auto;
         margin-left: 10px;
-        letter-spacing: 0px;
+        margin-bottom: 0;
         font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0;
     }
 
     &:hover {

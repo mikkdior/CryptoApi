@@ -1,9 +1,11 @@
 // /*.....................................*/
 // /* TEMPLATE: news-list */
 .dc-news-list {
+    .dcg-section__head {
+        padding-bottom: 38px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: news-list */
