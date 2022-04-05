@@ -1,8 +1,4 @@
-﻿@*@model CCoinDataVM*@
-@{
-    //string coin_name = Model.data.name;
-    string coin_name = "btc";
-}
+﻿@model (string coin1, string coin2)
 
 <div class="dc-coin-widget">
     <div class='dc-coin-widget__wrapper'>
@@ -13,7 +9,7 @@
             {
                 'symbols': [
                     [
-                        '@(coin_name)USD'
+                        '@(Model.coin1)@(Model.coin2)'
                     ]
                 ],
                 'chartOnly': false,

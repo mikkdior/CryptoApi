@@ -1,7 +1,9 @@
-﻿@model IEnumerable<(string title, string text)>
-
+﻿@model object
+@{
+    var data = (IEnumerable<CTextBlockVM>)Model; 
+}
 <div class="dc-faq">
-    @foreach(var item in Model)
+    @foreach(var item in data)
     {
         <div class="dc-faq-item">
             <div class="dc-faq-item__wrapper dcg-btn">

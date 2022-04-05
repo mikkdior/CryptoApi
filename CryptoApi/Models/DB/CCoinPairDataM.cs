@@ -7,8 +7,8 @@ public class CCoinPairDataM
 {
     public uint coin1_id => coin_1.id;
     public uint coin2_id => coin_2.id;
-    public string name_1 => coin_1.name;
-    public string name_2 => coin_2.name;
+    public string name_1 => coin_1.name.ToUpper();
+    public string name_2 => coin_2.name.ToUpper();
     public string name_full_1 => coin_1.name_full;
     public string name_full_2 => coin_2.name_full;
 

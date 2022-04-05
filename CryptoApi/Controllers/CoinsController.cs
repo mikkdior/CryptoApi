@@ -44,9 +44,6 @@ public class CoinsController : Controller
     [Route("/coins/{coin}")]
     public IActionResult Coin([FromServices] CCoinVM model)
     {
-        return View();  // filler
-
-
         ViewBag.Blocks = blocksHelper;
         model.Init(HttpContext);
         return View(model);

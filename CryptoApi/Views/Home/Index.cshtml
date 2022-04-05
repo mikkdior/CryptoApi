@@ -55,16 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @{
-                    string question1 = "What is XMR and BTC exchange pair?";
-                    string question2 = "How to convert Monero to Bitcoin?";
-                    string question3 = "How to compare XMR and BTC?";
-                    string question4 = "What is the limit for XMR to BTC exchange?";
-                    string question5 = "What is XMR and BTC exchange pair?";
-                    string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
-                }
-
-                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)(new[] { (question1, answer), (question2, answer), (question3, answer), (question4, answer), (question5, answer) })))
+                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)(Model.Faq)))
             </div>
         </div>
     </div>

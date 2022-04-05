@@ -24,6 +24,15 @@ public class CCoinDataM
     public decimal? low => ext.Last()?.low;
     public decimal? high => ext.Last()?.high;
 
+    public decimal? circulating_supply => 10633197;
+    public decimal? max_supply => 18900000;
+    public decimal? cmc_rank => 72;
+    public decimal? volume_24h => 828881044;
+    public decimal? change_1h => 2.21m;
+
+
+
+
     public ICollection<CCoinsMetaDataM> meta { get; set; }
     public ICollection<CCoinsExtDataM> ext { get; set; }
 

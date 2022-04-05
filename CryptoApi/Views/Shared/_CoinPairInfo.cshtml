@@ -1,4 +1,4 @@
-﻿@*@model (CCoinDataVM coindata, IEnumerable<CTextBlockVM> textblocks)*@
+﻿@model CCoinPairVM
 <div class="dc-coin-pair-info dcg-tpg"> @*flex*@
     <table> 
         <tr>
@@ -6,10 +6,10 @@
                 <span>Name</span>
             </td>
             <td>
-                <span>Dash</span>
+                <span>@Model.pair.coin1.name_full</span>
             </td>
             <td>
-                <span>Bitcoin</span>
+                <span>@Model.pair.coin2.name_full</span>
             </td>
         </tr>
         <tr>
@@ -17,10 +17,10 @@
                 <span>Symbol</span>
             </td>
             <td>
-                <span>DASH</span>
+                <span>@Model.pair.coin1.name</span>
             </td>
             <td>
-                <span>BTC</span>
+                <span>@Model.pair.coin2.name</span>
             </td>
         </tr>
         <tr>
@@ -28,10 +28,10 @@
                 <span>Circulating supply</span>
             </td>
             <td>
-                <span>10 633 197 $</span>
+                <span>$@Model.pair.coin1.circulating_supply</span>
             </td>
             <td>
-                <span>70 633 197 $</span>
+                <span>$@Model.pair.coin2.circulating_supply</span>
             </td>
         </tr>
         <tr>
@@ -39,10 +39,10 @@
                 <span>Max supply</span>
             </td>
             <td>
-                <span>18 900 000 $</span>
+                <span>$@Model.pair.coin1.max_supply</span>
             </td>
             <td>
-                <span>158 900 000 $</span>
+                <span>$@Model.pair.coin2.max_supply</span>
             </td>
         </tr>
         <tr>
@@ -50,10 +50,10 @@
                 <span>Cmc rank</span>
             </td>
             <td>
-                <span>76</span>
+                <span>@Model.pair.coin1.cmc_rank</span>
             </td>
             <td>
-                <span>12</span>
+                <span>@Model.pair.coin2.cmc_rank</span>
             </td>
         </tr>
     </table>
@@ -64,10 +64,10 @@
                 <span>Volume 24h</span>
             </td>
             <td>
-                <span>358 779 920 $</span>
+                <span>$@Model.pair.coin1.volume_24h</span>
             </td>
             <td>
-                <span>878 779 920 $</span>
+                <span>$@Model.pair.coin2.volume_24h</span>
             </td>
         </tr>
         <tr>
@@ -75,10 +75,10 @@
                 <span>Percent change 1h</span>
             </td>
             <td>
-                <span class="dcg-value-down">-0,37%</span>
+                <span class="dcg-value-down">@(Model.pair.coin1.change_1h)%</span>
             </td>
             <td>
-                <span class="dcg-value-up">5,59%</span>
+                <span class="dcg-value-up">@(Model.pair.coin2.change_1h)%</span>
             </td>
         </tr>
         <tr>
@@ -86,10 +86,10 @@
                 <span>Percent change 24h</span>
             </td>
             <td>
-                <span class="dcg-value-up">5,59%</span>
+                <span class="dcg-value-up">@(Model.pair.coin1.day_percent_change)%</span>
             </td>
             <td>
-                <span class="dcg-value-down">-0,37%</span>
+                <span class="dcg-value-down">@(Model.pair.coin2.day_percent_change)%</span>
             </td>
         </tr>
         <tr>
@@ -97,10 +97,10 @@
                 <span>Percent change 7d</span>
             </td>
             <td>
-                <span class="dcg-value-up">10%</span>
+                <span class="dcg-value-up">@(Model.pair.coin1.week_percent_change)%</span>
             </td>
             <td>
-                <span class="dcg-value-up">10%</span>
+                <span class="dcg-value-up">@(Model.pair.coin2.week_percent_change)%</span>
             </td>
         </tr>
     </table>

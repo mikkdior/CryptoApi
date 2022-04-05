@@ -6,13 +6,10 @@
 }
 <section class="dcg-section">
     <div class="container">
-        @*<div class="row">
-            
-        </div>*@
         <div class="row">
             <div class="col-6">
                 <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
-                    <h2 class="dcg-h2 text-left m-0">Basic information about DODO</h2>
+                    <h2 class="dcg-h2 text-left m-0">Basic information about @Model.pair.coin1.name_full</h2>
                     @{
                         string content = @" 
                             <h3>Do I need to get verified to swap ETH to BTC?</h3>
@@ -40,11 +37,11 @@
             <div class="col-6">
                 <div class="row">
                     <div class="col-12">
-                        @await Html.PartialAsync("_CoinPairInfo")
+                        @await Html.PartialAsync("_CoinPairInfo", Model)
                     </div>
                     <div class="col-12 bg-info">
-                        <h3 class="dcg-h3">Exchange rate DODO to Bitcoin</h3>
-                        @await Html.PartialAsync("_CoinWidget")
+                        <h3 class="dcg-h3">Exchange rate @Model.pair.coin1.name to @Model.pair.coin2</h3>
+                        @await Html.PartialAsync("_CoinWidget", (Model.pair.coin1.name, Model.pair.coin2.name))
                     </div>
                 </div>
             </div>
@@ -56,7 +53,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_GuideList")
+                @await Html.PartialAsync("_GuideList", (Model.pair.coin1.name, Model.pair.coin2.name))
             </div>
         </div>
     </div>
@@ -86,16 +83,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @{
-                    string content1 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
-                    string content2 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
-                    string content3 = "Our DODO to USD converter is developed to provide a perfect user experience for both professionals and newbies. Our users can count on the following benefits: No limitations. Our users can swap as many coins as you need. No mandatory account registration and verification. If you exchange crypto, you decide whether to handle it anonymously or benefit from perks offered if you open an account. Non-custodial services. The service doesn’t keep yourcoins needed for your DODO to Dollar conversion.";
-                    string title1 = "Exchange DODO to USD";
-                    string title2 = "How to Convert DODO to Dollar";
-                    string title3 = "DODO to USD Exchange Benefits";
-                    IEnumerable<(string title, string text)> tbs = new List<(string title, string text)>() { (title1, content1), (title2, content2), (title3, content3)};
-                }
-                @await Html.PartialAsync("_SectionTextBlocks", tbs)
+                @await Html.PartialAsync("_SectionTextBlocks", Model.TextBlocks)
             </div>
         </div>
     </div>
@@ -105,20 +93,12 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @{
-                    string question1 = "What is XMR and BTC exchange pair?";
-                    string question2 = "How to convert Monero to Bitcoin?";
-                    string question3 = "How to compare XMR and BTC?";
-                    string question4 = "What is the limit for XMR to BTC exchange?";
-                    string question5 = "What is XMR and BTC exchange pair?";
-                    string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
-                }
-                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)(new[] { (question1, answer), (question2, answer), (question3, answer), (question4, answer), (question5, answer) })))
+                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)Model.Faq))
             </div>
         </div>
     </div>
 </section>
 
 @section PageHead {
-    @await Html.PartialAsync("_SubheaderCoinPair")
+    @await Html.PartialAsync("_SubheaderCoinPair", (Model.pair.coin1.name, Model.pair.coin2.name))
 }

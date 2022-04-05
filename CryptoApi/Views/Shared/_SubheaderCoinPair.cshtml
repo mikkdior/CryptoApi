@@ -1,17 +1,18 @@
-﻿@*@model CCoinDataVM*@
+﻿@model (string coin1, string coin2)
+
 <div class="dc-subheader-coin-pair">
     <div class="row">
         <div class="col">
-            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Cryptocurrency Exchange Pairs", Url.RouteUrl(new { Action = "Index", Controller = "CoinPairs" })), ("BTC" + " to " + "BTC", "") })
+            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Cryptocurrency Exchange Pairs", Url.RouteUrl(new { Action = "Index", Controller = "CoinPairs" })), (Model.coin1.ToUpper() + " to " + Model.coin2.ToUpper(), "") })
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <h1 class="dcg-h1">Exchange <strong>DODO</strong> to <strong>USD</strong></h1>
-            @await Html.PartialAsync("_CoinWidget")
+            <h1 class="dcg-h1">Exchange <strong>@Model.coin1.ToUpper()</strong> to <strong>@Model.coin2.ToUpper()</strong></h1>
+            @await Html.PartialAsync("_CoinWidget", (Model.coin1, "usd"))
         </div>
         <div class="col">
-            @await Html.PartialAsync("_ExchangeWidget", ("btc", "eth"))
+            @await Html.PartialAsync("_ExchangeWidget", (Model.coin1, Model.coin2))
         </div>
     </div>
 </div>
