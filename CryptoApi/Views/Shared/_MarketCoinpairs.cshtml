@@ -1,19 +1,16 @@
 ﻿@inject CBlocksHelperVM BlocksHelper
-@{
-    int counter = 0;
-}
-<div class="dc-market-coin-pairs dcg-shadow dcg-table-sort-icons">
+
+<div class="dc-market-coin-pairs dcg-shadow">
     <div class="dc-market-coin-pairs__header">
+        <h2 class="dcg-h2">All Crypto Fiat Pairs</h2>
         @await Html.PartialAsync("_MarketSearch")
-        <a class="dc-market-coin-pairs__search-by" href="#">Sort coins by <svg icon="sort-down-arrow"></svg></a>
     </div>  
     @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (BlocksHelper.GetCoinList(10))
-        .Add("#", i => (++counter).ToString())
-        .Add("Coin1", i => Html.Partial("_Coin"))
-        .Add("Change (24h)", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
-        .Add("To", i => "<svg icon='arrow-right-dark' class='dcg-icon-arrow-right'></svg>")
-        .Add("Coin2", i => Html.Partial("_Coin"))
-        .Add("Change (24h )", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
-        .Add("Exchange", i => $"<div class='dc-market-coin-pairs__exchange'><a class='btn dcg-btn' asp-controller='CoinPairs' asp-action='Pair' asp-route-coin1='{i.data.name} asp-route-coin2='usd'>Exchange</a><svg icon='exchange-cycle-dark'></svg></div>")
+        .Add("<span class='dcg-first-coin'>Coin</span>", i => Html.Partial("_Coin"))
+        .Add("<span class='dcg-first-change'>Change (24h)</span>", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
+        .Add("To", i => "<div class='dc-market-coin-pairs__to-arrow'><svg class='dcg-icon-arrow-right'><use xlink:href='/images/svg-sprite.svg#arrow-right-darkgray'></svg></div>")
+        .Add("<span class='dcg-second-coin'>Coin</span>", i => Html.Partial("_Coin"))
+        .Add("<span class='dcg-second-change'>Change (24h)</span>", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
+        .Add("Exchange", i => $"<div class='dc-market-coin-pairs__exchange'><a class='btn dcg-btn' href='/crypto-pairs/{i.data.name}-to-usd'>Exchange</a><svg><use xlink:href='/images/svg-sprite.svg#exchange-cycle-dark'></svg></div>")
     )
 </div>

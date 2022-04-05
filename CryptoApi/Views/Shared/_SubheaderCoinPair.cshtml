@@ -1,9 +1,8 @@
 ﻿@*@model CCoinDataVM*@
-
-<div class="dc-subheader-coin">
+<div class="dc-subheader-coin-pair">
     <div class="row">
         <div class="col">
-            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Exchange Rates", Url.RouteUrl(new { Action = "Index", Controller = "Coins" })), ("BTC" + " to USD", "") })
+            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Cryptocurrency Exchange Pairs", Url.RouteUrl(new { Action = "Index", Controller = "CoinPairs" })), ("BTC" + " to " + "BTC", "") })
         </div>
     </div>
     <div class="row">

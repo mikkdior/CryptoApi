@@ -4,13 +4,121 @@
     ViewData["Title"] = "CoinPair Page";
     //var similiar_pairs = BlocksHelper.GetPairList(Model.pair.data);
 }
-@await Html.PartialAsync("_Breadcrumbs")
-<h1>title</h1>
-@await Html.PartialAsync("_CoinWidget")
-@await Html.PartialAsync("_ExchangeWidget")
-@await Html.PartialAsync("_CoinPairInfo")
-@await Html.PartialAsync("_GuideList")
-@await Html.PartialAsync("_CoinPairs")
-@await Html.PartialAsync("_Coins")
-@await Html.PartialAsync("_TextBlocks")
-@await Html.PartialAsync("_Faq")
+<section class="dcg-section">
+    <div class="container">
+        @*<div class="row">
+            
+        </div>*@
+        <div class="row">
+            <div class="col-6">
+                <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
+                    <h2 class="dcg-h2 text-left m-0">Basic information about DODO</h2>
+                    @{
+                        string content = @" 
+                            <h3>Do I need to get verified to swap ETH to BTC?</h3>
+                            <p>
+                                If it’s your first time exchanging funds on Changelly, you will need to submit the proof of identity. This data helps us keep the platform safe from malicious actors and any suspicious transactions.
+                            </p>
+                            <p>
+                                Another thing you’ll have to do before any exchanges is to provide your email. This is a standard procedure to create an account. Alternatively, you can use your Facebook or Twitter login credentials. You may enable or disable 2FA authentication at any time. But it’s recommended to keep the added layer of verification for maximum safety.
+                            </p>
+                            <h3>What are the fees to convert Ethereum to Bitcoin?</h3>
+                            <p>
+                                Always keep in mind that the final cost of the transaction amount will include two types of fees: exchange fees and network fees.
+                            </p>
+                            <p>
+                                The exchange fee on our platform is 0.25%, applicable to all transactions. If you’re converting the minimum amount - which is 0.02 ETH - the platform fee will be 0.00000411 BTC. If you’re exchanging one ether, the fee will be 0.00020516 BTC.
+                            </p>
+                            <p>
+                                As for the network fee, it is always 0.0005 BTC, regardless of the transaction size. ETH gas fees go towards successfully conducting transactions on the Ethereum blockchain. This small payment compensates for the computing energy required to process and validate operations. The estimated arrival is also the same regardless of the transaction – 5-30 minutes.
+                            </p>";
+                    }
+
+                    @await Html.PartialAsync("_TextBlock", ("", content))
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        @await Html.PartialAsync("_CoinPairInfo")
+                    </div>
+                    <div class="col-12 bg-info">
+                        <h3 class="dcg-h3">Exchange rate DODO to Bitcoin</h3>
+                        @await Html.PartialAsync("_CoinWidget")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_GuideList")
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_CoinPairs")
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_Coins")
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section dcg-section_gray">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @{
+                    string content1 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
+                    string content2 = "Our DODO to Dollar exchange enables you to perform swaps with no issues. To sell DODO to USD, you are required to: Choose the currencies to sell (cryptocurrency) and to buy USD. Provide the required information to receive the swapped funds. Make a deposit. Get the funds into your wallet or account.";
+                    string content3 = "Our DODO to USD converter is developed to provide a perfect user experience for both professionals and newbies. Our users can count on the following benefits: No limitations. Our users can swap as many coins as you need. No mandatory account registration and verification. If you exchange crypto, you decide whether to handle it anonymously or benefit from perks offered if you open an account. Non-custodial services. The service doesn’t keep yourcoins needed for your DODO to Dollar conversion.";
+                    string title1 = "Exchange DODO to USD";
+                    string title2 = "How to Convert DODO to Dollar";
+                    string title3 = "DODO to USD Exchange Benefits";
+                    IEnumerable<(string title, string text)> tbs = new List<(string title, string text)>() { (title1, content1), (title2, content2), (title3, content3)};
+                }
+                @await Html.PartialAsync("_SectionTextBlocks", tbs)
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dcg-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @{
+                    string question1 = "What is XMR and BTC exchange pair?";
+                    string question2 = "How to convert Monero to Bitcoin?";
+                    string question3 = "How to compare XMR and BTC?";
+                    string question4 = "What is the limit for XMR to BTC exchange?";
+                    string question5 = "What is XMR and BTC exchange pair?";
+                    string answer = "Monero to Bitcoin exchange pairs are very popular nowadays. Every second in the whole world lots of such transactions are performed. Monero confidently enters and holds the 10 most popular crypto coins, and Bitcoin, as the first crypto currency, is the most popular and one tops the list.";
+                }
+                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)(new[] { (question1, answer), (question2, answer), (question3, answer), (question4, answer), (question5, answer) })))
+            </div>
+        </div>
+    </div>
+</section>
+
+@section PageHead {
+    @await Html.PartialAsync("_SubheaderCoinPair")
+}

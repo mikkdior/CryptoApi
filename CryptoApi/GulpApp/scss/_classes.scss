@@ -408,8 +408,8 @@ textarea {}
         width: 680px;
     }
 
-    &_pair {
-        width: 680px; // 
+    &_coin-pair {
+        width: 530px; // 
     }
 }
 /*.....................................*/
@@ -424,12 +424,7 @@ textarea {}
     }
 }
 /*.....................................*/
-.dcg-table-sort-icons {
-    table th ~ th::after {
-        content: " ⇅";
-        color: darkgray;
-    }
-}
+
 /* /common */
 /* /CLASSES */
 /*------------------------------------------------------------*/

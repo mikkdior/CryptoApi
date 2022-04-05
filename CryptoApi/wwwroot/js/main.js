@@ -453,6 +453,13 @@ jQuery('.dc-subheader-coin').dcTpl(function ($, Export) {
 // /subheader-coin
 //--------------------------------------------
 
+// subheader-coin-pair
+jQuery('.dc-subheader-coin-pair').dcTpl(function ($, Export) {
+   var $self = $(this);
+});
+// /subheader-coin-pair
+//--------------------------------------------
+
 // subheader-coin-pairs
 jQuery('.dc-subheader-coin-pairs').dcTpl(function ($, Export) {
    var $self = $(this);

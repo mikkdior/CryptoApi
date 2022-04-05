@@ -1,17 +1,29 @@
-﻿@model IEnumerable<string>
+﻿@model IEnumerable<(string title, string url)>
 
 <div class="dc-breadcrumbs">
-    <div class="dc-breadcrumbs__breadcrumb">
-        Home
-    </div>
+    <a asp-controller="Home" asp-action="Index" class="dc-breadcrumbs__breadcrumb">
+        <span>Home</span>
+    </a>
 
     @foreach (var item in Model)
     {
-        <div class="dc-breadcrumbs__breadcrumb">
-            <svg icon="arrow-right-grey" class="dcg-icon-arrow-right"></svg>
-            <span>
-                @item
+        if (item == Model.Last())
+        {
+            <span class="dc-breadcrumbs__breadcrumb">
+                <svg icon="arrow-right-grey" class="dcg-icon-arrow-right"></svg>
+                <span>
+                    @item.title
+                </span>
             </span>
-        </div>
+        }
+        else
+        {
+            <a href="@item.url" class="dc-breadcrumbs__breadcrumb">
+                <svg icon="arrow-right-grey" class="dcg-icon-arrow-right"></svg>
+                <span>
+                    @item.title
+                </span>
+            </a>
+        }
     }
 </div>

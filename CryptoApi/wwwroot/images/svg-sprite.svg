@@ -2,6 +2,8 @@
 <path d="M6.27611 7.04478C5.87592 7.53733 5.12408 7.53733 4.72389 7.04478L0.324855 1.63059C-0.206125 0.977077 0.258936 8.12147e-08 1.10097 1.35535e-07L9.89903 7.03103e-07C10.7411 7.57423e-07 11.2061 0.977079 10.6751 1.63059L6.27611 7.04478Z" fill="#EA3F3F"/>
 </g></symbol><symbol id="arrow-right-dark" viewBox="0 0 17 10"><g fill="none">
 <path d="M1 5H15M15 5L10.3333 9M15 5L10.3333 1" stroke="#004188" stroke-width="1.5" stroke-linecap="round"/>
+</g></symbol><symbol id="arrow-right-darkgray" viewBox="0 0 17 10"><g fill="none">
+<path d="M1 5H15M15 5L10.3333 9M15 5L10.3333 1" stroke="#ADADAD" stroke-width="1.5" stroke-linecap="round"/>
 </g></symbol><symbol id="arrow-right-grey" viewBox="0 0 17 10"><g fill="none">
 <path d="M1 5H15M15 5L10.3333 9M15 5L10.3333 1" stroke="#DBDBDB" stroke-width="1.5" stroke-linecap="round"/>
 </g></symbol><symbol id="arrow-right-light" viewBox="0 0 17 10"><g fill="none">

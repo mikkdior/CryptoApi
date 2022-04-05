@@ -1,8 +1,107 @@
-﻿@model (CCoinDataVM coindata, IEnumerable<CTextBlockVM> textblocks)
-<div class="dc-coin-info"> @*flex*@
-    >coin-info
-    <h1>title</h1>
-    @await Html.PartialAsync("_Desc", Model.textblocks)
-    @await Html.PartialAsync("_Table", Model.coindata)
-    @await Html.PartialAsync("_CoinWidget")
+﻿@*@model (CCoinDataVM coindata, IEnumerable<CTextBlockVM> textblocks)*@
+<div class="dc-coin-pair-info dcg-tpg"> @*flex*@
+    <table> 
+        <tr>
+            <td>
+                <span>Name</span>
+            </td>
+            <td>
+                <span>Dash</span>
+            </td>
+            <td>
+                <span>Bitcoin</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Symbol</span>
+            </td>
+            <td>
+                <span>DASH</span>
+            </td>
+            <td>
+                <span>BTC</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Circulating supply</span>
+            </td>
+            <td>
+                <span>10 633 197 $</span>
+            </td>
+            <td>
+                <span>70 633 197 $</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Max supply</span>
+            </td>
+            <td>
+                <span>18 900 000 $</span>
+            </td>
+            <td>
+                <span>158 900 000 $</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Cmc rank</span>
+            </td>
+            <td>
+                <span>76</span>
+            </td>
+            <td>
+                <span>12</span>
+            </td>
+        </tr>
+    </table>
+    @*/-----------------------------------------/*@
+    <table>
+        <tr>
+            <td>
+                <span>Volume 24h</span>
+            </td>
+            <td>
+                <span>358 779 920 $</span>
+            </td>
+            <td>
+                <span>878 779 920 $</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Percent change 1h</span>
+            </td>
+            <td>
+                <span class="dcg-value-down">-0,37%</span>
+            </td>
+            <td>
+                <span class="dcg-value-up">5,59%</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Percent change 24h</span>
+            </td>
+            <td>
+                <span class="dcg-value-up">5,59%</span>
+            </td>
+            <td>
+                <span class="dcg-value-down">-0,37%</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Percent change 7d</span>
+            </td>
+            <td>
+                <span class="dcg-value-up">10%</span>
+            </td>
+            <td>
+                <span class="dcg-value-up">10%</span>
+            </td>
+        </tr>
+    </table>
 </div>

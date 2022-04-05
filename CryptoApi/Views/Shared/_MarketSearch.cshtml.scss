@@ -5,6 +5,8 @@
 
     form {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__wrapper {
@@ -18,14 +20,25 @@
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+
+        &:focus-visible {
+            outline: 0;
+        }
     }
 
     .dcg-btn {
+        display: inline-block;
+        background: #F0F0F0;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
     }
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+        margin-right: 2px;
     }
 
     @include media-breakpoint-down (sm) {

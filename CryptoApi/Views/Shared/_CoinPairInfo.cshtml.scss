@@ -1,9 +1,13 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-pair-info */
 .dc-coin-pair-info {
+    padding-bottom: 40px;
+
+    table td:nth-child(3) {
+        text-align: left !important;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coin-pair-info */

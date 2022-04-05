@@ -5,10 +5,13 @@
 
     &__breadcrumb {
         display: inline-block;
-        color: #CBCBCB;
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 0.2px;
+
+        a, span {
+            color: #CBCBCB;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
     }
 
     .dcg-icon-arrow-right {

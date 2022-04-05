@@ -1,6 +1,17 @@
-﻿<div class="dc-guide-list">
-    >guide-list
-    @await Html.PartialAsync("_Guide")
-    @await Html.PartialAsync("_Guide")
-    @await Html.PartialAsync("_Guide")
+﻿@{
+    string content_1 = "Select Ethereum and Bitcoin in the exchange window, then enter the amount of crypto you’d like to exchange";
+    string content_2 = "Choose whether you want to exchange crypto at fixed or floating rates";
+    string content_3 = "Enter your wallet addres. You will be shown a wallet address and the exact amount of crypto";
+    string content_4 = "That’s it! Enjoy your new Bitcoin";
+}
+
+<div class="dc-guide-list">
+    <h2 class="dcg-h2">Simple guide to exchange ETH to BTC</h2>
+    <div class="row">
+        <div class="col-3">@await Html.PartialAsync("_Guide", ("/images/exchange-image.png", "1. Сhoose crypto", content_1))</div>
+        <div class="col-3">@await Html.PartialAsync("_Guide", ("/images/cursor.png", "2. Select rates", content_2))</div>
+        <div class="col-3">@await Html.PartialAsync("_Guide", ("/images/wallet.png", "3. Enter wallet", content_3))</div>
+        <div class="col-3">@await Html.PartialAsync("_Guide", ("/images/done-image.png", "4. Well done", content_4))</div>
+    </div>
 </div>
+

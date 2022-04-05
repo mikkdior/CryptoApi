@@ -1,3 +1,13 @@
-﻿<div class="dc-guide">
-    >guide
+﻿@model (string img_path, string title, string content)
+
+<div class="dc-guide dcg-shadow-hover">
+    <div class="dc-guide__head">
+        <img src="@Model.img_path" alt="image">
+        <h3 class="dcg-h3">@Model.title</h3>
+    </div>
+    <div class="dc-guide__content">
+        <p>
+            @Model.content
+        </p>
+    </div>
 </div>
