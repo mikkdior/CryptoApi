@@ -1,2 +1,32 @@
 ﻿@using CryptoApi.Models.DB
 @model CCommonMetaDataM
+
+<h1>Common meta</h1>
+<div class="dc-meta-editor">
+    @using (Html.BeginForm("CommonMeta", "Admin", FormMethod.Post))
+    {
+        <p>
+            <label>group: </label>
+            <select name="group">
+                <option value="coin desc">Описание монеты</option>
+                <option value="coin texts">Тексты монеты</option>
+                <option value="coin faq">Faq монеты</option>
+                <option value="pair desc">Описание пары</option>
+                <option value="pair texts">Тексты пары</option>
+                <option value="pair faq">Faq пары</option>
+            </select>
+        </p>
+        <p>
+            <label>option: </label>
+            @Html.Editor("option")
+        </p>
+        <p>
+            <label>value: </label>
+            @Html.TextAreaFor(m => m.value)
+        </p>
+        <p>
+            <input type="submit" value="post"/>
+        </p>
+    }
+</div>
+<a asp-controller="Admin" asp-action="Index" class="dc-admin-back">>back</a>

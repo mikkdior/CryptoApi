@@ -18,6 +18,10 @@ namespace CryptoApi.Api.Gecko
         {
             foreach(var coin in coins_full)
             {
+                //Console.WriteLine("image: " + coin.Image.Large.AbsoluteUri);
+                //Console.WriteLine("image: " + coin.Image.Small.AbsoluteUri);
+                //Console.WriteLine("image: " + coin.Image.Thumb.AbsoluteUri);
+                
                 yield return new CApiCoin
                 {
                     Image = coin.Image.Large.AbsoluteUri,

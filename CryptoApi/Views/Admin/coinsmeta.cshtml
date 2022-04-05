@@ -1,3 +1,38 @@
 ﻿@using CryptoApi.Models.DB
 @model CCoinsMetaDataM
 @inject CBlocksHelperVM BlocksHelper
+
+<h1>Coins meta</h1>
+<div class="dc-meta-editor">
+    @using (Html.BeginForm("CoinsMeta", "Admin", FormMethod.Post))
+    {
+        <p>
+            <label>coin name: </label>
+            <input name="name" id="coin_pair_id" >
+        </p>
+        <p>
+            <label>group: </label>
+            <select name="group">
+                <option value="description">Описание монеты</option>
+                <option value="texts">Тексты монеты</option>
+                <option value="faq">Faq монеты</option>
+            </select>
+        </p>
+        <p>
+            <label>option: </label>
+            @Html.Editor("option")
+        </p>
+        <p>
+            <label>value: </label>
+            @Html.TextAreaFor(m => m.value)
+        </p>
+        <p>
+            <label>CCoinDataMid: </label>
+            @Html.Editor("CCoinDataMid")
+        </p>
+        <p>
+            <input type="submit" value="post"/>
+        </p>
+    }
+</div>
+<a asp-controller="Admin" asp-action="Index" class="dc-admin-back">>back</a>

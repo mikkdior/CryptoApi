@@ -12,10 +12,6 @@ public class CCoinsMetaDataM
     public string group { get; set; }
     public string option { get; set; }
     public string value { get; set; }
-    
-
-
-
 
     [ForeignKey("coins_id")]
     public CCoinDataM coin { get; set; }

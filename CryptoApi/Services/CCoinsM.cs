@@ -86,7 +86,7 @@ public class CCoinsM : CBaseDbM
         new_coin.name_full = coin.FullName;
         new_coin.name = coin.Name;
         new_coin.slug = coin.Name;
-        new_coin.image = coin.Image;
+        new_coin.image = coin.Image ?? new_coin.image;
         new_coin.last_updated = now;
 
         if (coin.UsdPrice == null) return new_coin;
@@ -156,8 +156,8 @@ public class CCoinsM : CBaseDbM
     public IEnumerable<CCoinDataM> GetTrueCoins()
     {
         return db.Coins
-            .Include(c => c.ext)
-            .Where(c => c.ext.Count() > 0);
+            .Include(c => c.ext);
+            //.Where(c => c.ext.Count() > 0);
     }
 
     /// <summary>
@@ -165,6 +165,7 @@ public class CCoinsM : CBaseDbM
     /// </summary>
     public IEnumerable<CCoinDataVM> GetCoins(CCoinDataM coin)
     {
+        return GetCoins(1, 10);
         return from item in coin["coins"]
                where item.coins_id == coin.id
                select new CCoinDataVM() { data = db.Coins.Find(uint.Parse(item.value)) };

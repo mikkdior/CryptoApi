@@ -1,4 +1,6 @@
 ﻿using CryptoApi.Models.DB;
+using CryptoApi.Services;
+using CryptoApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CryptoApi.Controllers;
@@ -50,8 +52,12 @@ public class AdminController : Controller
     ///     После чего перенаправляет на страницу админ панели, на которой находится пустая форма для добавления метаданных таблицы БД "CoinPairsMeta".
     /// </summary>
     [HttpPost]
-    public IActionResult CoinPairsMeta(CCoinPairsMetaDataM meta)
+    public IActionResult CoinPairsMeta(CCoinPairsMetaDataM meta, string name1, string name2, [FromServices] CCoinsM model)
     {
+        var coin1 = model.GetCoinByName(name1);
+        var coin2 = model.GetCoinByName(name2);
+        meta.coin_1_id = coin1.data.id;
+        meta.coin_2_id = coin2.data.id;
         db.CoinPairsMeta.Add(meta);
         db.SaveChanges();
 
@@ -68,8 +74,11 @@ public class AdminController : Controller
     ///     После чего перенаправляет на страницу админ панели, на которой находится пустая форма для добавления метаданных таблицы БД "CoinsMeta".
     /// </summary>
     [HttpPost]
-    public IActionResult CoinsMeta(CCoinsMetaDataM meta)
+    public IActionResult CoinsMeta(CCoinsMetaDataM meta, string name, [FromServices] CCoinsM model)
     {
+        var coin = model.GetCoinByName(name);
+        meta.coins_id = coin.data.id;
+        meta.coin = coin.data;
         db.CoinsMeta.Add(meta);
         db.SaveChanges();
 
