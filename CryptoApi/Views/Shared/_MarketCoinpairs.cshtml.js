@@ -1,6 +1,6 @@
-// market-coinpairs
-jQuery('.dc-market-coinpairs').dcTpl(function ($, Export) {
+// market-coin-pairs
+jQuery('.dc-market-coin-pairs').dcTpl(function ($, Export) {
    var $self = $(this);
 });
-// /market-coinpairs
+// /market-coin-pairs
 //--------------------------------------------

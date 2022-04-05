@@ -4,7 +4,7 @@ namespace CryptoApi.ViewModels
 {
     public interface ITableVM
     {
-        IEnumerable<string> keys { get; }
+        IEnumerable<IHtmlContent> keys { get; }
         IEnumerable<IEnumerable<IHtmlContent>> rows { get; }
     }
 }

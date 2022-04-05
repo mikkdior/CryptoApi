@@ -7253,6 +7253,8 @@ a.text-dark:hover, a.text-dark:focus {
   letter-spacing: 0em;
   padding: 15px 0;
   vertical-align: middle; }
+  .dcg-tpg th a {
+    font-weight: 400 !important; }
 
 .dcg-tpg tr {
   border-bottom: 1px solid #ECECEC; }
@@ -7892,6 +7894,51 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
         .dc-main-menu__nav ul li a:hover {
           color: #0FD4E2; }
 
+.dc-market-coin-pairs {
+  border-radius: 7px;
+  padding: 20px;
+  margin-top: -160px;
+  background: #fff;
+  padding-bottom: 0; }
+  .dc-market-coin-pairs .dc-table th:first-child {
+    width: 39px; }
+  .dc-market-coin-pairs .dc-table th:last-child {
+    text-align: end;
+    padding-right: 26px; }
+    .dc-market-coin-pairs .dc-table th:last-child::after {
+      content: ""; }
+  .dc-market-coin-pairs .dc-table th:nth-child(2) {
+    width: 93px; }
+  .dc-market-coin-pairs__search-by {
+    font-size: 14px;
+    font-weight: 400 !important;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 110px; }
+  .dc-market-coin-pairs__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px; }
+    .dc-market-coin-pairs__header .dcg-btn {
+      display: none; }
+    .dc-market-coin-pairs__header svg {
+      width: 13px;
+      height: 6px; }
+  .dc-market-coin-pairs__exchange .dcg-btn {
+    background: #0056B3;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; }
+  .dc-market-coin-pairs__exchange .dcg-btn:hover {
+    color: #fff; }
+  .dc-market-coin-pairs__exchange svg {
+    width: 13px;
+    height: 6px; }
+
 .dc-market-coins {
   border-radius: 7px;
   padding: 20px;
@@ -8114,6 +8161,24 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-subheader-coin .dc-exchange-widget {
   margin-left: auto; }
+
+.dc-subheader-coin-pairs {
+  margin-bottom: 75px; }
+  .dc-subheader-coin-pairs .dcg-h1 {
+    text-align: center;
+    width: 489px;
+    margin: auto;
+    margin-top: 45px; }
+  .dc-subheader-coin-pairs__desc {
+    text-align: center;
+    color: #FFF;
+    width: 521px;
+    margin: auto;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em; }
 
 .dc-subheader-coins {
   margin-bottom: 75px; }

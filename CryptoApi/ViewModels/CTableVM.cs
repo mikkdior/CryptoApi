@@ -8,8 +8,8 @@ namespace CryptoApi.ViewModels
     {
         public delegate string DGetItem(TRow data);
         public delegate IHtmlContent DGetHtmlItem(TRow data);
-        private Dictionary<string, DGetHtmlItem> items = new();
-        public IEnumerable<string> keys => items.Keys;
+        private Dictionary<IHtmlContent, DGetHtmlItem> items = new();
+        public IEnumerable<IHtmlContent> keys => items.Keys;
         public IEnumerable<IEnumerable<IHtmlContent>> rows => GetRows();
 
         IEnumerable<TRow> data { get; set; }
@@ -29,7 +29,7 @@ namespace CryptoApi.ViewModels
 
         public CTableVM<TRow> Add (string title, DGetItem callback)
         {
-            items.Add(title, i =>
+            items.Add(new HtmlContentBuilder().AppendHtml(title), i =>
             {
                 return new HtmlContentBuilder().AppendHtml(callback(i));
             });
@@ -38,7 +38,7 @@ namespace CryptoApi.ViewModels
         }
         public CTableVM<TRow> Add(string title, DGetHtmlItem callback)
         {
-            items.Add(title, callback);
+            items.Add(new HtmlContentBuilder().AppendHtml(title), callback);
             return this;
         }
 
