@@ -29,6 +29,10 @@
                 content: "";
             }
         }
+
+        th:nth-child(2) {
+            width: 225px;
+        }
     }
 
     @include media-breakpoint-down (sm) {

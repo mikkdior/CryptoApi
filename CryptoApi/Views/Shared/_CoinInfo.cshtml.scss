@@ -1,9 +1,11 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-info */
 .dc-coin-info {
+    table td:first-child {
+        width: 185px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coin-info */

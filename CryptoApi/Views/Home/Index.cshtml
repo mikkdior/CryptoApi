@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_Coins")
+                @await Html.PartialAsync("_Coins", BlocksHelper.GetCoinList(16))
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_MarketUpdate")
+                @await Html.PartialAsync("_MarketUpdate", BlocksHelper.GetCoinList(10))
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_CoinPairs")
+                @await Html.PartialAsync("_CoinPairs", BlocksHelper.GetPairList(8))
             </div>
         </div>
     </div>

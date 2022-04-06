@@ -1,9 +1,15 @@
 // /*.....................................*/
 // /* TEMPLATE: subheader-coin-pair */
 .dc-subheader-coin-pair {
+    .dcg-h1 {
+        margin-bottom: 39px;
+    }
+
+    .dc-exchange-widget {
+        margin-left: auto;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: subheader-coin-pair */

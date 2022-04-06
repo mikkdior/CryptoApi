@@ -54,18 +54,17 @@
         </tr>
         <tr>
             <td>
-                <span>Percent change 1h</span>
-            </td>
-            <td>
-                <span class="dcg-value-down">@(Model.coin.data.change_1h)% </span>
-            </td>
-        </tr>
-        <tr>
-            <td>
                 <span>Percent change 24h</span>
             </td>
             <td>
-                <span class="dcg-value-up">@(Model.coin.data.day_change)%</span>
+                @if(Model.coin.data.week_percent_change < 0)
+                {
+                    <span class="dcg-value-down">@(Model.coin.data.day_change)%</span>
+                }
+                else
+                {
+                    <span class="dcg-value-up">@(Model.coin.data.day_change)%</span>
+                }
             </td>
         </tr>
         <tr>
@@ -73,7 +72,14 @@
                 <span>Percent change 7d</span>
             </td>
             <td>
-                <span class="dcg-value-up">@(Model.coin.data.week_percent_change)%</span>
+                @if(Model.coin.data.week_percent_change < 0)
+                {
+                    <span class="dcg-value-down">@(Model.coin.data.week_percent_change)%</span>
+                }
+                else
+                {
+                    <span class="dcg-value-up">@(Model.coin.data.week_percent_change)%</span>
+                }
             </td>
         </tr>
     </table>

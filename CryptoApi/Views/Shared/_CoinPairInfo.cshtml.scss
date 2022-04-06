@@ -7,6 +7,14 @@
         text-align: left !important;
     }
 
+    table td:nth-child(2) {
+        width: 130px;
+    }
+
+    table td:first-child {
+        width: 185px;
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }

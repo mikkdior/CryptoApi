@@ -9,29 +9,8 @@
         <div class="row">
             <div class="col-6">
                 <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
-                    <h2 class="dcg-h2 text-left m-0">Basic information about @Model.pair.coin1.name_full</h2>
-                    @{
-                        string content = @" 
-                            <h3>Do I need to get verified to swap ETH to BTC?</h3>
-                            <p>
-                                If it’s your first time exchanging funds on Changelly, you will need to submit the proof of identity. This data helps us keep the platform safe from malicious actors and any suspicious transactions.
-                            </p>
-                            <p>
-                                Another thing you’ll have to do before any exchanges is to provide your email. This is a standard procedure to create an account. Alternatively, you can use your Facebook or Twitter login credentials. You may enable or disable 2FA authentication at any time. But it’s recommended to keep the added layer of verification for maximum safety.
-                            </p>
-                            <h3>What are the fees to convert Ethereum to Bitcoin?</h3>
-                            <p>
-                                Always keep in mind that the final cost of the transaction amount will include two types of fees: exchange fees and network fees.
-                            </p>
-                            <p>
-                                The exchange fee on our platform is 0.25%, applicable to all transactions. If you’re converting the minimum amount - which is 0.02 ETH - the platform fee will be 0.00000411 BTC. If you’re exchanging one ether, the fee will be 0.00020516 BTC.
-                            </p>
-                            <p>
-                                As for the network fee, it is always 0.0005 BTC, regardless of the transaction size. ETH gas fees go towards successfully conducting transactions on the Ethereum blockchain. This small payment compensates for the computing energy required to process and validate operations. The estimated arrival is also the same regardless of the transaction – 5-30 minutes.
-                            </p>";
-                    }
-
-                    @await Html.PartialAsync("_TextBlock", ("", content))
+                    <h2 class="dcg-h2 text-left m-0">@Model.Description.title</h2>
+                    @await Html.PartialAsync("_TextBlock", ("", Model.Description.text))
                 </div>
             </div>
             <div class="col-6">
@@ -40,8 +19,8 @@
                         @await Html.PartialAsync("_CoinPairInfo", Model)
                     </div>
                     <div class="col-12 bg-info">
-                        <h3 class="dcg-h3">Exchange rate @Model.pair.coin1.name to @Model.pair.coin2</h3>
-                        @await Html.PartialAsync("_CoinWidget", (Model.pair.coin1.name, Model.pair.coin2.name))
+                        <h3 class="dcg-h3">Exchange rate @Model.pair.data.name_1 to @Model.pair.data.name_2</h3>
+                        @await Html.PartialAsync("_CoinWidget", (Model.pair.data.name_1, Model.pair.data.name_2))
                     </div>
                 </div>
             </div>
@@ -53,7 +32,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_GuideList", (Model.pair.coin1.name, Model.pair.coin2.name))
+                @await Html.PartialAsync("_GuideList", (Model.pair.data.name_1, Model.pair.data.name_2))
             </div>
         </div>
     </div>
@@ -63,7 +42,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_CoinPairs")
+                @await Html.PartialAsync("_CoinPairs", BlocksHelper.GetPairList(8))
             </div>
         </div>
     </div>
@@ -73,7 +52,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_Coins")
+                @await Html.PartialAsync("_Coins", BlocksHelper.GetCoinList(16))
             </div>
         </div>
     </div>
@@ -100,5 +79,5 @@
 </section>
 
 @section PageHead {
-    @await Html.PartialAsync("_SubheaderCoinPair", (Model.pair.coin1.name, Model.pair.coin2.name))
+    @await Html.PartialAsync("_SubheaderCoinPair", (Model.pair.data.name_1, Model.pair.data.name_2))
 }

@@ -30,9 +30,6 @@ public class CCoinDataM
     public decimal? volume_24h => 828881044;
     public decimal? change_1h => 2.21m;
 
-
-
-
     public ICollection<CCoinsMetaDataM> meta { get; set; }
     public ICollection<CCoinsExtDataM> ext { get; set; }
 

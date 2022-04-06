@@ -1,11 +1,11 @@
-﻿@*@model CCoinDataVM*@
+﻿@model CCoinDataVM
 
 <div class="dc-coin dcg-shadow-hover">
-    <a class="dc-coin__link" asp-controller="Coins" asp-action="Coin" asp-route-coin="btc">
-        <img src="/images/test-coin-image.png" alt="coin-image">
+    <a class="dc-coin__link" asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name">
+        <img src="@Model.data.image" alt="coin-image">
         <h3 class="dcg-h3"> 
-            Bitcoin  (BTC)
-        </h5>
+            @Model.data.name_full  (@Model.data.name.ToUpper())
+        </h3>
         <svg icon="arrow-right-dark" class="dcg-icon-arrow-right"></svg>
     </a>
 </div>

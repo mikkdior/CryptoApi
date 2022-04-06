@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<CCoinPairDataVM>*@
+﻿@model IEnumerable<CCoinPairDataVM>
 
 <div class="dc-coin-pairs">
     <div class="dcg-section__head">
@@ -9,10 +9,10 @@
         </a>
     </div>
     <div class="row">
-        @for(int k = 0; k < 8; k++)
+        @foreach(var pair in Model)
         {
             <div class="col-3">
-                @await Html.PartialAsync("_CoinPair")
+                @await Html.PartialAsync("_CoinPair", pair)
             </div>
         }
     </div>

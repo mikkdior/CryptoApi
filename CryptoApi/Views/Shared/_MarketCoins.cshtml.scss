@@ -30,10 +30,10 @@
             text-align: end;
             padding-right: 26px;
             width: 165px;
+        }
 
-            &::after {
-                content: "";
-            }
+        th:nth-child(2) {
+            width: 250px;
         }
     }
 

@@ -53,6 +53,10 @@
             text-align: right;
         }
 
+        th:nth-child(1), th:nth-child(4) {
+            width: 250px;
+        }
+
         th:last-child {
             text-align: end;
             padding-right: 26px;

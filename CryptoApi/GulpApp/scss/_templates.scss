@@ -166,9 +166,11 @@
 // /*.....................................*/
 // /* TEMPLATE: coin-info */
 .dc-coin-info {
+    table td:first-child {
+        width: 185px;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: coin-info */
@@ -262,6 +264,14 @@
         text-align: left !important;
     }
 
+    table td:nth-child(2) {
+        width: 130px;
+    }
+
+    table td:first-child {
+        width: 185px;
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }
@@ -304,13 +314,16 @@
 
     .dc-coin {
         width: 265px;
-        height: 60px;
+        min-height: 60px;
         margin-bottom: 10px;
         background: #fff;
+        border-radius: 7px;
+        margin-top: 0px !important;
 
         &__link {
             padding: 15px;
-            justify-content: space-between;
+            position: relative;
+            align-items: flex-start;
         }
 
         &:hover {
@@ -320,13 +333,21 @@
         }
 
         .dcg-h3 {
-            margin-right: auto;
+            padding-right: 20px;
+            margin-top: 0 !important;
+        }
+
+        .dcg-icon-arrow-right {
+            position: absolute;
+            right: 15px;
+            top: 25px;
         }
     }
 
     .dcg-icon-arrow-right {
         margin-left: 7px;
     }
+
 
     &__list {
         justify-content: space-between;
@@ -732,6 +753,10 @@
             text-align: right;
         }
 
+        th:nth-child(1), th:nth-child(4) {
+            width: 250px;
+        }
+
         th:last-child {
             text-align: end;
             padding-right: 26px;
@@ -834,10 +859,10 @@
             text-align: end;
             padding-right: 26px;
             width: 165px;
+        }
 
-            &::after {
-                content: "";
-            }
+        th:nth-child(2) {
+            width: 250px;
         }
     }
 
@@ -989,6 +1014,10 @@
             &::after {
                 content: "";
             }
+        }
+
+        th:nth-child(2) {
+            width: 225px;
         }
     }
 
@@ -1365,9 +1394,15 @@
 // /*.....................................*/
 // /* TEMPLATE: subheader-coin-pair */
 .dc-subheader-coin-pair {
+    .dcg-h1 {
+        margin-bottom: 39px;
+    }
+
+    .dc-exchange-widget {
+        margin-left: auto;
+    }
 
     @include media-breakpoint-down (sm) {
-
     }
 }
 // /* /TEMPLATE: subheader-coin-pair */

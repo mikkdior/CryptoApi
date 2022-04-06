@@ -28,10 +28,10 @@
                 <span>Circulating supply</span>
             </td>
             <td>
-                <span>$@Model.pair.coin1.circulating_supply</span>
+                <span>$@Model.pair.data.price_1</span>
             </td>
             <td>
-                <span>$@Model.pair.coin2.circulating_supply</span>
+                <span>$@Model.pair.data.price_2</span>
             </td>
         </tr>
         <tr>
@@ -72,24 +72,27 @@
         </tr>
         <tr>
             <td>
-                <span>Percent change 1h</span>
-            </td>
-            <td>
-                <span class="dcg-value-down">@(Model.pair.coin1.change_1h)%</span>
-            </td>
-            <td>
-                <span class="dcg-value-up">@(Model.pair.coin2.change_1h)%</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
                 <span>Percent change 24h</span>
             </td>
             <td>
-                <span class="dcg-value-up">@(Model.pair.coin1.day_percent_change)%</span>
+                @if(Model.pair.coin1.day_percent_change < 0)
+                {
+                    <span class="dcg-value-down">@(Model.pair.coin1.day_percent_change)%</span>
+                }
+                else
+                {
+                    <span class="dcg-value-up">@(Model.pair.coin1.day_percent_change)%</span>
+                }
             </td>
             <td>
-                <span class="dcg-value-down">@(Model.pair.coin2.day_percent_change)%</span>
+                @if(Model.pair.coin1.day_percent_change < 0)
+                {
+                    <span class="dcg-value-down">@(Model.pair.coin2.day_percent_change)%</span>
+                }
+                else
+                {
+                    <span class="dcg-value-up">@(Model.pair.coin2.day_percent_change)%</span>
+                }
             </td>
         </tr>
         <tr>

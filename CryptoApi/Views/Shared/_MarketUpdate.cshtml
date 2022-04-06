@@ -1,7 +1,6 @@
 ﻿@using CryptoApi.ViewModels
 @inject CBlocksHelperVM BlocksHelper
-@*"<span class='dcg-value-up'>{i.data.ext.Last().volume_24h.ToString()}</span>"*@
-@using Microsoft.AspNetCore.Html;
+@model IEnumerable<CCoinDataVM>
 @{
     int counter = 0;
 }
@@ -14,14 +13,14 @@
             <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
         </a>
     </div>
-    @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (BlocksHelper.GetCoinList(10))
+    @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM>(Model)
         .Add("#", i => (++counter).ToString())
-        .Add("Name<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => Html.Partial("_Coin"))
-        .Add("Price<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => $"<span class='text-primary'>${i.data.ext.Last().usd_price}</span>")
-        .Add("Volume (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => i.data.day_change.ToString())
-        .Add("Circulating Supply<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => i.data.day_percent_change.ToString())
-        .Add("Market Cap<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => "$" + i.data.market_cap.ToString())
-        .Add("Change (24h<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => $"<span class='dcg-value-up'>+{i.data.ext.Last().change_24h.ToString()}</span>")
+        .Add("Name<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => Html.Partial("_Coin", i))
+        .Add("Price<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => $"<span class='text-primary'>${i.data.usd_price}</span>")
+        .Add("Volume (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => "$" + ((long)i.data.volume_24h).ToString())
+        .Add("Circulating Supply<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => i.data.circulating_supply.ToString())
+        .Add("Market Cap<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => "$" + ((long)i.data.market_cap).ToString())
+        .Add("Change (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => $"<span class='{(i.data.day_percent_change < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change.ToString()}%</span>")
         .Add("Price Graph (7d)", i => "<img src='/images/graph.png'>")
     )
 </div>

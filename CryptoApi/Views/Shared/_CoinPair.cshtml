@@ -1,37 +1,49 @@
 ﻿@using CryptoApi.Models.DB;
-@*@model CCoinPairDataVM*@
+@model CCoinPairDataVM
 
 <div class="dc-coin-pair">
     <div class="dc-coin-pair__wrapper dcg-shadow-hover">
         <div class="dc-coin-pair__head">
             <div class="dc-coin-pair__coin">
-                <a asp-controller="Coins" asp-action="Coin" asp-route-coin="btc" class="dc-coin-pair__coin-head">
-                    <img src="/images/test-coin-image.png" alt="coin-image">
+                <a asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name_1" class="dc-coin-pair__coin-head">
+                    <img src="@Model.coin1.image" alt="coin-image">
                     <h3 class="dcg-h3">
-                        BTC
+                        @Model.data.name_1
                     </h3>
                 </a>
-                <span class="dcg-percent-change dcg-percent-change_neg">
-                    <span class="dcg-value-down">-4,83%</span>
-                </span>
+                @if(Model.coin1.day_change < 0)
+                {
+                    <span class="dcg-value-down">@Model.data.day_percent_change_1%</span>
+                }
+                else
+                {
+                    <span class="dcg-value-up">+@Model.data.day_percent_change_1%</span>
+                }
+
             </div>
             <svg icon="arrow-right-darkgray" class="dcg-icon-arrow-right"></svg>
             <div class="dc-coin-pair__coin">
-                <a asp-controller="Coins" asp-action="Coin" asp-route-coin="btc" class="dc-coin-pair__coin-head">
-                    <img src="/images/test-coin-image.png" alt="coin-image">
+                <a asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name_2" class="dc-coin-pair__coin-head">
+                    <img src="@Model.coin2.image" alt="coin-image">
                     <h3 class="dcg-h3"> 
-                        ETH
+                        @Model.data.name_2
                     </h3>
                 </a>
-                <span class="dcg-percent-change dcg-percent-change_pos">
-                    <span class="dcg-value-up">+5,16%</span>
-                </span>
+                    
+                @if(Model.coin2.day_change < 0)
+                {
+                    <span class="dcg-value-down">@Model.data.day_percent_change_2%</span>
+                }
+                else
+                {
+                    <span class="dcg-value-up">+@Model.data.day_percent_change_2%</span>
+                }
             </div>
         </div>
         <span class="dc-coin-pair__value">
-            1 BTC = 13.90605686 ETH
+            1 @Model.data.name_1 = @Model.data.price_2 &nbsp; @Model.data.name_2
         </span>
-        <a class="dcg-btn dcg-btn_small" asp-controller="CoinPairs" asp-action="Pair" asp-route-coin1="btc" asp-route-coin2="eth">
+        <a class="dcg-btn dcg-btn_small" asp-controller="CoinPairs" asp-action="Pair" asp-route-coin1="@Model.data.name_1" asp-route-coin2="@Model.data.name_2">
             <svg icon="exchange-cycle-light"></svg>
             <span>Exchange</span>
         </a>

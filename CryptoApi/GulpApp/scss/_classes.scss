@@ -351,6 +351,10 @@ textarea {}
                 background: #11BDC9;
             }
         }
+
+        .dcg-icon-arrow-right {
+            margin-left: 7px;
+        }
     }
 
     @include media-breakpoint-down (sm) {
