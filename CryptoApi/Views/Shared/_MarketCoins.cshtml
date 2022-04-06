@@ -8,7 +8,13 @@
     <div class="dc-market-coins__header">
         @await Html.PartialAsync("_MarketSearch")
         <a class="dc-market-coins__search-by" href="#">Sort coins by <svg icon="sort-down-arrow"></svg></a>
-    </div>  
+    </div>
+    @*@foreach(var item in Model)
+    {
+        <p>
+            @item.data.name_full
+        </p>
+    }*@
     @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (Model)
         .Add("#", i => (++counter).ToString())
         .Add("Name<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg>", i => Html.Partial("_Coin", i))

@@ -31,10 +31,10 @@ public class CoinsController : Controller
     ///     Отображает страницу всех монет.
     /// </summary>
     [Route("/coins")]
-    public IActionResult Index(int page, [FromServices] CCoinsVM model)
+    public IActionResult Index([FromServices] CCoinsVM model, int page, string filter = "")
     {
-        ViewBag.Blocks = blocksHelper;
-        model.Init(HttpContext);
+        model.Init(HttpContext, filter);
+
         return View(model);
     }
 

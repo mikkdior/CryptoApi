@@ -128,23 +128,26 @@ public class CCoinsM : CBaseDbM
     /// <summary>
     ///     Возвращает количество монет.
     /// </summary>
-    public int Count()
+    public int Count(string filter = "")
     {
-        return db.Coins.Count<CCoinDataM>();
+        return db.Coins
+            .Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
+            .Count<CCoinDataM>();
     }
 
-    public int TrueCount()
+    public int TrueCount(string filter = "")
     {
-        return GetTrueCoins().Count();
+        return GetTrueCoins(filter).Count();
     }
 
     /// <summary>
     ///     Достает монеты из БД используя исходное заданное количество и номер страницы.
     /// </summary>
-    public IEnumerable<CCoinDataVM> GetCoins (int page, int count)
+    public IEnumerable<CCoinDataVM> GetCoins (int page, int count, string filter = "")
     {
         return db.Coins
             .Include(c => c.ext)
+            .Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
             .Select(c => new CCoinDataVM()
             {
                 data = c
@@ -153,9 +156,10 @@ public class CCoinsM : CBaseDbM
             .Take(count);
     }
 
-    public IEnumerable<CCoinDataM> GetTrueCoins()
+    public IEnumerable<CCoinDataM> GetTrueCoins(string filter = "")
     {
         return db.Coins
+            .Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
             .Include(c => c.ext);
             //.Where(c => c.ext.Count() > 0);
     }
@@ -190,9 +194,9 @@ public class CCoinsM : CBaseDbM
     /// <summary>
     ///     Возвращает число максимально возможной страницы для пагинации.
     /// </summary>
-    public int GetMaxPage (int count)
+    public int GetMaxPage (int count, string filter = "")
     {
-        int max_count = (int)Math.Ceiling(Count() / count * 1f);
+        int max_count = (int)Math.Ceiling(Count(filter) / count * 1f);
         return max_count;
     }
 

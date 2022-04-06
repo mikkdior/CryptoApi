@@ -27,9 +27,9 @@ public class CBlocksHelperVM
     /// <summary>
     ///     Возвращает список монет относительно кол-ва и номера страницы.
     /// </summary>
-    public IEnumerable<CCoinDataVM> GetCoinList(int count, int page = 1)
+    public IEnumerable<CCoinDataVM> GetCoinList(int count, int page = 1, string filter = "")
     {
-        return coinsModel.GetCoins(page, count);
+        return coinsModel.GetCoins(page, count, filter);
     }
     /// <summary>
     ///     Возвращает список похожих монет относительно текущей.
@@ -39,9 +39,9 @@ public class CBlocksHelperVM
     /// <summary>
     ///     Возвращает список пар относительно кол-ва и номера страницы.
     /// </summary>
-    public IEnumerable<CCoinPairDataVM> GetPairList(int count, int page = 1)
+    public IEnumerable<CCoinPairDataVM> GetPairList(int count, int page = 1, string filter = "")
     {
-        return pairsModel.GetPairs(page, count);
+        return pairsModel.GetPairs(page, count, filter);
     }
     /// <summary>
     ///     Возвращает список похожих пар относительно текущей.

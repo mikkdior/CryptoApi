@@ -1,7 +1,14 @@
 ﻿<div class="dc-market-search">
     <div class="dc-market-search__wrapper">
-        <form method="get">
-            <input class="dcg-inp" type="text" placeholder="Search the coin">
+        <form method="get" action="#">
+            @if (Context.Request.Query.ContainsKey("filter"))
+            {
+                <input class="dcg-inp" name="filter" value="@Context.Request.Query["filter"]" type="text" placeholder="Search the coin">
+            }
+            else
+            {
+                <input class="dcg-inp" name="filter" type="text" placeholder="Search the coin">
+            }
             <button class="btn dcg-btn" type="submit"><svg icon="search"></svg></button>
         </form>
     </div>

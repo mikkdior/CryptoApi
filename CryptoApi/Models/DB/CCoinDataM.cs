@@ -19,7 +19,7 @@ public class CCoinDataM
     public decimal? week_percent_change => CCurrMath.GetChangePercentPrice(7, ext);
     public decimal? month_percent_change => CCurrMath.GetChangePercentPrice(30, ext);
 
-    public decimal? usd_price => ext.Last()?.usd_price;
+    public decimal? usd_price => ext.Last()?.usd_price == 0 ? 0 : ext.Last()?.usd_price;
     public decimal? market_cap => ext.Last()?.market_cap;
     public decimal? low => ext.Last()?.low;
     public decimal? high => ext.Last()?.high;

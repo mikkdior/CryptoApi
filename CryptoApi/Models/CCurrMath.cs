@@ -32,6 +32,8 @@ namespace CryptoApi.Models
             var diff = GetChangePrice(days, coins);
             if (last == null || diff == null) return null;
 
+            if (last.Value == 0) return 0;
+
             var result = Math.Round(100 / last.Value * diff.Value, 3);
             
             return result;

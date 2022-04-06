@@ -27,13 +27,13 @@ public class CCoinsVM
     /// <summary>
     ///     Ручная инициализация (заполнение нужных полей).
     /// </summary>
-    public void Init(HttpContext context)
+    public void Init(HttpContext context, string filter = "")
     {
         int count = Int32.Parse(conf["CoinsCountOnPage"]);
-        maxPage = model.GetMaxPage(count);
+        maxPage = model.GetMaxPage(count, filter);
         string? page_str = (string?)context.Request.Query["page"];
         page = page_str == null ? 1 : Int32.Parse(page_str);
         page = page <= maxPage ? page : maxPage;
-        coins = blocks.GetCoinList(count, page);
+        coins = blocks.GetCoinList(count, page, filter);
     }
 }

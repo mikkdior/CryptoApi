@@ -2,7 +2,7 @@
 @inject IConfiguration conf
 @model List<(string Url, string Title)>
 @{
-    string current_page = Context.Request.Query["page"] == Microsoft.Extensions.Primitives.StringValues.Empty ? "1" : Context.Request.Query["page"];
+    string current_page = Context.Request.Query.ContainsKey("page") ? Context.Request.Query["page"] : "1";
 }
 @if (Model.Count > 1)
 {
@@ -21,9 +21,18 @@
                 else
                 {
                     <li class="dc-pagination__list-item-wrapper">
-                        <a href="@item.Url" class="dc-pagination__item">
-                            @item.Title
-                        </a>
+                        @if (Context.Request.Query.ContainsKey("filter"))
+                        {
+                            <a href="@(item.Url)&filter=@Context.Request.Query["filter"]" class="dc-pagination__item">
+                                @item.Title
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="@item.Url" class="dc-pagination__item">
+                                @item.Title
+                            </a>
+                        }
                     </li>
                 }
             }
