@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="dcg-h2 text-left m-0">Basic information about DODO</h2>
+                <h2 class="dcg-h2 text-left m-0">Basic information about @Model.coin.data.name</h2>
             </div>
         </div>
         <div class="row">
@@ -17,7 +17,7 @@
                 <div class="dcg-desc-wrapper dcg-desc-wrapper_coin">
                     @{
                         string content = @"
-                            <h3>Convert XMR to ETH</h3>
+                            <h3>Convert BTC to XMR</h3>
                             <p>
                                 HitBTC is a platform for digital asset and currency exchange where you can quickly and securely trade Bitcoin, Ethereum, EOS, Tether and many other cryptocurrencies, Several trading options are present, including spot and OTC markets. The platform's interface is very intuitive and easy to navigate.
                             </p>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="col-4"> 
-                @await Html.PartialAsync("_CoinInfo")
+                @await Html.PartialAsync("_CoinInfo", Model)
             </div>
         </div>
     </div>
@@ -82,5 +82,5 @@
 </section>
 
 @section PageHead {
-    @await Html.PartialAsync("_SubheaderCoin")
+    @await Html.PartialAsync("_SubheaderCoin", Model.coin.data.name)
 }
