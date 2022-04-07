@@ -15,19 +15,36 @@
                 }
                 else
                 {
-                    <th><a href="#">@title</a></th>
+                    @if (Model.IsSortable)
+                    {
+                        @if(counter + 1 == Model.keys.Count())
+                        {
+                            <th>@title</th>
+                        }
+                        else
+                        {
+                            <th><a href="#">@title</a></th>
+                        }
+                    }
+                    else
+                    {
+                        <th>@title</th>
+                    }
                 }
             }
         </tr>
+        @*@if (Model.rows.Count() > 0)
+        {*@
+            @foreach (var row in Model.rows)
+            {
+                <tr>
+                    @foreach(var value in row)
+                    {
+                        <td>@value</td>
+                    }
+                </tr>
+            }
+        @*}*@
         
-        @foreach (var row in Model.rows)
-        {
-            <tr>
-                @foreach(var value in row)
-                {
-                    <td>@value</td>
-                }
-            </tr>
-        }
     </table>
 </div>

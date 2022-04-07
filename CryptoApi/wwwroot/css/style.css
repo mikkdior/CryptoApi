@@ -7952,14 +7952,14 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     width: 11px;
     height: 14px;
     margin-left: 7px; }
-  .dc-market-coin-pairs .dc-table th a {
+  .dc-market-coin-pairs .dc-table th {
     font-weight: 400 !important; }
   .dc-market-coin-pairs .dc-table th {
     width: max-content; }
   .dc-market-coin-pairs .dc-table td {
     position: relative; }
   .dc-market-coin-pairs .dc-table th:nth-child(3) {
-    width: 246px;
+    width: 230px;
     text-align: center; }
   .dc-market-coin-pairs .dc-table th:nth-child(4) {
     text-align: left; }
@@ -8007,6 +8007,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       display: none; }
     .dc-market-coin-pairs__exchange:hover .dcg-btn {
       display: flex; }
+  .dc-market-coin-pairs__no-results {
+    padding: 130px 0 150px 0;
+    text-align: center; }
 
 .dc-market-coins {
   border-radius: 7px;
@@ -8072,6 +8075,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       display: none; }
     .dc-market-coins__exchange:hover .dcg-btn {
       display: flex; }
+  .dc-market-coins__no-results {
+    padding: 130px 0 150px 0;
+    text-align: center; }
 
 .dc-market-search {
   width: 910px; }

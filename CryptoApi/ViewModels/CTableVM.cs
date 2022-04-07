@@ -11,14 +11,15 @@ namespace CryptoApi.ViewModels
         public delegate IHtmlContent DGetHtmlItem(TRow data);
         private Dictionary<IHtmlContent, DGetHtmlItem> items = new();
         public IEnumerable<IHtmlContent> keys => items.Keys;
-        public IEnumerable<IEnumerable<IHtmlContent>> rows => GetRows();
+        public IEnumerable<IEnumerable<IHtmlContent>>? rows => /*items.Count() == 0 ? null : */GetRows();
+        public bool IsSortable { get; set; }
 
         IEnumerable<TRow> data { get; set; }
 
-        public CTableVM (IEnumerable<TRow> data)
+        public CTableVM (IEnumerable<TRow> data, bool is_sortable = false)
         {
-            
             this.data = data;
+            IsSortable = is_sortable;
         }
         public IEnumerable<DGetHtmlItem> GetEnumerable()
         {
@@ -43,8 +44,10 @@ namespace CryptoApi.ViewModels
             return this;
         }
 
-        private IEnumerable<IEnumerable<IHtmlContent>> GetRows ()
+        private IEnumerable<IEnumerable<IHtmlContent>>? GetRows ()
         {
+            /*if (items.Count() == 0) yield return null;*/
+
             IEnumerable<IHtmlContent> GetItems (TRow row)
             {
                 foreach(var item in items)
@@ -52,7 +55,7 @@ namespace CryptoApi.ViewModels
                     yield return item.Value(row);
                 }
             }
-
+            
             foreach(var row in data)
             {
                 yield return GetItems(row);

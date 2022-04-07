@@ -6,5 +6,6 @@ namespace CryptoApi.ViewModels
     {
         IEnumerable<IHtmlContent> keys { get; }
         IEnumerable<IEnumerable<IHtmlContent>> rows { get; }
+        bool IsSortable { get; set; }
     }
 }

@@ -15,11 +15,14 @@
                 {
                     <span class="dcg-value-down">@Model.data.day_percent_change_1%</span>
                 }
-                else
+                else if (Model.coin2.day_change == null)
+                {
+                    <span>-</span>
+                }
+                else 
                 {
                     <span class="dcg-value-up">+@Model.data.day_percent_change_1%</span>
                 }
-
             </div>
             <svg icon="arrow-right-darkgray" class="dcg-icon-arrow-right"></svg>
             <div class="dc-coin-pair__coin">
@@ -33,6 +36,10 @@
                 @if(Model.coin2.day_change < 0)
                 {
                     <span class="dcg-value-down">@Model.data.day_percent_change_2%</span>
+                }
+                else if (Model.coin2.day_change == null)
+                {
+                    <span>-</span>
                 }
                 else
                 {

@@ -11,16 +11,19 @@ namespace CryptoApi.Models
             return Math.Round((decimal)(100 / val1 * val2), 4);
         }
 
-        static public IUpdatedData FilterLust (int days, IEnumerable<IUpdatedData> list)
+        static public IUpdatedData? FilterLust (int days, IEnumerable<IUpdatedData> list)
         {
-            return list.First();
+            return list.Count() == 0 ? null : list.First();
         }
 
         static public decimal? GetChangePrice (int days, IEnumerable<CCoinsExtDataM> coins)
         {
             var first = (CCoinsExtDataM)FilterLust(days, coins);
+            if (first == null) return 0;
+
             var last = coins.Last();
-            if (last.usd_price == null || first.usd_price == null) return null;
+
+            if (last.usd_price == null || first.usd_price == null) return 0;
 
             return last.usd_price.Value - first.usd_price.Value;
         }

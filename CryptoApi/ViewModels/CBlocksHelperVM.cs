@@ -39,7 +39,7 @@ public class CBlocksHelperVM
     /// <summary>
     ///     Возвращает список пар относительно кол-ва и номера страницы.
     /// </summary>
-    public IEnumerable<CCoinPairDataVM> GetPairList(int count, int page = 1, string filter = "")
+    public IEnumerable<CCoinPairDataVM>? GetPairList(int count, int page = 1, string filter = "")
     {
         return pairsModel.GetPairs(page, count, filter);
     }

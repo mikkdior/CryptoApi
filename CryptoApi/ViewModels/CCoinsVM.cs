@@ -31,6 +31,7 @@ public class CCoinsVM
     {
         int count = Int32.Parse(conf["CoinsCountOnPage"]);
         maxPage = model.GetMaxPage(count, filter);
+        maxPage = maxPage == 0 ? 1 : maxPage;
         string? page_str = (string?)context.Request.Query["page"];
         page = page_str == null ? 1 : Int32.Parse(page_str);
         page = page <= maxPage ? page : maxPage;

@@ -30,10 +30,18 @@ public class CoinPairsController : Controller
     ///     Отображает страницу всех пар.
     /// </summary>
     [Route("/crypto-pairs")]
-    public IActionResult Index([FromServices] CCoinPairsVM model, int page, string filter = "")
+    public IActionResult Index([FromServices] CCoinPairsVM model, int page, string filter = null)
     {
-        ViewBag.Blocks = blocksHelper;
-        model.Init(HttpContext, filter);
+        if (filter == null)
+        {
+            model.Init(HttpContext);
+        }
+        else
+        {
+            if (filter == "" || filter == "#") return Redirect($"/crypto-pairs");
+
+            model.Init(HttpContext, filter);
+        }
 
         return View(model);
     }

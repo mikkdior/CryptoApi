@@ -22,7 +22,14 @@
                 <span>Circulating supply</span>
             </td>
             <td>
-                <span>$@Model.coin.data.circulating_supply</span>
+                @if(Model.coin.data.circulating_supply == null)
+                {
+                    <span>-</span>   
+                }
+                else
+                {
+                    <span>$@Model.coin.data.circulating_supply</span>
+                }
             </td>
         </tr>
         <tr>
@@ -30,7 +37,14 @@
                 <span>Max supply</span>
             </td>
             <td>
-                <span>$@Model.coin.data.max_supply</span>
+                @if(Model.coin.data.max_supply == null)
+                {
+                    <span>-</span>   
+                }
+                else
+                {
+                    <span>$@Model.coin.data.max_supply</span>
+                }
             </td>
         </tr>
         <tr>
@@ -38,7 +52,14 @@
                 <span>Cmc rank</span>
             </td>
             <td>
-                <span>$@Model.coin.data.cmc_rank</span>
+                @if(Model.coin.data.cmc_rank == null)
+                {
+                    <span>-</span>   
+                }
+                else
+                {
+                    <span>$@Model.coin.data.cmc_rank</span>
+                }
             </td>
         </tr>
     </table>
@@ -49,7 +70,14 @@
                 <span>Volume 24h</span>
             </td>
             <td>
-                <span>$@Model.coin.data.volume_24h</span>
+                @if(Model.coin.data.volume_24h == null)
+                {
+                    <span>-</span>   
+                }
+                else
+                {
+                    <span>$@Model.coin.data.volume_24h</span>
+                }
             </td>
         </tr>
         <tr>
@@ -57,9 +85,13 @@
                 <span>Percent change 24h</span>
             </td>
             <td>
-                @if(Model.coin.data.week_percent_change < 0)
+                @if(Model.coin.data.day_change < 0)
                 {
                     <span class="dcg-value-down">@(Model.coin.data.day_change)%</span>
+                }
+                else if (Model.coin.data.day_change == null)
+                {
+                    <span>-</span> 
                 }
                 else
                 {
@@ -75,6 +107,10 @@
                 @if(Model.coin.data.week_percent_change < 0)
                 {
                     <span class="dcg-value-down">@(Model.coin.data.week_percent_change)%</span>
+                }
+                else if (Model.coin.data.week_percent_change == null)
+                {
+                    <span>-</span> 
                 }
                 else
                 {

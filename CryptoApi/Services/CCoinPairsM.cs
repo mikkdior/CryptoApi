@@ -21,10 +21,10 @@ public class CCoinPairsM : CBaseDbM
         db.CoinPairs = GetPairsData();
     }
 
-    private IEnumerable<CCoinPairDataM> GetPairsData ()
+    private IEnumerable<CCoinPairDataM> GetPairsData (string filter = "")
     {
         yield break;
-        var coins = coinsModel.GetTrueCoins().ToArray();
+        var coins = coinsModel.GetTrueCoins(filter).ToArray();
 
         foreach (var coin1 in coins)
         {
@@ -35,9 +35,8 @@ public class CCoinPairsM : CBaseDbM
         }
     }
 
-    private IEnumerable<CCoinPairDataM> GetPairsData(uint shift, int limit)
+    private IEnumerable<CCoinPairDataM>? GetPairsData(uint shift, int limit, CCoinDataM[] coins, string filter = "")
     {
-        var coins = coinsModel.GetTrueCoins().ToArray();
         uint count = (uint)coins.Length;
         
         for (uint i = shift; i < shift + limit; i++)
@@ -67,16 +66,21 @@ public class CCoinPairsM : CBaseDbM
     public uint Count(string filter = "")
     {
         int count = coinsModel.TrueCount(filter);
-        return (uint)(count*count);
+
+        return (uint)(count*count - count);
     }
 
     /// <summary>
     ///     Достает пары из БД используя исходное заданное количество и номер страницы.
     /// </summary>
-    public IEnumerable<CCoinPairDataVM> GetPairs(int page, int count, string filter = "")
+    public IEnumerable<CCoinPairDataVM>? GetPairs(int page, int count, string filter = "")
     {
-        return GetPairsData((uint)(--page * count), count)
-            .Where(p => filter == "" ? true : (p.coin_1.name.Contains(filter) || p.coin_1.name.Contains(filter) || p.coin_2.name.Contains(filter) || p.coin_2.name.Contains(filter)))
+        var coins = coinsModel.GetTrueCoins(filter).ToArray();
+
+        if (coins.Count() == 0) return null;
+
+        return GetPairsData((uint)(--page * count), count, coins, filter)
+            /*.Where(p => filter == "" ? true : (p.coin_1.name.Contains(filter) || p.coin_1.name.Contains(filter) || p.coin_2.name.Contains(filter) || p.coin_2.name.Contains(filter)))*/
             .Select(p => new CCoinPairDataVM()
             {
                 data = p,
@@ -90,7 +94,9 @@ public class CCoinPairsM : CBaseDbM
     /// </summary>
     public IEnumerable<CCoinPairDataVM> GetPairs(CCoinPairDataM pair)
     {
-        return GetPairsData(0, 10)
+        var coins = coinsModel.GetTrueCoins().ToArray();
+
+        return GetPairsData(0, 10, coins)
             .Select(p => new CCoinPairDataVM
             {
                 data = p,
