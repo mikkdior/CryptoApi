@@ -2,6 +2,7 @@
 using CryptoApi.Models.DB;
 using CryptoApi.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace CryptoApi.Services;
 
@@ -143,11 +144,15 @@ public class CCoinsM : CBaseDbM
     /// <summary>
     ///     Достает монеты из БД используя исходное заданное количество и номер страницы.
     /// </summary>
-    public IEnumerable<CCoinDataVM> GetCoins (int page, int count, string filter = "")
+    public IEnumerable<CCoinDataVM> GetCoins (int page, int count, string filter = "", string? order = "name")
     {
+        /*Type? ccoin = typeof(CCoinDataVM);
+        PropertyInfo? pi = ccoin?.GetProperty(order);*/
+
         return db.Coins
             .Include(c => c.ext)
             .Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
+            /*.OrderBy(c => GetCoinProp(c, order))*/
             .Select(c => new CCoinDataVM()
             {
                 data = c
@@ -155,6 +160,17 @@ public class CCoinsM : CBaseDbM
             .Skip((page - 1) * count)
             .Take(count);
     }
+
+    /*private object GetCoinProp(CCoinDataM c, string? order)
+    {
+        if (order == "name") return c.name;
+        else if (order == "usd_price") return c.usd_price;
+        else if (order == "volume_24h") return c.volume_24h;
+        else if (order == "market_cap") return c.market_cap;
+        else if (order == "day_percent_change") return c.day_percent_change;
+        
+        return c.name;
+    }*/
 
     public IEnumerable<CCoinDataM> GetTrueCoins(string filter = "")
     {

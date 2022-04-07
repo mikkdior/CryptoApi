@@ -12,14 +12,12 @@ namespace CryptoApi.ViewModels
         private Dictionary<IHtmlContent, DGetHtmlItem> items = new();
         public IEnumerable<IHtmlContent> keys => items.Keys;
         public IEnumerable<IEnumerable<IHtmlContent>>? rows => /*items.Count() == 0 ? null : */GetRows();
-        public bool IsSortable { get; set; }
 
         IEnumerable<TRow> data { get; set; }
 
-        public CTableVM (IEnumerable<TRow> data, bool is_sortable = false)
+        public CTableVM (IEnumerable<TRow> data)
         {
             this.data = data;
-            IsSortable = is_sortable;
         }
         public IEnumerable<DGetHtmlItem> GetEnumerable()
         {

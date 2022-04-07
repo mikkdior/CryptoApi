@@ -1,4 +1,6 @@
-﻿namespace CryptoApi.Models.DB;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CryptoApi.Models.DB;
 
 /// <summary>
 ///     Структурная модель данных CoinData из БД.
@@ -26,16 +28,19 @@ public class CCoinDataM
     public DateTime last_updated { get; set; }
 
     public decimal? day_change => ext.Count() == 0 ? null : CCurrMath.GetChangePrice(1, ext);
+
     public decimal? day_percent_change => ext.Count() == 0 ? null : CCurrMath.GetChangePercentPrice(1, ext);
     public decimal? week_percent_change => ext.Count() == 0 ? null : CCurrMath.GetChangePercentPrice(7, ext);
     public decimal? month_percent_change => ext.Count() == 0 ? null : CCurrMath.GetChangePercentPrice(30, ext);
 
     public decimal? usd_price => ext.Count() == 0 ? null : ext.Last()?.usd_price;
+
     public decimal? market_cap => ext.Count() == 0 ? null : ext.Last()?.market_cap;
     public decimal? low => ext.Count() == 0 ? null : ext.Last()?.low;
     public decimal? high => ext.Count() == 0 ? null : ext.Last()?.high;
 
     public decimal? circulating_supply => ext.Count() == 0 ? null : 10633197;
+
     public decimal? max_supply => ext.Count() == 0 ? null : 18900000;
     public decimal? cmc_rank => ext.Count() == 0 ? null : 72;
     public decimal? volume_24h => ext.Count() == 0 ? null : 828881044;

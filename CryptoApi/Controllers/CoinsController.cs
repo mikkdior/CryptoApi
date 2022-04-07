@@ -31,17 +31,17 @@ public class CoinsController : Controller
     ///     Отображает страницу всех монет.
     /// </summary>
     [Route("/coins")]
-    public IActionResult Index([FromServices] CCoinsVM model, int page, string? filter = null)
+    public IActionResult Index([FromServices] CCoinsVM model, int page, string? filter = null, string? order = null)
     {
-        if (filter == null)
+        if (filter == null && order == null)
         {
             model.Init(HttpContext);
         }
         else
         {
-            if (filter == "" || filter == "#") return Redirect($"/coins");
+            if (filter == "" || filter == "#" && order == "" || order == "#") return Redirect($"/coins");
 
-            model.Init(HttpContext, filter);
+            model.Init(HttpContext, filter, order);
         }
 
         return View(model);

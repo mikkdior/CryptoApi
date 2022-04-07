@@ -8266,6 +8266,12 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     margin-left: 2px;
     margin-bottom: 4px; }
 
+@media (max-width: 991.98px) {
+  .dc-services {
+    background: red; }
+    .dc-services .dcg-h2 {
+      background: green; } }
+
 .dc-soc-icons .dcg-h3 {
   color: #FFF;
   font-size: 20px; }
