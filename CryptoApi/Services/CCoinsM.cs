@@ -133,7 +133,7 @@ public class CCoinsM : CBaseDbM
     {
         return db.Coins
             .Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
-            .Count<CCoinDataM>();
+            .Count();
     }
 
     public int TrueCount(string filter = "")
@@ -144,21 +144,28 @@ public class CCoinsM : CBaseDbM
     /// <summary>
     ///     Достает монеты из БД используя исходное заданное количество и номер страницы.
     /// </summary>
-    public IEnumerable<CCoinDataVM> GetCoins (int page, int count, string filter = "", string? order = "name")
+    public IEnumerable<CCoinDataVM> GetCoins(int page, int count, string filter = "", string? order = null)
     {
-        /*Type? ccoin = typeof(CCoinDataVM);
-        PropertyInfo? pi = ccoin?.GetProperty(order);*/
+        IEnumerable<CCoinDataM> result = db.Coins;
 
-        return db.Coins
-            .Include(c => c.ext)
-            .Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
-            /*.OrderBy(c => GetCoinProp(c, order))*/
+        if (order != null)
+            result = result.OrderByDescending(c =>
+            {
+                Type type = typeof(CCoinDataM);
+                return type.GetProperty(order).GetValue(c, null);
+            });
+
+        if (filter != "" && filter != null)
+            result = result.Where(c => filter == "" ? true : c.name.Contains(filter) || c.name_full.Contains(filter));
+            
+        return result
+            .Skip((page - 1) * count)
+            .Take(count)
+            //.Include(c => c.ext)
             .Select(c => new CCoinDataVM()
             {
                 data = c
-            })
-            .Skip((page - 1) * count)
-            .Take(count);
+            }).ToList();
     }
 
     /*private object GetCoinProp(CCoinDataM c, string? order)

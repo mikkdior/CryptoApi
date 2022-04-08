@@ -27,7 +27,7 @@ public class CCoinsVM
     /// <summary>
     ///     Ручная инициализация (заполнение нужных полей).
     /// </summary>
-    public void Init(HttpContext context, string filter = "", string? order = "")
+    public void Init(HttpContext context, string filter = "", string? order = null)
     {
         int count = Int32.Parse(conf["CoinsCountOnPage"]);
         maxPage = model.GetMaxPage(count, filter);
