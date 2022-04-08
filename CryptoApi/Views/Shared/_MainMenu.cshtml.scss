@@ -15,11 +15,15 @@
             li {
                 padding: 0 3px;
 
-                a:hover{
+                a:hover {
                     color: #0FD4E2;
                 }
             }
         }
+    }
+
+    @include media-breakpoint-down (md) {
+        display: none;
     }
 
     @include media-breakpoint-down (sm) {

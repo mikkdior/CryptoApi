@@ -20,6 +20,10 @@
         margin: 0px 10px 3px 10px;
     }
 
+    @include media-breakpoint-down (md) {
+        display: none;
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }

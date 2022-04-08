@@ -5,10 +5,10 @@
     letter-spacing: -0.5px;
 
     &__content {
-
     }
 
     @include media-breakpoint-down (sm) {
+        font-size: 13px;
     }
 }
 // /* /TEMPLATE: copyright */

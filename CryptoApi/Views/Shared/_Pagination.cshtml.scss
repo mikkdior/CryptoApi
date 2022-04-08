@@ -2,7 +2,7 @@
 // /* TEMPLATE: pagination */
 .dc-pagination {
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     align-items: center;
     justify-content: center;
 
@@ -14,6 +14,7 @@
         background: #fff;
         min-width: 50px;
         height: 50px;
+        margin-top: 20px;
         display: inline-block;
     }
 
@@ -40,6 +41,28 @@
 
 
     @include media-breakpoint-down (sm) {
+        margin-top: 0;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 130px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        
+
+        &__list-item-wrapper {
+            margin-top: 0;
+        }
+
+        &__list-item-wrapper {
+            min-width: 40px;
+            height: 40px;
+        }
     }
 }
 // /* /TEMPLATE: pagination */

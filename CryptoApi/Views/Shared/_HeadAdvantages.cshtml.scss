@@ -45,7 +45,16 @@
         color: #CBCBCB;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        width: 300px;
+
+        &__list {
+
+            li ~ li {
+                margin-left: 0;
+                margin-top: 40px;
+            }
+        }
     }
 }
 // /* /TEMPLATE: head-advantages */

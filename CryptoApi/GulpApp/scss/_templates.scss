@@ -95,6 +95,10 @@
         }
     }
 
+    @include media-breakpoint-down (md) {
+        display: none;
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }
@@ -121,6 +125,10 @@
         width: 17px;
         height: 17px;
         margin: 0px 10px 3px 10px;
+    }
+
+    @include media-breakpoint-down (md) {
+        display: none;
     }
 
     @include media-breakpoint-down (sm) {
@@ -244,12 +252,35 @@
         }
     }
 
-    &:hover &__wrapper {
-        position: absolute;
-        z-index: 100;
+    @include media-breakpoint-down (lg) {
+        &:hover &__wrapper {
+            position: absolute;
+            z-index: 100;
+        }
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        &__wrapper {
+            position: relative;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .dcg-btn {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        &__head {
+            justify-content: center;
+        }
     }
 }
 // /* /TEMPLATE: coin-pair */
@@ -288,7 +319,8 @@
     }
 
     .dcg-section__head {
-        padding-bottom: 15px;
+        margin-bottom: 12px;
+        padding-bottom: 0;
     }
 
     .dcg-icon-arrow-right {
@@ -407,10 +439,10 @@
     letter-spacing: -0.5px;
 
     &__content {
-
     }
 
     @include media-breakpoint-down (sm) {
+        font-size: 13px;
     }
 }
 // /* /TEMPLATE: copyright */
@@ -442,13 +474,13 @@
 // /* TEMPLATE: faq */
 .dc-faq {
 
-    .dc-faq-item {
+    &-item {
         margin-left: auto;
         width: 680px;
         margin-bottom: 20px;
         border-bottom: 1px solid #ECECEC;
 
-        .dcg-h3 { 
+        .dcg-h3 {
             padding: 0;
             text-align: start;
         }
@@ -460,9 +492,9 @@
             margin-bottom: 20px;
             width: 100%;
 
-            svg{
+            svg {
                 width: 18px;
-                height: 18px; 
+                height: 18px;
             }
 
             .dcg-h3 {
@@ -479,6 +511,14 @@
         .dcg-toggle {
             width: 20px;
             height: 20px;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        &-item {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
         }
     }
 
@@ -499,7 +539,17 @@
     font-size: 15px;
     padding: 34px 0 60px 0;
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        padding-bottom: 20px;
+        padding-top: 42px;
+
+        .dc-soc-icons {
+            margin-top: 20px;
+        }
+
+        .dc-copyright {
+            margin-top: 60px;
+        }
     }
 }
 // /* /TEMPLATE: footer */
@@ -612,7 +662,16 @@
         color: #CBCBCB;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        width: 300px;
+
+        &__list {
+
+            li ~ li {
+                margin-left: 0;
+                margin-top: 40px;
+            }
+        }
     }
 }
 // /* /TEMPLATE: head-advantages */
@@ -636,6 +695,10 @@
         }
     }
 
+    @include media-breakpoint-down (md) {
+        
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }
@@ -646,8 +709,16 @@
 // /* TEMPLATE: layout */
 .dc-layout {
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        .container {
+        }
+    }
 
+    @include media-breakpoint-down (xs) {
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
     }
 }
 // /* /TEMPLATE: layout */
@@ -663,6 +734,7 @@
     }
 
     @include media-breakpoint-down (sm) {
+        padding-left: 10px;
     }
 }
 // /* /TEMPLATE: logo */
@@ -685,11 +757,15 @@
             li {
                 padding: 0 3px;
 
-                a:hover{
+                a:hover {
                     color: #0FD4E2;
                 }
             }
         }
+    }
+
+    @include media-breakpoint-down (md) {
+        display: none;
     }
 
     @include media-breakpoint-down (sm) {
@@ -707,6 +783,10 @@
     background: #fff;
     padding-bottom: 0;
 
+    .dcg-h3 {
+        line-height: 20px;
+    }
+
     .dcg-h2 {
         width: 290px;
         padding: 0;
@@ -723,7 +803,7 @@
 
     .dc-table {
         th svg {
-            width: 11px; 
+            width: 11px;
             height: 14px;
             margin-left: 7px;
         }
@@ -759,12 +839,15 @@
 
         th:last-child {
             text-align: end;
-            padding-right: 26px;
             width: 165px;
+            padding-right: 14px !important;
+        }
+    }
 
-            &::after {
-                content: "";
-            }
+    .dc-market-search {
+        .dc-market-search__wrapper {
+            width: 100%;
+            margin-left: auto;
         }
     }
 
@@ -788,7 +871,6 @@
         width: 100%;
         height: 100%;
 
-
         .dcg-btn {
             background: #0056B3;
             width: 110px;
@@ -799,7 +881,7 @@
             display: none;
             position: absolute;
             left: 33%;
-            top: 26%;
+            top: 33%;
         }
 
         .dcg-btn:hover {
@@ -809,7 +891,6 @@
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
         }
 
         &:hover svg {
@@ -826,7 +907,147 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+        &__exchange {
+            svg {
+                margin-left: 75px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -166px;
+        width: 728px;
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 305px;
+                margin-left: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1), th:nth-child(4) {
+                width: 110px;
+            }
+
+            th:nth-child(2), th:nth-child(5) {
+                width: 99px;
+            }
+
+            th:nth-child(3) {
+                width: 104px;
+            }
+
+            th:last-child {
+                width: 104px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 7px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        margin-top: -155px;
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 100%;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(1), th:nth-child(4) {
+                width: 60px;
+            }
+
+            th:nth-child(2), th:nth-child(5), td:nth-child(2), td:nth-child(5) {
+                display: none;
+            }
+
+            th:nth-child(3) {
+                width: 60px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 45px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dc-table{
+            td{
+                font-size: 13px;
+            }
+        } 
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin: auto;
+                margin-left: 14px;
+            }
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover .dcg-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coin-pairs */
@@ -840,6 +1061,10 @@
     margin-top: -160px;
     background: #fff;
     padding-bottom: 0;
+
+    .dcg-h3 {
+        line-height: 20px;
+    }
 
     .dc-table {
         th svg {
@@ -896,11 +1121,17 @@
         }
     }
 
+    .dc-market-search {
+        &__wrapper {
+            width: 910px;
+            margin-left: auto;
+        }
+    }
+
     &__exchange {
         text-align: center;
         width: 100%;
         height: 100%;
-
 
         .dcg-btn {
             background: #0056B3;
@@ -922,7 +1153,6 @@
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
         }
 
         &:hover svg {
@@ -939,7 +1169,198 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+
+        .dc-table {
+            th:last-child {
+                width: 115px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 0;
+            }
+        }
+
+        .dc-market-search {
+            &__wrapper {
+                width: 745px;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -166px;
+        width: 728px;
+
+        &__search-by {
+            width: max-content;
+        }
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 475px;
+                margin-right: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1) {
+                width: 30px;
+            }
+
+            th:nth-child(2) {
+                width: 133px;
+            }
+
+            th:nth-child(3) {
+                width: 100px;
+            }
+
+            th:nth-child(4), td:nth-child(4) {
+                display: none;
+            }
+
+
+            th:nth-child(5) {
+                width: 180px;
+            }
+
+            th:last-child {
+                width: 102px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 41px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 10px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        margin-top: -155px;
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 375px;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(1), td:nth-child(1) {
+                display: none;
+            }
+
+            th:nth-child(2) {
+                width: 60px;
+            }
+
+            th:nth-child(3), td:nth-child(3) {
+                display: none;
+            }
+
+            th:nth-child(6) {
+                width: 90px;
+            }
+
+            th:nth-child(5) {
+                width: 100px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 16px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 190px;
+            }
+        }
+
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin: auto;
+                margin-left: 14px;
+            }
+        }
+
+        .dc-table {
+
+            th:last-child, td:last-child {
+                display: none;
+            }
+
+            td {
+                font-size: 13px;
+                word-break: break-all;
+            }
+
+            th:nth-child(2) {
+                width: 75px;
+            }
+
+            th:nth-child(5) {
+                width: 90px;
+            }
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover .dcg-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coins */
@@ -948,7 +1369,7 @@
 // /*.....................................*/
 // /* TEMPLATE: market-search */
 .dc-market-search {
-    width: 910px;
+    /*width: 910px;*/
 
     form {
         width: 100%;
@@ -998,7 +1419,7 @@
 // /* TEMPLATE: market-update */
 .dc-market-update {
     .dcg-section__head {
-        padding-bottom: 25px;
+        padding-bottom: 20px;
     }
 
     .dc-table {
@@ -1020,14 +1441,23 @@
             text-align: end;
             padding-right: 26px;
             width: 165px;
-
-            &::after {
-                content: "";
-            }
         }
 
         th:nth-child(2) {
             width: 225px;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        .dc-table {
+
+            th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(8), td:nth-child(8) {
+                display: none;
+            }
+
+            th:nth-child(2) {
+                width: 225px;
+            }
         }
     }
 
@@ -1041,7 +1471,7 @@
 // /* TEMPLATE: news-list */
 .dc-news-list {
     .dcg-section__head {
-        padding-bottom: 38px;
+        padding-bottom: 18px;
     }
 
     @include media-breakpoint-down (sm) {
@@ -1055,6 +1485,7 @@
 .dc-news-sketch {
     border-radius: 7px;
     background: #fff;
+    margin-top: 20px;
 
     .dcg-icon-arrow-right {
         width: 18px;
@@ -1180,7 +1611,7 @@
 // /* TEMPLATE: pagination */
 .dc-pagination {
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     align-items: center;
     justify-content: center;
 
@@ -1192,6 +1623,7 @@
         background: #fff;
         min-width: 50px;
         height: 50px;
+        margin-top: 20px;
         display: inline-block;
     }
 
@@ -1218,6 +1650,28 @@
 
 
     @include media-breakpoint-down (sm) {
+        margin-top: 0;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 130px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        
+
+        &__list-item-wrapper {
+            margin-top: 0;
+        }
+
+        &__list-item-wrapper {
+            min-width: 40px;
+            height: 40px;
+        }
     }
 }
 // /* /TEMPLATE: pagination */
@@ -1237,7 +1691,15 @@
         padding: 0px 7px;
     }
 
+    @include media-breakpoint-down (md) {
+        &__partner {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        
     }
 }
 // /* /TEMPLATE: partners */
@@ -1246,7 +1708,6 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
-    
     /*display: flex;*/
 
     .dcg-h2 {
@@ -1258,6 +1719,13 @@
         margin-bottom: 0;
         margin-left: auto;
         padding-left: 60px;
+    }
+
+    @include media-breakpoint-down (md) {
+        .dcg-h2{
+            margin-bottom: 38px;
+            text-align: center !important;
+        }
     }
 
     @include media-breakpoint-down (sm) {
@@ -1300,6 +1768,7 @@
     border-radius: 7px;
     padding: 8px 20px;
     background: #fff;
+    margin-top: 20px;
 
     .dcg-h3 {
         padding-top: 7px;
@@ -1343,6 +1812,7 @@
 .dc-services {
 
     .dcg-h2 {
+        padding-bottom: 10px;
     }
 
 
@@ -1353,11 +1823,7 @@
     }
 
     @include media-breakpoint-down (md) {
-        background: red;
-
-        .dcg-h2 {
-            background: green;
-        }
+        
     }
 
     @include media-breakpoint-down (sm) {
@@ -1461,7 +1927,41 @@
         letter-spacing: 0em;
     }
 
+    @include media-breakpoint-down (md) {
+        margin-bottom: 32px;
+
+        .dcg-h1 {
+            margin-top: 20px;
+        }
+
+        &__desc {
+            margin-top: 27px;
+            line-height: 23px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        
+    }
+
+    @include media-breakpoint-down (xs) {
+        &__desc {
+            width: 100%;
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0 10px;
+        }
+
+        .dcg-h1 {
+            margin-top: 10px;
+            font-family: Nunito;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coin-pairs */
@@ -1491,7 +1991,40 @@
         letter-spacing: 0em;
     }
 
+    @include media-breakpoint-down (md) {
+        margin-bottom: 32px;
+
+        .dcg-h1 {
+            margin-top: 20px;
+        }
+
+        &__desc {
+            margin-top: 27px;
+            line-height: 23px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+    }
+
+    @include media-breakpoint-down (xs) {
+        &__desc {
+            width: 100%;
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0 10px;
+        }
+
+        .dcg-h1 {
+            margin-top: 10px;
+            font-family: Nunito;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coins */
@@ -1522,7 +2055,13 @@
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .dcg-h1 {
+            margin-bottom: 30px;
+        }
     }
 }
 // /* /TEMPLATE: subheader-main */

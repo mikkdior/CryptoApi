@@ -23,7 +23,13 @@
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .dcg-h1 {
+            margin-bottom: 30px;
+        }
     }
 }
 // /* /TEMPLATE: subheader-main */

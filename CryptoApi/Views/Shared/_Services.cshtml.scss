@@ -3,6 +3,7 @@
 .dc-services {
 
     .dcg-h2 {
+        padding-bottom: 10px;
     }
 
 
@@ -13,11 +14,7 @@
     }
 
     @include media-breakpoint-down (md) {
-        background: red;
-
-        .dcg-h2 {
-            background: green;
-        }
+        
     }
 
     @include media-breakpoint-down (sm) {

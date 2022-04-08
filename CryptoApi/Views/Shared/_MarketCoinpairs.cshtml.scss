@@ -7,6 +7,10 @@
     background: #fff;
     padding-bottom: 0;
 
+    .dcg-h3 {
+        line-height: 20px;
+    }
+
     .dcg-h2 {
         width: 290px;
         padding: 0;
@@ -23,7 +27,7 @@
 
     .dc-table {
         th svg {
-            width: 11px; 
+            width: 11px;
             height: 14px;
             margin-left: 7px;
         }
@@ -59,12 +63,15 @@
 
         th:last-child {
             text-align: end;
-            padding-right: 26px;
             width: 165px;
+            padding-right: 14px !important;
+        }
+    }
 
-            &::after {
-                content: "";
-            }
+    .dc-market-search {
+        .dc-market-search__wrapper {
+            width: 100%;
+            margin-left: auto;
         }
     }
 
@@ -88,7 +95,6 @@
         width: 100%;
         height: 100%;
 
-
         .dcg-btn {
             background: #0056B3;
             width: 110px;
@@ -99,7 +105,7 @@
             display: none;
             position: absolute;
             left: 33%;
-            top: 26%;
+            top: 33%;
         }
 
         .dcg-btn:hover {
@@ -109,7 +115,6 @@
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
         }
 
         &:hover svg {
@@ -126,7 +131,147 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+        &__exchange {
+            svg {
+                margin-left: 75px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -166px;
+        width: 728px;
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 305px;
+                margin-left: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1), th:nth-child(4) {
+                width: 110px;
+            }
+
+            th:nth-child(2), th:nth-child(5) {
+                width: 99px;
+            }
+
+            th:nth-child(3) {
+                width: 104px;
+            }
+
+            th:last-child {
+                width: 104px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 7px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        margin-top: -155px;
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 100%;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(1), th:nth-child(4) {
+                width: 60px;
+            }
+
+            th:nth-child(2), th:nth-child(5), td:nth-child(2), td:nth-child(5) {
+                display: none;
+            }
+
+            th:nth-child(3) {
+                width: 60px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 45px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dc-table{
+            td{
+                font-size: 13px;
+            }
+        } 
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin: auto;
+                margin-left: 14px;
+            }
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover .dcg-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coin-pairs */

@@ -2,7 +2,7 @@
 // /* TEMPLATE: market-update */
 .dc-market-update {
     .dcg-section__head {
-        padding-bottom: 25px;
+        padding-bottom: 20px;
     }
 
     .dc-table {
@@ -24,14 +24,23 @@
             text-align: end;
             padding-right: 26px;
             width: 165px;
-
-            &::after {
-                content: "";
-            }
         }
 
         th:nth-child(2) {
             width: 225px;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        .dc-table {
+
+            th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(8), td:nth-child(8) {
+                display: none;
+            }
+
+            th:nth-child(2) {
+                width: 225px;
+            }
         }
     }
 

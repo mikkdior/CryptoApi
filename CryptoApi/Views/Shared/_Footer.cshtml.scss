@@ -9,7 +9,17 @@
     font-size: 15px;
     padding: 34px 0 60px 0;
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        padding-bottom: 20px;
+        padding-top: 42px;
+
+        .dc-soc-icons {
+            margin-top: 20px;
+        }
+
+        .dc-copyright {
+            margin-top: 60px;
+        }
     }
 }
 // /* /TEMPLATE: footer */

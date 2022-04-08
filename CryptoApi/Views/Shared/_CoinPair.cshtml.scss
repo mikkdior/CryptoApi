@@ -66,12 +66,35 @@
         }
     }
 
-    &:hover &__wrapper {
-        position: absolute;
-        z-index: 100;
+    @include media-breakpoint-down (lg) {
+        &:hover &__wrapper {
+            position: absolute;
+            z-index: 100;
+        }
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        &__wrapper {
+            position: relative;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .dcg-btn {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        &__head {
+            justify-content: center;
+        }
     }
 }
 // /* /TEMPLATE: coin-pair */

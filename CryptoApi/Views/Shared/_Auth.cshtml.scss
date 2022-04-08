@@ -19,6 +19,10 @@
         }
     }
 
+    @include media-breakpoint-down (md) {
+        display: none;
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }

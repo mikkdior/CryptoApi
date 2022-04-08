@@ -12,11 +12,17 @@
         <div class="row">
             @foreach(var coin in Model)
             {
-                <div class="col-3">
+                <div class="col-lg-3 col-md-4">
                     @await Html.PartialAsync("_Coin", coin)
                 </div>
             }
         </div>
+    </div>
+    <div class="dcg-section__foot">
+        <a asp-controller="Coins" asp-action="Index" class="dcg-btn dcg-btn_big">
+            Find out more Amounts
+            <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
+        </a>
     </div>
 </div>
 
