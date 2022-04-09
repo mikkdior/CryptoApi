@@ -167,6 +167,7 @@ public class CCoinsM : CBaseDbM
                 data = c
             }).ToList();
     }
+    public IEnumerable<CCoinDataM> GetCoins() => db.Coins;
 
     public IEnumerable<CCoinDataM> GetTrueCoins(string? filter = null)
     {
