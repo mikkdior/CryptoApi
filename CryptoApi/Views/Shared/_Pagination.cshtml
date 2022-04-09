@@ -2,6 +2,12 @@
 @inject IConfiguration conf
 @model List<(string Url, string Title)>
 @{
+    string continuity = "";
+
+    foreach(var pair in Context.Request.Query)
+        if(pair.Key != "page")
+            continuity += (pair.Value == "" || pair.Value == "#") ? "" : $"&{pair.Key}={pair.Value}";
+
     string current_page = Context.Request.Query.ContainsKey("page") ? Context.Request.Query["page"] : "1";
 }
 @if (Model.Count > 1)
@@ -21,18 +27,9 @@
                 else
                 {
                     <li class="dc-pagination__list-item-wrapper">
-                        @if (Context.Request.Query.ContainsKey("filter"))
-                        {
-                            <a href="@(item.Url)&filter=@Context.Request.Query["filter"]" class="dc-pagination__item">
-                                @item.Title
-                            </a>
-                        }
-                        else
-                        {
-                            <a href="@item.Url" class="dc-pagination__item">
-                                @item.Title
-                            </a>
-                        }
+                        <a href="@(item.Url + continuity)" class="dc-pagination__item">
+                            @item.Title
+                        </a>
                     </li>
                 }
             }

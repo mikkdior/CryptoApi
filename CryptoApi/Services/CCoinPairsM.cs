@@ -21,7 +21,7 @@ public class CCoinPairsM : CBaseDbM
         db.CoinPairs = GetPairsData();
     }
 
-    private IEnumerable<CCoinPairDataM> GetPairsData (string filter = "")
+    private IEnumerable<CCoinPairDataM> GetPairsData (string? filter = null)
     {
         yield break;
         var coins = coinsModel.GetTrueCoins(filter).ToArray();
@@ -35,7 +35,7 @@ public class CCoinPairsM : CBaseDbM
         }
     }
 
-    private IEnumerable<CCoinPairDataM>? GetPairsData(uint shift, int limit, CCoinDataM[] coins, string filter = "")
+    private IEnumerable<CCoinPairDataM>? GetPairsData(uint shift, int limit, CCoinDataM[] coins)
     {
         uint count = (uint)coins.Length;
         
@@ -63,7 +63,7 @@ public class CCoinPairsM : CBaseDbM
     /// <summary>
     ///     Возвращает количество пар.
     /// </summary>
-    public uint Count(string filter = "")
+    public uint Count(string? filter = null)
     {
         int count = coinsModel.TrueCount(filter);
 
@@ -73,14 +73,13 @@ public class CCoinPairsM : CBaseDbM
     /// <summary>
     ///     Достает пары из БД используя исходное заданное количество и номер страницы.
     /// </summary>
-    public IEnumerable<CCoinPairDataVM>? GetPairs(int page, int count, string filter = "")
+    public IEnumerable<CCoinPairDataVM>? GetPairs(int page, int count, string? filter = null)
     {
         var coins = coinsModel.GetTrueCoins(filter).ToArray();
 
         if (coins.Count() == 0) return null;
 
-        return GetPairsData((uint)(--page * count), count, coins, filter)
-            /*.Where(p => filter == "" ? true : (p.coin_1.name.Contains(filter) || p.coin_1.name.Contains(filter) || p.coin_2.name.Contains(filter) || p.coin_2.name.Contains(filter)))*/
+        return GetPairsData((uint)(--page * count), count, coins)
             .Select(p => new CCoinPairDataVM()
             {
                 data = p,
@@ -124,7 +123,7 @@ public class CCoinPairsM : CBaseDbM
     /// <summary>
     ///     Возвращает число максимально возможной страницы для пагинации.
     /// </summary>
-    public int GetMaxPage(int count, string filter = "")
+    public int GetMaxPage(int count, string? filter = null)
     {
         int max_count = (int)Math.Ceiling(Count(filter) / count * 1f);
         return max_count;

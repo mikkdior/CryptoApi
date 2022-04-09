@@ -39,7 +39,7 @@ public class CBlocksHelperVM
     /// <summary>
     ///     Возвращает список пар относительно кол-ва и номера страницы.
     /// </summary>
-    public IEnumerable<CCoinPairDataVM>? GetPairList(int count, int page = 1, string filter = "")
+    public IEnumerable<CCoinPairDataVM>? GetPairList(int count, int page = 1, string? filter = null)
     {
         return pairsModel.GetPairs(page, count, filter);
     }
@@ -54,17 +54,19 @@ public class CBlocksHelperVM
     public List<(string Url, string Title)> GetPagination(int max_page, int page, string link_start = "?page=")
     {
         List<(string Url, string Title)> pag_items = new List<(string Url, string Title)>();
-        int max_links_per_page = 10;
+        /*int max_links_per_page = 10;*/
         int dott_backward_page = (int)Math.Ceiling(decimal.Divide(1 + page, 2));
         int dott_forward_page = (int)Math.Ceiling(decimal.Divide(max_page + page, 2));
 
-        if (max_page <= max_links_per_page)
+        /*if (max_page <= max_links_per_page)
         {
             for (int i = 1; i <= max_page; i++) 
                 pag_items.Add((link_start + i.ToString(), i.ToString()));
 
             return pag_items;
-        }
+        }*/
+        if (max_page <= 1) return pag_items;
+        
         if (page == 1)
         {
             string _page = page.ToString();

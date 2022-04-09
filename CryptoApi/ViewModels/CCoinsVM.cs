@@ -27,12 +27,19 @@ public class CCoinsVM
     /// <summary>
     ///     Ручная инициализация (заполнение нужных полей).
     /// </summary>
-    public void Init(HttpContext context, string filter = "", string? order = null)
+    public void Init(HttpContext context)
     {
+        string? page_str = (string?)context.Request.Query["page"];
+        string? order = (string?)context.Request.Query["order"];
+        string? filter = (string?)context.Request.Query["filter"];
+
+        filter = (filter == "" || filter == "#" || filter == null) ? null : filter;
+        order = (order == "" || order == "#" || order == null) ? null : order;
+        //
         int count = Int32.Parse(conf["CoinsCountOnPage"]);
         maxPage = model.GetMaxPage(count, filter);
         maxPage = maxPage == 0 ? 1 : maxPage;
-        string? page_str = (string?)context.Request.Query["page"];
+        //
         page = page_str == null ? 1 : Int32.Parse(page_str);
         page = page <= maxPage ? page : maxPage;
         coins = blocks.GetCoinList(count, page, filter, order);
