@@ -5,7 +5,27 @@
         width: 185px;
     }
 
+    @include media-breakpoint-down (md) {
+        margin-top: 20px;
+
+        table td {
+            width: 320px;
+        }
+
+        table td:first-child {
+            width: 320px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+
+        table td {
+            width: 175px;
+        }
+
+        table td:first-child {
+            width: 175px;
+        }
     }
 }
 // /* /TEMPLATE: coin-info */

@@ -14,14 +14,13 @@
         padding-left: 60px;
     }
 
+
     @include media-breakpoint-down (md) {
-        .dcg-h2{
+        .dcg-h2 {
             margin-bottom: 38px;
             text-align: center !important;
         }
-    }
-
-    @include media-breakpoint-down (sm) {
+        
     }
 }
 // /* /TEMPLATE: section-text-block */

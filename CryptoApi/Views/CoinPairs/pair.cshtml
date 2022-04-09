@@ -7,13 +7,19 @@
 <section class="dcg-section">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col">
                 <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
                     <h2 class="dcg-h2 text-left m-0">@Model.Description.title</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
                     @await Html.PartialAsync("_TextBlock", ("", Model.Description.text))
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="row">
                     <div class="col-12">
                         @await Html.PartialAsync("_CoinPairInfo", Model)

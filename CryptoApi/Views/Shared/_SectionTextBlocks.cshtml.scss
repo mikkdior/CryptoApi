@@ -18,7 +18,18 @@
         margin-top: 37px;
     }
 
-    @include media-breakpoint-down (sm) {
+
+    @include media-breakpoint-down (md) {
+        /*.dc-section-text-block {
+            .dcg-h2 {
+                text-align: left;
+            }
+        }*/
+
+        .dc-text-block {
+            margin-left: 0;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: section-text-blocks */

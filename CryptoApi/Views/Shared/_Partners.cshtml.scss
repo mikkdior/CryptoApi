@@ -7,10 +7,16 @@
     }
 
     &__partner {
-        width: 265px;
         margin-top: 55px;
         padding: 0px 7px;
+        text-align: center;
+
+        img {
+            width: 265px;
+        }
     }
+
+
 
     @include media-breakpoint-down (md) {
         &__partner {
@@ -20,7 +26,6 @@
     }
 
     @include media-breakpoint-down (sm) {
-        
     }
 }
 // /* /TEMPLATE: partners */

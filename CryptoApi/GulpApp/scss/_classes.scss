@@ -69,6 +69,10 @@ h1, .dcg-h1 {
     font-size: 32px;
     line-height: 44px;
     color: #FFF;
+
+    @include media-breakpoint-down (xs) {
+        font-size: 28px;
+    }
 }
 
 h2, .dcg-h2 {
@@ -79,7 +83,8 @@ h2, .dcg-h2 {
     line-height: 44px;
     color: #212529;
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (xs) {
+        font-size: 20px;
     }
 }
 
@@ -91,7 +96,8 @@ h3, .dcg-h3 {
     line-height: 33px;
     color: #212529;
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (xs) {
+        font-size: 18px;
     }
 }
 
@@ -191,7 +197,11 @@ h5, .dcg-h5 {
         border: 0;
     }
 
-    @include media-breakpoint-down (sm) {
+
+    @include media-breakpoint-down (xs) {
+        &.dcg-btn_big {
+            width: 100%;
+        }
     }
 }
 /* /button, [type="button"], [type="submit"], [type="reset"], .ssg-button */
@@ -250,7 +260,8 @@ h5, .dcg-h5 {
         width: 305px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        
     }
 }
 
@@ -274,9 +285,6 @@ textarea {}
     &_subheader {
         padding: 100px 0 93px 0;
 
-        .dc-subheader-main {
-            margin-top: 45px;
-        }
     }
 
     & + & {
@@ -334,6 +342,7 @@ textarea {}
         padding: 0 0 30px 0;
 
         .dcg-h2 {
+            font-size: 32px;
             margin: 0;
             padding: 0;
         }
@@ -377,6 +386,7 @@ textarea {}
     }
 
     @include media-breakpoint-down (md) {
+        padding: 40px 0;
 
         &__head {
             justify-content: center;
@@ -396,10 +406,21 @@ textarea {}
 
         & + & {
         }
-
-        .container {
+        /*.container {
             padding-left: 0;
             padding-right: 0;
+        }*/
+    }
+
+    @include media-breakpoint-down (xs) {
+
+        & + & {
+        }
+
+        &__head {
+            .dcg-h2 {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -410,7 +431,6 @@ textarea {}
     box-shadow: 0px 10px 30px 0px #2125291F;
 }
 .dcg-shadow-md {
-    
     box-shadow: unset;
     
     @include media-breakpoint-down (md) {
@@ -459,7 +479,21 @@ textarea {}
     }
 
     &_coin-pair {
-        width: 530px; // 
+        width: 530px; //
+    }
+
+    @include media-breakpoint-down (lg) {
+
+        &_coin-pair {
+            width: 100%; //
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        &_coin {
+            width: 100%;
+        }
+
     }
 }
 /*.....................................*/

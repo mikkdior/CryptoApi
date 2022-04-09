@@ -5,6 +5,12 @@
         padding-bottom: 20px;
     }
 
+    .dc-coin {
+        .dcg-h3 {
+            line-height: 20px;
+        }
+    }
+
     .dc-table {
         th svg {
             width: 11px;
@@ -23,11 +29,19 @@
         th:last-child {
             text-align: end;
             padding-right: 26px;
-            width: 165px;
+            width: 145px;
         }
 
         th:nth-child(2) {
             width: 225px;
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        .dc-table {
+            th:nth-child(2) {
+                width: 150px;
+            }
         }
     }
 
@@ -41,10 +55,47 @@
             th:nth-child(2) {
                 width: 225px;
             }
+
+            th:last-child {
+                width: 135px;
+            }
         }
     }
 
     @include media-breakpoint-down (sm) {
+        .dc-table {
+
+
+            th:nth-child(2) {
+                width: 225px;
+            }
+
+            th:nth-child(1), td:nth-child(1), th:nth-child(3), td:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (xs) {
+        .dc-table {
+            font-size: 13px;
+
+            th:nth-child(2) {
+                width: 110px;
+            }
+
+            .dc-coin {
+                .dcg-h3 {
+                    font-size: 13px;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
     }
 }
 // /* /TEMPLATE: market-update */

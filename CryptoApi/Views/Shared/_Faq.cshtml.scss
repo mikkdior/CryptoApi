@@ -42,6 +42,12 @@
         }
     }
 
+    @include media-breakpoint-down (lg) {
+        &-item {
+            width: 570px;
+        }
+    }
+
     @include media-breakpoint-down (md) {
         &-item {
             margin-left: 0;
@@ -51,6 +57,13 @@
     }
 
     @include media-breakpoint-down (sm) {
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dcg-h3 {
+            font-size: 20px;
+            width: 100%;
+        }
     }
 }
     // /* /TEMPLATE: faq */

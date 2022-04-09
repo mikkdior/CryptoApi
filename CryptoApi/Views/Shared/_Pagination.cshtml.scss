@@ -2,7 +2,7 @@
 // /* TEMPLATE: pagination */
 .dc-pagination {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
 
@@ -41,22 +41,23 @@
 
 
     @include media-breakpoint-down (sm) {
-        margin-top: 0;
 
         &__list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            min-height: 130px;
+            
         }
     }
 
     @include media-breakpoint-down (xs) {
-        
+
+        &__list {
+        }
 
         &__list-item-wrapper {
-            margin-top: 0;
+            margin-top: 20px;
         }
 
         &__list-item-wrapper {

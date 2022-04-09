@@ -5,11 +5,20 @@
         margin-bottom: 39px;
     }
 
-    .dc-exchange-widget{
+    .dc-exchange-widget {
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (lg) {
+        .dcg-h1 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .dc-exchange-widget {
+            margin: auto;
+            margin-top: 20px;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coin */

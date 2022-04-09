@@ -3,7 +3,20 @@
 .dc-exchange-widget {
     width: 396px;
 
+    @include media-breakpoint-down (md) {
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+        height: 356px;
+
+        iframe {
+            height: 369px !important;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        height: 370px;
     }
 }
 // /* /TEMPLATE: exchange-widget */

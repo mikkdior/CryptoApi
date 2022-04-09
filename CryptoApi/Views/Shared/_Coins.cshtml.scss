@@ -46,8 +46,22 @@
         padding-top: 8px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        .dc-coin {
+            width: auto;
+            min-height: 85%;
+
+            .dcg-icon-arrow-right {
+                display: inline-block;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dc-coin {
+            min-height: 60px;
+        }
     }
 }
-// /* /TEMPLATE: coins */
-// /*.....................................*/
+    // /* /TEMPLATE: coins */
+    // /*.....................................*/

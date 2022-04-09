@@ -15,7 +15,16 @@
         width: 185px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        margin-top: 20px;
+
+        table td:nth-child(3), table td:nth-child(2), table td:first-child {
+            width: max-content;
+        }
+
+        @include media-breakpoint-down (sm) {
+            
+        }
     }
 }
 // /* /TEMPLATE: coin-pair-info */
