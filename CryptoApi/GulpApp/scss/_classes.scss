@@ -284,7 +284,6 @@ textarea {}
 
     &_subheader {
         padding: 100px 0 93px 0;
-
     }
 
     & + & {
@@ -388,6 +387,10 @@ textarea {}
     @include media-breakpoint-down (md) {
         padding: 40px 0;
 
+        &_subheader {
+            padding: 100px 0 93px 0;
+        }
+
         &__head {
             justify-content: center;
 
@@ -400,9 +403,15 @@ textarea {}
             display: block;
             margin-top: 40px;
         }
+        /*&__adaptive {
+            padding: 80px 0;
+        }*/
     }
 
     @include media-breakpoint-down (sm) {
+        &_subheader {
+            padding: 140px 0 133px 0;
+        }
 
         & + & {
         }

@@ -3,30 +3,126 @@
 .dc-main-menu {
     letter-spacing: 0px;
     margin-left: 27px;
+    height: max-content;
+    display: block;
+    background: #3665ac;
+    position: relative;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+
+
+    &_opened {
+        box-shadow: 0px 10px 30px 0px #2125291F;
+    }
 
     &__nav {
         padding: 12px 0px 0 0;
+    }
 
-        ul {
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-between;
+    .nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
 
-            li {
-                padding: 0 3px;
+        li {
+            padding: 0 3px;
 
-                a:hover {
-                    color: #0FD4E2;
-                }
+            a:hover {
+                color: #0FD4E2;
             }
         }
     }
 
-    @include media-breakpoint-down (md) {
+    &__login {
         display: none;
     }
 
-    @include media-breakpoint-down (sm) {
+    &__hamburger-open, &__hamburger-close {
+        display: none;
+        background: transparent;
+        border: 0;
+        margin-top: 3px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+    }
+
+    &__hamburger-close {
+        svg {
+            filter: invert(1);
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__hamburger-open, &__hamburger-close {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        margin-left: 0;
+        height: max-content;
+        display: flex;
+        align-items: self-start;
+        justify-content: flex-end;
+        background: #3665ac;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        padding-left: 36px;
+        padding-bottom: 5px;
+
+        &__nav {
+            padding: 0;
+            width: max-content;
+            justify-content: center;
+        }
+
+        .nav {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+        }
+
+        li {
+            padding: 12px 30px 12px 30px !important;
+            width: 100%;
+            text-align: right;
+        }
+
+        li:first-child {
+            padding-top: 8px !important;
+        }
+
+        li ~ li {
+            border-top: 1px solid ghostwhite;
+            border-style: dotted;
+        }
+
+        &__login {
+            display: list-item;
+        }
+
+        &__hamburger-open {
+            display: inline-block;
+        }
+
+        &__hamburger-close {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        position: fixed;
+        right: 5px;
+        top: 30px;
     }
 }
 // /* /TEMPLATE: main-menu */

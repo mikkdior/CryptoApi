@@ -78,7 +78,7 @@
 // /* TEMPLATE: auth */
 .dc-auth {
     padding-top: 3px;
-    padding-left: 5px;
+    padding-left: 11px;
     width: max-content;
 
     &__auth {
@@ -508,18 +508,19 @@
 // /*.....................................*/
 // /* TEMPLATE: exchange-widget */
 .dc-exchange-widget {
-    width: 396px;
+    width: 396px !important;
 
-    @include media-breakpoint-down (md) {
+    iframe {
+        /*height: 387px !important;*/
+    }
+
+    @include media-breakpoint-down (lg) {
+        
     }
 
     @include media-breakpoint-down (sm) {
         width: 100%;
         height: 356px;
-
-        iframe {
-            height: 369px !important;
-        }
     }
 
     @include media-breakpoint-down (xs) {
@@ -866,30 +867,126 @@
 .dc-main-menu {
     letter-spacing: 0px;
     margin-left: 27px;
+    height: max-content;
+    display: block;
+    background: #3665ac;
+    position: relative;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+
+
+    &_opened {
+        box-shadow: 0px 10px 30px 0px #2125291F;
+    }
 
     &__nav {
         padding: 12px 0px 0 0;
+    }
 
-        ul {
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-between;
+    .nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
 
-            li {
-                padding: 0 3px;
+        li {
+            padding: 0 3px;
 
-                a:hover {
-                    color: #0FD4E2;
-                }
+            a:hover {
+                color: #0FD4E2;
             }
         }
     }
 
-    @include media-breakpoint-down (md) {
+    &__login {
         display: none;
     }
 
-    @include media-breakpoint-down (sm) {
+    &__hamburger-open, &__hamburger-close {
+        display: none;
+        background: transparent;
+        border: 0;
+        margin-top: 3px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+    }
+
+    &__hamburger-close {
+        svg {
+            filter: invert(1);
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__hamburger-open, &__hamburger-close {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        margin-left: 0;
+        height: max-content;
+        display: flex;
+        align-items: self-start;
+        justify-content: flex-end;
+        background: #3665ac;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        padding-left: 36px;
+        padding-bottom: 5px;
+
+        &__nav {
+            padding: 0;
+            width: max-content;
+            justify-content: center;
+        }
+
+        .nav {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+        }
+
+        li {
+            padding: 12px 30px 12px 30px !important;
+            width: 100%;
+            text-align: right;
+        }
+
+        li:first-child {
+            padding-top: 8px !important;
+        }
+
+        li ~ li {
+            border-top: 1px solid ghostwhite;
+            border-style: dotted;
+        }
+
+        &__login {
+            display: list-item;
+        }
+
+        &__hamburger-open {
+            display: inline-block;
+        }
+
+        &__hamburger-close {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        position: fixed;
+        right: 5px;
+        top: 30px;
     }
 }
 // /* /TEMPLATE: main-menu */
@@ -961,7 +1058,7 @@
         th:last-child {
             text-align: end;
             width: 165px;
-            padding-right: 14px !important;
+            padding-right: 28px !important;
         }
     }
 
@@ -988,11 +1085,14 @@
     }
 
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -1004,22 +1104,27 @@
             left: 33%;
             top: 33%;
         }
+        /*&-cycle {
+            margin-left: 30px;
+        }*/
 
-        .dcg-btn:hover {
+        &-btn:hover {
             color: #fff;
         }
 
         svg {
             width: 16px;
             height: 16px;
+            margin-left: 20px;
         }
 
         &:hover svg {
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover .dc-market-coins__exchange-btn {
             display: flex;
+            margin-left: 15px;
         }
     }
 
@@ -1031,7 +1136,7 @@
     @include media-breakpoint-down (xl) {
         &__exchange {
             svg {
-                margin-left: 75px;
+                margin-left: 20px;
             }
         }
     }
@@ -1042,11 +1147,21 @@
                 margin-left: 55px;
             }
         }
+
+        .dc-table {
+            th:last-child {
+                padding-right: 18px !important;
+            }
+        }
+
+        .dc-market-coins__exchange-cycle {
+            margin-left: 0;
+        }
     }
 
 
     @include media-breakpoint-down (md) {
-        margin-top: -166px;
+        margin-top: -125px;
         width: 728px;
 
         .dc-market-search {
@@ -1083,6 +1198,27 @@
             svg {
                 margin-left: 55px;
             }
+
+            &-cycle {
+                margin-left: 0;
+                padding-right: 0;
+            }
+
+            .dc-market-coins__exchange-cycle {
+                padding-right: 0;
+            }
+
+            svg {
+                margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover .dc-market-coins__exchange-btn {
+                display: none;
+            }
         }
 
         &__header {
@@ -1091,7 +1227,6 @@
     }
 
     @include media-breakpoint-down (sm) {
-        margin-top: -155px;
         width: 100%;
 
         .dcg-h2 {
@@ -1127,8 +1262,11 @@
         }
 
         &__exchange {
+            justify-content: end;
+
             svg {
-                margin-left: 45px;
+                margin-left: 0px;
+                margin-right: 20px;
             }
         }
 
@@ -1138,11 +1276,12 @@
     }
 
     @include media-breakpoint-down (xs) {
-        .dc-table{
-            td{
+        .dc-table {
+            td {
                 font-size: 13px;
             }
-        } 
+        }
+
         .dc-coin {
             img {
                 width: 20px;
@@ -1156,17 +1295,15 @@
         }
 
         &__exchange {
-            svg {
-                margin: auto;
-                margin-left: 14px;
-            }
+
+            
         }
 
         &:hover svg {
             display: inline-block;
         }
 
-        &:hover .dcg-btn {
+        &:hover &__exchange-btn {
             display: none;
         }
     }
@@ -1209,11 +1346,15 @@
         th:last-child {
             text-align: end;
             padding-right: 26px;
-            width: 165px;
+            width: 145px;
         }
 
         th:nth-child(2) {
             width: 250px;
+        }
+
+        th:nth-child(7), td:nth-child(7) {
+            display: none;
         }
     }
 
@@ -1250,11 +1391,14 @@
     }
 
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -1263,11 +1407,15 @@
             margin-left: auto;
             display: none;
             position: absolute;
-            left: 33%;
+            left: 24%;
             top: 26%;
         }
 
-        .dcg-btn:hover {
+        &-cycle {
+            margin-left: 30px;
+        }
+
+        &-btn:hover {
             color: #fff;
         }
 
@@ -1280,7 +1428,7 @@
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover &-btn {
             display: flex;
         }
     }
@@ -1294,7 +1442,7 @@
 
         .dc-table {
             th:last-child {
-                width: 115px;
+                width: 145px;
             }
         }
     }
@@ -1315,7 +1463,7 @@
 
 
     @include media-breakpoint-down (md) {
-        margin-top: -166px;
+        margin-top: -125px;
         width: 728px;
 
         &__search-by {
@@ -1323,7 +1471,7 @@
         }
 
         .dc-market-search {
-            .dc-market-search__wrapper {
+            &__wrapper {
                 width: 475px;
                 margin-right: auto;
             }
@@ -1362,8 +1510,20 @@
         }
 
         &__exchange {
+            &-cycle {
+                margin-left: 0;
+            }
+
             svg {
                 margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover &-btn {
+                display: none;
             }
         }
 
@@ -1373,7 +1533,6 @@
     }
 
     @include media-breakpoint-down (sm) {
-        margin-top: -155px;
         width: 100%;
 
         .dcg-h2 {
@@ -1382,7 +1541,7 @@
 
 
         .dc-market-search {
-            .dc-market-search__wrapper {
+            &__wrapper {
                 width: 375px;
             }
         }
@@ -1392,20 +1551,12 @@
                 margin-left: 5px;
             }
 
-            th:nth-child(1), td:nth-child(1) {
-                display: none;
-            }
-
             th:nth-child(2) {
                 width: 60px;
             }
 
-            th:nth-child(3), td:nth-child(3) {
+            th:nth-child(3), td:nth-child(3), th:nth-child(6), td:nth-child(6), th:nth-child(1), td:nth-child(1) {
                 display: none;
-            }
-
-            th:nth-child(6) {
-                width: 90px;
             }
 
             th:nth-child(5) {
@@ -1414,6 +1565,11 @@
 
             th:last-child {
                 width: 60px !important;
+            }
+
+            th:nth-child(7), td:nth-child(7) {
+                width: 90px;
+                display: table-cell;
             }
         }
 
@@ -1431,8 +1587,10 @@
     @include media-breakpoint-down (xs) {
 
         .dc-market-search {
-            .dc-market-search__wrapper {
-                width: 190px;
+            width: 60%;
+
+            &__wrapper {
+                width: 100%;
             }
         }
 
@@ -1573,6 +1731,10 @@
         th:nth-child(2) {
             width: 225px;
         }
+
+        th:nth-child(8), td:nth-child(8) {
+            display: none;
+        }
     }
 
     @include media-breakpoint-down (lg) {
@@ -1586,7 +1748,7 @@
     @include media-breakpoint-down (md) {
         .dc-table {
 
-            th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(8), td:nth-child(8) {
+            th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(9), td:nth-child(9) {
                 display: none;
             }
 
@@ -1603,13 +1765,16 @@
     @include media-breakpoint-down (sm) {
         .dc-table {
 
-
             th:nth-child(2) {
                 width: 225px;
             }
 
-            th:nth-child(1), td:nth-child(1), th:nth-child(3), td:nth-child(3) {
+            th:nth-child(1), td:nth-child(1), th:nth-child(3), td:nth-child(3), th:nth-child(7), td:nth-child(7) {
                 display: none;
+            }
+
+            th:nth-child(8), td:nth-child(8) {
+                display: table-cell;
             }
         }
     }
@@ -1622,6 +1787,8 @@
             th:nth-child(2) {
                 width: 110px;
             }
+
+
 
             .dc-coin {
                 .dcg-h3 {
@@ -1955,7 +2122,7 @@
 // /* TEMPLATE: service */
 .dc-service {
     width: 360px;
-    min-height: 275px;
+    min-height: 100%;
     border-radius: 7px;
     padding: 8px 20px;
     background: #fff;
@@ -1996,6 +2163,7 @@
     }
 
     @include media-breakpoint-down (md) {
+        min-height: 275px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -2045,8 +2213,6 @@
     .dcg-h2 {
         padding-bottom: 10px;
     }
-
-
 
 
     @include media-breakpoint-down (lg) {
@@ -2177,8 +2343,12 @@
         letter-spacing: 0em;
     }
 
+    @include media-breakpoint-down (lg) {
+        padding: 0;
+    }
+
     @include media-breakpoint-down (md) {
-        margin-bottom: 32px;
+        margin-bottom: 25px;
 
         .dcg-h1 {
             margin-top: 20px;
@@ -2191,7 +2361,7 @@
     }
 
     @include media-breakpoint-down (sm) {
-        
+        margin-bottom: 0;
     }
 
     @include media-breakpoint-down (xs) {
@@ -2242,7 +2412,7 @@
     }
 
     @include media-breakpoint-down (md) {
-        margin-bottom: 32px;
+        margin-bottom: 75px;
 
         .dcg-h1 {
             margin-top: 20px;
@@ -2255,6 +2425,7 @@
     }
 
     @include media-breakpoint-down (sm) {
+        margin-bottom: 0;
     }
 
     @include media-breakpoint-down (xs) {

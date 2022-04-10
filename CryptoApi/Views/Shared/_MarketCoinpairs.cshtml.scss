@@ -64,7 +64,7 @@
         th:last-child {
             text-align: end;
             width: 165px;
-            padding-right: 14px !important;
+            padding-right: 28px !important;
         }
     }
 
@@ -91,11 +91,14 @@
     }
 
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -107,22 +110,27 @@
             left: 33%;
             top: 33%;
         }
+        /*&-cycle {
+            margin-left: 30px;
+        }*/
 
-        .dcg-btn:hover {
+        &-btn:hover {
             color: #fff;
         }
 
         svg {
             width: 16px;
             height: 16px;
+            margin-left: 20px;
         }
 
         &:hover svg {
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover .dc-market-coins__exchange-btn {
             display: flex;
+            margin-left: 15px;
         }
     }
 
@@ -134,7 +142,7 @@
     @include media-breakpoint-down (xl) {
         &__exchange {
             svg {
-                margin-left: 75px;
+                margin-left: 20px;
             }
         }
     }
@@ -145,11 +153,21 @@
                 margin-left: 55px;
             }
         }
+
+        .dc-table {
+            th:last-child {
+                padding-right: 18px !important;
+            }
+        }
+
+        .dc-market-coins__exchange-cycle {
+            margin-left: 0;
+        }
     }
 
 
     @include media-breakpoint-down (md) {
-        margin-top: -166px;
+        margin-top: -125px;
         width: 728px;
 
         .dc-market-search {
@@ -186,6 +204,27 @@
             svg {
                 margin-left: 55px;
             }
+
+            &-cycle {
+                margin-left: 0;
+                padding-right: 0;
+            }
+
+            .dc-market-coins__exchange-cycle {
+                padding-right: 0;
+            }
+
+            svg {
+                margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover .dc-market-coins__exchange-btn {
+                display: none;
+            }
         }
 
         &__header {
@@ -194,7 +233,6 @@
     }
 
     @include media-breakpoint-down (sm) {
-        margin-top: -155px;
         width: 100%;
 
         .dcg-h2 {
@@ -230,8 +268,11 @@
         }
 
         &__exchange {
+            justify-content: end;
+
             svg {
-                margin-left: 45px;
+                margin-left: 0px;
+                margin-right: 20px;
             }
         }
 
@@ -241,11 +282,12 @@
     }
 
     @include media-breakpoint-down (xs) {
-        .dc-table{
-            td{
+        .dc-table {
+            td {
                 font-size: 13px;
             }
-        } 
+        }
+
         .dc-coin {
             img {
                 width: 20px;
@@ -259,17 +301,15 @@
         }
 
         &__exchange {
-            svg {
-                margin: auto;
-                margin-left: 14px;
-            }
+
+            
         }
 
         &:hover svg {
             display: inline-block;
         }
 
-        &:hover .dcg-btn {
+        &:hover &__exchange-btn {
             display: none;
         }
     }

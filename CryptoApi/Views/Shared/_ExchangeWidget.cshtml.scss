@@ -1,18 +1,19 @@
 // /*.....................................*/
 // /* TEMPLATE: exchange-widget */
 .dc-exchange-widget {
-    width: 396px;
+    width: 396px !important;
 
-    @include media-breakpoint-down (md) {
+    iframe {
+        /*height: 387px !important;*/
+    }
+
+    @include media-breakpoint-down (lg) {
+        
     }
 
     @include media-breakpoint-down (sm) {
         width: 100%;
         height: 356px;
-
-        iframe {
-            height: 369px !important;
-        }
     }
 
     @include media-breakpoint-down (xs) {

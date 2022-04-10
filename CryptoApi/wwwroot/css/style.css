@@ -7543,7 +7543,12 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       padding-right: 5px; } }
   @media (max-width: 991.98px) {
     .dcg-section {
-      padding: 40px 0; }
+      padding: 40px 0;
+      /*&__adaptive {
+            padding: 80px 0;
+        }*/ }
+      .dcg-section_subheader {
+        padding: 100px 0 93px 0; }
       .dcg-section__head {
         justify-content: center; }
         .dcg-section__head .dcg-btn {
@@ -7556,7 +7561,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       /*.container {
             padding-left: 0;
             padding-right: 0;
-        }*/ } }
+        }*/ }
+      .dcg-section_subheader {
+        padding: 140px 0 133px 0; } }
   @media (max-width: 575.98px) {
     .dcg-section__head .dcg-h2 {
       font-size: 20px; } }
@@ -7708,7 +7715,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-auth {
   padding-top: 3px;
-  padding-left: 5px;
+  padding-left: 11px;
   width: max-content; }
   .dc-auth__auth {
     border: 0;
@@ -7931,13 +7938,13 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       font-size: 13px; } }
 
 .dc-exchange-widget {
-  width: 396px; }
+  width: 396px !important; }
+  .dc-exchange-widget iframe {
+    /*height: 387px !important;*/ }
   @media (max-width: 767.98px) {
     .dc-exchange-widget {
       width: 100%;
-      height: 356px; }
-      .dc-exchange-widget iframe {
-        height: 369px !important; } }
+      height: 356px; } }
   @media (max-width: 575.98px) {
     .dc-exchange-widget {
       height: 370px; } }
@@ -8125,20 +8132,86 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-main-menu {
   letter-spacing: 0px;
-  margin-left: 27px; }
+  margin-left: 27px;
+  height: max-content;
+  display: block;
+  background: #3665ac;
+  position: relative;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 0;
+  padding-bottom: 0; }
+  .dc-main-menu_opened {
+    box-shadow: 0px 10px 30px 0px #2125291F; }
   .dc-main-menu__nav {
     padding: 12px 0px 0 0; }
-    .dc-main-menu__nav ul {
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-between; }
-      .dc-main-menu__nav ul li {
-        padding: 0 3px; }
-        .dc-main-menu__nav ul li a:hover {
-          color: #0FD4E2; }
+  .dc-main-menu .nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; }
+    .dc-main-menu .nav li {
+      padding: 0 3px; }
+      .dc-main-menu .nav li a:hover {
+        color: #0FD4E2; }
+  .dc-main-menu__login {
+    display: none; }
+  .dc-main-menu__hamburger-open, .dc-main-menu__hamburger-close {
+    display: none;
+    background: transparent;
+    border: 0;
+    margin-top: 3px; }
+    .dc-main-menu__hamburger-open svg, .dc-main-menu__hamburger-close svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff; }
+  .dc-main-menu__hamburger-close svg {
+    filter: invert(1); }
+  @media (max-width: 1199.98px) {
+    .dc-main-menu__hamburger-open, .dc-main-menu__hamburger-close {
+      display: none; } }
   @media (max-width: 991.98px) {
     .dc-main-menu {
-      display: none; } }
+      margin-left: 0;
+      height: max-content;
+      display: flex;
+      align-items: self-start;
+      justify-content: flex-end;
+      background: #3665ac;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      padding-left: 36px;
+      padding-bottom: 5px; }
+      .dc-main-menu__nav {
+        padding: 0;
+        width: max-content;
+        justify-content: center; }
+      .dc-main-menu .nav {
+        flex-direction: column;
+        width: 100%;
+        display: none; }
+      .dc-main-menu li {
+        padding: 12px 30px 12px 30px !important;
+        width: 100%;
+        text-align: right; }
+      .dc-main-menu li:first-child {
+        padding-top: 8px !important; }
+      .dc-main-menu li ~ li {
+        border-top: 1px solid ghostwhite;
+        border-style: dotted; }
+      .dc-main-menu__login {
+        display: list-item; }
+      .dc-main-menu__hamburger-open {
+        display: inline-block; }
+      .dc-main-menu__hamburger-close {
+        display: none; } }
+  @media (max-width: 575.98px) {
+    .dc-main-menu {
+      position: fixed;
+      right: 5px;
+      top: 30px; } }
 
 .dc-market-coin-pairs {
   border-radius: 7px;
@@ -8178,7 +8251,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   .dc-market-coin-pairs .dc-table th:last-child {
     text-align: end;
     width: 165px;
-    padding-right: 14px !important; }
+    padding-right: 28px !important; }
   .dc-market-coin-pairs .dc-market-search .dc-market-search__wrapper {
     width: 100%;
     margin-left: auto; }
@@ -8192,10 +8265,16 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-market-coin-pairs__header svg {
       margin-right: 6px !important; }
   .dc-market-coin-pairs__exchange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
-    height: 100%; }
-    .dc-market-coin-pairs__exchange .dcg-btn {
+    height: 38px;
+    /*&-cycle {
+            margin-left: 30px;
+        }*/ }
+    .dc-market-coin-pairs__exchange-btn {
       background: #0056B3;
       width: 110px;
       display: flex;
@@ -8206,26 +8285,32 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       position: absolute;
       left: 33%;
       top: 33%; }
-    .dc-market-coin-pairs__exchange .dcg-btn:hover {
+    .dc-market-coin-pairs__exchange-btn:hover {
       color: #fff; }
     .dc-market-coin-pairs__exchange svg {
       width: 16px;
-      height: 16px; }
+      height: 16px;
+      margin-left: 20px; }
     .dc-market-coin-pairs__exchange:hover svg {
       display: none; }
-    .dc-market-coin-pairs__exchange:hover .dcg-btn {
-      display: flex; }
+    .dc-market-coin-pairs__exchange:hover .dc-market-coins__exchange-btn {
+      display: flex;
+      margin-left: 15px; }
   .dc-market-coin-pairs__no-results {
     padding: 130px 0 150px 0;
     text-align: center; }
   .dc-market-coin-pairs__exchange svg {
-    margin-left: 75px; }
+    margin-left: 20px; }
   @media (max-width: 1199.98px) {
     .dc-market-coin-pairs__exchange svg {
-      margin-left: 55px; } }
+      margin-left: 55px; }
+    .dc-market-coin-pairs .dc-table th:last-child {
+      padding-right: 18px !important; }
+    .dc-market-coin-pairs .dc-market-coins__exchange-cycle {
+      margin-left: 0; } }
   @media (max-width: 991.98px) {
     .dc-market-coin-pairs {
-      margin-top: -166px;
+      margin-top: -125px;
       width: 728px; }
       .dc-market-coin-pairs .dc-market-search .dc-market-search__wrapper {
         width: 305px;
@@ -8243,11 +8328,21 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
         padding-right: 0px !important; }
       .dc-market-coin-pairs__exchange svg {
         margin-left: 55px; }
+      .dc-market-coin-pairs__exchange-cycle {
+        margin-left: 0;
+        padding-right: 0; }
+      .dc-market-coin-pairs__exchange .dc-market-coins__exchange-cycle {
+        padding-right: 0; }
+      .dc-market-coin-pairs__exchange svg {
+        margin-left: 41px; }
+      .dc-market-coin-pairs__exchange:hover svg {
+        display: inline; }
+      .dc-market-coin-pairs__exchange:hover .dc-market-coins__exchange-btn {
+        display: none; }
       .dc-market-coin-pairs__header {
         margin-bottom: 7px; } }
   @media (max-width: 767.98px) {
     .dc-market-coin-pairs {
-      margin-top: -155px;
       width: 100%; }
       .dc-market-coin-pairs .dcg-h2 {
         display: none; }
@@ -8263,8 +8358,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
         width: 60px; }
       .dc-market-coin-pairs .dc-table th:last-child {
         width: 60px !important; }
-      .dc-market-coin-pairs__exchange svg {
-        margin-left: 45px; }
+      .dc-market-coin-pairs__exchange {
+        justify-content: end; }
+        .dc-market-coin-pairs__exchange svg {
+          margin-left: 0px;
+          margin-right: 20px; }
       .dc-market-coin-pairs__header {
         margin-bottom: 2px; } }
   @media (max-width: 575.98px) {
@@ -8276,12 +8374,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-market-coin-pairs .dc-coin .dcg-h3 {
       font-weight: 400;
       font-size: 13px; }
-    .dc-market-coin-pairs__exchange svg {
-      margin: auto;
-      margin-left: 14px; }
     .dc-market-coin-pairs:hover svg {
       display: inline-block; }
-    .dc-market-coin-pairs:hover .dcg-btn {
+    .dc-market-coin-pairs:hover .dc-market-coin-pairs__exchange-btn {
       display: none; } }
 
 .dc-market-coins {
@@ -8305,9 +8400,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   .dc-market-coins .dc-table th:last-child {
     text-align: end;
     padding-right: 26px;
-    width: 165px; }
+    width: 145px; }
   .dc-market-coins .dc-table th:nth-child(2) {
     width: 250px; }
+  .dc-market-coins .dc-table th:nth-child(7), .dc-market-coins .dc-table td:nth-child(7) {
+    display: none; }
   .dc-market-coins__search-by {
     font-size: 14px;
     font-weight: 400 !important;
@@ -8329,10 +8426,13 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     width: 910px;
     margin-left: auto; }
   .dc-market-coins__exchange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
-    height: 100%; }
-    .dc-market-coins__exchange .dcg-btn {
+    height: 38px; }
+    .dc-market-coins__exchange-btn {
       background: #0056B3;
       width: 110px;
       display: flex;
@@ -8341,22 +8441,24 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       margin-left: auto;
       display: none;
       position: absolute;
-      left: 33%;
+      left: 24%;
       top: 26%; }
-    .dc-market-coins__exchange .dcg-btn:hover {
+    .dc-market-coins__exchange-cycle {
+      margin-left: 30px; }
+    .dc-market-coins__exchange-btn:hover {
       color: #fff; }
     .dc-market-coins__exchange svg {
       width: 16px;
       height: 16px; }
     .dc-market-coins__exchange:hover svg {
       display: none; }
-    .dc-market-coins__exchange:hover .dcg-btn {
+    .dc-market-coins__exchange:hover .dc-market-coins__exchange-btn {
       display: flex; }
   .dc-market-coins__no-results {
     padding: 130px 0 150px 0;
     text-align: center; }
   .dc-market-coins .dc-table th:last-child {
-    width: 115px; }
+    width: 145px; }
   @media (max-width: 1199.98px) {
     .dc-market-coins__exchange svg {
       margin-left: 0; }
@@ -8364,11 +8466,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       width: 745px; } }
   @media (max-width: 991.98px) {
     .dc-market-coins {
-      margin-top: -166px;
+      margin-top: -125px;
       width: 728px; }
       .dc-market-coins__search-by {
         width: max-content; }
-      .dc-market-coins .dc-market-search .dc-market-search__wrapper {
+      .dc-market-coins .dc-market-search__wrapper {
         width: 475px;
         margin-right: auto; }
       .dc-market-coins .dcg-h2 {
@@ -8386,39 +8488,45 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       .dc-market-coins .dc-table th:last-child {
         width: 102px !important;
         padding-right: 0px !important; }
+      .dc-market-coins__exchange-cycle {
+        margin-left: 0; }
       .dc-market-coins__exchange svg {
         margin-left: 41px; }
+      .dc-market-coins__exchange:hover svg {
+        display: inline; }
+      .dc-market-coins__exchange:hover .dc-market-coins__exchange-btn {
+        display: none; }
       .dc-market-coins__header {
         margin-bottom: 10px; } }
   @media (max-width: 767.98px) {
     .dc-market-coins {
-      margin-top: -155px;
       width: 100%; }
       .dc-market-coins .dcg-h2 {
         display: none; }
-      .dc-market-coins .dc-market-search .dc-market-search__wrapper {
+      .dc-market-coins .dc-market-search__wrapper {
         width: 375px; }
       .dc-market-coins .dc-table .dcg-h3 {
         margin-left: 5px; }
-      .dc-market-coins .dc-table th:nth-child(1), .dc-market-coins .dc-table td:nth-child(1) {
-        display: none; }
       .dc-market-coins .dc-table th:nth-child(2) {
         width: 60px; }
-      .dc-market-coins .dc-table th:nth-child(3), .dc-market-coins .dc-table td:nth-child(3) {
+      .dc-market-coins .dc-table th:nth-child(3), .dc-market-coins .dc-table td:nth-child(3), .dc-market-coins .dc-table th:nth-child(6), .dc-market-coins .dc-table td:nth-child(6), .dc-market-coins .dc-table th:nth-child(1), .dc-market-coins .dc-table td:nth-child(1) {
         display: none; }
-      .dc-market-coins .dc-table th:nth-child(6) {
-        width: 90px; }
       .dc-market-coins .dc-table th:nth-child(5) {
         width: 100px; }
       .dc-market-coins .dc-table th:last-child {
         width: 60px !important; }
+      .dc-market-coins .dc-table th:nth-child(7), .dc-market-coins .dc-table td:nth-child(7) {
+        width: 90px;
+        display: table-cell; }
       .dc-market-coins__exchange svg {
         margin-left: 16px; }
       .dc-market-coins__header {
         margin-bottom: 2px; } }
   @media (max-width: 575.98px) {
-    .dc-market-coins .dc-market-search .dc-market-search__wrapper {
-      width: 190px; }
+    .dc-market-coins .dc-market-search {
+      width: 60%; }
+      .dc-market-coins .dc-market-search__wrapper {
+        width: 100%; }
     .dc-market-coins .dc-coin img {
       width: 20px;
       height: 20px; }
@@ -8496,12 +8604,15 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-market-update .dc-table th:nth-child(2) {
   width: 225px; }
 
+.dc-market-update .dc-table th:nth-child(8), .dc-market-update .dc-table td:nth-child(8) {
+  display: none; }
+
 @media (max-width: 1199.98px) {
   .dc-market-update .dc-table th:nth-child(2) {
     width: 150px; } }
 
 @media (max-width: 991.98px) {
-  .dc-market-update .dc-table th:nth-child(4), .dc-market-update .dc-table td:nth-child(4), .dc-market-update .dc-table th:nth-child(5), .dc-market-update .dc-table td:nth-child(5), .dc-market-update .dc-table th:nth-child(8), .dc-market-update .dc-table td:nth-child(8) {
+  .dc-market-update .dc-table th:nth-child(4), .dc-market-update .dc-table td:nth-child(4), .dc-market-update .dc-table th:nth-child(5), .dc-market-update .dc-table td:nth-child(5), .dc-market-update .dc-table th:nth-child(9), .dc-market-update .dc-table td:nth-child(9) {
     display: none; }
   .dc-market-update .dc-table th:nth-child(2) {
     width: 225px; }
@@ -8511,8 +8622,10 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 @media (max-width: 767.98px) {
   .dc-market-update .dc-table th:nth-child(2) {
     width: 225px; }
-  .dc-market-update .dc-table th:nth-child(1), .dc-market-update .dc-table td:nth-child(1), .dc-market-update .dc-table th:nth-child(3), .dc-market-update .dc-table td:nth-child(3) {
-    display: none; } }
+  .dc-market-update .dc-table th:nth-child(1), .dc-market-update .dc-table td:nth-child(1), .dc-market-update .dc-table th:nth-child(3), .dc-market-update .dc-table td:nth-child(3), .dc-market-update .dc-table th:nth-child(7), .dc-market-update .dc-table td:nth-child(7) {
+    display: none; }
+  .dc-market-update .dc-table th:nth-child(8), .dc-market-update .dc-table td:nth-child(8) {
+    display: table-cell; } }
 
 @media (max-width: 575.98px) {
   .dc-market-update .dc-table {
@@ -8677,7 +8790,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-service {
   width: 360px;
-  min-height: 275px;
+  min-height: 100%;
   border-radius: 7px;
   padding: 8px 20px;
   background: #fff;
@@ -8703,6 +8816,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       width: 300px; } }
   @media (max-width: 991.98px) {
     .dc-service {
+      min-height: 275px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -8793,14 +8907,20 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     font-weight: 600;
     line-height: 22px;
     letter-spacing: 0em; }
+  @media (max-width: 1199.98px) {
+    .dc-subheader-coin-pairs {
+      padding: 0; } }
   @media (max-width: 991.98px) {
     .dc-subheader-coin-pairs {
-      margin-bottom: 32px; }
+      margin-bottom: 25px; }
       .dc-subheader-coin-pairs .dcg-h1 {
         margin-top: 20px; }
       .dc-subheader-coin-pairs__desc {
         margin-top: 27px;
         line-height: 23px; } }
+  @media (max-width: 767.98px) {
+    .dc-subheader-coin-pairs {
+      margin-bottom: 0; } }
   @media (max-width: 575.98px) {
     .dc-subheader-coin-pairs__desc {
       width: 100%;
@@ -8836,12 +8956,15 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     letter-spacing: 0em; }
   @media (max-width: 991.98px) {
     .dc-subheader-coins {
-      margin-bottom: 32px; }
+      margin-bottom: 75px; }
       .dc-subheader-coins .dcg-h1 {
         margin-top: 20px; }
       .dc-subheader-coins__desc {
         margin-top: 27px;
         line-height: 23px; } }
+  @media (max-width: 767.98px) {
+    .dc-subheader-coins {
+      margin-bottom: 0; } }
   @media (max-width: 575.98px) {
     .dc-subheader-coins__desc {
       width: 100%;

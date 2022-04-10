@@ -17,12 +17,27 @@
     {
         @await Html.PartialAsync("_Table", new CTableVM<CCoinDataVM> (Model)
             .Add("#", i => (++counter).ToString())
-            .Add("<a href='?order=name'>Name<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", i => Html.Partial("_Coin", i))
-            .Add("<a href='?order=usd_price'>Price<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", i => i.data.usd_price == null ? "-" : $"<span class='text-primary'>${i.data.usd_price}</span>")
-            .Add("<a href='?order=volume_24h'>Volume (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", i => i.data.volume_24h == null ? "-" : "$" + ((long)i.data.volume_24h).ToString())
-            .Add("<a href='?order=market_cap'>Market Cap<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", i => i.data.market_cap == null ? "-" : "$" + ((long)i.data.market_cap).ToString())
-            .Add("<a href='?order=day_percent_change'>Change (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", i => i.data.day_percent_change == null ? "-" : $"<span class='{(i.data.day_percent_change < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change.ToString()}%</span>")
-            .Add("Exchange", i => $"<div class='dc-market-coins__exchange'><a class='btn dcg-btn' href='{coins_route}/{i.data.name}'>Exchange</a><svg><use xlink:href='/images/svg-sprite.svg#exchange-cycle-dark'></svg></div>")
+
+            .Add("<a href='?order=name'>Name<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", 
+                i => Html.Partial("_Coin", i))
+            
+            .Add("<a href='?order=usd_price'>Price<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", 
+                i => i.data.usd_price == null ? "-" : $"<span class='text-primary'>${i.data.usd_price}</span>")
+            
+            .Add("<a href='?order=volume_24h'>Volume (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", 
+                i => i.data.volume_24h == null ? "-" : "$" + ((long)i.data.volume_24h).ToString())
+            
+            .Add("<a href='?order=market_cap'>Market Cap<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", 
+                i => i.data.market_cap == null ? "-" : "$" + ((long)i.data.market_cap).ToString())
+            
+            .Add("<a href='?order=day_percent_change'>Change (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", 
+                i => i.data.day_percent_change == null ? "-" : $"<span class='{(i.data.day_percent_change < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change.ToString()}%</span>")
+            
+            .Add("<a href='?order=usd_price'>Price (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows'></svg></a>", 
+                i => i.data.usd_price == null ? "-" : $"<span class='text-primary'>${i.data.usd_price}</span><br><span class='{(i.data.day_percent_change < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change.ToString()}%</span>")
+
+            .Add("Exchange", 
+                i => $"<div class='dc-market-coins__exchange'><a class='btn dcg-btn dc-market-coins__exchange-btn' href='{coins_route}/{i.data.name}'>Exchange</a><a class='dcg-btn dc-market-coins__exchange-cycle' href='{coins_route}/{i.data.name}'><svg><use xlink:href='/images/svg-sprite.svg#exchange-cycle-dark'></svg></a></div>")
         )
     }
 </div>
