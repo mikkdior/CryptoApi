@@ -14,12 +14,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-8">
+            <div class="col-lg-8 col-md-12">
                 <div class="dcg-desc-wrapper dcg-desc-wrapper_coin">
                     @await Html.PartialAsync("_TextBlock", ("", Model.Description.text))
                 </div>
             </div>
-            <div class="col-4"> 
+            <div class="col-lg-4 col-md-12"> 
                 @await Html.PartialAsync("_CoinInfo", Model)
             </div>
         </div>

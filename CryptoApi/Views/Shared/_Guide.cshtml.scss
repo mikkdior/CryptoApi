@@ -2,7 +2,7 @@
 // /* TEMPLATE: guide */
 .dc-guide {
     width: 265px;
-    height: 214px;
+    min-height: 90%;
     border-radius: 7px;
     padding: 8px 20px;
     background: #fff;
@@ -28,7 +28,8 @@
         margin-bottom: 15px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        width: 100%;
     }
 }
 // /* /TEMPLATE: guide */

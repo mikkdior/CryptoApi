@@ -2,8 +2,16 @@
 // /* TEMPLATE: layout */
 .dc-layout {
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        .container {
+        }
+    }
 
+    @include media-breakpoint-down (xs) {
+        /*.container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }*/
     }
 }
 // /* /TEMPLATE: layout */

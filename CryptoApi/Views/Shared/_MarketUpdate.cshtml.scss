@@ -2,7 +2,13 @@
 // /* TEMPLATE: market-update */
 .dc-market-update {
     .dcg-section__head {
-        padding-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .dc-coin {
+        .dcg-h3 {
+            line-height: 20px;
+        }
     }
 
     .dc-table {
@@ -23,19 +29,82 @@
         th:last-child {
             text-align: end;
             padding-right: 26px;
-            width: 165px;
-
-            &::after {
-                content: "";
-            }
+            width: 145px;
         }
 
         th:nth-child(2) {
             width: 225px;
         }
+
+        th:nth-child(8), td:nth-child(8) {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        .dc-table {
+            th:nth-child(2) {
+                width: 150px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        .dc-table {
+
+            th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(9), td:nth-child(9) {
+                display: none;
+            }
+
+            th:nth-child(2) {
+                width: 225px;
+            }
+
+            th:last-child {
+                width: 135px;
+            }
+        }
     }
 
     @include media-breakpoint-down (sm) {
+        .dc-table {
+
+            th:nth-child(2) {
+                width: 225px;
+            }
+
+            th:nth-child(1), td:nth-child(1), th:nth-child(3), td:nth-child(3), th:nth-child(7), td:nth-child(7) {
+                display: none;
+            }
+
+            th:nth-child(8), td:nth-child(8) {
+                display: table-cell;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (xs) {
+        .dc-table {
+            font-size: 13px;
+
+            th:nth-child(2) {
+                width: 110px;
+            }
+
+
+
+            .dc-coin {
+                .dcg-h3 {
+                    font-size: 13px;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
     }
 }
 // /* /TEMPLATE: market-update */

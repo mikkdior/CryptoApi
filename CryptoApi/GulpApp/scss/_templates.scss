@@ -78,7 +78,7 @@
 // /* TEMPLATE: auth */
 .dc-auth {
     padding-top: 3px;
-    padding-left: 5px;
+    padding-left: 11px;
     width: max-content;
 
     &__auth {
@@ -93,6 +93,10 @@
             padding-right: 5px;
             padding-bottom: 1px;
         }
+    }
+
+    @include media-breakpoint-down (md) {
+        display: none;
     }
 
     @include media-breakpoint-down (sm) {
@@ -121,6 +125,10 @@
         width: 17px;
         height: 17px;
         margin: 0px 10px 3px 10px;
+    }
+
+    @include media-breakpoint-down (md) {
+        display: none;
     }
 
     @include media-breakpoint-down (sm) {
@@ -157,6 +165,8 @@
         margin-right: 4px;
     }
 
+    
+
     @include media-breakpoint-down (sm) {
     }
 }
@@ -170,7 +180,27 @@
         width: 185px;
     }
 
+    @include media-breakpoint-down (md) {
+        margin-top: 20px;
+
+        table td {
+            width: 320px;
+        }
+
+        table td:first-child {
+            width: 320px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+
+        table td {
+            width: 175px;
+        }
+
+        table td:first-child {
+            width: 175px;
+        }
     }
 }
 // /* /TEMPLATE: coin-info */
@@ -244,12 +274,35 @@
         }
     }
 
-    &:hover &__wrapper {
-        position: absolute;
-        z-index: 100;
+    @include media-breakpoint-down (lg) {
+        &:hover &__wrapper {
+            position: absolute;
+            z-index: 100;
+        }
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        &__wrapper {
+            position: relative;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .dcg-btn {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        &__head {
+            justify-content: center;
+        }
     }
 }
 // /* /TEMPLATE: coin-pair */
@@ -272,7 +325,16 @@
         width: 185px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        margin-top: 20px;
+
+        table td:nth-child(3), table td:nth-child(2), table td:first-child {
+            width: max-content;
+        }
+
+        @include media-breakpoint-down (sm) {
+            
+        }
     }
 }
 // /* /TEMPLATE: coin-pair-info */
@@ -288,7 +350,8 @@
     }
 
     .dcg-section__head {
-        padding-bottom: 15px;
+        margin-bottom: 12px;
+        padding-bottom: 0;
     }
 
     .dcg-icon-arrow-right {
@@ -354,15 +417,30 @@
         padding-top: 8px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        .dc-coin {
+            width: auto;
+            min-height: 85%;
+
+            .dcg-icon-arrow-right {
+                display: inline-block;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dc-coin {
+            min-height: 60px;
+        }
     }
 }
-// /* /TEMPLATE: coins */
-// /*.....................................*/
+    // /* /TEMPLATE: coins */
+    // /*.....................................*/
 
 // /*.....................................*/
 // /* TEMPLATE: coin-widget */
 .dc-coin-widget {
+    text-align: center;
 
     &__wrapper {
         border-radius: 7px;
@@ -407,10 +485,10 @@
     letter-spacing: -0.5px;
 
     &__content {
-
     }
 
     @include media-breakpoint-down (sm) {
+        font-size: 13px;
     }
 }
 // /* /TEMPLATE: copyright */
@@ -430,9 +508,23 @@
 // /*.....................................*/
 // /* TEMPLATE: exchange-widget */
 .dc-exchange-widget {
-    width: 396px;
+    width: 396px !important;
+
+    iframe {
+        /*height: 387px !important;*/
+    }
+
+    @include media-breakpoint-down (lg) {
+        
+    }
 
     @include media-breakpoint-down (sm) {
+        width: 100%;
+        height: 356px;
+    }
+
+    @include media-breakpoint-down (xs) {
+        height: 370px;
     }
 }
 // /* /TEMPLATE: exchange-widget */
@@ -442,13 +534,13 @@
 // /* TEMPLATE: faq */
 .dc-faq {
 
-    .dc-faq-item {
+    &-item {
         margin-left: auto;
         width: 680px;
         margin-bottom: 20px;
         border-bottom: 1px solid #ECECEC;
 
-        .dcg-h3 { 
+        .dcg-h3 {
             padding: 0;
             text-align: start;
         }
@@ -460,9 +552,9 @@
             margin-bottom: 20px;
             width: 100%;
 
-            svg{
+            svg {
                 width: 18px;
-                height: 18px; 
+                height: 18px;
             }
 
             .dcg-h3 {
@@ -482,7 +574,28 @@
         }
     }
 
+    @include media-breakpoint-down (lg) {
+        &-item {
+            width: 570px;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        &-item {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dcg-h3 {
+            font-size: 20px;
+            width: 100%;
+        }
     }
 }
     // /* /TEMPLATE: faq */
@@ -499,7 +612,17 @@
     font-size: 15px;
     padding: 34px 0 60px 0;
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        padding-bottom: 20px;
+        padding-top: 42px;
+
+        .dc-soc-icons {
+            margin-top: 20px;
+        }
+
+        .dc-copyright {
+            margin-top: 60px;
+        }
     }
 }
 // /* /TEMPLATE: footer */
@@ -509,7 +632,7 @@
 // /* TEMPLATE: guide */
 .dc-guide {
     width: 265px;
-    height: 214px;
+    min-height: 90%;
     border-radius: 7px;
     padding: 8px 20px;
     background: #fff;
@@ -535,7 +658,8 @@
         margin-bottom: 15px;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        width: 100%;
     }
 }
 // /* /TEMPLATE: guide */
@@ -546,8 +670,13 @@
 .dc-guide-list {
     .dcg-h2 {
         text-align: left;
+        padding-bottom: 10px;
     }
 
+    .dc-guide{
+        margin-top: 20px;
+    }
+    
     @include media-breakpoint-down (sm) {
     }
 }
@@ -612,11 +741,63 @@
         color: #CBCBCB;
     }
 
+    @include media-breakpoint-down (lg) {
+        width: 300px;
+
+        &__list {
+
+            li ~ li {
+                margin-left: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+
+        &__list {
+            margin-top: 0;
+            margin-bottom: 40px;
+
+            li ~ li {
+                margin-left: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+
+        &__list {
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            li ~ li {
+                margin-top: 0;
+            }
+        }
+
+        &__advantage {
+            flex-direction: column;
+        }
+
+        &__done {
+            width: 15px;
+            height: 15px;
+            margin-bottom: 5px;
+            margin-right: 0;
+        }
     }
 }
-// /* /TEMPLATE: head-advantages */
-// /*.....................................*/
+    // /* /TEMPLATE: head-advantages */
+    // /*.....................................*/
 
 // /*.....................................*/
 // /* TEMPLATE: header */
@@ -636,6 +817,10 @@
         }
     }
 
+    @include media-breakpoint-down (md) {
+        
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }
@@ -646,8 +831,16 @@
 // /* TEMPLATE: layout */
 .dc-layout {
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (md) {
+        .container {
+        }
+    }
 
+    @include media-breakpoint-down (xs) {
+        /*.container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }*/
     }
 }
 // /* /TEMPLATE: layout */
@@ -663,6 +856,7 @@
     }
 
     @include media-breakpoint-down (sm) {
+        /*padding-left: 10px;*/
     }
 }
 // /* /TEMPLATE: logo */
@@ -673,26 +867,126 @@
 .dc-main-menu {
     letter-spacing: 0px;
     margin-left: 27px;
+    height: max-content;
+    display: block;
+    background: #3665ac;
+    position: relative;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+
+
+    &_opened {
+        box-shadow: 0px 10px 30px 0px #2125291F;
+    }
 
     &__nav {
         padding: 12px 0px 0 0;
+    }
 
-        ul {
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-between;
+    .nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
 
-            li {
-                padding: 0 3px;
+        li {
+            padding: 0 3px;
 
-                a:hover{
-                    color: #0FD4E2;
-                }
+            a:hover {
+                color: #0FD4E2;
             }
         }
     }
 
-    @include media-breakpoint-down (sm) {
+    &__login {
+        display: none;
+    }
+
+    &__hamburger-open, &__hamburger-close {
+        display: none;
+        background: transparent;
+        border: 0;
+        margin-top: 3px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+    }
+
+    &__hamburger-close {
+        svg {
+            filter: invert(1);
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__hamburger-open, &__hamburger-close {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        margin-left: 0;
+        height: max-content;
+        display: flex;
+        align-items: self-start;
+        justify-content: flex-end;
+        background: #3665ac;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        padding-left: 36px;
+        padding-bottom: 5px;
+
+        &__nav {
+            padding: 0;
+            width: max-content;
+            justify-content: center;
+        }
+
+        .nav {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+        }
+
+        li {
+            padding: 12px 30px 12px 30px !important;
+            width: 100%;
+            text-align: right;
+        }
+
+        li:first-child {
+            padding-top: 8px !important;
+        }
+
+        li ~ li {
+            border-top: 1px solid ghostwhite;
+            border-style: dotted;
+        }
+
+        &__login {
+            display: list-item;
+        }
+
+        &__hamburger-open {
+            display: inline-block;
+        }
+
+        &__hamburger-close {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        position: fixed;
+        right: 5px;
+        top: 30px;
     }
 }
 // /* /TEMPLATE: main-menu */
@@ -706,6 +1000,10 @@
     margin-top: -160px;
     background: #fff;
     padding-bottom: 0;
+
+    .dcg-h3 {
+        line-height: 20px;
+    }
 
     .dcg-h2 {
         width: 290px;
@@ -723,7 +1021,7 @@
 
     .dc-table {
         th svg {
-            width: 11px; 
+            width: 11px;
             height: 14px;
             margin-left: 7px;
         }
@@ -759,12 +1057,15 @@
 
         th:last-child {
             text-align: end;
-            padding-right: 26px;
             width: 165px;
+            padding-right: 28px !important;
+        }
+    }
 
-            &::after {
-                content: "";
-            }
+    .dc-market-search {
+        .dc-market-search__wrapper {
+            width: 100%;
+            margin-left: auto;
         }
     }
 
@@ -784,12 +1085,14 @@
     }
 
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -799,25 +1102,29 @@
             display: none;
             position: absolute;
             left: 33%;
-            top: 26%;
+            top: 33%;
         }
+        /*&-cycle {
+            margin-left: 30px;
+        }*/
 
-        .dcg-btn:hover {
+        &-btn:hover {
             color: #fff;
         }
 
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
+            margin-left: 20px;
         }
 
         &:hover svg {
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover .dc-market-coins__exchange-btn {
             display: flex;
+            margin-left: 15px;
         }
     }
 
@@ -826,7 +1133,179 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+        &__exchange {
+            svg {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+        }
+
+        .dc-table {
+            th:last-child {
+                padding-right: 18px !important;
+            }
+        }
+
+        .dc-market-coins__exchange-cycle {
+            margin-left: 0;
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -125px;
+        width: 728px;
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 305px;
+                margin-left: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1), th:nth-child(4) {
+                width: 110px;
+            }
+
+            th:nth-child(2), th:nth-child(5) {
+                width: 99px;
+            }
+
+            th:nth-child(3) {
+                width: 104px;
+            }
+
+            th:last-child {
+                width: 104px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+
+            &-cycle {
+                margin-left: 0;
+                padding-right: 0;
+            }
+
+            .dc-market-coins__exchange-cycle {
+                padding-right: 0;
+            }
+
+            svg {
+                margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover .dc-market-coins__exchange-btn {
+                display: none;
+            }
+        }
+
+        &__header {
+            margin-bottom: 7px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 100%;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(1), th:nth-child(4) {
+                width: 60px;
+            }
+
+            th:nth-child(2), th:nth-child(5), td:nth-child(2), td:nth-child(5) {
+                display: none;
+            }
+
+            th:nth-child(3) {
+                width: 60px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+        }
+
+        &__exchange {
+            justify-content: end;
+
+            svg {
+                margin-left: 0px;
+                margin-right: 20px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dc-table {
+            td {
+                font-size: 13px;
+            }
+        }
+
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+
+            
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover &__exchange-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coin-pairs */
@@ -840,6 +1319,10 @@
     margin-top: -160px;
     background: #fff;
     padding-bottom: 0;
+
+    .dcg-h3 {
+        line-height: 20px;
+    }
 
     .dc-table {
         th svg {
@@ -863,11 +1346,15 @@
         th:last-child {
             text-align: end;
             padding-right: 26px;
-            width: 165px;
+            width: 145px;
         }
 
         th:nth-child(2) {
             width: 250px;
+        }
+
+        th:nth-child(7), td:nth-child(7) {
+            display: none;
         }
     }
 
@@ -896,13 +1383,22 @@
         }
     }
 
+    .dc-market-search {
+        &__wrapper {
+            width: 910px;
+            margin-left: auto;
+        }
+    }
+
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -911,25 +1407,28 @@
             margin-left: auto;
             display: none;
             position: absolute;
-            left: 33%;
+            left: 24%;
             top: 26%;
         }
 
-        .dcg-btn:hover {
+        &-cycle {
+            margin-left: 30px;
+        }
+
+        &-btn:hover {
             color: #fff;
         }
 
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
         }
 
         &:hover svg {
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover &-btn {
             display: flex;
         }
     }
@@ -939,7 +1438,208 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+
+        .dc-table {
+            th:last-child {
+                width: 145px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 0;
+            }
+        }
+
+        .dc-market-search {
+            &__wrapper {
+                width: 745px;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -125px;
+        width: 728px;
+
+        &__search-by {
+            width: max-content;
+        }
+
+        .dc-market-search {
+            &__wrapper {
+                width: 475px;
+                margin-right: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1) {
+                width: 30px;
+            }
+
+            th:nth-child(2) {
+                width: 133px;
+            }
+
+            th:nth-child(3) {
+                width: 100px;
+            }
+
+            th:nth-child(4), td:nth-child(4) {
+                display: none;
+            }
+
+
+            th:nth-child(5) {
+                width: 180px;
+            }
+
+            th:last-child {
+                width: 102px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            &-cycle {
+                margin-left: 0;
+            }
+
+            svg {
+                margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover &-btn {
+                display: none;
+            }
+        }
+
+        &__header {
+            margin-bottom: 10px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+
+        .dc-market-search {
+            &__wrapper {
+                width: 375px;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(2) {
+                width: 60px;
+            }
+
+            th:nth-child(3), td:nth-child(3), th:nth-child(6), td:nth-child(6), th:nth-child(1), td:nth-child(1) {
+                display: none;
+            }
+
+            th:nth-child(5) {
+                width: 100px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+
+            th:nth-child(7), td:nth-child(7) {
+                width: 90px;
+                display: table-cell;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 16px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+
+        .dc-market-search {
+            width: 60%;
+
+            &__wrapper {
+                width: 100%;
+            }
+        }
+
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin: auto;
+                margin-left: 14px;
+            }
+        }
+
+        .dc-table {
+
+            th:last-child, td:last-child {
+                display: none;
+            }
+
+            td {
+                font-size: 13px;
+                word-break: break-all;
+            }
+
+            th:nth-child(2) {
+                width: 75px;
+            }
+
+            th:nth-child(5) {
+                width: 90px;
+            }
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover .dcg-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coins */
@@ -948,7 +1648,7 @@
 // /*.....................................*/
 // /* TEMPLATE: market-search */
 .dc-market-search {
-    width: 910px;
+    /*width: 910px;*/
 
     form {
         width: 100%;
@@ -998,7 +1698,13 @@
 // /* TEMPLATE: market-update */
 .dc-market-update {
     .dcg-section__head {
-        padding-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .dc-coin {
+        .dcg-h3 {
+            line-height: 20px;
+        }
     }
 
     .dc-table {
@@ -1019,19 +1725,82 @@
         th:last-child {
             text-align: end;
             padding-right: 26px;
-            width: 165px;
-
-            &::after {
-                content: "";
-            }
+            width: 145px;
         }
 
         th:nth-child(2) {
             width: 225px;
         }
+
+        th:nth-child(8), td:nth-child(8) {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        .dc-table {
+            th:nth-child(2) {
+                width: 150px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        .dc-table {
+
+            th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(9), td:nth-child(9) {
+                display: none;
+            }
+
+            th:nth-child(2) {
+                width: 225px;
+            }
+
+            th:last-child {
+                width: 135px;
+            }
+        }
     }
 
     @include media-breakpoint-down (sm) {
+        .dc-table {
+
+            th:nth-child(2) {
+                width: 225px;
+            }
+
+            th:nth-child(1), td:nth-child(1), th:nth-child(3), td:nth-child(3), th:nth-child(7), td:nth-child(7) {
+                display: none;
+            }
+
+            th:nth-child(8), td:nth-child(8) {
+                display: table-cell;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (xs) {
+        .dc-table {
+            font-size: 13px;
+
+            th:nth-child(2) {
+                width: 110px;
+            }
+
+
+
+            .dc-coin {
+                .dcg-h3 {
+                    font-size: 13px;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
     }
 }
 // /* /TEMPLATE: market-update */
@@ -1041,7 +1810,7 @@
 // /* TEMPLATE: news-list */
 .dc-news-list {
     .dcg-section__head {
-        padding-bottom: 38px;
+        padding-bottom: 18px;
     }
 
     @include media-breakpoint-down (sm) {
@@ -1055,6 +1824,7 @@
 .dc-news-sketch {
     border-radius: 7px;
     background: #fff;
+    margin-top: 20px;
 
     .dcg-icon-arrow-right {
         width: 18px;
@@ -1128,6 +1898,9 @@
     }
 
     @include media-breakpoint-down (sm) {
+        width: 340px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 // /* /TEMPLATE: news-sketch */
@@ -1180,7 +1953,7 @@
 // /* TEMPLATE: pagination */
 .dc-pagination {
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
 
@@ -1192,6 +1965,7 @@
         background: #fff;
         min-width: 50px;
         height: 50px;
+        margin-top: 20px;
         display: inline-block;
     }
 
@@ -1218,6 +1992,29 @@
 
 
     @include media-breakpoint-down (sm) {
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+
+        &__list {
+        }
+
+        &__list-item-wrapper {
+            margin-top: 20px;
+        }
+
+        &__list-item-wrapper {
+            min-width: 40px;
+            height: 40px;
+        }
     }
 }
 // /* /TEMPLATE: pagination */
@@ -1232,9 +2029,22 @@
     }
 
     &__partner {
-        width: 265px;
         margin-top: 55px;
         padding: 0px 7px;
+        text-align: center;
+
+        img {
+            width: 265px;
+        }
+    }
+
+
+
+    @include media-breakpoint-down (md) {
+        &__partner {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     @include media-breakpoint-down (sm) {
@@ -1246,7 +2056,6 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
-    
     /*display: flex;*/
 
     .dcg-h2 {
@@ -1260,7 +2069,13 @@
         padding-left: 60px;
     }
 
-    @include media-breakpoint-down (sm) {
+
+    @include media-breakpoint-down (md) {
+        .dcg-h2 {
+            margin-bottom: 38px;
+            text-align: center !important;
+        }
+        
     }
 }
 // /* /TEMPLATE: section-text-block */
@@ -1286,7 +2101,18 @@
         margin-top: 37px;
     }
 
-    @include media-breakpoint-down (sm) {
+
+    @include media-breakpoint-down (md) {
+        /*.dc-section-text-block {
+            .dcg-h2 {
+                text-align: left;
+            }
+        }*/
+
+        .dc-text-block {
+            margin-left: 0;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: section-text-blocks */
@@ -1296,10 +2122,11 @@
 // /* TEMPLATE: service */
 .dc-service {
     width: 360px;
-    height: 275px;
+    min-height: 100%;
     border-radius: 7px;
     padding: 8px 20px;
     background: #fff;
+    margin-top: 20px;
 
     .dcg-h3 {
         padding-top: 7px;
@@ -1319,7 +2146,6 @@
     }
 
     &__content {
-        margin-bottom: 15px;
     }
 
     &__details {
@@ -1332,7 +2158,49 @@
         }
     }
 
+    @include media-breakpoint-down (lg) {
+        width: 300px;
+    }
+
+    @include media-breakpoint-down (md) {
+        min-height: 275px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        min-height: unset;
+
+        &__head {
+            height: 90px;
+        }
+
+        &__content {
+            width: 370px;
+            padding-top: 12px;
+            padding-bottom: 5px;
+        }
+
+        &__details {
+            padding: 5px 0;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+        display: block;
+
+        &__head {
+            height: auto;
+        }
+
+        &__content {
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 5px;
+        }
+
+        &__details {
+            padding: 5px 0;
+        }
     }
 }
 // /* /TEMPLATE: service */
@@ -1343,9 +2211,8 @@
 .dc-services {
 
     .dcg-h2 {
+        padding-bottom: 10px;
     }
-
-
 
 
     @include media-breakpoint-down (lg) {
@@ -1353,11 +2220,7 @@
     }
 
     @include media-breakpoint-down (md) {
-        background: red;
-
-        .dcg-h2 {
-            background: green;
-        }
+        
     }
 
     @include media-breakpoint-down (sm) {
@@ -1410,11 +2273,20 @@
         margin-bottom: 39px;
     }
 
-    .dc-exchange-widget{
+    .dc-exchange-widget {
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (lg) {
+        .dcg-h1 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .dc-exchange-widget {
+            margin: auto;
+            margin-top: 20px;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coin */
@@ -1431,7 +2303,17 @@
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+
+    @include media-breakpoint-down (lg) {
+        .dcg-h1 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .dc-exchange-widget {
+            margin: auto;
+            margin-top: 20px;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coin-pair */
@@ -1461,7 +2343,45 @@
         letter-spacing: 0em;
     }
 
+    @include media-breakpoint-down (lg) {
+        padding: 0;
+    }
+
+    @include media-breakpoint-down (md) {
+        margin-bottom: 25px;
+
+        .dcg-h1 {
+            margin-top: 20px;
+        }
+
+        &__desc {
+            margin-top: 27px;
+            line-height: 23px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down (xs) {
+        &__desc {
+            width: 100%;
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0 10px;
+        }
+
+        .dcg-h1 {
+            margin-top: 10px;
+            font-family: Nunito;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coin-pairs */
@@ -1491,7 +2411,41 @@
         letter-spacing: 0em;
     }
 
+    @include media-breakpoint-down (md) {
+        margin-bottom: 75px;
+
+        .dcg-h1 {
+            margin-top: 20px;
+        }
+
+        &__desc {
+            margin-top: 27px;
+            line-height: 23px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down (xs) {
+        &__desc {
+            width: 100%;
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0 10px;
+        }
+
+        .dcg-h1 {
+            margin-top: 10px;
+            font-family: Nunito;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: subheader-coins */
@@ -1500,6 +2454,8 @@
 // /*.....................................*/
 // /* TEMPLATE: subheader-main */
 .dc-subheader-main {
+    margin-top: 45px;
+
     &::after {
         content: "";
         clear: both;
@@ -1522,7 +2478,42 @@
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .dcg-h1 {
+            margin-bottom: 30px;
+            text-align: center;
+            width: 710px;
+        }
+
+        .dc-exchange-widget {
+            margin-left: 0;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        .dcg-h1 {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        /*padding: 0 20px;*/
+        margin-top: 0 !important;
+
+        .dcg-h1 {
+            margin-top: 10px;
+            font-family: Nunito;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: subheader-main */

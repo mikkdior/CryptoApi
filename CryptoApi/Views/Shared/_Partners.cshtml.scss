@@ -7,9 +7,22 @@
     }
 
     &__partner {
-        width: 265px;
         margin-top: 55px;
         padding: 0px 7px;
+        text-align: center;
+
+        img {
+            width: 265px;
+        }
+    }
+
+
+
+    @include media-breakpoint-down (md) {
+        &__partner {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     @include media-breakpoint-down (sm) {

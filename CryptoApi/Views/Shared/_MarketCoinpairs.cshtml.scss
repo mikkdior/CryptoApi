@@ -7,6 +7,10 @@
     background: #fff;
     padding-bottom: 0;
 
+    .dcg-h3 {
+        line-height: 20px;
+    }
+
     .dcg-h2 {
         width: 290px;
         padding: 0;
@@ -23,7 +27,7 @@
 
     .dc-table {
         th svg {
-            width: 11px; 
+            width: 11px;
             height: 14px;
             margin-left: 7px;
         }
@@ -59,12 +63,15 @@
 
         th:last-child {
             text-align: end;
-            padding-right: 26px;
             width: 165px;
+            padding-right: 28px !important;
+        }
+    }
 
-            &::after {
-                content: "";
-            }
+    .dc-market-search {
+        .dc-market-search__wrapper {
+            width: 100%;
+            margin-left: auto;
         }
     }
 
@@ -84,12 +91,14 @@
     }
 
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -99,25 +108,29 @@
             display: none;
             position: absolute;
             left: 33%;
-            top: 26%;
+            top: 33%;
         }
+        /*&-cycle {
+            margin-left: 30px;
+        }*/
 
-        .dcg-btn:hover {
+        &-btn:hover {
             color: #fff;
         }
 
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
+            margin-left: 20px;
         }
 
         &:hover svg {
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover .dc-market-coins__exchange-btn {
             display: flex;
+            margin-left: 15px;
         }
     }
 
@@ -126,7 +139,179 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+        &__exchange {
+            svg {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+        }
+
+        .dc-table {
+            th:last-child {
+                padding-right: 18px !important;
+            }
+        }
+
+        .dc-market-coins__exchange-cycle {
+            margin-left: 0;
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -125px;
+        width: 728px;
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 305px;
+                margin-left: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1), th:nth-child(4) {
+                width: 110px;
+            }
+
+            th:nth-child(2), th:nth-child(5) {
+                width: 99px;
+            }
+
+            th:nth-child(3) {
+                width: 104px;
+            }
+
+            th:last-child {
+                width: 104px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 55px;
+            }
+
+            &-cycle {
+                margin-left: 0;
+                padding-right: 0;
+            }
+
+            .dc-market-coins__exchange-cycle {
+                padding-right: 0;
+            }
+
+            svg {
+                margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover .dc-market-coins__exchange-btn {
+                display: none;
+            }
+        }
+
+        &__header {
+            margin-bottom: 7px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+        .dc-market-search {
+            .dc-market-search__wrapper {
+                width: 100%;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(1), th:nth-child(4) {
+                width: 60px;
+            }
+
+            th:nth-child(2), th:nth-child(5), td:nth-child(2), td:nth-child(5) {
+                display: none;
+            }
+
+            th:nth-child(3) {
+                width: 60px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+        }
+
+        &__exchange {
+            justify-content: end;
+
+            svg {
+                margin-left: 0px;
+                margin-right: 20px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dc-table {
+            td {
+                font-size: 13px;
+            }
+        }
+
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+
+            
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover &__exchange-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coin-pairs */

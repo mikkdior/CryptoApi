@@ -9,9 +9,15 @@
     <div class="row">
         @for (int i = 0; i < 3; i++)
         {
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 @await Html.PartialAsync("_NewsSketch")
             </div>
         }
+    </div>
+    <div class="dcg-section__foot">
+        <a href="#" class="dcg-btn dcg-btn_big">
+            View All
+            <svg icon="arrow-right-light" class="dcg-icon-arrow-right"></svg>
+        </a>
     </div>
 </div>

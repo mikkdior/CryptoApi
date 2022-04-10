@@ -7,6 +7,10 @@
     background: #fff;
     padding-bottom: 0;
 
+    .dcg-h3 {
+        line-height: 20px;
+    }
+
     .dc-table {
         th svg {
             width: 11px;
@@ -29,11 +33,15 @@
         th:last-child {
             text-align: end;
             padding-right: 26px;
-            width: 165px;
+            width: 145px;
         }
 
         th:nth-child(2) {
             width: 250px;
+        }
+
+        th:nth-child(7), td:nth-child(7) {
+            display: none;
         }
     }
 
@@ -62,13 +70,22 @@
         }
     }
 
+    .dc-market-search {
+        &__wrapper {
+            width: 910px;
+            margin-left: auto;
+        }
+    }
+
     &__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 38px;
 
-
-        .dcg-btn {
+        &-btn {
             background: #0056B3;
             width: 110px;
             display: flex;
@@ -77,25 +94,28 @@
             margin-left: auto;
             display: none;
             position: absolute;
-            left: 33%;
+            left: 24%;
             top: 26%;
         }
 
-        .dcg-btn:hover {
+        &-cycle {
+            margin-left: 30px;
+        }
+
+        &-btn:hover {
             color: #fff;
         }
 
         svg {
             width: 16px;
             height: 16px;
-            margin-left: 53px;
         }
 
         &:hover svg {
             display: none;
         }
 
-        &:hover .dcg-btn {
+        &:hover &-btn {
             display: flex;
         }
     }
@@ -105,7 +125,208 @@
         text-align: center;
     }
 
+    @include media-breakpoint-down (xl) {
+
+        .dc-table {
+            th:last-child {
+                width: 145px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down (lg) {
+        &__exchange {
+            svg {
+                margin-left: 0;
+            }
+        }
+
+        .dc-market-search {
+            &__wrapper {
+                width: 745px;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down (md) {
+        margin-top: -125px;
+        width: 728px;
+
+        &__search-by {
+            width: max-content;
+        }
+
+        .dc-market-search {
+            &__wrapper {
+                width: 475px;
+                margin-right: auto;
+            }
+        }
+
+        .dcg-h2 {
+            width: 400px;
+        }
+
+        .dc-table {
+            th:nth-child(1) {
+                width: 30px;
+            }
+
+            th:nth-child(2) {
+                width: 133px;
+            }
+
+            th:nth-child(3) {
+                width: 100px;
+            }
+
+            th:nth-child(4), td:nth-child(4) {
+                display: none;
+            }
+
+
+            th:nth-child(5) {
+                width: 180px;
+            }
+
+            th:last-child {
+                width: 102px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__exchange {
+            &-cycle {
+                margin-left: 0;
+            }
+
+            svg {
+                margin-left: 41px;
+            }
+
+            &:hover svg {
+                display: inline;
+            }
+
+            &:hover &-btn {
+                display: none;
+            }
+        }
+
+        &__header {
+            margin-bottom: 10px;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+
+        .dcg-h2 {
+            display: none;
+        }
+
+
+        .dc-market-search {
+            &__wrapper {
+                width: 375px;
+            }
+        }
+
+        .dc-table {
+            .dcg-h3 {
+                margin-left: 5px;
+            }
+
+            th:nth-child(2) {
+                width: 60px;
+            }
+
+            th:nth-child(3), td:nth-child(3), th:nth-child(6), td:nth-child(6), th:nth-child(1), td:nth-child(1) {
+                display: none;
+            }
+
+            th:nth-child(5) {
+                width: 100px;
+            }
+
+            th:last-child {
+                width: 60px !important;
+            }
+
+            th:nth-child(7), td:nth-child(7) {
+                width: 90px;
+                display: table-cell;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin-left: 16px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+
+        .dc-market-search {
+            width: 60%;
+
+            &__wrapper {
+                width: 100%;
+            }
+        }
+
+        .dc-coin {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .dcg-h3 {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        &__exchange {
+            svg {
+                margin: auto;
+                margin-left: 14px;
+            }
+        }
+
+        .dc-table {
+
+            th:last-child, td:last-child {
+                display: none;
+            }
+
+            td {
+                font-size: 13px;
+                word-break: break-all;
+            }
+
+            th:nth-child(2) {
+                width: 75px;
+            }
+
+            th:nth-child(5) {
+                width: 90px;
+            }
+        }
+
+        &:hover svg {
+            display: inline-block;
+        }
+
+        &:hover .dcg-btn {
+            display: none;
+        }
     }
 }
 // /* /TEMPLATE: market-coins */

@@ -2,10 +2,11 @@
 // /* TEMPLATE: service */
 .dc-service {
     width: 360px;
-    height: 275px;
+    min-height: 100%;
     border-radius: 7px;
     padding: 8px 20px;
     background: #fff;
+    margin-top: 20px;
 
     .dcg-h3 {
         padding-top: 7px;
@@ -25,7 +26,6 @@
     }
 
     &__content {
-        margin-bottom: 15px;
     }
 
     &__details {
@@ -38,7 +38,49 @@
         }
     }
 
+    @include media-breakpoint-down (lg) {
+        width: 300px;
+    }
+
+    @include media-breakpoint-down (md) {
+        min-height: 275px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        min-height: unset;
+
+        &__head {
+            height: 90px;
+        }
+
+        &__content {
+            width: 370px;
+            padding-top: 12px;
+            padding-bottom: 5px;
+        }
+
+        &__details {
+            padding: 5px 0;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+        width: 100%;
+        display: block;
+
+        &__head {
+            height: auto;
+        }
+
+        &__content {
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 5px;
+        }
+
+        &__details {
+            padding: 5px 0;
+        }
     }
 }
 // /* /TEMPLATE: service */

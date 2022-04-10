@@ -1,7 +1,6 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
-    
     /*display: flex;*/
 
     .dcg-h2 {
@@ -15,7 +14,13 @@
         padding-left: 60px;
     }
 
-    @include media-breakpoint-down (sm) {
+
+    @include media-breakpoint-down (md) {
+        .dcg-h2 {
+            margin-bottom: 38px;
+            text-align: center !important;
+        }
+        
     }
 }
 // /* /TEMPLATE: section-text-block */

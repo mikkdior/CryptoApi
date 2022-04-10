@@ -2,13 +2,13 @@
 // /* TEMPLATE: faq */
 .dc-faq {
 
-    .dc-faq-item {
+    &-item {
         margin-left: auto;
         width: 680px;
         margin-bottom: 20px;
         border-bottom: 1px solid #ECECEC;
 
-        .dcg-h3 { 
+        .dcg-h3 {
             padding: 0;
             text-align: start;
         }
@@ -20,9 +20,9 @@
             margin-bottom: 20px;
             width: 100%;
 
-            svg{
+            svg {
                 width: 18px;
-                height: 18px; 
+                height: 18px;
             }
 
             .dcg-h3 {
@@ -42,7 +42,28 @@
         }
     }
 
+    @include media-breakpoint-down (lg) {
+        &-item {
+            width: 570px;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        &-item {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
     @include media-breakpoint-down (sm) {
+    }
+
+    @include media-breakpoint-down (xs) {
+        .dcg-h3 {
+            font-size: 20px;
+            width: 100%;
+        }
     }
 }
     // /* /TEMPLATE: faq */

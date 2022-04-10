@@ -1,6 +1,8 @@
 // /*.....................................*/
 // /* TEMPLATE: subheader-main */
 .dc-subheader-main {
+    margin-top: 45px;
+
     &::after {
         content: "";
         clear: both;
@@ -23,7 +25,42 @@
         margin-left: auto;
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .dcg-h1 {
+            margin-bottom: 30px;
+            text-align: center;
+            width: 710px;
+        }
+
+        .dc-exchange-widget {
+            margin-left: 0;
+        }
+    }
+
+    @include media-breakpoint-down (md) {
+        .dcg-h1 {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    @include media-breakpoint-down (xs) {
+        /*padding: 0 20px;*/
+        margin-top: 0 !important;
+
+        .dcg-h1 {
+            margin-top: 10px;
+            font-family: Nunito;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 // /* /TEMPLATE: subheader-main */

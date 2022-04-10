@@ -110,7 +110,10 @@
     i {
     }
 
-    @include media-breakpoint-down (sm) {
+    @include media-breakpoint-down (xs) {
+        h2 {
+            font-size: 18px;
+        }
     }
 }
 /* /TYPOGRAPHY */
