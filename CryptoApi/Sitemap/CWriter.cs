@@ -7,7 +7,7 @@
     {
         int countUrls = 100;
         string mainFileName = "_sitemap.xml";
-        string subFileName = "_sitemap{index}.xml";
+        string subFileName = "_sitemap-{index}.xml";
 
         IEnumerable<CPageInfo> pages { get; set; }
         int count { get; set; }
@@ -60,14 +60,22 @@
         void CreateSubfile(List<CPageInfo> pages, int index)
         {
             // TODO: реализовать
-
-            string path = "/" + GetSubFileName(index);
-            string sample = "<sitemap><loc>{url}</loc></sitemap>";
+            
+            string path = "./" + GetSubFileName(index);
+            string sample = "\t\t<url>\r\t\t\t<loc>{url}</loc>\r\t\t\t<lastmod>{lastmod}</lastmod>\r\t\t</url>";
+            string lastmod = DateTime.Now.ToString("yyyy-MM-dd");
 
             using (var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8))
             {
+                sw.WriteLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+                sw.WriteLine("<sitemapindex xmlns=\"https://www.sitemaps.org/schemas/sitemap/0.9\">");
+                sw.WriteLine("\t<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">");
+
                 foreach (var page in pages)
-                    sw.WriteLine(sample.Replace("{url}", page.url));
+                    sw.WriteLine(sample.Replace("{url}", page.url).Replace("{lastmod}", lastmod));
+
+                sw.WriteLine("\t</urlset>");
+                sw.WriteLine("</sitemapindex>");
             }
         }
 
@@ -80,7 +88,7 @@
         {
             // TODO: реализовать
 
-            string path = "/" + mainFileName;
+            string path = "./" + mainFileName;
 
             using (var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8))
             {
@@ -88,7 +96,7 @@
                 sw.WriteLine("<sitemapindex xmlns=\"https://www.sitemaps.org/schemas/sitemap/0.9\">");
 
                 for (int i = 1; i < count + 1; i++)
-                    sw.WriteLine($"<sitemap><loc>/sitemap-{i}.xml</loc></sitemap>");
+                    sw.WriteLine($"\t<sitemap>\r\t\t<loc>/sitemap-{i}.xml</loc>\r\t</sitemap>");
 
                 sw.WriteLine("</sitemapindex>");
             }
@@ -103,28 +111,13 @@
         {
             // TODO: реализовать
 
-            foreach (var filepath in Directory.GetFiles("/"))
-                if (filepath.EndsWith(".xml") && !filepath.StartsWith('_')) 
-                    File.Delete(filepath);
-
-
-            /*string[] lines = File.ReadAllLines("path");
-
-            using (StreamReader sr = new StreamReader(CurrentPath))
+            foreach (var filepath in Directory.GetFiles("./"))
             {
-                string line;
+                string file_name = filepath.Split('/').Last();
 
-                while ((line = sr.ReadLine()) != null)
-                {
-                    string[] user = line.Split('/');
-                    string log = user[0].Trim();
-                    string pass = user[1].Trim();
-
-                    if (filter != "" && !log.StartsWith(filter)) continue;
-
-                    callback(log, pass);
-                }
-            }*/
+                if (file_name.StartsWith("sitemap"))
+                    File.Delete(filepath);
+            }
         }
 
         /// <summary>
@@ -133,10 +126,16 @@
         void RenameNewFiles()
         {
             // TODO: реализовать
+            foreach (var old_path in Directory.GetFiles("./"))
+            {
+                string file_name = old_path.Split('/').Last();
 
-            foreach (var filepath in Directory.GetFiles("/"))
-                if (filepath.EndsWith(".xml") && filepath.StartsWith('_'))
-                    File.Move(filepath, filepath.Substring(1));
+                if (file_name.StartsWith("_sitemap"))
+                {
+                    string new_path = old_path.Replace(file_name, file_name.Substring(1));
+                    File.Move(old_path, new_path);
+                }
+            }
         }
     }
 }

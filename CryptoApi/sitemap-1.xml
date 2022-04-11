@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+		<url>			<loc>/</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/btc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/eth</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/usdt</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/BNB</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/usdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/xrp</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ada</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/luna</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/sol</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/avax</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/dot</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/doge</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/busd</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ust</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/shib</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/wbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/cro</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/matic</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/steth</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/near</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/dai</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ltc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/atom</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/link</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/trx</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/bch</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ftt</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/axs</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/etc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/algo</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/xlm</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/vet</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/leo</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/okb</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/uni</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/waves</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/hbar</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/fil</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/icp</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/egld</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/mana</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/sand</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/xmr</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/theta</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/rune</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ceth</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ftm</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/xtz</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/klay</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/aave</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/zoc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/algohalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/althalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/asdhalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/bchhalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/half</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/adahalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/linkhalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/atomhalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/dogehalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/eoshalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/etchalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/ethhalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/knchalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/matichalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/privhalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/sxphalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/thetahalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/xrphalf</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/zch</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/zcn</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/zrx</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/zxc</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/OXD</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/oxd v2</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/0xmr</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/0xpad</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/zrx</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10024-10028-appoline-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10084-grayton-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/man</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/100x</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10604-somerset-ave-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10612-somerset-ave-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10616-mckinney-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10617-hathaway-ave-cleveland-oh</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10629-mckinney-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10639-stratman-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-10700-whittier-ave-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-11078-longview-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-11078-wayburn-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-11201-college-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-11300-roxbury-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-11653-nottingham-rd-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-11957-olga-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/elvn</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-12334-lansdowne-street-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-12405-santa-rosa-dr-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+		<url>			<loc>/coins/realtoken-s-12409-whitehill-st-detroit-mi</loc>			<lastmod>2022-04-11</lastmod>		</url>
+	</urlset>
+</sitemapindex>
