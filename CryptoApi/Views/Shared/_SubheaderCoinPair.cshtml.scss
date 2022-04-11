@@ -21,6 +21,12 @@
             margin-top: 20px;
         }
     }
+
+    @include media-breakpoint-down (md) {
+        .dcg-h1 {
+            margin-top: 0;
+        }
+    }
 }
 // /* /TEMPLATE: subheader-coin-pair */
 // /*.....................................*/

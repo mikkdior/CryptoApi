@@ -84,7 +84,7 @@ h2, .dcg-h2 {
     color: #212529;
 
     @include media-breakpoint-down (xs) {
-        font-size: 20px;
+        font-size: 26px;
     }
 }
 
@@ -415,6 +415,10 @@ textarea {}
 
         & + & {
         }
+
+        &_subheader {
+            padding-top: 100px;
+        }
         /*.container {
             padding-left: 0;
             padding-right: 0;
@@ -428,7 +432,7 @@ textarea {}
 
         &__head {
             .dcg-h2 {
-                font-size: 20px;
+                font-size: 26px;
             }
         }
     }
