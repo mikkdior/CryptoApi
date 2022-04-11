@@ -8,7 +8,7 @@
         int countUrls = 50000;
         string mainFileName = "_sitemap.xml";
         string subFileName = "_sitemap-{index}.xml";
-
+        string root = "./wwwroot/";
         IEnumerable<CPageInfo> pages { get; set; }
         int count { get; set; }
 
@@ -63,7 +63,7 @@
         {
             // TODO: реализовать
             
-            string path = "./" + GetSubFileName(index);
+            string path = root + GetSubFileName(index);
             string sample = "\t\t<url>\r\t\t\t<loc>{url}</loc>\r\t\t\t<lastmod>{lastmod}</lastmod>\r\t\t</url>";
             string lastmod = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -90,7 +90,7 @@
         {
             // TODO: реализовать
 
-            string path = "./" + mainFileName;
+            string path = root + mainFileName;
 
             using (var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8))
             {
@@ -113,7 +113,7 @@
         {
             // TODO: реализовать
 
-            foreach (var filepath in Directory.GetFiles("./"))
+            foreach (var filepath in Directory.GetFiles(root))
             {
                 string file_name = filepath.Split('/').Last();
 
@@ -128,7 +128,7 @@
         void RenameNewFiles()
         {
             // TODO: реализовать
-            foreach (var old_path in Directory.GetFiles("./"))
+            foreach (var old_path in Directory.GetFiles(root))
             {
                 string file_name = old_path.Split('/').Last();
 
