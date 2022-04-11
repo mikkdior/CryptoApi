@@ -60,10 +60,15 @@
         void CreateSubfile(List<CPageInfo> pages, int index)
         {
             // TODO: реализовать
-            foreach (var page in pages)
-                Console.WriteLine(page.url);
 
-            Console.WriteLine("--------------------");
+            string path = "/" + GetSubFileName(index);
+            string sample = "<sitemap><loc>{url}</loc></sitemap>";
+
+            using (var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8))
+            {
+                foreach (var page in pages)
+                    sw.WriteLine(sample.Replace("{url}", page.url));
+            }
         }
 
         /// <summary>
@@ -74,6 +79,19 @@
         void CreateMainFile(int count)
         {
             // TODO: реализовать
+
+            string path = "/" + mainFileName;
+
+            using (var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8))
+            {
+                sw.WriteLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+                sw.WriteLine("<sitemapindex xmlns=\"https://www.sitemaps.org/schemas/sitemap/0.9\">");
+
+                for (int i = 1; i < count + 1; i++)
+                    sw.WriteLine($"<sitemap><loc>/sitemap-{i}.xml</loc></sitemap>");
+
+                sw.WriteLine("</sitemapindex>");
+            }
         }
 
         /// <summary>
@@ -84,6 +102,29 @@
         void RemoveOldFiles()
         {
             // TODO: реализовать
+
+            foreach (var filepath in Directory.GetFiles("/"))
+                if (filepath.EndsWith(".xml") && !filepath.StartsWith('_')) 
+                    File.Delete(filepath);
+
+
+            /*string[] lines = File.ReadAllLines("path");
+
+            using (StreamReader sr = new StreamReader(CurrentPath))
+            {
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] user = line.Split('/');
+                    string log = user[0].Trim();
+                    string pass = user[1].Trim();
+
+                    if (filter != "" && !log.StartsWith(filter)) continue;
+
+                    callback(log, pass);
+                }
+            }*/
         }
 
         /// <summary>
@@ -92,6 +133,10 @@
         void RenameNewFiles()
         {
             // TODO: реализовать
+
+            foreach (var filepath in Directory.GetFiles("/"))
+                if (filepath.EndsWith(".xml") && filepath.StartsWith('_'))
+                    File.Move(filepath, filepath.Substring(1));
         }
     }
 }
