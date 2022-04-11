@@ -1,5 +1,6 @@
 ﻿using CryptoApi.Api;
 using CryptoApi.Models.DB;
+using CryptoApi.Sitemap;
 
 namespace CryptoApi.Services
 {
@@ -11,14 +12,16 @@ namespace CryptoApi.Services
         private CApiManager api;
         private IConfiguration conf;
         private IRunnerM runner;
+        private ISitemap sitemap;
 
-        public CActualizerM (CDbM db, CCoinsM coins, CCoinPairsM pair, CApiManager api, IRunnerM runner)
+        public CActualizerM (CDbM db, CCoinsM coins, CCoinPairsM pair, CApiManager api, IRunnerM runner, ISitemap sitemap)
         {
             this.db = db;
             this.coinsModel = coins;
             this.coinPairsModel = pair;
             this.api = api;
             this.runner = runner;
+            this.sitemap = sitemap;
 
             conf = new ConfigurationBuilder().AddJsonFile("ConfApi.json").Build();
             var donors = conf.GetSection("Donors");
@@ -26,7 +29,8 @@ namespace CryptoApi.Services
         }
         public async Task RefreshDataAsync ()
         {
-            await RefreshCoinsAsync();
+            //await RefreshCoinsAsync();
+            await sitemap.CreateAsync();
         }
         public async Task RefreshCoinsAsync()
         {

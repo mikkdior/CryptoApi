@@ -1,6 +1,7 @@
 using CryptoApi.Api;
 using CryptoApi.Models.DB;
 using CryptoApi.Services;
+using CryptoApi.Sitemap;
 using CryptoApi.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,7 @@ builder.Services.AddTransient<CHomeVM>();
 builder.Services.AddTransient<CActualizerM>();
 builder.Services.AddSingleton<CApiManager>();
 builder.Services.AddSingleton<IRunnerM, CRunnerM>();
+builder.Services.AddTransient<ISitemap, CSitemap>();
 
 var app = builder.Build();
 
