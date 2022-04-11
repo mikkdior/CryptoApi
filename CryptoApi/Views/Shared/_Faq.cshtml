@@ -6,11 +6,11 @@
     @foreach(var item in data)
     {
         <div class="dc-faq-item">
-            <div class="dc-faq-item__wrapper dcg-btn">
+            <button type="button" class="dc-faq-item__wrapper dcg-btn">
                 <h3 class="dcg-h3">@item.title</h3>
                 <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
                 <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
-            </div>
+            </button>
             <p class="dc-faq-item__content">
                 @item.text
             </p>

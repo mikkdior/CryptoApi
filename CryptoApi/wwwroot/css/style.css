@@ -7970,19 +7970,35 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    width: 100%; }
+    width: 100%;
+    border: 0;
+    background: unset; }
     .dc-faq-item__wrapper svg {
       width: 18px;
       height: 18px; }
     .dc-faq-item__wrapper .dcg-h3 {
       margin-bottom: 0; }
   .dc-faq-item__content {
-    /*display: none;*/
+    display: none;
     padding-right: 10px;
     padding-left: 0px; }
   .dc-faq-item .dcg-toggle {
+    /*display: inline-block;*/
     width: 20px;
-    height: 20px; }
+    height: 20px;
+    margin-left: 15px;
+    /*&_hide {
+                display: none;
+            }*/ }
+
+.dc-faq-item:first-child .dc-faq-item__content {
+  display: inline-block; }
+
+.dc-faq-item:first-child .dcg-toggle_hide {
+  display: inline-block; }
+
+.dc-faq-item:first-child .dcg-toggle_view {
+  display: none; }
 
 @media (max-width: 1199.98px) {
   .dc-faq-item {
