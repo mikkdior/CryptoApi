@@ -18,18 +18,19 @@ public class CCoinPairsM : CBaseDbM
     public CCoinPairsM(CDbM db, CCoinsM coins) : base(db)
     {
         coinsModel = coins;
-        db.CoinPairs = GetPairsData();
+        /*db.CoinPairs = GetPairsData();*/
     }
 
-    private IEnumerable<CCoinPairDataM> GetPairsData (string? filter = null)
+    public IEnumerable<CCoinPairDataM> GetPairsData (string? filter = null)
     {
-        yield break;
         var coins = coinsModel.GetTrueCoins(filter).ToArray();
 
         foreach (var coin1 in coins)
         {
             foreach (var coin2 in coins)
             {
+                if (coin1.name == coin2.name) continue;
+
                 yield return new CCoinPairDataM(coin1, coin2, GetMeta(coin1.id, coin2.id));
             }
         }

@@ -16,6 +16,12 @@ namespace CryptoApi.Sitemap
             get
             {
                 yield break;
+
+                /*return model.GetPairsData()
+                    .Select(p => new CPageInfo()
+                    {
+                        url = $"/crypto-pairs/{p.coin_1.name}-to-{p.coin_2.name}"
+                    });*/
             }
         }
     }

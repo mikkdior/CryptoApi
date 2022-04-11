@@ -1,106 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-		<url>			<loc>/coins/wwcn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/bwrx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wxbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wxdai</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wxmr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wxrp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wsbt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wtf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wula</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wwbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wxc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x2</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x22</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x2y2</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x3s</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x42</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x8x</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x99</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xaea12</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xaea-xii</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xeta</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/alia</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xaur</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xvc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xts</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xbe</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xbt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ix</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xbn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xbc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/gold</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/silv</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xbx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xcad</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xcv</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xcash</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xld</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xlab</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xcf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xcz</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/game</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xdai</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xcomb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/stake</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xdefi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xdex</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xdoge</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xdo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xim</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xeeb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xels</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xend</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xnc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xemx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x2p</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/x2p</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xplay</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xph</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xno</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xenox</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xensa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xsr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xnb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xns</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xeta</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xeus</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xfi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xet</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xfit</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xfuel</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xfund</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xgold</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xsh</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xtag</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xmpt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xiasi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xido</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xgc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xplus</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xINCHa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xio</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xgt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xiot</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xircus</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xiro</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xkawa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xlmn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xlshiba</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xmark</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xmx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xmeta</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xmn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xmon</loc>			<lastmod>2022-04-11</lastmod>		</url>
-	</urlset>
-</sitemapindex>

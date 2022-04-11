@@ -1,106 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-		<url>			<loc>/coins/amana</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amkr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amkr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amAAVE</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amDAI</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amusdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amUSDT</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amWBTC</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amWETH</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/amWMATIC</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/arai</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aren</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aren</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/asnx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/asnx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/asusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/asusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/atusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/atusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/auni</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ausdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ausdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ausdt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ausdt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/awbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/awbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aweth</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aave</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aXSUSHI</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aYFI</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/azrx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/azrx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aab</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abby</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/at</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abey</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abst</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/able</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ast</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aaa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/abu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aca</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aca</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aca</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/accel</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ACE</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aced</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aced</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ace</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/astar</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ace</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/act</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acxt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/act</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ack</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ac</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acoin</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acsi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/actn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ACADA</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/aac</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/acy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adaboy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adacash</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adao</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adat</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ADAFlect</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/akong</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adal</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/addy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/admc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adam</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/demir</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adapad</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/asw</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adax</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/addict</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/add</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adena</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ADEN</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/adf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-	</urlset>
-</sitemapindex>

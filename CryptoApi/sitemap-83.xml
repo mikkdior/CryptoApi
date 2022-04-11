@@ -1,106 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-		<url>			<loc>/coins/npw</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nwc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nst</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nste</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ncp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/new</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nyr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/NYT</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nyc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nye</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xlt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nexo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nax</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxdf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxtt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/next</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nexm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nETH</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nLuna</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/psi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nxm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nexus</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nezuko</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfmon</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfta</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nft11</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfta</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftallbi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/alley</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftart</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftascii</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nbm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nbp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftbs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/champ</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/NAO</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfteez</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/eye</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftfy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/gs1</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/n1</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftm</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftndr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/NFTI</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/loot</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/gem</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/mania</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nmt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/MAZE</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/music</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/streamer</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftopia</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftpad</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/NFTP</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nft</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftpunk2.0</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftpunk</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nrt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfsg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nsc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftsol</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfts</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nst</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftstyle</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/swaps</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/tone</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/war</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftk</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/wrld</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfty</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nfxc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ng</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nhbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nice</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nicheman</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nickel</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/robin</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/guru</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nido</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nift</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/niftsy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nftl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nifty</loc>			<lastmod>2022-04-11</lastmod>		</url>
-	</urlset>
-</sitemapindex>

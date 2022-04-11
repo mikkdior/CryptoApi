@@ -1,106 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-		<url>			<loc>/coins/vgo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vai</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vai</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vcf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/flov</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vld</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/val</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vkr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/valk</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbit</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/v$</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/valor</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vft</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/value</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vntw</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vlu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vsc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vancat</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vancat</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vancii</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/dVNQ</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/dVOO</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vnl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vnla</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vny</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vkt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vtar</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vany</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vprc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vpnd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vrn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vsc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vault</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vgt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vault</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vhc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vault-s</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vlty</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbswap</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbzrx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xvc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vcg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vdv</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vet</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/veco</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/yve-crvdao</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vtx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vect</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vxv</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/weve</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/veed</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vee</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/slbz</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/grnc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vega</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vgw</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vegi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vegi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/veil</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vektor</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vlx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vlxpad</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vdora</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vdgt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vls</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/scar</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/velo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vex</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vemp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vndt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/veni</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vjc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vnx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vent</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vention</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xvs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbch</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbeth</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vbusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vdai</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vdoge</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vdot</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/veth</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vfil</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vlink</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vltc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vrt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vsxp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vusdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vusdt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vxrp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vxvs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vera</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vcco</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vera</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vro</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vra</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/vrap</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xvg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-	</urlset>
-</sitemapindex>

@@ -5,7 +5,7 @@
     /// </summary>
     public class CWriter
     {
-        int countUrls = 100;
+        int countUrls = 50000;
         string mainFileName = "_sitemap.xml";
         string subFileName = "_sitemap-{index}.xml";
 
@@ -47,6 +47,8 @@
 
                 part_pages.Add(page);
             }
+
+            CreateSubfile(part_pages, ++files_count);
 
             return files_count;
         }

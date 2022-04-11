@@ -1,106 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-		<url>			<loc>/coins/ihf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/invi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ivc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iv</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iobusd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ioc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ioeth</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ioex</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ioi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ion</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ionc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ion</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iost</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/miota</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/itc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iotn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iotx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iotexchart</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iodoge</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/tex</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ioshib</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iouni</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iousdc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iousdt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iowbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iown</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ipay</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/post</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/pls</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ipx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iq</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iqcoin</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/IQG</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iqn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iqq</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iqt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/irena</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ird</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iris</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iris</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ib</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ibeur</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iron</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ice</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ironman</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iron</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/titan</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/isal</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iset-84e55e</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/dURTH</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/isikc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/$islbyz</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/island</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/isa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/islainu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/isl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iso</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/isp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ibfk</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/isdt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/itl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xta</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/itamcube</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/itam</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/itc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iten</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ITS</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/iti</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/itg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/myne</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/notart</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ing</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/pixel</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ivg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ivory</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ivy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ixc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ixi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/xxa</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ixir</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ixo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ixs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ixt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/nagi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ize</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/izi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jfi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/777</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jackpot</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jpt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jack</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jacy</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jade</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jade</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jaguar</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jaiho</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jar</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jrt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jaud</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jgbp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/jcad</loc>			<lastmod>2022-04-11</lastmod>		</url>
-	</urlset>
-</sitemapindex>

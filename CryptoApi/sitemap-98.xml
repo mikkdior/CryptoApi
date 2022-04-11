@@ -1,106 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-		<url>			<loc>/coins/red</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redbuff</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redbux</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rdd</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reddoge</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redfeg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redfloki</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rfox</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redkishu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/playmates</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rmars</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redpanda</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/phb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redshiba</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rst</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/redzilla</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ree</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reefer</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reef</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/sycle</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rfr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ref</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/refi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/fine</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rfi</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reflecto</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rfx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/flx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reflex</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/RMOG</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/efk</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/$RFG</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/regen</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rtf</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/REGU</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rkt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/relay</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rlb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rel</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rel</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rlx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reli</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rmtx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rmx</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/remit</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rem</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/remn</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/RENA</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/renbtc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rndr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rendoge</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reec</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/renfil</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rrb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/berry</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rnb</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/renzec</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/repo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rpt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rptc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rod</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/ren</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/req</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rsv</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rsr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rsr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/res</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/source</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rtt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rETH</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reth2</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/retire</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rcube</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/retro</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rok</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rev</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/reva</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rev</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvc</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvrs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvrs</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvst</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/recap</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rve</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvl</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/revt</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rev</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvlng</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvp</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rvz</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/rpg</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/$rvlvr</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/revo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/revo</loc>			<lastmod>2022-04-11</lastmod>		</url>
-		<url>			<loc>/coins/revu</loc>			<lastmod>2022-04-11</lastmod>		</url>
-	</urlset>
-</sitemapindex>
