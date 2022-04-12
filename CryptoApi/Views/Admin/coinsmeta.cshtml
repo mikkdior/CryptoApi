@@ -13,6 +13,7 @@
         <p>
             <label>group: </label>
             <select name="group">
+                <option value="pagehead">Шапка страницы монеты</option>
                 <option value="description">Описание монеты</option>
                 <option value="texts">Тексты монеты</option>
                 <option value="faq">Faq монеты</option>
@@ -25,10 +26,6 @@
         <p>
             <label>value: </label>
             @Html.TextAreaFor(m => m.value)
-        </p>
-        <p>
-            <label>CCoinDataMid: </label>
-            @Html.Editor("CCoinDataMid")
         </p>
         <p>
             <input type="submit" value="post"/>

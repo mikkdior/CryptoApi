@@ -20,13 +20,14 @@ public class CCoinVM
         get
         {
             string title = coin.data["pagehead", "title"] != null ? coin.data["pagehead", "title"].value : commonModel["coin pagehead", "title"]?.value;
+            string text = coin.data["pagehead", "text"] != null ? coin.data["pagehead", "text"].value : commonModel["coin pagehead", "text"]?.value;
 
             return new CTextBlockBuilder()
                 .SetTitle(title)
                 .SetTitleValues(coin.data["pagehead tpl", "title"]?.value)
                 .SetTitleData(coin.data)
-                .SetText("")
-                .SetTextValues("")
+                .SetText(text)
+                .SetTextValues(text)
                 .SetTextData(null)
                 .Build();
         }

@@ -20,13 +20,14 @@ public class CCoinPairVM
         get
         {
             string title = pair.data["pagehead", "title"] != null ? pair.data["pagehead", "title"].value : commonModel["pair pagehead", "title"]?.value;
+            string text = pair.data["pagehead", "text"] != null ? pair.data["pagehead", "text"].value : commonModel["pair pagehead", "text"]?.value;
 
             return new CTextBlockBuilder()
                 .SetTitle(title)
                 .SetTitleValues(pair.data["pagehead tpl", "title"]?.value)
                 .SetTitleData(pair.data)
-                .SetText("")
-                .SetTextValues("")
+                .SetText(text)
+                .SetTextValues(text)
                 .SetTextData(null)
                 .Build();
         }
