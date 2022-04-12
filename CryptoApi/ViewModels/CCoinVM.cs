@@ -17,14 +17,19 @@ public class CCoinVM
     /// </summary>
     public CTextBlockVM PageHead
     {
-        get => new CTextBlockBuilder()
-                .SetTitle(commonModel["coin pagehead", "title"]?.value)
-                .SetTitleValues(coin.data["pagehead", "title"]?.value)
+        get
+        {
+            string title = coin.data["pagehead", "title"] != null ? coin.data["pagehead", "title"].value : commonModel["coin pagehead", "title"]?.value;
+
+            return new CTextBlockBuilder()
+                .SetTitle(title)
+                .SetTitleValues(coin.data["pagehead tpl", "title"]?.value)
                 .SetTitleData(coin.data)
-                .SetText(commonModel["coin pagehead", "text"]?.value)
-                .SetTextValues(coin.data["pagehead", "text"]?.value)
-                .SetTextData(coin.data)
+                .SetText("")
+                .SetTextValues("")
+                .SetTextData(null)
                 .Build();
+        }
     }
     /// <summary>
     ///     Используя паттерн Buider генерирует модель текстового блока "Описания" и возвращает ее.

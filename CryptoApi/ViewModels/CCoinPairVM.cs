@@ -17,14 +17,19 @@ public class CCoinPairVM
     /// </summary>
     public CTextBlockVM PageHead
     {
-        get => new CTextBlockBuilder()
-                .SetTitle(commonModel["pair pagehead", "title"]?.value)
-                .SetTitleValues(pair.data["pagehead", "title"]?.value)
+        get
+        {
+            string title = pair.data["pagehead", "title"] != null ? pair.data["pagehead", "title"].value : commonModel["pair pagehead", "title"]?.value;
+
+            return new CTextBlockBuilder()
+                .SetTitle(title)
+                .SetTitleValues(pair.data["pagehead tpl", "title"]?.value)
                 .SetTitleData(pair.data)
-                .SetText(commonModel["pair pagehead", "text"]?.value)
-                .SetTextValues(pair.data["pagehead", "text"]?.value)
-                .SetTextData(pair.data)
+                .SetText("")
+                .SetTextValues("")
+                .SetTextData(null)
                 .Build();
+        }
     }
     /// <summary>
     ///     Используя паттерн Buider генерирует модель текстового блока "Описания" и возвращает ее.
