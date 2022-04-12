@@ -8471,6 +8471,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-market-coins__sort-by-list li ~ li {
       border-top: solid 1px #ECECEC;
       border-style: dotted; }
+    .dc-market-coins__sort-by-list li:last-child {
+      display: none; }
   .dc-market-coins__header {
     display: flex;
     justify-content: space-between;
@@ -8532,6 +8534,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       .dc-market-coins .dc-market-search__wrapper {
         width: 475px;
         margin-right: auto; }
+      .dc-market-coins__sort-by-list li:nth-child(3) {
+        display: none; }
       .dc-market-coins .dcg-h2 {
         width: 400px; }
       .dc-market-coins .dc-table th:nth-child(1) {
@@ -8560,6 +8564,10 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   @media (max-width: 767.98px) {
     .dc-market-coins {
       width: 100%; }
+      .dc-market-coins__sort-by-list li:last-child {
+        display: list-item; }
+      .dc-market-coins__sort-by-list li:nth-child(2), .dc-market-coins__sort-by-list li:nth-child(5) {
+        display: none; }
       .dc-market-coins .dcg-h2 {
         display: none; }
       .dc-market-coins .dc-market-search__wrapper {
