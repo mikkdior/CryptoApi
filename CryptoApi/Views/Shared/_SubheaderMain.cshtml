@@ -1,5 +1,7 @@
-﻿<div class="dc-subheader-main">
-    <h1 class="dcg-h1">Exchange <strong>anonymously</strong> any volume with guaranteed fixed rate</h1>
+﻿@model (CTextBlockVM textblock, (string coin1_name, string coin2_name) coins)
+
+<div class="dc-subheader-main">
+    <h1 class="dcg-h1">@Html.Raw(Model.textblock.title)</h1>
     @await Html.PartialAsync("_HeadAdvantages")
-    @await Html.PartialAsync("_ExchangeWidget", ("btc", "eth"))
+    @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
 </div>

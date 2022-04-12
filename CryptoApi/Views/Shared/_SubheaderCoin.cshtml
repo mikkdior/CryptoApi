@@ -1,18 +1,18 @@
-﻿@model string
+﻿@model (CTextBlockVM pagehead, (string coin1_name, string coin2_name) coins)
 
 <div class="dc-subheader-coin">
     <div class="row">
         <div class="col">
-            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Exchange Rates", Url.RouteUrl(new { Action = "Index", Controller = "Coins" })), (Model + " to USD", "") })
+            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Exchange Rates", Url.RouteUrl(new { Action = "Index", Controller = "Coins" })), (Model.coins.coin1_name.ToUpper() + " to " + Model.coins.coin2_name.ToUpper(), "") })
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <h1 class="dcg-h1">Exchange <strong>@Model</strong> to <strong>USD</strong></h1>
-            @await Html.PartialAsync("_CoinWidget", (Model, "usd"))
+            <h1 class="dcg-h1">@Html.Raw(Model.pagehead.title)</h1>
+            @await Html.PartialAsync("_CoinWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
         </div>
         <div class="col">
-            @await Html.PartialAsync("_ExchangeWidget", (Model, "usd"))
+            @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
         </div>
     </div>
 </div>

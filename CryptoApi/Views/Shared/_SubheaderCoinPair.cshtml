@@ -1,18 +1,18 @@
-﻿@model (string coin1, string coin2)
+﻿@model (CTextBlockVM pagehead, (string coin1_name, string coin2_name) coins)
 
 <div class="dc-subheader-coin-pair">
     <div class="row">
         <div class="col">
-            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Cryptocurrency Exchange Pairs", Url.RouteUrl(new { Action = "Index", Controller = "CoinPairs" })), (Model.coin1.ToUpper() + " to " + Model.coin2.ToUpper(), "") })
+            @await Html.PartialAsync("_Breadcrumbs", new[] { ("Cryptocurrency Exchange Pairs", Url.RouteUrl(new { Action = "Index", Controller = "CoinPairs" })), (Model.coins.coin1_name + " to " + Model.coins.coin2_name, "") })
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <h1 class="dcg-h1">Exchange <strong>@Model.coin1.ToUpper()</strong> to <strong>@Model.coin2.ToUpper()</strong></h1>
-            @await Html.PartialAsync("_CoinWidget", (Model.coin1, "usd"))
+            <h1 class="dcg-h1">@Html.Raw(Model.pagehead.title)</h1>
+            @await Html.PartialAsync("_CoinWidget", (Model.coins.coin1_name, "usd"))
         </div>
         <div class="col">
-            @await Html.PartialAsync("_ExchangeWidget", (Model.coin1, Model.coin2))
+            @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
         </div>
     </div>
 </div>

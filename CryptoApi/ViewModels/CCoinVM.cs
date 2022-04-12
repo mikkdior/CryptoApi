@@ -13,6 +13,20 @@ public class CCoinVM
     private CCommonM commonModel;
 
     /// <summary>
+    ///     Возвращает заголовок страницы из БД.
+    /// </summary>
+    public CTextBlockVM PageHead
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["coin pagehead", "title"]?.value)
+                .SetTitleValues(coin.data["pagehead", "title"]?.value)
+                .SetTitleData(coin.data)
+                .SetText(commonModel["coin pagehead", "text"]?.value)
+                .SetTextValues(coin.data["pagehead", "text"]?.value)
+                .SetTextData(coin.data)
+                .Build();
+    }
+    /// <summary>
     ///     Используя паттерн Buider генерирует модель текстового блока "Описания" и возвращает ее.
     /// </summary>
     public CTextBlockVM Description
