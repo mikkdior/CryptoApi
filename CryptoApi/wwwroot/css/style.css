@@ -8421,13 +8421,25 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     width: 250px; }
   .dc-market-coins .dc-table th:nth-child(7), .dc-market-coins .dc-table td:nth-child(7) {
     display: none; }
-  .dc-market-coins__search-by {
+  .dc-market-coins__sort-by {
+    position: relative; }
+  .dc-market-coins__sort-by-btn {
     font-size: 14px;
     font-weight: 400 !important;
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
-    width: 110px; }
+    width: 110px;
+    border: 0;
+    background: unset;
+    color: black; }
+  .dc-market-coins__sort-by-list {
+    /*display: none;*/
+    position: absolute;
+    background: #fff; }
+    .dc-market-coins__sort-by-list li {
+      padding: 10px;
+      text-align: right; }
   .dc-market-coins__header {
     display: flex;
     justify-content: space-between;
@@ -8484,7 +8496,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-market-coins {
       margin-top: -125px;
       width: 728px; }
-      .dc-market-coins__search-by {
+      .dc-market-coins__sort-by {
         width: max-content; }
       .dc-market-coins .dc-market-search__wrapper {
         width: 475px;
