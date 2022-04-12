@@ -1402,10 +1402,44 @@
         /*display: none;*/
         position: absolute;
         background: #fff;
+        border: 1px solid #ECECEC;
+        border-top: 0;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        margin: 0;
+        z-index: 1;
 
-        li{
-            padding: 10px;
-            text-align: right;
+        li {
+            overflow: hidden;
+            a {
+                font-size: 15px;
+                color: #000;
+                font-weight: 400;
+                padding: 10px;
+                text-align: right;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+
+            a:hover {
+                background: #0FD4E2;
+            }
+
+            li {
+                padding: 10px;
+                text-align: right;
+
+                a {
+                    font-size: 15px;
+                    color: #000;
+                    font-weight: 400;
+                }
+            }
+
+            li ~ li {
+                border-top: solid 1px #ECECEC;
+            }
         }
     }
 
@@ -1685,7 +1719,7 @@
     }
 }
 // /* /TEMPLATE: market-coins */
-            // /*.....................................*/
+// /*.....................................*/
 
 // /*.....................................*/
 // /* TEMPLATE: market-search */
