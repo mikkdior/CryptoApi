@@ -19,43 +19,49 @@ public class CCoinVM
     {
         get 
         {
+            string desc = coin.data["description", "text"] != null ? coin.data["description", "text"].value : commonModel["coin desc", "text"]?.value;
+            string title = coin.data["description", "title"] != null ? coin.data["description", "title"].value : commonModel["coin desc", "title"]?.value;
+
             return new CTextBlockBuilder()
-                .SetTitle(commonModel["coin desc", "title"]?.value)
-                .SetTitleValues(coin.data["desc", "title"]?.value)
+                .SetTitle(title)
+                .SetTitleValues(coin.data["desc tpl", "title"]?.value)
                 .SetTitleData(coin.data)
-                .SetText(commonModel["coin desc", "text"]?.value)
-                .SetTextValues(coin.data["desc", "text"]?.value)
+                .SetText(desc)
+                .SetTextValues(coin.data["desc tpl", "text"]?.value)
                 .SetTextData(coin.data)
-                .Build(); 
+                .Build();
         }
     }
 
     /// <summary>
     ///     Используя метод GetTextBlock генерирует перечисление моделей текстовых блоков и возвращает их.
     /// </summary>
-    public IEnumerable<CTextBlockVM> TextBlocks => GetTextBlock("coin texts");
+    public IEnumerable<CTextBlockVM> TextBlocks => GetTextBlocks("coin texts", "texts");
 
     /// <summary>
     ///     Используя метод GetTextBlock генерирует перечисление моделей текстовых блоков "Faq" и возвращает их.
     /// </summary>
-    public IEnumerable<CTextBlockVM> Faq => GetTextBlock("coin faq");
+    public IEnumerable<CTextBlockVM> Faq => GetTextBlocks("coin faq", "faq");
 
     /// <summary>
     ///     Генерирует перечисление моделей текстовых блоков по имени группы и возвращает их.
     /// </summary>
-    public IEnumerable<CTextBlockVM> GetTextBlock(string group)
+    public IEnumerable<CTextBlockVM> GetTextBlocks(string group, string coin_group)
     {
         for (var i = 0; i < commonModel[group].Count() / 2; i++)
         {
-            string title = commonModel[group, $"title{i + 1}"].value;
-            string text = commonModel[group, $"text{i + 1}"].value;
+            string coin_title = coin.data[coin_group, $"title{i + 1}"]?.value;
+            string coin_text = coin.data[coin_group, $"text{i + 1}"]?.value;
+
+            string title = coin_title != null ? coin_title : commonModel[group, $"title{i + 1}"].value;
+            string text = coin_text != null ? coin_text : commonModel[group, $"text{i + 1}"].value;
 
             yield return new CTextBlockBuilder()
                 .SetTitle(title)
-                .SetTitleValues(coin.data["desc", "title"]?.value)
+                .SetTitleValues(coin.data["info tpl", "title"]?.value)
                 .SetTitleData(coin.data)
                 .SetText(text)
-                .SetTextValues(coin.data["desc", "text"]?.value)
+                .SetTextValues(coin.data["info tpl", "text"]?.value)
                 .SetTextData(coin.data)
                 .Build();
         }
@@ -78,10 +84,5 @@ public class CCoinVM
     {
         string? name = (string?)context.GetRouteValue("coin");
         coin = model.GetCoinByName(name);
-        Console.WriteLine("-------------------------");
-        Console.WriteLine(Description.title);
-        Console.WriteLine("-------------------------");
-        Console.WriteLine(Description.text);
-        Console.WriteLine("-------------------------");
     }
 }
