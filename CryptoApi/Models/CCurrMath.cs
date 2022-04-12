@@ -13,6 +13,11 @@ namespace CryptoApi.Models
 
         static public IUpdatedData? FilterLust (int days, IEnumerable<IUpdatedData> list)
         {
+            DateTime now = DateTime.Now;
+            DateTime days_before = DateTime.Now.AddDays(-days);
+            // TODO: вернуть элемент списка который соответствует дате, если нету то ближайшую к треуемой.
+
+
             return list.Count() == 0 ? null : list.First();
         }
 
