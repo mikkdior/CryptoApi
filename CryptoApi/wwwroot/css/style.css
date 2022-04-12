@@ -8434,6 +8434,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     background: unset;
     color: black;
     height: 40px; }
+    .dc-market-coins__sort-by-btn:focus-visible {
+      outline: unset; }
   .dc-market-coins__sort-by-list {
     /*display: none;*/
     position: absolute;

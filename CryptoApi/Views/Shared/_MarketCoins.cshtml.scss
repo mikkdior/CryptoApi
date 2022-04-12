@@ -60,6 +60,10 @@
         background: unset;
         color: black;
         height: 40px;
+
+        &:focus-visible {
+            outline: unset;
+        }
     }
 
     &__sort-by-list {
