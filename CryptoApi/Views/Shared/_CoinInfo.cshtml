@@ -90,7 +90,7 @@
                     <td>
                         @if(Model.coin.data.day_change < 0)
                         {
-                            <span class="dcg-value-down">@(Model.coin.data.day_change)%</span>
+                            <span class="dcg-value-down">@(Model.coin.data.day_percent_change)%</span>
                         }
                         else if (Model.coin.data.day_change == null)
                         {
@@ -98,7 +98,7 @@
                         }
                         else
                         {
-                            <span class="dcg-value-up">@(Model.coin.data.day_change)%</span>
+                            <span class="dcg-value-up">@(Model.coin.data.day_percent_change)%</span>
                         }
                     </td>
                 </tr>

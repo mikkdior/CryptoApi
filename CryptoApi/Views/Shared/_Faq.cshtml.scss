@@ -19,6 +19,18 @@
             align-items: center;
             margin-bottom: 20px;
             width: 100%;
+            border: 0;
+            background: unset;
+
+            &_opened {
+                .dcg-toggle_view {
+                    display: none !important;
+                }
+
+                .dcg-toggle_hide {
+                    display: inline-block !important;
+                }
+            }
 
             svg {
                 width: 18px;
@@ -30,15 +42,22 @@
             }
         }
 
+
+
         &__content {
-            /*display: none;*/
+            display: none;
             padding-right: 10px;
             padding-left: 0px;
+
+            &_opened {
+                display: block;
+            }
         }
 
         .dcg-toggle {
             width: 20px;
             height: 20px;
+            margin-left: 15px;
         }
     }
 

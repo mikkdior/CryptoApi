@@ -235,30 +235,58 @@ jQuery('.dc-exchange-widget').dcTpl(function ($, Export) {
 
 // faq
 jQuery('.dc-faq').dcTpl(function ($, Export) {
-   var $self = $(this);
+    var $self = $(this);
+
+    /*var $coll = $self.find('.dc-faq-item__wrapper');*/
+    /* $coll.on('click', function (e) {
+        console.log('cllick!!');
+    });*/
+     
+    $self.on('click', '.dc-faq-item__wrapper', function (e) {
+        var $item = $(this);
+        $item.closest('.dc-faq-item').find('.dc-faq-item__content').stop().slideToggle(); // parent
+        $item.toggleClass('dc-faq-item__wrapper_opened');
+    });
+
 });
 
-//faq hide/open answers
+/*//faq hide/open answers
 document.querySelectorAll('.dc-faq').forEach((faq) => {
-    document.querySelectorAll('.dc-section-text-block').forEach((main) => {
-        
-        function isAnswerOpened(answer) {
-            return answer.style.display != 'none';
-        }
-        function toggle(main) {
-            let answer = main.parentNode.querySelector('.dc-section-text-block__content');
-            let toggle_view = main.querySelector('.dcg-btn .dcg-toggle_view');
-            let toggle_hide = main.querySelector('.dcg-btn .dcg-toggle_hide');
+    document.querySelectorAll('.dc-faq-item').forEach((main) => {
 
-            answer.style.display = isAnswerOpened(answer) ? 'none' : 'block';
-            toggle_view.style.display = isAnswerOpened(answer) ? 'none' : 'inline-block';
-            toggle_hide.style.display = isAnswerOpened(answer) ? 'inline-block' : 'none';
+        let answer = main.parentNode.querySelector('.dc-faq-item__content');
+        let toggle_view = main.querySelector('.dcg-btn .dcg-toggle_view');
+        let toggle_hide = main.querySelector('.dcg-btn .dcg-toggle_hide');
+
+        if (main == faq.children[0]) {
+            toggle_view.style.display = 'none';
+            toggle_hide.style.display = 'inline-block';
+            answer.style.display = 'inline-block';
         }
-        main.addEventListener('click', function (e) {
-            toggle(main);
+        else {
+            toggle_view.style.display = 'inline-block';
+            toggle_hide.style.display = 'none';
+            answer.style.display = 'none';
+        }
+
+        main.querySelector('.dc-faq-item__wrapper').addEventListener('click', function (e) {
+
+            var IsPlus = toggle_view.style.display == 'inline-block';
+
+            if (IsPlus) {
+                toggle_view.style.display = 'inline-block';
+                answer.style.display = 'none';
+                toggle_hide.style.display = 'none';
+            }
+            else {
+                toggle_view.style.display = 'none';
+                answer.style.display = 'inline-block';
+                toggle_hide.style.display = 'inline-block';
+            }
+            
         })
     });
-});
+});*/
 
 
 // /faq
@@ -339,12 +367,17 @@ jQuery('.dc-main-menu').dcTpl(function ($, Export) {
         $self.find('.dc-main-menu__hamburger-open').css("display", "inline-block");
         e.stopPropagation()
     });
+
+    var mq = window.matchMedia("(max-width: 992px)");
+
     $('body').on('click', function () {
-        $self.find('.nav').slideUp(function () {
-            $self.removeClass('dc-main-menu_opened');
-        });
-        $self.find('.dc-main-menu__hamburger-close').css("display", "none");
-        $self.find('.dc-main-menu__hamburger-open').css("display", "inline-block");
+        if (mq.matches) {
+            $self.find('.nav').slideUp(function () {
+                $self.removeClass('dc-main-menu_opened');
+            });
+            $self.find('.dc-main-menu__hamburger-close').css("display", "none");
+            $self.find('.dc-main-menu__hamburger-open').css("display", "inline-block");
+        }
     });
 });
 

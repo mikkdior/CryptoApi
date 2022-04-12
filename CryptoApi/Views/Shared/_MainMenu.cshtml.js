@@ -17,12 +17,17 @@ jQuery('.dc-main-menu').dcTpl(function ($, Export) {
         $self.find('.dc-main-menu__hamburger-open').css("display", "inline-block");
         e.stopPropagation()
     });
+
+    var mq = window.matchMedia("(max-width: 992px)");
+
     $('body').on('click', function () {
-        $self.find('.nav').slideUp(function () {
-            $self.removeClass('dc-main-menu_opened');
-        });
-        $self.find('.dc-main-menu__hamburger-close').css("display", "none");
-        $self.find('.dc-main-menu__hamburger-open').css("display", "inline-block");
+        if (mq.matches) {
+            $self.find('.nav').slideUp(function () {
+                $self.removeClass('dc-main-menu_opened');
+            });
+            $self.find('.dc-main-menu__hamburger-close').css("display", "none");
+            $self.find('.dc-main-menu__hamburger-open').css("display", "inline-block");
+        }
     });
 });
 

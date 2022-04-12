@@ -1,5 +1,4 @@
 ﻿using CryptoApi.Services;
-
 namespace CryptoApi.ViewModels;
 
 /// <summary>
@@ -13,17 +12,29 @@ public class CCoinsVM
     public int maxPage;
     public int page;
     public CBlocksHelperVM blocks;
+    private CCommonM commonModel;
 
+    /// <summary>
+    ///     Возвращает заголовок страницы из БД.
+    /// </summary>
+    public CTextBlockVM PageHead
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["coins pagehead", "title"]?.value)
+                .SetText(commonModel["coins pagehead", "text"]?.value)
+                .Build();
+    }
     /// <summary>
     ///     Конструктор. заполняет  необходимые поля при создании модели.
     /// </summary>
-    public CCoinsVM(CCoinsM model, IConfiguration conf, CBlocksHelperVM blocks)
+    public CCoinsVM(CCoinsM model, IConfiguration conf, CBlocksHelperVM blocks, CCommonM common_model)
     {
         this.model = model;
         this.conf = conf;
         this.blocks = blocks;
+        this.commonModel = common_model;
     }
-
+    
     /// <summary>
     ///     Ручная инициализация (заполнение нужных полей).
     /// </summary>

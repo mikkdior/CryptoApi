@@ -67,5 +67,5 @@
 </section>
 
 @section PageHead {
-    @await Html.PartialAsync("_SubheaderCoin", Model.coin.data.name)
+    @await Html.PartialAsync("_SubheaderCoin", (Model.PageHead, (Model.coin.data.name, "USD")))
 }

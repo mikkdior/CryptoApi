@@ -7,7 +7,29 @@
 <div class="dc-market-coins dcg-shadow dcg-table-sort-icons">
     <div class="dc-market-coins__header">
         @await Html.PartialAsync("_MarketSearch")
-        <a class="dc-market-coins__search-by" href="#">Sort coins by <svg icon="sort-down-arrow"></svg></a>
+        <div class="dc-market-coins__sort-by">
+            <button type="button" class="dc-market-coins__sort-by-btn">Sort coins by <svg icon="sort-down-arrow"></svg></button>
+            <ul class="dc-market-coins__sort-by-list">
+                <li>
+                    <a href='?order=name'>Name</a>
+                </li>
+                <li>
+                    <a href='?order=usd_price'>Price</a>
+                </li>
+                <li>
+                    <a href='?order=volume_24h'>Volume (24h)</a>
+                </li>
+                <li>
+                    <a href='?order=market_cap'>Market Cap</a>
+                </li>
+                <li>
+                    <a href='?order=day_percent_change'>Change (24h)</a>
+                </li>
+                <li>
+                    <a href='?order=usd_price'>Price (24h)</a>
+                </li>
+            </ul>
+        </div>
     </div>
     @if (Model == null || Model.Count() < 1)
     {

@@ -13,15 +13,27 @@ public class CCoinPairsVM
     public int maxPage = 10;
     public int page = 1;
     public CBlocksHelperVM blocks;
+    private CCommonM commonModel;
 
+    /// <summary>
+    ///     Возвращает заголовок страницы из БД.
+    /// </summary>
+    public CTextBlockVM PageHead
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["pairs pagehead", "title"]?.value)
+                .SetText(commonModel["pairs pagehead", "text"]?.value)
+                .Build();
+    }
     /// <summary>
     ///     Конструктор. заполняет  необходимые поля при создании модели.
     /// </summary>
-    public CCoinPairsVM(CCoinPairsM model, IConfiguration conf, CBlocksHelperVM blocks)
+    public CCoinPairsVM(CCoinPairsM model, IConfiguration conf, CBlocksHelperVM blocks, CCommonM common_model)
     {
         this.model = model;
         this.conf = conf;
         this.blocks = blocks;
+        this.commonModel = common_model;
     }
     /// <summary>
     ///     Ручная инициализация (заполнение нужных полей).

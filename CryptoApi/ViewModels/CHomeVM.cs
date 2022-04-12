@@ -8,6 +8,16 @@ public class CHomeVM
 {
     private IConfiguration conf;
     private CCommonM commonModel;
+    /// <summary>
+    ///     Возвращает заголовок страницы из БД.
+    /// </summary>
+    public CTextBlockVM PageHead
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["home pagehead", "title"]?.value)
+                .SetText(commonModel["home pagehead", "text"]?.value)
+                .Build();
+    }
 
     /// <summary>
     ///     Используя паттерн Buider генерирует модель текстового блока "Описания" и возвращает ее.

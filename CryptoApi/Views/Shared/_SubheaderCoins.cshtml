@@ -1,4 +1,4 @@
-﻿@*@model I_subheader-coins *@
+﻿@model CTextBlockVM
 
 <div class="dc-subheader-coins">
     <div class="row">
@@ -6,8 +6,8 @@
             @await Html.PartialAsync("_Breadcrumbs", new[] { ("Exchange Rates", "") })
         </div>
     </div>
-    <h1 class="dcg-h1">Currencies <strong>available</strong> for exchange on Atomex</h1>
+    <h1 class="dcg-h1">@Html.Raw(Model.title)</h1>
     <p class="dc-subheader-coins__desc">
-        Check out the list of cryptocurrencies available for limitless swaps. Buy/Sell pairs? Fixed rate exchange flow? Assets available for debit/credit card purchase? We've got it all — right here.
+       @Html.Raw(Model.text)
     </p>
 </div>

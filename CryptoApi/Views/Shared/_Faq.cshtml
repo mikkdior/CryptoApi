@@ -6,14 +6,28 @@
     @foreach(var item in data)
     {
         <div class="dc-faq-item">
-            <div class="dc-faq-item__wrapper dcg-btn">
-                <h3 class="dcg-h3">@item.title</h3>
-                <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
-                <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
-            </div>
-            <p class="dc-faq-item__content">
-                @item.text
-            </p>
+            @if (item == data.First())
+            {
+                <button type="button" class="dc-faq-item__wrapper dc-faq-item__wrapper_opened dcg-btn">
+                    <h3 class="dcg-h3">@item.title</h3>
+                    <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
+                    <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
+                </button>
+                <p class="dc-faq-item__content dc-faq-item__content_opened">
+                    @item.text
+                </p>
+            }
+            else
+            {
+                <button type="button" class="dc-faq-item__wrapper dcg-btn">
+                    <h3 class="dcg-h3">@item.title</h3>
+                    <svg class="dcg-toggle dcg-toggle_view" icon="plus"></svg>
+                    <svg class="dcg-toggle dcg-toggle_hide" icon="minus"></svg>
+                </button>
+                <p class="dc-faq-item__content dc-faq-item__content">
+                    @item.text
+                </p>
+            }
         </div>
     }
 </div>

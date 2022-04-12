@@ -80,5 +80,5 @@
 </section>
 
 @section PageHead {
-    @await Html.PartialAsync("_SubheaderMain")
+    @await Html.PartialAsync("_SubheaderMain", (Model.PageHead, ("btc", "eth")))
 }

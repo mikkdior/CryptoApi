@@ -45,13 +45,31 @@
         }
     }
 
-    &__search-by {
+    &__sort-by {
+        position: relative;
+    }
+
+    &__sort-by-btn {
         font-size: 14px;
         font-weight: 400 !important;
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
         width: 110px;
+        border: 0;
+        background: unset;
+        color: black;
+    }
+
+    &__sort-by-list {
+        /*display: none;*/
+        position: absolute;
+        background: #fff;
+
+        li{
+            padding: 10px;
+            text-align: right;
+        }
     }
 
     &__header {
@@ -153,7 +171,7 @@
         margin-top: -125px;
         width: 728px;
 
-        &__search-by {
+        &__sort-by {
             width: max-content;
         }
 
