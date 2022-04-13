@@ -1062,20 +1062,24 @@
             position: relative
         }
 
-        th:nth-child(3) {
+        td:nth-child(3), td:nth-child(7), th:nth-child(3), th:nth-child(7) {
+            display: none;
+        }
+
+        th:nth-child(4) {
             width: 230px;
             text-align: center;
         }
 
-        th:nth-child(4) {
+        th:nth-child(5) {
             text-align: left;
         }
 
-        th:nth-child(2), th:nth-child(5), td:nth-child(2), td:nth-child(5) {
+        th:nth-child(2), th:nth-child(6), td:nth-child(2), td:nth-child(6) {
             text-align: right;
         }
 
-        th:nth-child(1), th:nth-child(4) {
+        th:nth-child(1), th:nth-child(5) {
             width: 250px;
         }
 
@@ -1128,9 +1132,6 @@
             left: 33%;
             top: 33%;
         }
-        /*&-cycle {
-            margin-left: 30px;
-        }*/
 
         &-btn:hover {
             color: #fff;
@@ -1154,6 +1155,11 @@
 
     &__no-results {
         padding: 130px 0 150px 0;
+        text-align: center;
+    }
+
+    &__hidden-val {
+        margin-top: 3px;
         text-align: center;
     }
 
@@ -1200,15 +1206,15 @@
         }
 
         .dc-table {
-            th:nth-child(1), th:nth-child(4) {
+            th:nth-child(1), th:nth-child(5) {
                 width: 110px;
             }
 
-            th:nth-child(2), th:nth-child(5) {
+            th:nth-child(2), th:nth-child(6) {
                 width: 99px;
             }
 
-            th:nth-child(3) {
+            th:nth-child(4) {
                 width: 104px;
             }
 
@@ -1265,23 +1271,30 @@
 
         .dc-table {
             .dcg-h3 {
-                margin-left: 5px;
+                /*margin-left: 5px;*/
             }
 
-            th:nth-child(1), th:nth-child(4) {
-                width: 60px;
-            }
-
-            th:nth-child(2), th:nth-child(5), td:nth-child(2), td:nth-child(5) {
+            th:nth-child(1), th:nth-child(5), td:nth-child(1), td:nth-child(5) {
+                /*width: 60px;*/
                 display: none;
             }
 
-            th:nth-child(3) {
-                width: 60px;
+            th:nth-child(3), th:nth-child(7), td:nth-child(3), td:nth-child(7) {
+                display: inline-block;
+                width: 150px;
+                text-align: left;
+            }
+
+            th:nth-child(2), th:nth-child(6), td:nth-child(2), td:nth-child(6) {
+                display: none;
+            }
+
+            th:nth-child(4) {
+                width: 100px;
             }
 
             th:last-child {
-                width: 60px !important;
+                width: 100px !important;
             }
         }
 
@@ -1304,6 +1317,14 @@
             td {
                 font-size: 13px;
             }
+
+            th:nth-child(3), th:nth-child(7), td:nth-child(3), td:nth-child(7) {
+                width: 80px;
+            }
+
+            th:nth-child(4) {
+                width: 80px;
+            }
         }
 
         .dc-coin {
@@ -1319,8 +1340,6 @@
         }
 
         &__exchange {
-
-            
         }
 
         &:hover svg {
