@@ -18,14 +18,22 @@ namespace CryptoApi.Models
             IUpdatedData? item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-days).Date).FirstOrDefault();
             if (item != null) return item;
 
+            int _days = days;
+
             while (item == null)
             {
-                if (--days < 0) return null;
-                item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-days).Date).FirstOrDefault();
+                if (--days > 0)
+                {
+                    item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-days).Date).FirstOrDefault(); //ищем соответствие в ближайшем от заданного дня к сегоднешнему дню
+                    if (item != null) return item;
+                }
+
+                ++_days;
+
+                item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-_days).Date).FirstOrDefault(); //ищем соответствие в ближайшем от заданного дня к предыдущим дням
             }
 
             return item;
-
 
 
             /*return list.Count() == 0 ? null : list.First();*/
