@@ -13,22 +13,22 @@ namespace CryptoApi.Models
 
         static public IUpdatedData? FilterLust (int days, IEnumerable<IUpdatedData> list)
         {
-            /*if (list.Count() == 0) return null;
+            if (list.Count() == 0) return null;
 
             IUpdatedData? item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-days).Date).FirstOrDefault();
             if (item != null) return item;
 
             while (item == null)
             {
-                if(--days <= 0) return null;
+                if (--days <= 0) return null;
                 item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-days).Date).FirstOrDefault();
             }
 
-            return item;*/
+            return item;
 
 
 
-            return list.Count() == 0 ?  null : list.First();
+            /*return list.Count() == 0 ? null : list.First();*/
             // TODO: вернуть элемент списка который соответствует дате, если нету то ближайшую к требуемой.
         }
 
