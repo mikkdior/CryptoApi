@@ -25,10 +25,9 @@
             RemoveOldFiles();
             RenameNewFiles();
         }
-        string GetSubFileName(int index)
-        {
-            return subFileName.Replace("{index}", index.ToString());
-        }
+        
+        string GetSubFileName(int index) => subFileName.Replace("{index}", index.ToString());
+        
         int CreateSubFiles()
         {
             List<CPageInfo> part_pages = new List<CPageInfo>();
@@ -138,6 +137,45 @@
                     File.Move(old_path, new_path);
                 }
             }
+        }
+
+
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        public void RefreshMainFile()
+        {
+            int count = pages.Count() / countUrls;
+            CreateMainFile(count);
+            RemoveOldFiles();
+            RenameNewFiles();
+        }
+
+        public string GetSubfileData(List<CPageInfo> pages, int index)
+        {
+
+
+            return BuildSitemap(pages);
+        }
+        public string BuildSitemap(List<CPageInfo> pages)
+        {
+            string sample = "\t\t<url>\r\t\t\t<loc>{url}</loc>\r\t\t\t<lastmod>{lastmod}</lastmod>\r\t\t</url>";
+            string lastmod = DateTime.Now.ToString("yyyy-MM-dd");
+
+            string result = "";
+            result += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r";
+            result += "<sitemapindex xmlns=\"https://www.sitemaps.org/schemas/sitemap/0.9\">\r";
+            result += "\t<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\r";
+
+            foreach (var page in pages)
+                result += sample.Replace("{url}", page.url).Replace("{lastmod}", lastmod) + "\r";
+
+            result += "\t</urlset>\r";
+            result += "</sitemapindex>";
+
+            return result;
         }
     }
 }
