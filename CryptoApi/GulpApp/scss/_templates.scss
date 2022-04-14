@@ -1428,6 +1428,8 @@
         position: absolute;
         /*background: #fff;*/
         background: linear-gradient(75deg, #fff 0%, #3665AC 70%, #3665AC 100%);
+        /*background: linear-gradient(180deg, #fff 0%, #3665AC 35%, #3665AC 100%);*/
+        /*background: linear-gradient(180deg, #fff 0%, #3665AC 50%, #3665AC 100%);*/
         /*border: 1px solid #ECECEC;*/
         border-top: 0;
         border-bottom-left-radius: 7px;
@@ -1444,12 +1446,14 @@
                 font-size: 15px;
                 /*color: #63696F;*/
                 font-weight: 400;
-                padding: 10px 24px 10px 20px;
+                /*padding: 10px 24px 10px 20px;*/
+                padding: 10px;
                 text-align: right;
                 display: inline-block;
                 width: 100%;
                 height: 100%;
                 color: #FFF;
+                white-space: nowrap;
             }
 
             a:hover {

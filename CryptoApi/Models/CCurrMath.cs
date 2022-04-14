@@ -20,7 +20,7 @@ namespace CryptoApi.Models
 
             while (item == null)
             {
-                if (--days <= 0) return null;
+                if (--days < 0) return null;
                 item = list.Where(i => i.last_updated.Date == DateTime.Now.AddDays(-days).Date).FirstOrDefault();
             }
 
