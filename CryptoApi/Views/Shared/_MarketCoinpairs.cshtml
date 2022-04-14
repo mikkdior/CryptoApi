@@ -23,11 +23,10 @@
             .Add("<span class='dcg-first-change'>Change (24h)</span>", 
                 i => i.data.day_change_1 == null ? "-" : $"<span class='{(i.data.day_change_1 < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change_1.ToString()}</span>")
 
-
-
-            //.Add("<span class='dcg-first-change'>Coin (24h)</span>", 
-                //i => $"<div class='dc-coin dcg-shadow-hover dcg-shadow-md'><a class='dc-coin__link' href='{coins_route}/{i.coin1.name}'><img src='{i.coin1.image}' alt='coin-image'><h3 class='dcg-h3'>{i.coin1.name_full}  ({i.coin1.name.ToUpper()})</h3><svg icon='arrow-right-dark' class='dcg-icon-arrow-right'></svg></a></div>" + "<br>" + i.data.day_change_1 == null ? "-" : $"<span class='{(i.data.day_change_1 < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change_1.ToString()}</span>")
-
+            .Add("<span class='dcg-first-change'>Coin (24h)</span>", 
+                i => i.data.day_change_1 == null ? 
+                  $"<div class='dc-coin dcg-shadow-hover dcg-shadow-md'><a class='dc-coin__link' href='{coins_route}/{i.coin1.name}'><img src='{i.coin1.image}' alt='coin-image'><h3 class='dcg-h3'>{i.coin1.name_full}  ({i.coin1.name.ToUpper()})</h3><svg icon='arrow-right-dark' class='dcg-icon-arrow-right'></svg></a></div><div class='dc-market-coin-pairs__hidden-val'>-</div>" 
+                : $"<div class='dc-coin dcg-shadow-hover dcg-shadow-md'><a class='dc-coin__link' href='{coins_route}/{i.coin1.name}'><img src='{i.coin1.image}' alt='coin-image'><h3 class='dcg-h3'>{i.coin1.name_full}  ({i.coin1.name.ToUpper()})</h3><svg icon='arrow-right-dark' class='dcg-icon-arrow-right'></svg></a></div><div class='dc-market-coin-pairs__hidden-val {(i.data.day_change_1 < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{ i.data.day_percent_change_1.ToString() }%</div>")
 
             .Add("To", 
                 i => "<div class='dc-market-coin-pairs__to-arrow'><svg class='dcg-icon-arrow-right'><use xlink:href='/images/svg-sprite.svg#arrow-right-darkgray'></svg></div>")
@@ -37,6 +36,11 @@
             
             .Add("<span class='dcg-second-change'>Change (24h)</span>", 
                 i => i.data.day_change_2 == null ? "-" : $"<span class='{(i.data.day_change_2 < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change_2.ToString()}%</span>")
+
+            .Add("<span class='dcg-second-change'>Coin (24h)</span>", 
+                i => i.data.day_change_2 == null ? 
+                  $"<div class='dc-coin dcg-shadow-hover dcg-shadow-md'><a class='dc-coin__link' href='{coins_route}/{i.coin2.name}'><img src='{i.coin2.image}' alt='coin-image'><h3 class='dcg-h3'>{i.coin2.name_full}  ({i.coin2.name.ToUpper()})</h3><svg icon='arrow-right-dark' class='dcg-icon-arrow-right'></svg></a></div><div class='dc-market-coin-pairs__hidden-val'>-</div>" 
+                : $"<div class='dc-coin dcg-shadow-hover dcg-shadow-md'><a class='dc-coin__link' href='{coins_route}/{i.coin2.name}'><img src='{i.coin2.image}' alt='coin-image'><h3 class='dcg-h3'>{i.coin2.name_full}  ({i.coin2.name.ToUpper()})</h3><svg icon='arrow-right-dark' class='dcg-icon-arrow-right'></svg></a></div><div class='dc-market-coin-pairs__hidden-val {(i.data.day_change_2 < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{ i.data.day_percent_change_2.ToString() }%</div>")
 
             .Add("Exchange", 
                 i => $"<div class='dc-market-coin-pairs__exchange'><a class='btn dcg-btn dc-market-coins__exchange-btn' href='{pairs_route}/{i.coin1.name}-to-{i.coin2.name}'>Exchange</a><a class='dcg-btn dc-market-coins__exchange-cycle' href='{pairs_route}/{i.coin1.name}-to-{i.coin2.name}'><svg><use xlink:href='/images/svg-sprite.svg#exchange-cycle-dark'></svg></a></div>")
