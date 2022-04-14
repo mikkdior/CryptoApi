@@ -37,7 +37,7 @@ namespace CryptoApi.Models
             var first = (CCoinsExtDataM)FilterLust(days, coins);
             if (first == null) return 0;
 
-            var last = coins.Last();
+            var last = coins.OrderBy(i => i.last_updated).Last();
 
             if (last.usd_price == null || first.usd_price == null) return 0;
 
