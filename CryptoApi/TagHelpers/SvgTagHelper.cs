@@ -7,7 +7,7 @@ namespace Sass.TagHelpers
         public string icon { get; set; }
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            output.Content.SetHtmlContent($"<use xlink:href=\"/images/svg-sprite.svg#{icon}\"/>");
+            output.Content.SetHtmlContent($"<use xlink:href=\"/images/svg-sprite.svg#{icon}\" />");
         }
     }
 }

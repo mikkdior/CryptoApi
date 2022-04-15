@@ -1,7 +1,7 @@
-﻿@model (CTextBlockVM textblock, (string coin1_name, string coin2_name) coins)
+﻿@model (CTextBlockVM pagehead, (string coin1_name, string coin2_name) coins)
 
 <div class="dc-subheader-main">
-    <h1 class="dcg-h1">@Html.Raw(Model.textblock.title)</h1>
+    <h1 class="dcg-h1">@Html.Raw(Model.pagehead.title)</h1>
     @await Html.PartialAsync("_HeadAdvantages")
     @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
 </div>
