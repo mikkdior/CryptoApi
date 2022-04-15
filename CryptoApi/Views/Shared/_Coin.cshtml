@@ -2,7 +2,7 @@
 
 <div class="dc-coin dcg-shadow-hover dcg-shadow-md">
     <a class="dc-coin__link" asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name">
-        <img src="@Model.data.image" alt="coin-image">
+        <img src="@Model.data.image" alt="coin-image" loading="lazy">
         <h3 class="dcg-h3"> 
             @Model.data.name_full  (@Model.data.name.ToUpper())
         </h3>

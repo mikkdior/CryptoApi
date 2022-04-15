@@ -6,7 +6,7 @@
         <div class="dc-coin-pair__head">
             <div class="dc-coin-pair__coin">
                 <a asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name_1" class="dc-coin-pair__coin-head">
-                    <img src="@Model.coin1.image" alt="coin-image">
+                    <img src="@Model.coin1.image" alt="coin-image" loading="lazy">
                     <h3 class="dcg-h3">
                         @Model.data.name_1
                     </h3>
@@ -27,7 +27,7 @@
             <svg icon="arrow-right-darkgray" class="dcg-icon-arrow-right"></svg>
             <div class="dc-coin-pair__coin">
                 <a asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name_2" class="dc-coin-pair__coin-head">
-                    <img src="@Model.coin2.image" alt="coin-image">
+                    <img src="@Model.coin2.image" alt="coin-image" loading="lazy">
                     <h3 class="dcg-h3"> 
                         @Model.data.name_2
                     </h3>
