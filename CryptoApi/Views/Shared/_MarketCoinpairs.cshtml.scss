@@ -252,12 +252,8 @@
         }
 
         .dc-table {
-            .dcg-h3 {
-                /*margin-left: 5px;*/
-            }
 
             th:nth-child(1), th:nth-child(5), td:nth-child(1), td:nth-child(5) {
-                /*width: 60px;*/
                 display: none;
             }
 

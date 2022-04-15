@@ -42,8 +42,6 @@
             }
         }
 
-
-
         &__content {
             display: none;
             padding-right: 10px;
@@ -75,8 +73,6 @@
         }
     }
 
-    @include media-breakpoint-down (sm) {
-    }
 
     @include media-breakpoint-down (xs) {
         .dcg-h3 {

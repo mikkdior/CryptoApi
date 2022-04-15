@@ -7941,21 +7941,10 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-exchange-widget {
   border-radius: 7px;
-  width: 396px !important;
-  /*iframe {
-        height: 391px !important;
-    }*/ }
-  @media (max-width: 991.98px) {
-    .dc-exchange-widget {
-      /*iframe {
-            height: 387px !important;
-        }*/ } }
+  width: 396px !important; }
   @media (max-width: 767.98px) {
     .dc-exchange-widget {
       width: 100% !important; } }
-  @media (max-width: 575.98px) {
-    .dc-exchange-widget {
-      /*height: 370px;*/ } }
 
 .dc-faq-item {
   margin-left: auto;
@@ -8014,7 +8003,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   background: #3665AC;
   color: #FFFFFF;
   letter-spacing: -0.4px;
-  /* ??? */
   font-size: 15px;
   padding: 34px 0 60px 0; }
   @media (max-width: 991.98px) {
@@ -8131,20 +8119,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-header a :hover {
       color: #0FD4E2; }
 
-@media (max-width: 575.98px) {
-  .dc-layout {
-    /*.container {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }*/ } }
-
 .dc-logo img {
   width: 179px;
   height: 45px; }
-
-@media (max-width: 767.98px) {
-  .dc-logo {
-    /*padding-left: 10px;*/ } }
 
 .dc-main-menu {
   letter-spacing: 0px;
@@ -8366,10 +8343,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
         display: none; }
       .dc-market-coin-pairs .dc-market-search .dc-market-search__wrapper {
         width: 100%; }
-      .dc-market-coin-pairs .dc-table .dcg-h3 {
-        /*margin-left: 5px;*/ }
       .dc-market-coin-pairs .dc-table th:nth-child(1), .dc-market-coin-pairs .dc-table th:nth-child(5), .dc-market-coin-pairs .dc-table td:nth-child(1), .dc-market-coin-pairs .dc-table td:nth-child(5) {
-        /*width: 60px;*/
         display: none; }
       .dc-market-coin-pairs .dc-table th:nth-child(3), .dc-market-coin-pairs .dc-table th:nth-child(7), .dc-market-coin-pairs .dc-table td:nth-child(3), .dc-market-coin-pairs .dc-table td:nth-child(7) {
         display: inline-block;
@@ -8448,13 +8422,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-market-coins__sort-by-btn:focus-visible {
       outline: unset; }
   .dc-market-coins__sort-by-list {
-    /*display: none;*/
     position: absolute;
-    /*background: #fff;*/
     background: linear-gradient(75deg, #fff 0%, #3665AC 70%, #3665AC 100%);
-    /*background: linear-gradient(180deg, #fff 0%, #3665AC 35%, #3665AC 100%);*/
-    /*background: linear-gradient(180deg, #fff 0%, #3665AC 50%, #3665AC 100%);*/
-    /*border: 1px solid #ECECEC;*/
     border-top: 0;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -8465,9 +8434,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     display: none; }
     .dc-market-coins__sort-by-list li a {
       font-size: 15px;
-      /*color: #63696F;*/
       font-weight: 400;
-      /*padding: 10px 24px 10px 20px;*/
       padding: 10px;
       text-align: right;
       display: inline-block;
@@ -8476,7 +8443,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       color: #FFF;
       white-space: nowrap; }
     .dc-market-coins__sort-by-list li a:hover {
-      /*background: #0FD4E2;*/
       background: linear-gradient(75deg, #fff 0%, #0FD4E2 70%, #0FD4E2 100%); }
     .dc-market-coins__sort-by-list li li {
       padding: 10px;
@@ -8634,34 +8600,36 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     .dc-market-coins:hover .dcg-btn {
       display: none; } }
 
-.dc-market-search {
-  /*width: 910px;*/ }
-  .dc-market-search form {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; }
-  .dc-market-search__wrapper {
-    width: 100%; }
-  .dc-market-search .dcg-inp {
-    width: 100%;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px; }
-    .dc-market-search .dcg-inp:focus-visible {
-      outline: 0; }
-  .dc-market-search .dcg-btn {
-    display: inline-block;
-    background: #F0F0F0;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px; }
-  .dc-market-search svg {
-    width: 18px;
-    height: 18px;
-    margin-right: 2px; }
+.dc-market-search form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.dc-market-search__wrapper {
+  width: 100%; }
+
+.dc-market-search .dcg-inp {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px; }
+  .dc-market-search .dcg-inp:focus-visible {
+    outline: 0; }
+
+.dc-market-search .dcg-btn {
+  display: inline-block;
+  background: #F0F0F0;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px; }
+
+.dc-market-search svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 2px; }
 
 .dc-market-update .dcg-section__head {
   padding-bottom: 20px; }
@@ -8835,19 +8803,19 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     margin-left: auto;
     margin-right: auto; } }
 
-.dc-section-text-block {
-  /*display: flex;*/ }
+.dc-section-text-block .dcg-h2 {
+  text-align: start;
+  padding: 0; }
+
+.dc-section-text-block__content {
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-left: 60px; }
+
+@media (max-width: 991.98px) {
   .dc-section-text-block .dcg-h2 {
-    text-align: start;
-    padding: 0; }
-  .dc-section-text-block__content {
-    margin-bottom: 0;
-    margin-left: auto;
-    padding-left: 60px; }
-  @media (max-width: 991.98px) {
-    .dc-section-text-block .dcg-h2 {
-      margin-bottom: 38px;
-      text-align: center !important; } }
+    margin-bottom: 38px;
+    text-align: center !important; } }
 
 .dc-section-text-blocks .dc-section-text-block {
   margin-bottom: 0; }
@@ -8862,15 +8830,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   margin-top: 37px; }
 
 @media (max-width: 991.98px) {
-  .dc-section-text-blocks {
-    /*.dc-section-text-block {
-            .dcg-h2 {
-                text-align: left;
-            }
-        }*/ }
-    .dc-section-text-blocks .dc-text-block {
-      margin-left: 0;
-      width: 100%; } }
+  .dc-section-text-blocks .dc-text-block {
+    margin-left: 0;
+    width: 100%; } }
 
 .dc-service {
   width: 360px;
@@ -9104,7 +9066,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       padding: 0; } }
   @media (max-width: 575.98px) {
     .dc-subheader-main {
-      /*padding: 0 20px;*/
       margin-top: 0 !important; }
       .dc-subheader-main .dcg-h1 {
         margin-top: 10px;

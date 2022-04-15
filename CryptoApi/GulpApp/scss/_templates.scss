@@ -512,25 +512,8 @@
     border-radius: 7px;
     width: 396px !important;
 
-    /*iframe {
-        height: 391px !important;
-    }*/
-
-    @include media-breakpoint-down (lg) {
-    }
-
-    @include media-breakpoint-down (md) {
-        /*iframe {
-            height: 387px !important;
-        }*/
-    }
-
     @include media-breakpoint-down (sm) {
         width: 100% !important;
-    }
-
-    @include media-breakpoint-down (xs) {
-        /*height: 370px;*/
     }
 }
 // /* /TEMPLATE: exchange-widget */
@@ -580,8 +563,6 @@
             }
         }
 
-
-
         &__content {
             display: none;
             padding-right: 10px;
@@ -613,8 +594,6 @@
         }
     }
 
-    @include media-breakpoint-down (sm) {
-    }
 
     @include media-breakpoint-down (xs) {
         .dcg-h3 {
@@ -633,7 +612,7 @@
     bottom: 0;
     background: #3665AC;
     color: #FFFFFF;
-    letter-spacing: -0.4px; /* ??? */
+    letter-spacing: -0.4px;
     font-size: 15px;
     padding: 34px 0 60px 0;
 
@@ -856,16 +835,7 @@
 // /* TEMPLATE: layout */
 .dc-layout {
 
-    @include media-breakpoint-down (md) {
-        .container {
-        }
-    }
-
     @include media-breakpoint-down (xs) {
-        /*.container {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }*/
     }
 }
 // /* /TEMPLATE: layout */
@@ -881,7 +851,6 @@
     }
 
     @include media-breakpoint-down (sm) {
-        /*padding-left: 10px;*/
     }
 }
 // /* /TEMPLATE: logo */
@@ -1271,12 +1240,8 @@
         }
 
         .dc-table {
-            .dcg-h3 {
-                /*margin-left: 5px;*/
-            }
 
             th:nth-child(1), th:nth-child(5), td:nth-child(1), td:nth-child(5) {
-                /*width: 60px;*/
                 display: none;
             }
 
@@ -1424,13 +1389,8 @@
     }
 
     &__sort-by-list {
-        /*display: none;*/
         position: absolute;
-        /*background: #fff;*/
         background: linear-gradient(75deg, #fff 0%, #3665AC 70%, #3665AC 100%);
-        /*background: linear-gradient(180deg, #fff 0%, #3665AC 35%, #3665AC 100%);*/
-        /*background: linear-gradient(180deg, #fff 0%, #3665AC 50%, #3665AC 100%);*/
-        /*border: 1px solid #ECECEC;*/
         border-top: 0;
         border-bottom-left-radius: 7px;
         border-bottom-right-radius: 7px;
@@ -1444,9 +1404,7 @@
 
             a {
                 font-size: 15px;
-                /*color: #63696F;*/
                 font-weight: 400;
-                /*padding: 10px 24px 10px 20px;*/
                 padding: 10px;
                 text-align: right;
                 display: inline-block;
@@ -1457,7 +1415,6 @@
             }
 
             a:hover {
-                /*background: #0FD4E2;*/
                 background: linear-gradient(75deg, #fff 0%, #0FD4E2 70%, #0FD4E2 100%);
             }
 
@@ -1782,8 +1739,6 @@
 // /*.....................................*/
 // /* TEMPLATE: market-search */
 .dc-market-search {
-    /*width: 910px;*/
-
     form {
         width: 100%;
         display: flex;
@@ -2190,7 +2145,6 @@
 // /*.....................................*/
 // /* TEMPLATE: section-text-block */
 .dc-section-text-block {
-    /*display: flex;*/
 
     .dcg-h2 {
         text-align: start;
@@ -2237,11 +2191,6 @@
 
 
     @include media-breakpoint-down (md) {
-        /*.dc-section-text-block {
-            .dcg-h2 {
-                text-align: left;
-            }
-        }*/
 
         .dc-text-block {
             margin-left: 0;
@@ -2348,18 +2297,6 @@
         padding-bottom: 10px;
     }
 
-
-    @include media-breakpoint-down (lg) {
-
-    }
-
-    @include media-breakpoint-down (md) {
-        
-    }
-
-    @include media-breakpoint-down (sm) {
-
-    }
 
     @include media-breakpoint-down (xs) {
 
@@ -2646,7 +2583,6 @@
     }
 
     @include media-breakpoint-down (xs) {
-        /*padding: 0 20px;*/
         margin-top: 0 !important;
 
         .dcg-h1 {

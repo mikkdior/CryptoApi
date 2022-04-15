@@ -4,25 +4,8 @@
     border-radius: 7px;
     width: 396px !important;
 
-    /*iframe {
-        height: 391px !important;
-    }*/
-
-    @include media-breakpoint-down (lg) {
-    }
-
-    @include media-breakpoint-down (md) {
-        /*iframe {
-            height: 387px !important;
-        }*/
-    }
-
     @include media-breakpoint-down (sm) {
         width: 100% !important;
-    }
-
-    @include media-breakpoint-down (xs) {
-        /*height: 370px;*/
     }
 }
 // /* /TEMPLATE: exchange-widget */
