@@ -1,18 +1,21 @@
-﻿namespace CryptoApi.Sitemap
+﻿namespace CryptoApi.Sitemap;
+public class CSitemap : ISitemap
 {
-    public class CSitemap : ISitemap
-    {
-        IServiceProvider services;
-        public CSitemap (IServiceProvider services)
-        {
-            this.services = services;
-        }
-        public async Task CreateAsync()
-        {
-            var pages = new CPages(services);
-            var writer = new CWriter(pages.GetPages(), pages.count);
+    IServiceProvider services;
+    CWriter writer;
 
-            await Task.Run(() => writer.Write()); 
-        }
+    public CSitemap(IServiceProvider services)
+    {
+        this.services = services;
     }
+    public async Task CreateAsync()
+    {
+        var pages = new CPages(services);
+        writer = new CWriter(pages.GetPages(), pages.count);
+
+        await Task.Run(() => writer.UpdateMainSitemap());
+
+        /*await Task.Run(() => Writer.Write());*/
+    }
+    public string? GetSubSitemap(int index) => writer.GetSubSitemap(index);
 }

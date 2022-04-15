@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CryptoApi.Sitemap;
+using Microsoft.AspNetCore.Mvc;
+using ServiceStack.Host;
 
-namespace CryptoApi.Controllers
+namespace CryptoApi.Controllers;
+public class SitemapController : Controller
 {
-    public class SitemapController : Controller
+    [Route("/sitemap-{index:int}.xml")]
+    public IActionResult Index([FromServices] CSitemap sitemapModel, int index) 
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        string? result = sitemapModel.GetSubSitemap(index);
+
+        return result != null ? View(result) : throw new HttpException(404, "Page you requested is not found");
     }
 }
