@@ -13,9 +13,7 @@ public class CSitemap : ISitemap
         var pages = new CPages(services);
         writer = new CWriter(pages.GetPages(), pages.count);
 
-        await Task.Run(() => writer.UpdateMainSitemap());
-
-        /*await Task.Run(() => Writer.Write());*/
+        await Task.Run(() => writer.UpdateMainSitemap());      /*await Task.Run(() => Writer.Write());*/
     }
-    public string? GetSubSitemap(int index) => writer.GetSubSitemap(index);
+    public string? GetSubSitemap(int index) => writer != null? writer.GetSubSitemap(index) : null;
 }
