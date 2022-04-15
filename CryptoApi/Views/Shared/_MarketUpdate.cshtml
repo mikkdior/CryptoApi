@@ -37,7 +37,7 @@
         .Add("<a href='?order=usd_price'>Price (24h)<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows' /></svg></a>", 
             i => i.data.usd_price == null ? "-" : $"<span class='text-primary'>${i.data.usd_price}</span><br><span class='{(i.data.day_percent_change < 0 ? "dcg-value-down'>" : "dcg-value-up'>+")}{i.data.day_percent_change.ToString()}%</span>")
 
-        .Add("Price Graph (7d)", i => "<img src='/images/graph.png' alt='graph'>")
+        .Add("Price Graph (7d)", i => "<img class='dc-market-update__graph' src='/images/graph.png' alt='graph' loading='lazy'>")
     )
     <div class="dcg-section__foot">
         <a asp-controller="Coins" asp-action="Index" class="dcg-btn dcg-btn_big">

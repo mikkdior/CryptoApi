@@ -13,9 +13,9 @@
 
         img {
             width: 265px;
+            height: auto;
         }
     }
-
 
 
     @include media-breakpoint-down (md) {

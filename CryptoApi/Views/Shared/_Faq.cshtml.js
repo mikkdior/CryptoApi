@@ -1,11 +1,6 @@
 // faq
 jQuery('.dc-faq').dcTpl(function ($, Export) {
     var $self = $(this);
-
-    /*var $coll = $self.find('.dc-faq-item__wrapper');*/
-    /* $coll.on('click', function (e) {
-        console.log('cllick!!');
-    });*/
      
     $self.on('click', '.dc-faq-item__wrapper', function (e) {
         var $item = $(this);

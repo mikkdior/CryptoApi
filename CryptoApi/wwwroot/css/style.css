@@ -8634,6 +8634,10 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-market-update .dcg-section__head {
   padding-bottom: 20px; }
 
+.dc-market-update .dc-market-update__graph {
+  width: 111px;
+  height: 36px; }
+
 .dc-market-update .dc-coin .dcg-h3 {
   line-height: 20px; }
 
@@ -8796,7 +8800,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   padding: 0px 7px;
   text-align: center; }
   .dc-partners__partner img {
-    width: 265px; }
+    width: 265px;
+    height: auto; }
 
 @media (max-width: 991.98px) {
   .dc-partners__partner {

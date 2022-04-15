@@ -1790,6 +1790,11 @@
         padding-bottom: 20px;
     }
 
+    .dc-market-update__graph{
+        width: 111px;
+        height: 36px;
+    } 
+    
     .dc-coin {
         .dcg-h3 {
             line-height: 20px;
@@ -2124,9 +2129,9 @@
 
         img {
             width: 265px;
+            height: auto;
         }
     }
-
 
 
     @include media-breakpoint-down (md) {
