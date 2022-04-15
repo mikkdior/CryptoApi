@@ -11,7 +11,7 @@ namespace CryptoApi.Models
             return Math.Round((decimal)(100 / val1 * val2), 4);
         }
 
-        static public IUpdatedData? FilterLust (int days, IEnumerable<IUpdatedData> list)
+        /*static public IUpdatedData? FilterLust (int days, IEnumerable<IUpdatedData> list)
         {
             if (list.Count() == 0) return null;
 
@@ -36,7 +36,7 @@ namespace CryptoApi.Models
             return item;
 
 
-            /*return list.Count() == 0 ? null : list.First();*/
+            *//*return list.Count() == 0 ? null : list.First();*//*
             // TODO: вернуть элемент списка который соответствует дате, если нету то ближайшую к требуемой.
         }
 
@@ -46,6 +46,45 @@ namespace CryptoApi.Models
             if (first == null) return 0;
 
             var last = coins.OrderBy(i => i.last_updated).Last();
+
+            if (last.usd_price == null || first.usd_price == null) return 0;
+
+            return last.usd_price.Value - first.usd_price.Value;
+        }*/
+
+        static public IUpdatedData? FilterLust(int days, IEnumerable<IUpdatedData> list, DateTime last_date)
+        {
+            if (list.Count() == 0) return null;
+
+            IUpdatedData? item = list.Where(i => i.last_updated.Date == last_date.AddDays(-days).Date).FirstOrDefault();
+            if (item != null) return item;
+
+            int _days = days;
+
+            while (item == null)
+            {
+                if (--days > 0)
+                {
+                    item = list.Where(i => i.last_updated.Date == last_date.AddDays(-days).Date).FirstOrDefault(); //ищем соответствие в ближайшем от заданного дня к сегоднешнему дню
+                    if (item != null) return item;
+                }
+
+                ++_days;
+
+                item = list.Where(i => i.last_updated.Date == last_date.AddDays(-_days).Date).FirstOrDefault(); //ищем соответствие в ближайшем от заданного дня к предыдущим дням
+            }
+
+            return item;
+        }
+
+        static public decimal? GetChangePrice(int days, IEnumerable<CCoinsExtDataM> coins)
+        {
+            if (coins.Count() == 0) return 0;
+
+            var last = coins.OrderBy(i => i.last_updated).Last();
+            var first = (CCoinsExtDataM)FilterLust(days, coins, last.last_updated.Date);
+
+            if (first == null) return 0;
 
             if (last.usd_price == null || first.usd_price == null) return 0;
 
