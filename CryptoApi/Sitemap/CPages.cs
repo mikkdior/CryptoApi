@@ -22,9 +22,12 @@ namespace CryptoApi.Sitemap
         public CPages (IServiceProvider services)
         {
             _pages.Add(new CMainPage());
-            _pages.Add(new CCoinPage(services.GetService<CCoinsM>()));
+            //_pages.Add(new CCoinPage(services.GetService<CCoinsM>()));
             _pages.Add(new CCoinsPage(services.GetService<CCoinsM>()));
-            _pages.Add(new CPairPage(services.GetService<CCoinPairsM>()));
+            var ser = services.GetService<CCoinPairsM>();
+            var pair_p = new CPairPage(ser);
+            _pages.Add(pair_p);
+            /*_pages.Add(new CPairPage(services.GetService<CCoinPairsM>()));*/
             _pages.Add(new CPairsPage(services.GetService<CCoinPairsM>()));
         }
 

@@ -4,7 +4,7 @@ namespace CryptoApi.Sitemap
 {
     public class CPairsPage : IPageType
     {
-        public int count => 0;
+        public int count => 1;
         public CCoinPairsM model;
 
         public CPairsPage(CCoinPairsM model)
@@ -15,7 +15,8 @@ namespace CryptoApi.Sitemap
         {
             get
             {
-                yield break;
+                /*yield break;*/
+                yield return new CPageInfo() { url = "/crypto-pairs" };
             }
         }
     }

@@ -5,7 +5,7 @@
     /// </summary>
     public class CWriter
     {
-        int countUrls = 50000;
+        int countUrls = 1000;
         string mainFileName = "_sitemap.xml";
         string subFileName = "_sitemap-{index}.xml";
         string root = "./wwwroot/";
@@ -143,7 +143,8 @@
 
         public void UpdateMainSitemap()
         {
-            CreateMainFile(count / countUrls);
+            int count_subfiles = (int)Math.Ceiling((double)count / countUrls);
+            CreateMainFile(count_subfiles);
             RemoveOldFiles();
             RenameNewFiles();
         }
