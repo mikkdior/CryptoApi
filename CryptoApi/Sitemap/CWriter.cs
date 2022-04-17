@@ -5,10 +5,11 @@
     /// </summary>
     public class CWriter
     {
-        int countUrls = 50000;
+        int countUrls = 1000;
         string mainFileName = "_sitemap.xml";
         string subFileName = "_sitemap-{index}.xml";
         string root = "./wwwroot/";
+        string lastmod = DateTime.Now.ToString("yyyy-MM-dd");
         IEnumerable<CPageInfo> pages { get; set; }
         int count { get; set; }
 
@@ -25,10 +26,9 @@
             RemoveOldFiles();
             RenameNewFiles();
         }
-        string GetSubFileName(int index)
-        {
-            return subFileName.Replace("{index}", index.ToString());
-        }
+        
+        string GetSubFileName(int index) => subFileName.Replace("{index}", index.ToString());
+        
         int CreateSubFiles()
         {
             List<CPageInfo> part_pages = new List<CPageInfo>();
@@ -65,7 +65,6 @@
             
             string path = root + GetSubFileName(index);
             string sample = "\t\t<url>\r\t\t\t<loc>{url}</loc>\r\t\t\t<lastmod>{lastmod}</lastmod>\r\t\t</url>";
-            string lastmod = DateTime.Now.ToString("yyyy-MM-dd");
 
             using (var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8))
             {
@@ -138,6 +137,37 @@
                     File.Move(old_path, new_path);
                 }
             }
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        public void UpdateMainSitemap()
+        {
+            int count_subfiles = (int)Math.Ceiling((double)count / countUrls);
+            CreateMainFile(count_subfiles);
+            RemoveOldFiles();
+            RenameNewFiles();
+        }
+
+        public string? GetSubSitemap(int index)
+        {
+            var curr_pages = pages.Skip(countUrls * (index - 1)).Take(countUrls);
+            if (curr_pages.Count() == 0) return null;
+
+            string sample = "\t\t<url>\r\t\t\t<loc>{url}</loc>\r\t\t\t<lastmod>{lastmod}</lastmod>\r\t\t</url>";
+
+            string result = "";
+            result += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r";
+            result += "<sitemapindex xmlns=\"https://www.sitemaps.org/schemas/sitemap/0.9\">\r";
+            result += "\t<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\r";
+
+            foreach (var page in curr_pages)
+                result += sample.Replace("{url}", page.url).Replace("{lastmod}", lastmod) + "\r";
+
+            result += "\t</urlset>\r";
+            result += "</sitemapindex>";
+
+            return result;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace CryptoApi.Services
         }
         public async Task RefreshDataAsync ()
         {
-            await RefreshCoinsAsync();
+            //await RefreshCoinsAsync();
             await sitemap.CreateAsync();
         }
         public async Task RefreshCoinsAsync()
