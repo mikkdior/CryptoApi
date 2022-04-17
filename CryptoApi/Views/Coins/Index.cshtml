@@ -1,7 +1,8 @@
 ﻿@inject CBlocksHelperVM BlocksHelper
 @model CCoinsVM
 @{
-    ViewData["Title"] = "Coins Page";
+    ViewData["Title"] = Model.SeoInfo.title == "" ? "Coins Page" : Model.SeoInfo.title;
+    ViewData["Description"] = Model.SeoInfo.text == "" ? "" : Model.SeoInfo.text;
 }
 <section class="dcg-section">
     <div class="container">

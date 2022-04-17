@@ -13,7 +13,13 @@ public class CCoinsVM
     public int page;
     public CBlocksHelperVM blocks;
     private CCommonM commonModel;
-
+    public CTextBlockVM SeoInfo
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["coins seo", "title"]?.value)
+                .SetText(commonModel["coins seo", "text"]?.value)
+                .Build();
+    }
     /// <summary>
     ///     Возвращает заголовок страницы из БД.
     /// </summary>

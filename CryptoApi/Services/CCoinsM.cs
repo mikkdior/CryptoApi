@@ -82,6 +82,9 @@ public class CCoinsM : CBaseDbM
         var new_coin = data ?? new CCoinDataM();
         var now = DateTime.Now;
 
+        if (data == null)
+            new_coin.enable = true;
+
         new_coin.donor = coin.Donor;
         new_coin.donor_id = coin.Id;
         new_coin.name_full = coin.FullName;
@@ -159,6 +162,7 @@ public class CCoinsM : CBaseDbM
             result = result.Where(c => c.name.Contains(filter) || c.name_full.Contains(filter));
             
         return result
+            .Where(c => c.enable.Value)
             .Skip((page - 1) * count)
             .Take(count)
             //.Include(c => c.ext)
@@ -167,12 +171,14 @@ public class CCoinsM : CBaseDbM
                 data = c
             }).ToList();
     }
-    public IEnumerable<CCoinDataM> GetCoins() => db.Coins;
+    public IEnumerable<CCoinDataM> GetCoins() => db.Coins.Where(c => c.enable.Value);
 
     public IEnumerable<CCoinDataM> GetTrueCoins(string? filter = null)
     {
+        filter = filter == null ? "" : filter;
+
         return db.Coins
-            .Where(c => (filter == "" || filter == null) ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
+            .Where(c => c.enable.Value && (filter == "" || c.name.Contains(filter) || c.name_full.Contains(filter)))
             .Include(c => c.ext);
             //.Where(c => c.ext.Count() > 0);
     }

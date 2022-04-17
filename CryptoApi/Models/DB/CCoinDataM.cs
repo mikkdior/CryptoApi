@@ -14,7 +14,7 @@ public class CCoinDataM
     public string name { get; set; }
     public string slug { get; set; }
     private string? _image { get; set; }
-    public string? image 
+    public string? image
     {
         get
         {
@@ -23,9 +23,10 @@ public class CCoinDataM
         set
         {
             _image = value;
-        } 
+        }
     }
     public DateTime last_updated { get; set; }
+    public bool? enable { get; set; }
 
     public decimal? day_change => ext.Count() == 0 ? null : CCurrMath.GetChangePrice(1, ext);
 

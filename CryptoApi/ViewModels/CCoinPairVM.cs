@@ -11,7 +11,23 @@ public class CCoinPairVM
     private IConfiguration conf;
     public CCoinPairDataVM pair;
     private CCommonM commonModel;
+    public CTextBlockVM SeoInfo
+    {
+        get
+        {
+            string title = pair.data["seo", "title"] != null ? pair.data["seo", "title"].value : commonModel["pair seo", "title"]?.value;
+            string text = pair.data["seo", "text"] != null ? pair.data["seo", "text"].value : commonModel["pair seo", "text"]?.value;
 
+            return new CTextBlockBuilder()
+                .SetTitle(title)
+                .SetTitleValues(pair.data["seo tpl", "title"]?.value)
+                .SetTitleData(pair.data)
+                .SetText(text)
+                .SetTextValues(text)
+                .SetTextData(null)
+                .Build();
+        }
+    }
     /// <summary>
     ///     Возвращает заголовок страницы из БД.
     /// </summary>

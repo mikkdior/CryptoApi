@@ -8,6 +8,18 @@ public class CHomeVM
 {
     private IConfiguration conf;
     private CCommonM commonModel;
+
+    /// <summary>
+    ///     Возвращает заголовок страницы из БД.
+    /// </summary>
+    public CTextBlockVM SeoInfo
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["home seo", "title"]?.value)
+                .SetText(commonModel["home seo", "text"]?.value)
+                .Build();
+    }
+
     /// <summary>
     ///     Возвращает заголовок страницы из БД.
     /// </summary>

@@ -15,6 +15,13 @@ public class CCoinPairsVM
     public CBlocksHelperVM blocks;
     private CCommonM commonModel;
 
+    public CTextBlockVM SeoInfo
+    {
+        get => new CTextBlockBuilder()
+                .SetTitle(commonModel["pairs seo", "title"]?.value)
+                .SetText(commonModel["pairs seo", "text"]?.value)
+                .Build();
+    }
     /// <summary>
     ///     Возвращает заголовок страницы из БД.
     /// </summary>

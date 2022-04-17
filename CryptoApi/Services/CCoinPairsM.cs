@@ -44,7 +44,7 @@ public class CCoinPairsM : CBaseDbM
         {
             uint index1 = i / count;
             uint index2 = i % count;
-
+            //if (index1 > index2) break;
             if (index1 == index2)
             {
                 //limit++;
@@ -68,7 +68,17 @@ public class CCoinPairsM : CBaseDbM
     {
         int count = coinsModel.TrueCount(filter);
 
-        return (uint)(count*count - count);
+        uint pair_count = 0;
+        for (uint i = 1; i < count; i++)
+        {
+            pair_count += i;
+        }
+
+        Console.WriteLine(pair_count);
+        Console.WriteLine(count * count - count);
+        //return (uint)(count*count - count);
+        return pair_count;
+        //return (uint)(count*count - count);
     }
 
     /// <summary>

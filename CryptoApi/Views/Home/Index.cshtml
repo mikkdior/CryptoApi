@@ -2,7 +2,8 @@
 @inject CBlocksHelperVM BlocksHelper
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = Model.SeoInfo.title == "" ? "CriptoApi" : Model.SeoInfo.title;
+    ViewData["Description"] = Model.SeoInfo.text == "" ? "" : Model.SeoInfo.text;
     ViewData["Page"] = "main";
 }
 

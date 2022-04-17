@@ -1,7 +1,8 @@
 ﻿@model CCoinVM
 @inject CBlocksHelperVM BlocksHelper
 @{
-    ViewData["Title"] = "Coin Page";
+    ViewData["Title"] = Model.SeoInfo.title == "" ? "Coin Page" : Model.SeoInfo.title;
+    ViewData["Description"] = Model.SeoInfo.text == "" ? "" : Model.SeoInfo.text;
     ViewData["Page"] = "coin";
     Model.coin.data.name = Model.coin.data.name.ToUpper();
 }

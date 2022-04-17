@@ -12,6 +12,24 @@ public class CCoinVM
     private IConfiguration conf;
     private CCommonM commonModel;
 
+    public CTextBlockVM SeoInfo
+    {
+        get
+        {
+            string title = coin.data["seo", "title"] != null ? coin.data["seo", "title"].value : commonModel["coin seo", "title"]?.value;
+            string text = coin.data["seo", "text"] != null ? coin.data["seo", "text"].value : commonModel["coin seo", "text"]?.value;
+
+            return new CTextBlockBuilder()
+                .SetTitle(title)
+                .SetTitleValues(coin.data["seo tpl", "title"]?.value)
+                .SetTitleData(coin.data)
+                .SetText(text)
+                .SetTextValues(text)
+                .SetTextData(null)
+                .Build();
+        }
+    }
+
     /// <summary>
     ///     Возвращает заголовок страницы из БД.
     /// </summary>

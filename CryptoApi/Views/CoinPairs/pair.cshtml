@@ -1,8 +1,11 @@
 ﻿@model CCoinPairVM
 @inject CBlocksHelperVM BlocksHelper
 @{
-    bool non_page = Model.pair.data.coin1_id == Model.pair.data.coin2_id;
-    ViewData["Title"] = non_page ? "Page not found" : "CoinPair Page";
+    bool non_page = Model.pair.data.coin1_id >= Model.pair.data.coin2_id;
+    
+    ViewData["Title"] = Model.SeoInfo.title == "" ? "CoinPair Page" : Model.SeoInfo.title;
+    ViewData["Title"] = non_page ? "Page not found" : ViewData["Title"];
+    ViewData["Description"] = Model.SeoInfo.text == "" ? "" : Model.SeoInfo.text;
     //var similiar_pairs = BlocksHelper.GetPairList(Model.pair.data);
 }
 
@@ -100,7 +103,7 @@ else {
 }
 
 @section PageHead {
-    @if (Model.pair.data.coin1_id != Model.pair.data.coin2_id) 
+    @if (Model.pair.data.coin1_id < Model.pair.data.coin2_id) 
     {
         @await Html.PartialAsync("_SubheaderCoinPair", (Model.PageHead, (Model.pair.data.name_1, Model.pair.data.name_2)))
     }
