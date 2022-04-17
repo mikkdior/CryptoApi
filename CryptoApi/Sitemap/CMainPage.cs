@@ -2,7 +2,7 @@
 {
     public class CMainPage : IPageType
     {
-        public int count => 1;
+        public uint count => 1;
 
         public IEnumerable<CPageInfo> pages
         {

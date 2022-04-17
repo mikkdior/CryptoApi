@@ -5,15 +5,15 @@
     /// </summary>
     public class CWriter
     {
-        int countUrls = 1000;
+        int countUrls = 10000;
         string mainFileName = "_sitemap.xml";
         string subFileName = "_sitemap-{index}.xml";
         string root = "./wwwroot/";
         string lastmod = DateTime.Now.ToString("yyyy-MM-dd");
         IEnumerable<CPageInfo> pages { get; set; }
-        int count { get; set; }
+        uint count { get; set; }
 
-        public CWriter (IEnumerable<CPageInfo> pages, int count)
+        public CWriter (IEnumerable<CPageInfo> pages, uint count)
         {
             this.count = count;
             this.pages = pages;

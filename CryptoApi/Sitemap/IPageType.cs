@@ -2,7 +2,7 @@
 {
     public interface IPageType
     {
-        int count { get; }
+        uint count { get; }
         IEnumerable<CPageInfo> pages { get; }
     }
 }

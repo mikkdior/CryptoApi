@@ -1,89 +1,107 @@
 ﻿@model CCoinPairVM
 @inject CBlocksHelperVM BlocksHelper
 @{
-    ViewData["Title"] = "CoinPair Page";
+    bool non_page = Model.pair.data.coin1_id == Model.pair.data.coin2_id;
+    ViewData["Title"] = non_page ? "Page not found" : "CoinPair Page";
     //var similiar_pairs = BlocksHelper.GetPairList(Model.pair.data);
 }
-<section class="dcg-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
-                    <h2 class="dcg-h2 text-left m-0">@Model.Description.title</h2>
+
+@if (non_page) {
+    <section class="dcg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="dcg-h2">Такой пары не существует.</h2>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
-                    @await Html.PartialAsync("_TextBlock", ("", Model.Description.text))
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="row">
-                    <div class="col-12">
-                        @await Html.PartialAsync("_CoinPairInfo", Model)
-                    </div>
-                    <div class="col-12">
-                        <h3 class="dcg-h3">Exchange rate @Model.pair.data.name_1 to @Model.pair.data.name_2</h3>
-                        @await Html.PartialAsync("_CoinWidget", (Model.pair.data.name_1, Model.pair.data.name_2))
+    </section>
+}
+else {
+    <section class="dcg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
+                        <h2 class="dcg-h2 text-left m-0">@Model.Description.title</h2>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="dcg-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                @await Html.PartialAsync("_GuideList", (Model.pair.data.name_1, Model.pair.data.name_2))
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="dcg-desc-wrapper dcg-desc-wrapper_coin-pair">
+                        @await Html.PartialAsync("_TextBlock", ("", Model.Description.text))
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-12">
+                            @await Html.PartialAsync("_CoinPairInfo", Model)
+                        </div>
+                        <div class="col-12">
+                            <h3 class="dcg-h3">Exchange rate @Model.pair.data.name_1 to @Model.pair.data.name_2</h3>
+                            @await Html.PartialAsync("_CoinWidget", (Model.pair.data.name_1, Model.pair.data.name_2))
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="dcg-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                @await Html.PartialAsync("_CoinPairs", BlocksHelper.GetPairList(9))
+    <section class="dcg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @await Html.PartialAsync("_GuideList", (Model.pair.data.name_1, Model.pair.data.name_2))
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="dcg-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                @await Html.PartialAsync("_Coins", BlocksHelper.GetCoinList(16))
+    <section class="dcg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @await Html.PartialAsync("_CoinPairs", BlocksHelper.GetPairList(9))
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="dcg-section dcg-section_gray">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                @await Html.PartialAsync("_SectionTextBlocks", Model.TextBlocks)
+    <section class="dcg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @await Html.PartialAsync("_Coins", BlocksHelper.GetCoinList(16))
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="dcg-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)Model.Faq))
+    <section class="dcg-section dcg-section_gray">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @await Html.PartialAsync("_SectionTextBlocks", Model.TextBlocks)
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="dcg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @await Html.PartialAsync("_SectionTextBlock", ("Frequently Asked Questions", "_Faq", (object)Model.Faq))
+                </div>
+            </div>
+        </div>
+    </section>
+}
 
 @section PageHead {
-    @await Html.PartialAsync("_SubheaderCoinPair", (Model.PageHead, (Model.pair.data.name_1, Model.pair.data.name_2)))
+    @if (Model.pair.data.coin1_id != Model.pair.data.coin2_id) 
+    {
+        @await Html.PartialAsync("_SubheaderCoinPair", (Model.PageHead, (Model.pair.data.name_1, Model.pair.data.name_2)))
+    }
 }

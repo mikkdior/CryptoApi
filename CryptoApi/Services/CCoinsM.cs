@@ -129,9 +129,9 @@ public class CCoinsM : CBaseDbM
     /// <summary>
     ///     Возвращает количество монет.
     /// </summary>
-    public int Count(string? filter = null)
+    public uint Count(string? filter = null)
     {
-        return db.Coins
+        return (uint)db.Coins
             .Where(c => (filter == "" || filter == null) ? true : c.name.Contains(filter) || c.name_full.Contains(filter))
             .Count();
     }

@@ -4,7 +4,7 @@ namespace CryptoApi.Sitemap
 {
     public class CPairsPage : IPageType
     {
-        public int count => 1;
+        public uint count => 1;
         public CCoinPairsM model;
 
         public CPairsPage(CCoinPairsM model)
