@@ -1,11 +1,13 @@
-﻿<div class="dc-partners">
+﻿@model IEnumerable<string>
+
+<div class="dc-partners">
     <h2 class="dcg-h2">Media & Partners</h2>
     <div class="row justify-content-center">
-        @for (int i = 0; i < 11; i++)
+        @foreach (string img in Model)
         {
             <div class="col-xl-3 col-lg-4 col-md-12">
                 <div class="dc-partners__partner">
-                    <img src="/pictures/defiprime-logo.png" alt="partner" loading="lazy">
+                    <img src="@img" alt="partner" loading="lazy">
                 </div>
             </div>
         }

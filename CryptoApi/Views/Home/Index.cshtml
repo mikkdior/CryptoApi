@@ -1,5 +1,21 @@
 ﻿@model CHomeVM
 @inject CBlocksHelperVM BlocksHelper
+@{
+    List<string> partners = new() 
+    { 
+        "/pictures/defiprime-logo.png", 
+        "/pictures/dappradar.png", 
+        "/pictures/dapp-review.png",
+        "/pictures/cryptowisser.png",
+        "/pictures/defi-pulse.png",
+        "/pictures/dapp.png",
+        "/pictures/baking-bad.png",
+        "/pictures/coinfunda.png",
+        "/pictures/state-of-the-dapps.png",
+        "/pictures/staking-rewards.png",
+        "/pictures/leastauthority.png",
+    };
+}
 
 @{
     ViewData["Title"] = Model.SeoInfo.title == "" ? "CriptoApi" : Model.SeoInfo.title;
@@ -65,7 +81,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                @await Html.PartialAsync("_Partners")
+                @await Html.PartialAsync("_Partners", partners)
             </div>
         </div>
     </div>

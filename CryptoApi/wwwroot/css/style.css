@@ -8817,16 +8817,16 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       height: 40px; } }
 
 .dc-partners .dcg-h2 {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-bottom: 0; }
 
 .dc-partners__partner {
-  margin-top: 55px;
+  margin-top: 60px;
   padding: 0px 7px;
   text-align: center; }
   .dc-partners__partner img {
-    width: 265px;
-    height: auto; }
+    width: auto;
+    height: 60px; }
 
 @media (max-width: 991.98px) {
   .dc-partners__partner {

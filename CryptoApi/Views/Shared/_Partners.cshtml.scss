@@ -2,19 +2,19 @@
 // /* TEMPLATE: partners */
 .dc-partners {
     .dcg-h2 {
-        margin-bottom: 0;
+        margin-bottom: 10px;
         padding-bottom: 0;
     }
 
     &__partner {
-        margin-top: 55px;
+        margin-top: 60px;
         padding: 0px 7px;
         text-align: center;
 
         img {
-            width: 265px;
-            height: auto;
-        }
+            width: auto;
+            height: 60px;
+        } 
     }
 
 
