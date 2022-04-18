@@ -3,5 +3,75 @@
 <div class="dc-subheader-main">
     <h1 class="dcg-h1">@Html.Raw(Model.pagehead.title)</h1>
     @await Html.PartialAsync("_HeadAdvantages")
+    <div class="dc-subheader-main__links dc-subheader-main__links_first">
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-big">
+                <img src="/images/google-play.svg" alt="gp">
+                @*<svg icon="google-play"></svg>*@
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-big">
+                <svg icon="app-store"></svg>
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-middle">
+                <svg icon="apk-android"></svg>
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-small">
+                <svg icon="download"></svg>
+            </span>
+            <span class="dc-subheader-main__link-name">
+                Download
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-small">
+                <svg icon="auth"></svg>
+            </span>
+            <span class="dc-subheader-main__link-name">
+                Web Wallet
+            </span>
+        </a>
+    </div>
+
     @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
+
+    <div class="dc-subheader-main__links dc-subheader-main__links_second">
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-big">
+                <img src="/images/google-play.svg" alt="gp">
+                @*<svg icon="google-play"></svg>*@
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-big">
+                <svg icon="app-store"></svg>
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-middle">
+                <svg icon="apk-android"></svg>
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-small">
+                <svg icon="download"></svg>
+            </span>
+            <span class="dc-subheader-main__link-name">
+                Download
+            </span>
+        </a>
+        <a href="#" class="dc-subheader-main__link dcg-btn">
+            <span class="dc-subheader-main__svg-small">
+                <svg icon="auth"></svg>
+            </span>
+            <span class="dc-subheader-main__link-name">
+                Web Wallet
+            </span>
+        </a>
+    </div>
 </div>

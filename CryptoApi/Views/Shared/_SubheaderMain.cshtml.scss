@@ -25,6 +25,75 @@
         margin-left: auto;
     }
 
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        height: max-content;
+        width: 550px;
+        align-items: center;
+        /*margin-top: -120px;*/
+        float: left;
+
+        &_second {
+            display: none
+        }
+
+        svg {
+            fill: #FFF;
+        }
+    }
+
+    &__link {
+        width: 135px;
+        height: 40px;
+        background: #212529;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 7.5px 15px 7.5px 0px;
+    }
+
+    &__svg-big {
+        svg {
+            width: 115px;
+        }
+
+        img {
+            width: 115px;
+            height: 30px;
+        }
+    }
+
+    &__svg-middle {
+
+        svg {
+            width: 100px;
+        }
+    }
+
+    &__svg-small {
+        svg {
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+        }
+    }
+
+    &__link-name {
+        font-size: 14px;
+        color: #fff;
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__link-name-single {
+    }
+
+
     @include media-breakpoint-down (lg) {
         display: flex;
         flex-wrap: wrap;
@@ -34,10 +103,33 @@
             margin-bottom: 30px;
             text-align: center;
             width: 710px;
+            padding: 0;
         }
 
         .dc-exchange-widget {
             margin-left: 0;
+        }
+
+        &__links {
+            width: 730px;
+            flex-wrap: nowrap;
+            margin-top: 0;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            &_first {
+                display: none
+            }
+
+            &_second {
+                display: flex;
+            }
+
+
+
+            &__link {
+                margin: 0;
+            }
         }
     }
 
@@ -47,6 +139,21 @@
             padding: 0;
         }
     }
+
+    @include media-breakpoint-down (sm) {
+        .dcg-h1 {
+            width: 100%;
+            padding: 0;
+        }
+
+        &__links {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+
 
     @include media-breakpoint-down (xs) {
         margin-top: 0 !important;
@@ -63,4 +170,4 @@
     }
 }
 // /* /TEMPLATE: subheader-main */
-// /*.....................................*/
+    // /*.....................................*/

@@ -22,6 +22,12 @@
         letter-spacing: 0em;
     }
 
+    @include media-breakpoint-down (lg) {
+        &__desc {
+            margin-bottom: 130px;
+        }
+    }
+
     @include media-breakpoint-down (md) {
         margin-bottom: 75px;
 
@@ -32,7 +38,9 @@
         &__desc {
             margin-top: 27px;
             line-height: 23px;
+            margin-bottom: 50px;
         }
+
     }
 
     @include media-breakpoint-down (sm) {
