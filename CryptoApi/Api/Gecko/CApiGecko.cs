@@ -13,13 +13,37 @@ namespace CryptoApi.Api.Gecko
         {
             client = CoinGeckoClient.Instance;
         }
+        IEnumerable<CoinMarkets> GetAllMarkets ()
+        {
+            int page = 1;
+
+            while(true)
+            {
+                Console.WriteLine("before");
+                var markets = client.CoinsClient.GetCoinMarkets("usd", new string[] { }, "market_cap_desc", 250, page++, false, "", "").Result;
+                Console.WriteLine("after " + markets.Count + " " + (page - 1));
+
+                if (markets.Count == 0) break;
+                
+                foreach (CoinMarkets market in markets)
+                {
+                    yield return market;
+                }
+            }
+        }
         public async Task<IApiCoinsData> GetCoinsAsync()
         {
             Inc();
-            CurrentCoins = await client.CoinsClient.GetAllCoinsData();
-            var coins = await client.CoinsClient.GetCoinList();
-            Console.WriteLine($"current coins: {CurrentCoins}");
-            return new CGeckoCoinsData(CurrentCoins, coins);
+            //CurrentCoins = await client.CoinsClient.GetAllCoinsData();
+            //Console.WriteLine($"current coins: {CurrentCoins.Count()}");
+            //var markets = await client.CoinsClient.GetCoinMarkets("usd");
+            //Console.WriteLine($"markets: {markets.Count()}");
+            //
+            //return null;
+            
+            //var coins = await client.CoinsClient.GetCoinList();
+
+            return new CGeckoCoinsData(GetAllMarkets(), null);
         }
         public async Task<IApiCoinPairsData> GetCoinPairsAsync()
         {

@@ -17,4 +17,8 @@ public class CApiCoin : IApiCoin
     public decimal? MarketCap { get; set; }
     public decimal? Low { get; set; }
     public decimal? High { get; set; }
+    public string CirculatingSupply { get; set; }
+    public decimal? TotalSupply { get; set; }
+    public long? MarketCapRank { get; set; }
+    public decimal? TotalVolume { get; set; }
 }

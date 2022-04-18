@@ -62,6 +62,7 @@ public class CCoinsM : CBaseDbM
     public async Task AddCoinAsync(IApiCoin coin, bool save = true)
     {
         await db.Coins.AddAsync(ApiToData(coin));
+            //db.SaveChangesAsync();
         if (save) await db.SaveChangesAsync();
     }
 
@@ -71,6 +72,7 @@ public class CCoinsM : CBaseDbM
     public async Task UpdateCoinAsync(IApiCoin coin, CCoinDataM? has_coin, bool save = true)
     {
         ApiToData(coin, has_coin);
+        //await db.SaveChanges();
         if (save) await db.SaveChangesAsync();
     }
 
@@ -102,6 +104,10 @@ public class CCoinsM : CBaseDbM
             low = coin.Low,
             high = coin.High,
             last_updated = now,
+            circulating_supply = coin.CirculatingSupply,
+            total_supply = coin.TotalSupply.ToString(),
+            market_cap_rank = coin.MarketCapRank,
+            total_volume = coin.TotalVolume
         };
 
         new_coin.ext.Add(ext);
@@ -124,6 +130,8 @@ public class CCoinsM : CBaseDbM
                 await UpdateCoinAsync(coin, has_coin, false);
             else
                 await AddCoinAsync(coin, false);
+
+            await db.SaveChangesAsync();
         }
 
         await db.SaveChangesAsync();

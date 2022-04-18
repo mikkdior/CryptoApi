@@ -40,11 +40,11 @@ public class CCoinDataM
     public decimal? low => ext.Count() == 0 ? null : ext.Last()?.low;
     public decimal? high => ext.Count() == 0 ? null : ext.Last()?.high;
 
-    public decimal? circulating_supply => ext.Count() == 0 ? null : 10633197;
+    public string circulating_supply => ext.Count() == 0 ? "" : ext.Last().circulating_supply;
 
-    public decimal? max_supply => ext.Count() == 0 ? null : 18900000;
-    public decimal? cmc_rank => ext.Count() == 0 ? null : 72;
-    public decimal? volume_24h => ext.Count() == 0 ? null : 828881044;
+    public string max_supply => ext.Count() == 0 ? null : ext.Last().total_supply;
+    public decimal? cmc_rank => ext.Count() == 0 ? null : ext.Last().market_cap_rank;
+    public decimal? volume_24h => ext.Count() == 0 ? null : ext.Last().total_volume;
     public decimal? change_1h => ext.Count() == 0 ? null : 2.21m;
 
     public ICollection<CCoinsMetaDataM> meta { get; set; }

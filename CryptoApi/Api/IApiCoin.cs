@@ -13,5 +13,9 @@ namespace CryptoApi.Api
         decimal? MarketCap { get; set; }
         decimal? Low { get; set; }
         decimal? High { get; set; }
+        string CirculatingSupply { get; set; }
+        decimal? TotalSupply { get; set; }
+        long? MarketCapRank { get; set; }
+        decimal? TotalVolume { get; set; }
     }
 }

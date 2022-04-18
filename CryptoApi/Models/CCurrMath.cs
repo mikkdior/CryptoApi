@@ -55,11 +55,13 @@ namespace CryptoApi.Models
         static public IUpdatedData? FilterLust(int days, IEnumerable<IUpdatedData> list, DateTime last_date)
         {
             if (list.Count() == 0) return null;
-
+            
             IUpdatedData? item = list.Where(i => i.last_updated.Date == last_date.AddDays(-days).Date).FirstOrDefault();
             if (item != null) return item;
 
             int _days = days;
+            var res = list.Where(i => i.last_updated.Date != last_date.Date); //ищем соответствие в ближайшем от заданного дня к сегоднешнему дню
+            if (res.Count() == 0) return null;
 
             while (item == null)
             {

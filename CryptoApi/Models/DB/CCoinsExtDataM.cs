@@ -19,6 +19,12 @@ namespace CryptoApi.Models.DB
 
         public DateTime last_updated { get; set; }
 
+        public string circulating_supply { get; set; }
+        public string total_supply { get; set; }
+        public long? market_cap_rank { get; set; }
+        public decimal? total_volume { get; set; }
+
+
         [ForeignKey("coins_id")]
         public CCoinDataM coin { get; set; }
     }
