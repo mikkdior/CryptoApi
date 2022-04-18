@@ -4,7 +4,7 @@
     <a class="dc-coin__link" asp-controller="Coins" asp-action="Coin" asp-route-coin="@Model.data.name">
         <img src="@Model.data.image" alt="coin-image" loading="lazy">
         <h3 class="dcg-h3"> 
-            @Model.data.name_full  (@Model.data.name.ToUpper())
+            <span class="dc-coin_full-name">@Model.data.name_full  (@Model.data.name.ToUpper())</span><span class="dc-coin_short-name">@Model.data.name.ToUpper()</span>
         </h3>
         <svg icon="arrow-right-dark" class="dcg-icon-arrow-right"></svg>
     </a>

@@ -5,11 +5,11 @@
         padding-bottom: 20px;
     }
 
-    .dc-market-update__graph{
+    .dc-market-update__graph {
         width: 111px;
         height: 36px;
-    } 
-    
+    }
+
     .dc-coin {
         .dcg-h3 {
             line-height: 20px;
@@ -94,10 +94,8 @@
             font-size: 13px;
 
             th:nth-child(2) {
-                width: 110px;
+                width: 80px;
             }
-
-
 
             .dc-coin {
                 .dcg-h3 {
@@ -107,6 +105,14 @@
                 img {
                     width: 20px;
                     height: 20px;
+                }
+
+                .dc-coin_short-name {
+                    display: inline-block;
+                }
+
+                .dc-coin_full-name {
+                    display: none;
                 }
             }
         }

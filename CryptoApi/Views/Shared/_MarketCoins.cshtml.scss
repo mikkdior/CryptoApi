@@ -173,6 +173,7 @@
         svg {
             width: 16px;
             height: 16px;
+            margin-left: 0;
         }
 
         &:hover svg {
@@ -189,19 +190,22 @@
         text-align: center;
     }
 
-    @include media-breakpoint-down (xl) {
-
-        .dc-table {
-            th:last-child {
-                width: 145px;
-            }
-        }
-    }
-
     @include media-breakpoint-down (lg) {
         &__exchange {
             svg {
-                margin-left: 0;
+                margin-left: 10px;
+            }
+
+            &:hover .dc-market-coins__exchange-btn {
+                margin-left: 10px;
+                width: 90px;
+            }
+        }
+
+        .dc-table {
+            th:last-child {
+                width: 130px;
+                padding-right: 15px;
             }
         }
 
@@ -265,6 +269,20 @@
                 width: 102px !important;
                 padding-right: 0px !important;
             }
+
+            .dc-coin {
+                .dc-coin_short-name {
+                    display: inline-block;
+                }
+
+                .dc-coin_full-name {
+                    display: none;
+                }
+
+                .dcg-h3 {
+                    margin-left: 10px;
+                }
+            }
         }
 
         &__exchange {
@@ -316,10 +334,6 @@
         }
 
         .dc-table {
-            .dcg-h3 {
-                margin-left: 5px;
-            }
-
             th:nth-child(2) {
                 width: 60px;
             }
@@ -333,7 +347,7 @@
             }
 
             th:last-child {
-                width: 60px !important;
+                width: 80px !important;
             }
 
             th:nth-child(7), td:nth-child(7) {
@@ -344,7 +358,7 @@
 
         &__exchange {
             svg {
-                margin-left: 16px;
+                margin-left: 46px;
             }
         }
 
