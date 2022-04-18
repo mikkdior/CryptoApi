@@ -9111,8 +9111,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   .dc-subheader-main__svg-big img {
     width: 115px;
     height: 30px; }
-  .dc-subheader-main__svg-middle svg {
-    width: 100px; }
+  .dc-subheader-main__svg-middle svg, .dc-subheader-main__svg-middle img {
+    width: 100px;
+    height: 30px; }
   .dc-subheader-main__svg-small svg {
     width: 17px;
     height: 17px;

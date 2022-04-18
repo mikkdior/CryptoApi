@@ -2652,8 +2652,9 @@
 
     &__svg-middle {
 
-        svg {
+        svg, img {
             width: 100px;
+            height: 30px;
         }
     }
 
