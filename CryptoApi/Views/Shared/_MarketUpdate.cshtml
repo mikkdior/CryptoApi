@@ -26,7 +26,7 @@
             i => i.data.volume_24h == null ? "-" : "$" + ((long)i.data.volume_24h).ToString())
 
         .Add("<a href='?order=circulating_supply'>Circulating Supply<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows' /></svg></a>", 
-            i => i.data.circulating_supply == null ? "-" : i.data.circulating_supply.ToString())
+            i => i.data.circulating_supply == null || i.data.circulating_supply == "" ? "-" : i.data.circulating_supply.ToString())
 
         .Add("<a href='?order=market_cap'>Market Cap<svg><use xlink:href='/images/svg-sprite.svg#up-down-arrows' /></svg></a>", 
             i => i.data.market_cap == null ? "-" : "$" + ((long)i.data.market_cap).ToString())
