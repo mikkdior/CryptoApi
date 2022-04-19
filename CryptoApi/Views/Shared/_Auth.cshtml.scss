@@ -19,6 +19,10 @@
         }
     }
 
+    &__auth:hover {
+        color: #0FD4E2;
+    }
+
     @include media-breakpoint-down (md) {
         display: none;
     }

@@ -7260,6 +7260,8 @@ a.text-dark:hover, a.text-dark:focus {
       font-weight: 400 !important;
       text-align: right;
       color: #63696F; }
+  .dcg-tpg td ~ td {
+    padding-left: 10px; }
   .dcg-tpg tr {
     border-bottom: 1px solid #ECECEC; }
   .dcg-tpg td {
@@ -7730,6 +7732,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       height: 40px;
       padding-right: 5px;
       padding-bottom: 1px; }
+  .dc-auth__auth:hover {
+    color: #0FD4E2; }
   @media (max-width: 991.98px) {
     .dc-auth {
       display: none; } }

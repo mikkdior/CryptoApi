@@ -1,4 +1,5 @@
-﻿@model CCoinPairVM
+﻿@using CryptoApi.ViewModels
+@model CCoinPairVM
 <div class="dc-coin-pair-info dcg-tpg"> @*flex*@
     <div class="row">
         <div class="col">
@@ -22,7 +23,7 @@
                         <span>@Model.pair.data.name_1</span>
                     </td>
                     <td>
-                        <span>@Model.pair.data.name_2</span>
+                        <span>@Model.pair.data.name_2</span> 
                     </td>
                 </tr>
                 <tr>
@@ -30,23 +31,23 @@
                         <span>Circulating supply</span>
                     </td>
                     <td>
-                        @if(Model.pair.data.price_1 == null)
+                        @if(Model.pair.data.circulating_supply_1 == null || Model.pair.data.circulating_supply_1 == "")
                         {
                             <span>-</span>   
-                        }
+                        } 
                         else
                         {
-                            <span>$@Model.pair.data.price_1</span>
+                            <span>$@Model.pair.data.circulating_supply_1</span>
                         }
                     </td>
                     <td>
-                        @if(Model.pair.data.price_2 == null)
+                        @if(Model.pair.data.circulating_supply_2 == null || Model.pair.data.circulating_supply_2 == "")
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>$@Model.pair.data.price_2</span>
+                            <span>$@Model.pair.data.circulating_supply_2</span>
                         }
                     </td>
                 </tr>
@@ -55,23 +56,23 @@
                         <span>Max supply</span>
                     </td>
                     <td>
-                        @if(Model.pair.coin1.max_supply == null)
+                        @if(Model.pair.data.max_supply_1 == null || Model.pair.data.max_supply_1 == "")
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>$@Model.pair.coin1.max_supply</span>
+                            <span>$@Model.pair.data.max_supply_1</span>
                         }
                     </td>
                     <td>
-                        @if(Model.pair.coin2.max_supply == null)
+                        @if(Model.pair.data.max_supply_2 == null || Model.pair.data.max_supply_2 == "")
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>$@Model.pair.coin2.max_supply</span>
+                            <span>$@Model.pair.data.max_supply_2</span>
                         }
                     </td>
                 </tr>
@@ -80,23 +81,23 @@
                         <span>Cmc rank</span>
                     </td>
                     <td>
-                        @if(Model.pair.coin1.cmc_rank == null)
+                        @if(Model.pair.data.cmc_rank_1 == null)
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>@Model.pair.coin1.cmc_rank</span>
+                            <span>@Model.pair.data.cmc_rank_1</span>
                         }
                     </td>
                     <td>
-                        @if(Model.pair.coin2.cmc_rank == null)
+                        @if(Model.pair.data.cmc_rank_2 == null)
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>@Model.pair.coin2.cmc_rank</span>
+                            <span>@Model.pair.data.cmc_rank_2</span>
                         }
                     </td>
                 </tr>
@@ -105,23 +106,23 @@
                         <span>Volume 24h</span>
                     </td>
                     <td>
-                        @if(Model.pair.coin1.volume_24h == null)
+                        @if(Model.pair.data.volume_24h_1 == null)
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>$@Model.pair.coin1.volume_24h</span>
+                            <span>$@Model.pair.data.volume_24h_1</span>
                         }
                     </td>
                     <td>
-                        @if(Model.pair.coin2.volume_24h == null)
+                        @if(Model.pair.data.volume_24h_2 == null)
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span>$@Model.pair.coin2.volume_24h</span>
+                            <span>$@Model.pair.data.volume_24h_2</span>
                         }
                     </td>
                 </tr>
@@ -130,9 +131,9 @@
                         <span>Percent change 24h</span>
                     </td>
                     <td>
-                        @if(Model.pair.coin1.day_percent_change < 0)
+                        @if(Model.pair.data.day_percent_change_1 < 0)
                         {
-                            <span class="dcg-value-down">@(Model.pair.coin1.day_percent_change)%</span>
+                            <span class="dcg-value-down">@(Model.pair.data.day_percent_change_1)%</span>
                         }
                         else if (Model.pair.coin1.day_percent_change == null)
                         {
@@ -140,21 +141,21 @@
                         }
                         else
                         {
-                            <span class="dcg-value-up">@(Model.pair.coin1.day_percent_change)%</span>
+                            <span class="dcg-value-up">@(Model.pair.data.day_percent_change_1)%</span>
                         }
                     </td>
                     <td>
-                        @if(Model.pair.coin2.day_percent_change < 0)
+                        @if(Model.pair.data.day_percent_change_2 < 0)
                         {
-                            <span class="dcg-value-down">@(Model.pair.coin2.day_percent_change)%</span>
+                            <span class="dcg-value-down">@(Model.pair.data.day_percent_change_2)%</span>
                         }
-                        else if (Model.pair.coin2.day_percent_change == null)
+                        else if (Model.pair.data.day_percent_change_2 == null)
                         {
                             <span>-</span>
                         }
                         else
                         {
-                            <span class="dcg-value-up">@(Model.pair.coin2.day_percent_change)%</span>
+                            <span class="dcg-value-up">@(Model.pair.data.day_percent_change_2)%</span>
                         }
                     </td>
                 </tr>
@@ -163,23 +164,23 @@
                         <span>Percent change 7d</span>
                     </td>
                     <td>
-                        @if(Model.pair.coin1.week_percent_change == null)
+                        @if(Model.pair.data.week_percent_change_1 == null)
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span class="dcg-value-up">@(Model.pair.coin1.week_percent_change)%</span>
+                            <span class="dcg-value-up">@(Model.pair.data.week_percent_change_1)%</span>
                         }
                     </td>
                     <td>
-                        @if(Model.pair.coin2.week_percent_change == null)
+                        @if(Model.pair.data.week_percent_change_2 == null)
                         {
                             <span>-</span>   
                         }
                         else
                         {
-                            <span class="dcg-value-up">@(Model.pair.coin2.week_percent_change)%</span>
+                            <span class="dcg-value-up">@(Model.pair.data.week_percent_change_2)%</span>
                         }
                     </td>
                 </tr>
