@@ -1,7 +1,9 @@
 ﻿@inject CBlocksHelperVM BlocksHelper
 @model IEnumerable<CCoinDataVM>
 @{
+    string current_page = Context.Request.Query.ContainsKey("page") ? Context.Request.Query["page"] : "1";
     int counter = 0;
+    counter += (int.Parse(current_page) - 1) * Model.Count();
     string coins_route = Url.RouteUrl(new { Action = "Index", Controller = "Coins" });
 }
 <div class="dc-market-coins dcg-shadow dcg-table-sort-icons">
