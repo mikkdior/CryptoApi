@@ -7808,7 +7808,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     border-radius: 7px;
     background: #fff; }
   .dc-coin-pair .dcg-icon-arrow-right {
-    margin: 17px 7px 0 0px; }
+    margin-top: 17px; }
   .dc-coin-pair__head {
     display: flex;
     justify-content: space-between; }
@@ -7877,10 +7877,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 .dc-coin-pairs .dcg-section__head {
   margin-bottom: 12px;
   padding-bottom: 0; }
-
-.dc-coin-pairs .dcg-icon-arrow-right {
-  margin-left: 11px;
-  margin-bottom: 1px; }
 
 .dc-coins .dc-coin {
   width: 265px;
