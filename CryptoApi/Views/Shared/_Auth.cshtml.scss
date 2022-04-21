@@ -8,6 +8,9 @@
     &__auth {
         border: 0;
         background: transparent;
+        display: flex;
+        justify-items: center;
+        align-items: center;
 
         svg {
             color: #FFF;

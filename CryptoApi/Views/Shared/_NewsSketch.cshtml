@@ -1,29 +1,31 @@
-﻿<div class="dc-news-sketch dcg-shadow-hover dcg-shadow-md">
+﻿@model (string image, IEnumerable<string> tags, string title, string text, string date, string link)
+
+<div class="dc-news-sketch dcg-shadow-hover dcg-shadow-md">
     <div class="dc-news-sketch__image-wrapper">
-        <img src="/pictures/bitcoin-gold.jpg" alt="news" loading="lazy">
+        <img src="@Model.image" alt="news" loading="lazy">
     </div>
     <div class="dc-news-sketch__content-wrapper">
         <div class="dc-news-sketch__tags">
-            <a href="#" class="dc-news-sketch__tag">
-                btg
-            </a>
-            <a href="#" class="dc-news-sketch__tag">
-                predictions
-            </a>
+            @foreach (var tag in Model.tags)
+            {
+                <a href="#" class="dc-news-sketch__tag">
+                    @tag
+                </a>
+            }
         </div>
         <h3 class="dcg-h3"> 
-            Bitcoin Gold (BTG) Price Prediction for 2022 - 2030
+            @Model.title
         </h3>
         <div class="dc-news-sketch__text">
-            Atomex provides websocket API for wallets and market makers. Contact us if you have questions regarding integration.
+            @Model.text
         </div>
         <div class="dc-news-sketch__details">
             <div class="dc-news-sketch__date">
                 <svg icon="calendar"></svg>
-                <span>April 7</span>
+                <span>@Model.date</span>
             </div>
             <div class="dc-news-sketch__link">
-                <a href="#">Read more</a>
+                <a href="@Model.link">Read more</a>
                 <svg icon="arrow-right-dark" class="dcg-icon-arrow-right"></svg>
             </div>
         </div>

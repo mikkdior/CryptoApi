@@ -1,11 +1,11 @@
 {
     "debug": false,
 
-    "lib": {
-        "reset": true,
-        "hover-min": true,
-        "animate.min": true,
-        "font-awesome.min": true,
-        "classes": true
-    }
+  "lib": {
+    "reset": true,
+    "hover-min": false,
+    "animate.min": false,
+    "font-awesome.min": false,
+    "classes": false
+  }
 }

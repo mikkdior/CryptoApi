@@ -1,12 +1,12 @@
 {
     "debug": false,
 
-    "lib": {
-        "jquery-ui-1.12.1.custom": true,
-        "jQueryFormStyler-master": false,
-        "kladrapi-jsclient-master": false,
-        "jquery.jscrollpane": false,
-        "handsontable": false,
-        "handsontable-crack": false
-    }
+  "lib": {
+    "jquery-ui-1.12.1.custom": false,
+    "jQueryFormStyler-master": false,
+    "kladrapi-jsclient-master": false,
+    "jquery.jscrollpane": false,
+    "handsontable": false,
+    "handsontable-crack": false
+  }
 }

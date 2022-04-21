@@ -1,4 +1,10 @@
-﻿<div class="dc-news-list">
+﻿@{
+    IEnumerable<string> tags1 = new List<string>() { "btg", "predictions" };
+    IEnumerable<string> tags2 = new List<string>() { "vet", "predictions" };
+    IEnumerable<string> tags3 = new List<string>() { "meta", "predictions" };
+
+}
+<div class="dc-news-list">
     <div class="dcg-section__head">
         <h2 class="dcg-h2">Latest News</h2>
         <a href="#" class="dcg-btn dcg-btn_big">
@@ -7,12 +13,15 @@
         </a>
     </div>
     <div class="row">
-        @for (int i = 0; i < 3; i++)
-        {
             <div class="col-lg-4 col-md-6">
-                @await Html.PartialAsync("_NewsSketch")
+                @await Html.PartialAsync("_NewsSketch", ("/pictures/bitcoin-gold.jpg" , tags1, "Bitcoin Gold (BTG) Price Prediction for 2022 - 2030", "Atomex provides websocket API for wallets and market makers. Contact us if you have questions regarding integration.", "April 7", "#"))
             </div>
-        }
+            <div class="col-lg-4 col-md-6">
+                @await Html.PartialAsync("_NewsSketch", ("/pictures/metaverse-tokens.jpg" , tags2, "How and Where to Buy VeChain (VET) to Buy VeChain Fast and Safely in 2022?", "Atomex provides websocket API for wallets and market makers. Contact us if you have...", "March 13", "#"))
+            </div>
+            <div class="col-lg-4 col-md-6">
+                @await Html.PartialAsync("_NewsSketch", ("/pictures/where-to-buy-vechain.jpg" , tags3, "Are Metaverse Tokens a Good Investment Option?", "Atomex provides websocket API for wallets and market makers. Contact us if you have questions regarding integration.", "March 1", "#"))
+            </div>
     </div>
     <div class="dcg-section__foot">
         <a href="#" class="dcg-btn dcg-btn_big">
