@@ -1071,6 +1071,10 @@
             width: 165px;
             padding-right: 28px !important;
         }
+
+        .dcg-icon-arrow-right {
+            display: none !important;
+        }
     }
 
     .dc-market-search {
@@ -1388,6 +1392,10 @@
 
         th:nth-child(7), td:nth-child(7) {
             display: none;
+        }
+
+        .dcg-icon-arrow-right {
+            display: none !important;
         }
     }
 
@@ -1866,6 +1874,10 @@
 
         th:nth-child(8), td:nth-child(8) {
             display: none;
+        }
+
+        .dcg-icon-arrow-right{
+            display: none !important;
         }
     }
 

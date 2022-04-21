@@ -23,7 +23,7 @@ public class CCoinPairVM
                 .SetTitleValues(pair.data["seo tpl", "title"]?.value)
                 .SetTitleData(pair.data)
                 .SetText(text)
-                .SetTextValues(text)
+                .SetTextValues(pair.data["seo tpl", "text"]?.value)
                 .SetTextData(null)
                 .Build();
         }

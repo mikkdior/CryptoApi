@@ -44,6 +44,10 @@
         th:nth-child(8), td:nth-child(8) {
             display: none;
         }
+
+        .dcg-icon-arrow-right{
+            display: none !important;
+        }
     }
 
     @include media-breakpoint-down (lg) {

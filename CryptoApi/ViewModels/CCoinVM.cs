@@ -24,7 +24,7 @@ public class CCoinVM
                 .SetTitleValues(coin.data["seo tpl", "title"]?.value)
                 .SetTitleData(coin.data)
                 .SetText(text)
-                .SetTextValues(text)
+                .SetTextValues(coin.data["seo tpl", "text"]?.value)
                 .SetTextData(null)
                 .Build();
         }
