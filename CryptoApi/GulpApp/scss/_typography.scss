@@ -114,6 +114,13 @@
     i {
     }
 
+
+    @include media-breakpoint-down (sm) {
+        td ~ td {
+            text-align: end;
+        }
+    }
+
     @include media-breakpoint-down (xs) {
         h2 {
             font-size: 18px;

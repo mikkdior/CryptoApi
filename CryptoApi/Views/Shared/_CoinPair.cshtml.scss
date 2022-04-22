@@ -16,7 +16,7 @@
     }
 
     .dcg-icon-arrow-right {
-        margin-top: 17px; 
+        margin-top: 17px;
     }
 
     &__head {
@@ -74,7 +74,7 @@
     }
 
     @include media-breakpoint-down (md) {
-        height: auto;
+        height: 190px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;

@@ -7277,6 +7277,9 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: start; }
   .dcg-tpg h3 ~ h3 {
     margin-top: 40px; }
+  @media (max-width: 767.98px) {
+    .dcg-tpg td ~ td {
+      text-align: end; } }
   @media (max-width: 575.98px) {
     .dcg-tpg h2 {
       font-size: 18px; } }
@@ -7855,7 +7858,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       z-index: 100; } }
   @media (max-width: 991.98px) {
     .dc-coin-pair {
-      height: auto;
+      height: 190px;
       margin-left: auto;
       margin-right: auto;
       width: 100%; }
@@ -7884,6 +7887,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
       margin-top: 20px; }
       .dc-coin-pair-info table td:nth-child(3), .dc-coin-pair-info table td:nth-child(2), .dc-coin-pair-info table td:first-child {
         width: max-content; } }
+  @media (max-width: 991.98px) and (max-width: 767.98px) {
+    .dc-coin-pair-info table td:nth-child(3) {
+      text-align: right !important; } }
 
 .dc-coin-pairs .dcg-section__head {
   margin-bottom: 12px;
