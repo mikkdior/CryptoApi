@@ -37,6 +37,11 @@
         justify-content: center;
         margin-bottom: 8px;
 
+        &:hover h3 {
+            color: #0FD4E2;
+            transition: all 300ms;
+        }
+
         img {
             width: 30px;
             height: 30px;

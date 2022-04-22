@@ -7777,7 +7777,11 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   display: flex;
   align-items: center; }
 
-.dc-coin .dcg-h3 {
+.dc-coin:hover h3 {
+  color: #0FD4E2;
+  transition: all 300ms; }
+
+.dc-coin__link .dcg-h3 {
   margin-left: 10px;
   margin-bottom: 0;
   font-weight: 600;
@@ -7836,6 +7840,9 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     align-items: center;
     justify-content: center;
     margin-bottom: 8px; }
+    .dc-coin-pair__coin-head:hover h3 {
+      color: #0FD4E2;
+      transition: all 300ms; }
     .dc-coin-pair__coin-head img {
       width: 30px;
       height: 30px; }
@@ -7982,7 +7989,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     margin-bottom: 20px;
     width: 100%;
     border: 0;
-    background: unset; }
+    background: unset;
+    padding-left: 0; }
     .dc-faq-item__wrapper_opened .dcg-toggle_view {
       display: none !important; }
     .dc-faq-item__wrapper_opened .dcg-toggle_hide {
@@ -7995,7 +8003,7 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   .dc-faq-item__content {
     display: none;
     padding-right: 10px;
-    padding-left: 0px; }
+    padding-left: 15px; }
     .dc-faq-item__content_opened {
       display: block; }
   .dc-faq-item .dcg-toggle {

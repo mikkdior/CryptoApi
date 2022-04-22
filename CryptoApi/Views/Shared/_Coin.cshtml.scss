@@ -12,7 +12,12 @@
         align-items: center;
     }
 
-    .dcg-h3 {
+    &:hover h3 {
+        color: #0FD4E2;
+        transition: all 300ms;
+    }
+
+    &__link .dcg-h3 {
         margin-left: 10px;
         margin-bottom: 0;
         font-weight: 600;
@@ -26,10 +31,10 @@
         margin-right: 4px;
     }
 
-    .dc-coin_short-name{
-        display:none;
-    } 
-    
+    .dc-coin_short-name {
+        display: none;
+    }
+
     @include media-breakpoint-down (sm) {
     }
 }

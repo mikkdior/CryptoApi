@@ -21,6 +21,7 @@
             width: 100%;
             border: 0;
             background: unset;
+            padding-left: 0;
 
             &_opened {
                 .dcg-toggle_view {
@@ -45,7 +46,7 @@
         &__content {
             display: none;
             padding-right: 10px;
-            padding-left: 0px;
+            padding-left: 15px;
 
             &_opened {
                 display: block;
