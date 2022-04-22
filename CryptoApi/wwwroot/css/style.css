@@ -7445,6 +7445,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     font-size: 1rem;
     line-height: 1.5;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;*/ }
+  button:active, [type="button"]:active, [type="submit"]:active, [type="reset"]:active, .dcg-btn:active {
+    outline: unset !important; }
   button.dcg-btn_light, [type="button"].dcg-btn_light, [type="submit"].dcg-btn_light, [type="reset"].dcg-btn_light, .dcg-btn.dcg-btn_light {
     background: #0FD4E2; }
     button.dcg-btn_light:hover, [type="button"].dcg-btn_light:hover, [type="submit"].dcg-btn_light:hover, [type="reset"].dcg-btn_light:hover, .dcg-btn.dcg-btn_light:hover {

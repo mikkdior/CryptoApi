@@ -130,6 +130,9 @@ h5, .dcg-h5 {
     cursor: pointer;
     color: #FFFFFF;
     border-radius: 7px;
+    &:active{
+        outline: unset !important;
+    }
     /*text-align: center;
     vertical-align: middle;
     user-select: none;
