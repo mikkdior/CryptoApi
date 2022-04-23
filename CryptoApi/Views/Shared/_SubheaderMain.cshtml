@@ -37,7 +37,7 @@
         </a>
     </div>
 
-    @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name, Model.coins.coin2_name))
+    @await Html.PartialAsync("_ExchangeWidget", (Model.coins.coin1_name.ToLower(), Model.coins.coin2_name.ToLower()))
 
     <div class="dc-subheader-main__links dc-subheader-main__links_second">
         <a href="#" class="dc-subheader-main__link dcg-btn">
