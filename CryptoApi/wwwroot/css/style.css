@@ -7699,7 +7699,8 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
 
 .dc-advantage {
   padding: 10px;
-  height: 220px; }
+  height: 220px;
+  border-radius: 7px; }
   .dc-advantage__image-wrapper svg {
     width: 40px;
     height: 40px;
@@ -9229,34 +9230,6 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
   box-shadow: unset; }
 
 /*.....................................*/
-/* TEMPLATE: classes */
-.dc-classes {
-  width: 1024px;
-  margin: auto;
-  /*..................................... Buttons*/
-  /*..................................... Inputs*/
-  /*.....................................*/ }
-  .dc-classes section {
-    text-align: center; }
-  .dc-classes__checkbox-wrapper label {
-    display: block; }
-  .dc-classes__container {
-    padding: 15px;
-    text-align: center; }
-  .dc-classes__container-headline {
-    text-align: center; }
-  .dc-classes__container-list {
-    font-size: 20px; }
-  .dc-classes .dcg-button {
-    width: 150px;
-    margin: 10px; }
-  .dc-classes .dcg-input {
-    width: 200px;
-    margin: 10px; }
-
-/* /TEMPLATE: classes */
-/*.....................................*/
-/*.....................................*/
 /* TEMPLATE: _logo */
 /* /TEMPLATE: _logo */
 /*.....................................*/
@@ -9297,6 +9270,34 @@ button, [type="button"], [type="submit"], [type="reset"], .dcg-btn {
     transform: rotate(180deg); }
 
 /* /TEMPLATE: _menu */
+/*.....................................*/
+/*.....................................*/
+/* TEMPLATE: classes */
+.dc-classes {
+  width: 1024px;
+  margin: auto;
+  /*..................................... Buttons*/
+  /*..................................... Inputs*/
+  /*.....................................*/ }
+  .dc-classes section {
+    text-align: center; }
+  .dc-classes__checkbox-wrapper label {
+    display: block; }
+  .dc-classes__container {
+    padding: 15px;
+    text-align: center; }
+  .dc-classes__container-headline {
+    text-align: center; }
+  .dc-classes__container-list {
+    font-size: 20px; }
+  .dc-classes .dcg-button {
+    width: 150px;
+    margin: 10px; }
+  .dc-classes .dcg-input {
+    width: 200px;
+    margin: 10px; }
+
+/* /TEMPLATE: classes */
 /*.....................................*/
 /* /TEMPLATES */
 /*------------------------------------------------------------*/
