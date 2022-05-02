@@ -9,9 +9,7 @@
     font-size: 15px;
     padding: 34px 0 60px 0;
 
-    a:hover{
-        filter: invert(0.3);
-    }
+    
 
     @include media-breakpoint-down (md) {
         padding-bottom: 20px;

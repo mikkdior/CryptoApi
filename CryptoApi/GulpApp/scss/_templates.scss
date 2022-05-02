@@ -27,6 +27,7 @@
 // /* TEMPLATE: advantage */
 .dc-advantage {
     padding: 10px;
+    height: 220px;
 
     &__image-wrapper {
         svg {
@@ -195,6 +196,10 @@
         width: 185px;
     }
 
+    table td ~ td {
+        padding-left: 10px;
+    }
+
     @include media-breakpoint-down (md) {
         margin-top: 20px;
 
@@ -345,6 +350,10 @@
         width: 185px;
     }
 
+    table td ~ td {
+        padding-left: 10px;
+    }
+
     @include media-breakpoint-down (md) {
         margin-top: 20px;
 
@@ -481,6 +490,12 @@
     .dcg-h3 {
         color: #FFF;
         font-size: 20px;
+
+        a {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 400;
+        }
     }
 
     .dcg-h3 ~ .dcg-h3 {
@@ -489,8 +504,12 @@
 
     a {
         color: #c0cee5;
-        font-weight: 700;
         letter-spacing: -0.9px;
+
+        &:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
     }
 
     @include media-breakpoint-down (sm) {
@@ -641,9 +660,7 @@
     font-size: 15px;
     padding: 34px 0 60px 0;
 
-    a:hover{
-        filter: invert(0.3);
-    }
+    
 
     @include media-breakpoint-down (md) {
         padding-bottom: 20px;
@@ -1043,6 +1060,12 @@
         text-align: center;
     }
 
+    .dc-coin {
+        .dcg-icon-arrow-right {
+            display: none !important;
+        }
+    }
+
     .dc-table {
         th svg {
             width: 11px;
@@ -1087,10 +1110,6 @@
             text-align: end;
             width: 165px;
             padding-right: 28px !important;
-        }
-
-        .dcg-icon-arrow-right {
-            display: none !important;
         }
     }
 
@@ -2196,22 +2215,47 @@
     }
 
     &__partner {
-        margin-top: 60px;
-        padding: 0px 7px;
-        text-align: center;
+        padding: 48px 15px 0 15px;
+        display: block;
 
         img {
-            width: auto;
             height: 60px;
-        } 
+            width: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.8;
+        }
+    }
+
+    &__partner:hover {
+        img {
+            opacity: 1;
+        }
+    }
+
+    & div:nth-child(6) {
+        .dc-partners__partner {
+            padding-top: 38px;
+
+            img {
+                height: 90px;
+            }
+        }
+    }
+
+    & div:nth-child(7) {
+        .dc-partners__partner {
+            padding-top: 28px;
+
+            img {
+                height: 110px;
+            }
+        }
     }
 
 
     @include media-breakpoint-down (md) {
-        &__partner {
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 
     @include media-breakpoint-down (sm) {
@@ -2406,6 +2450,10 @@
             margin-right: 16px;
             height: 16px;
             fill: #d6e0ee;
+        }
+
+        :hover {
+            filter: invert(0.3);
         }
     }
 

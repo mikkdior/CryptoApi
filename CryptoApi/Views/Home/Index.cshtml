@@ -1,19 +1,19 @@
 ﻿@model CHomeVM
 @inject CBlocksHelperVM BlocksHelper
 @{
-    List<string> partners = new() 
+    Dictionary<string, string> partners = new() 
     { 
-        "/pictures/defiprime-logo.png", 
-        "/pictures/dappradar.png", 
-        "/pictures/dapp-review.png",
-        "/pictures/cryptowisser.png",
-        "/pictures/defi-pulse.png",
-        "/pictures/dapp.png",
-        "/pictures/baking-bad.png",
-        "/pictures/coinfunda.png",
-        "/pictures/state-of-the-dapps.png",
-        "/pictures/staking-rewards.png",
-        "/pictures/leastauthority.png",
+        { "/pictures/defiprime-logo.png", "https://defiprime.com/product/atomex" },
+        { "/pictures/dappradar.png", "https://dappradar.com/ethereum/exchanges/atomex" },
+        { "/pictures/dapp-review.png", "https://dapp.review/dapp/12376/Atomex" },
+        { "/pictures/cryptowisser.png", "https://www.cryptowisser.com/wallet/atomex/" },
+        { "/pictures/defi-pulse.png", "https://www.defipulse.com/" },
+        { "/pictures/dapp.png", "https://www.dapp.com/app/atomex" },
+        { "/pictures/baking-bad.png", "https://baking-bad.org/" },
+        { "/pictures/coinfunda.png", "https://coinfunda.com/best-tezos-wallets/" },
+        { "/pictures/state-of-the-dapps.png", "https://www.stateofthedapps.com/dapps/atomex" },
+        { "/pictures/staking-rewards.png", "https://www.stakingrewards.com/savings/atomex/" },
+        { "/pictures/leastauthority.png", "https://leastauthority.com/blog/tag/atomex/" }
     };
 }
 

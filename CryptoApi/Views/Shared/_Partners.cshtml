@@ -1,14 +1,15 @@
-﻿@model IEnumerable<string>
+﻿@model Dictionary<string, string>
 
 <div class="dc-partners">
     <h2 class="dcg-h2">Media & Partners</h2>
     <div class="row justify-content-center">
-        @foreach (string img in Model)
+
+        @foreach (var pair in Model)
         {
             <div class="col-xl-3 col-lg-4 col-md-12">
-                <div class="dc-partners__partner">
-                    <img src="@img" alt="partner" loading="lazy">
-                </div>
+                <a href="@pair.Value" class="dc-partners__partner">
+                    <img src="@pair.Key" alt="partner" loading="lazy">
+                </a>
             </div>
         }
     </div>

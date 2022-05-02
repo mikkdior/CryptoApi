@@ -160,11 +160,22 @@ public class CCoinsM : CBaseDbM
         IEnumerable<CCoinDataM> result = db.Coins;
 
         if (order != null)
-            result = result.OrderByDescending(c =>
+            if(order != "name")
             {
-                Type type = typeof(CCoinDataM);
-                return type.GetProperty(order).GetValue(c, null);
-            });
+                result = result.OrderByDescending(c =>
+                {
+                    Type type = typeof(CCoinDataM);
+                    return type.GetProperty(order).GetValue(c, null);
+                });
+            }
+            else
+            {
+                result = result.OrderBy(c =>
+                {
+                    Type type = typeof(CCoinDataM);
+                    return type.GetProperty(order).GetValue(c, null);
+                });
+            }
 
         if (filter != "" && filter != null)
             result = result.Where(c => c.name.Contains(filter) || c.name_full.Contains(filter));

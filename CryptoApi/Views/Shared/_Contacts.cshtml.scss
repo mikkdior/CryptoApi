@@ -4,6 +4,12 @@
     .dcg-h3 {
         color: #FFF;
         font-size: 20px;
+
+        a {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 400;
+        }
     }
 
     .dcg-h3 ~ .dcg-h3 {
@@ -12,8 +18,12 @@
 
     a {
         color: #c0cee5;
-        font-weight: 700;
         letter-spacing: -0.9px;
+
+        &:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
     }
 
     @include media-breakpoint-down (sm) {
